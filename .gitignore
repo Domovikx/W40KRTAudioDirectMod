@@ -1,5 +1,3 @@
 *.dll
 *.dll.*
 *.cache
-.opencode/
-opencode/

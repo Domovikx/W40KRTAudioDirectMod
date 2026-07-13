@@ -29,38 +29,11 @@ namespace W40KRTAudioDirectMod
             string clipsDir = modPath + "\\clips\\";
             guidToWav["93eaeadd-6adb-47aa-af0d-45e37840a92d"] = clipsDir + "93eaeadd-6adb-47aa-af0d-45e37840a92d.wav";
             guidToWav["36a60f39-1962-464e-8bdc-ea78e5559370"] = clipsDir + "36a60f39-1962-464e-8bdc-ea78e5559370.wav";
+            guidToWav["7d7fdde5-2ea2-4194-b0c5-b1b672268fbc"] = clipsDir + "7d7fdde5-2ea2-4194-b0c5-b1b672268fbc.wav";
+            guidToWav["9e22eda7-5e0c-4bd0-aff6-5e535872b847"] = clipsDir + "9e22eda7-5e0c-4bd0-aff6-5e535872b847.wav";
 
             var harmony = new Harmony(modEntry.Info.Id);
             harmony.PatchAll(Assembly.GetExecutingAssembly());
-
-            // Manually patch BarkPlayer.Bark
-            try
-            {
-                foreach (Assembly asm in AppDomain.CurrentDomain.GetAssemblies())
-                {
-                    if (asm.GetName().Name == "Code")
-                    {
-                        Type bp = asm.GetType("Kingmaker.Code.UI.MVVM.VM.Bark.BarkPlayer");
-                        if (bp != null)
-                        {
-                            foreach (MethodInfo m in bp.GetMethods())
-                            {
-                                if (m.Name == "Bark")
-                                {
-                                    ParameterInfo[] pars = m.GetParameters();
-                                    if (pars.Length >= 2 && pars[1].ParameterType == typeof(string))
-                                    {
-                                        harmony.Patch(m, prefix: new HarmonyMethod(typeof(Main), "OnBark"));
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-                        break;
-                    }
-                }
-            }
-            catch { }
 
             modEntry.OnToggle = (entry, value) => { Enabled = value; return true; };
             modEntry.OnUpdate = OnUpdate;
@@ -68,60 +41,94 @@ namespace W40KRTAudioDirectMod
             return true;
         }
 
-        static bool delayedPatched;
+        private static int updateCount;
 
-        static int updateCount;
-
-        static void OnUpdate(UnityModManager.ModEntry modEntry, float delta)
+        private static void OnUpdate(UnityModManager.ModEntry modEntry, float delta)
         {
             updateCount++;
             if (updateCount == 1)
-                UnityEngine.Debug.Log("[W40KRTAudioDirectMod] OnUpdate called");
-            if (delayedPatched) return;
-            try
             {
-                foreach (Assembly asm in AppDomain.CurrentDomain.GetAssemblies())
+                UnityEngine.Debug.Log("[W40KRTAudioDirectMod] OnUpdate first frame");
+                try
                 {
-                    if (asm.GetName().Name == "Unity.TextMeshPro")
+                    // Try Type.GetType first
+                    Type tmpType = Type.GetType("TMPro.TextMeshProUGUI, Unity.TextMeshPro");
+                    if (tmpType == null)
+                        tmpType = Type.GetType("TMPro.TextMeshProUGUI, Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null");
+                    // Fallback: search loaded assemblies
+                    if (tmpType == null)
                     {
-                        Type t = asm.GetType("TMPro.TextMeshProUGUI");
-                        if (t != null)
+                        foreach (Assembly a in AppDomain.CurrentDomain.GetAssemblies())
+                            if (a.GetName().Name == "Unity.TextMeshPro")
+                            { tmpType = a.GetType("TMPro.TextMeshProUGUI"); break; }
+                    }
+                    UnityEngine.Debug.Log("[W40KRTAudioDirectMod] TMPro type found: " + (tmpType != null) + " fullname=" + (tmpType != null ? tmpType.FullName : "null"));
+                    if (tmpType != null)
+                    {
+                        // Patch BASE class TMP_Text.set_text (set_text is virtual, defined on TMP_Text)
+                        Type baseType = tmpType.BaseType;
+                        if (baseType != null && baseType.FullName == "TMPro.TMP_Text")
                         {
-                            var m = t.GetMethod("set_text", new Type[] { typeof(string) });
-                            if (m != null)
+                            var setText = baseType.GetMethod("set_text", new Type[] { typeof(string) });
+                            if (setText != null)
                             {
-                                new Harmony("W40KRTAudioDirectMod.TMP").Patch(m, prefix: new HarmonyMethod(typeof(Main), "OnText"));
+                                var h = new Harmony("W40KRTAudioDirectMod.TMP");
+                                h.Patch(setText, prefix: new HarmonyMethod(typeof(Main), "OnTextSet"));
+                                UnityEngine.Debug.Log("[W40KRTAudioDirectMod] TMP_Text.set_text patched!");
                             }
                         }
-                        delayedPatched = true;
-                        break;
+                        // Also patch legacy Text component if available
+                        Type legacyText = Type.GetType("UnityEngine.UI.Text, UnityEngine.UI");
+                        if (legacyText == null)
+                        {
+                            foreach (Assembly a in AppDomain.CurrentDomain.GetAssemblies())
+                                if (a.GetName().Name == "UnityEngine.UI")
+                                { legacyText = a.GetType("UnityEngine.UI.Text"); break; }
+                        }
+                        if (legacyText != null)
+                        {
+                            var setLegacy = legacyText.GetMethod("set_text", new Type[] { typeof(string) });
+                            if (setLegacy != null)
+                            {
+                                var h2 = new Harmony("W40KRTAudioDirectMod.Legacy");
+                                h2.Patch(setLegacy, prefix: new HarmonyMethod(typeof(Main), "OnTextSet"));
+                                UnityEngine.Debug.Log("[W40KRTAudioDirectMod] Legacy Text.set_text patched!");
+                            }
+                        }
                     }
                 }
-            }
-            catch { delayedPatched = true; }
-        }
-
-        public static void OnText(string value)
-        {
-            if (!Enabled || played36) return;
-            if (value != null && value.IndexOf("Let it be known") >= 0)
-            {
-                played36 = true;
-                string path;
-                if (guidToWav.TryGetValue("36a60f39-1962-464e-8bdc-ea78e5559370", out path))
-                    PlaySound(path, IntPtr.Zero, SND_FILENAME | SND_ASYNC);
+                catch (Exception ex) { UnityEngine.Debug.Log("[W40KRTAudioDirectMod] Patch err: " + ex.Message); }
             }
         }
 
-        public static void OnBark(string text)
+        public static void OnTextSet(string value)
         {
-            if (!Enabled || played36) return;
-            if (text != null && text.IndexOf("Let it be known") >= 0)
+            if (!Main.Enabled) return;
+            if (value != null && value.Length > 3)
             {
-                played36 = true;
-                string path;
-                if (guidToWav.TryGetValue("36a60f39-1962-464e-8bdc-ea78e5559370", out path))
-                    PlaySound(path, IntPtr.Zero, SND_FILENAME | SND_ASYNC);
+                string trunc = value.Substring(0, Math.Min(120, value.Length));
+                // Log interesting texts only (skip "100%" spam)
+                if (value != "100%" && !value.StartsWith("20/") && !value.StartsWith("Shift+") && !value.StartsWith("Ctrl+"))
+                    UnityEngine.Debug.Log("[W40KRTAudioDirectMod] Text: " + trunc);
+                if (!played36 && (value.IndexOf("Да будет известно") >= 0 || value.IndexOf("Патента Вольного Торговца") >= 0))
+                {
+                    played36 = true;
+                    string path;
+                    if (guidToWav.TryGetValue("36a60f39-1962-464e-8bdc-ea78e5559370", out path))
+                        PlaySound(path, IntPtr.Zero, SND_FILENAME | SND_ASYNC);
+                }
+                if (value.IndexOf("ослепительным примером") >= 0)
+                {
+                    string path;
+                    if (guidToWav.TryGetValue("7d7fdde5-2ea2-4194-b0c5-b1b672268fbc", out path))
+                        PlaySound(path, IntPtr.Zero, SND_FILENAME | SND_ASYNC);
+                }
+                if (value.IndexOf("возвыситься над") >= 0)
+                {
+                    string path;
+                    if (guidToWav.TryGetValue("9e22eda7-5e0c-4bd0-aff6-5e535872b847", out path))
+                        PlaySound(path, IntPtr.Zero, SND_FILENAME | SND_ASYNC);
+                }
             }
         }
 
@@ -138,56 +145,78 @@ namespace W40KRTAudioDirectMod
     public static class DialogCuePatch
     {
         private static bool tried;
-        private static PropertyInfo instanceP, cueP, textP, keyP, dispP;
 
         [HarmonyPostfix]
         public static void Postfix()
         {
             if (!Main.Enabled) return;
-            try
+
+            // On first call, try to log all available types to find Game.Instance
+            if (!tried)
             {
-                if (!tried)
+                tried = true;
+                try
                 {
-                    tried = true;
+                    Type gt = null;
                     foreach (Type t in AccessTools.AllTypes())
-                        if (t.FullName == "Kingmaker.Game")
-                        { instanceP = t.GetProperty("Instance", BindingFlags.Public | BindingFlags.Static); break; }
+                        if (t.FullName == "Kingmaker.Game") { gt = t; break; }
+                    UnityEngine.Debug.Log("[W40KRTAudioDirectMod] Game type: " + (gt != null));
+                    if (gt != null)
+                    {
+                        var p = gt.GetProperty("Instance", BindingFlags.Public | BindingFlags.Static);
+                        UnityEngine.Debug.Log("[W40KRTAudioDirectMod] Instance prop: " + (p != null));
+                        if (p != null)
+                        {
+                            var gi = p.GetValue(null, null);
+                            UnityEngine.Debug.Log("[W40KRTAudioDirectMod] Game.Instance: " + (gi != null));
+                            if (gi != null)
+                            {
+                                var dc = findDialogController(gi);
+                                UnityEngine.Debug.Log("[W40KRTAudioDirectMod] DialogController: " + (dc != null));
+                                if (dc != null)
+                                {
+                                    var cueP = dc.GetType().GetProperty("CurrentCue");
+                                    if (cueP != null)
+                                    {
+                                        var cue = cueP.GetValue(dc, null);
+                                        UnityEngine.Debug.Log("[W40KRTAudioDirectMod] CurrentCue: " + (cue != null));
+                                        if (cue != null)
+                                        {
+                                            var textP = cue.GetType().GetProperty("LocalizedStringText");
+                                            if (textP == null) textP = cue.GetType().GetProperty("DisplayText");
+                                            UnityEngine.Debug.Log("[W40KRTAudioDirectMod] Text prop: " + (textP != null));
+                                            if (textP != null)
+                                            {
+                                                var txt = textP.GetValue(cue, null);
+                                                if (txt != null)
+                                                {
+                                                    var keyP = txt.GetType().GetProperty("Key");
+                                                    if (keyP != null)
+                                                    {
+                                                        var key = (string)keyP.GetValue(txt, null);
+                                                        UnityEngine.Debug.Log("[W40KRTAudioDirectMod] Key=" + key);
+                                                        Main.PlayClip(key);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
-                if (instanceP == null) return;
-                object gi = instanceP.GetValue(null, null);
-                if (gi == null) return;
-                object dc = null;
-                foreach (var p in gi.GetType().GetProperties())
-                    if (p.Name.ToLower().Contains("dialog")) { dc = p.GetValue(gi, null); break; }
-                if (dc == null)
-                    foreach (var f in gi.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
-                        if (f.Name.ToLower().Contains("dialog")) { dc = f.GetValue(gi); break; }
-                if (dc == null) return;
-
-                if (cueP == null) cueP = dc.GetType().GetProperty("CurrentCue");
-                if (cueP == null) return;
-                object cue = cueP.GetValue(dc, null);
-                if (cue == null) return;
-
-                if (textP == null) textP = cue.GetType().GetProperty("LocalizedStringText");
-                if (textP == null) textP = cue.GetType().GetProperty("DisplayText");
-                if (textP == null) return;
-                object txt = textP.GetValue(cue, null);
-                if (txt == null) return;
-
-                if (keyP == null) keyP = txt.GetType().GetProperty("Key");
-                string k = keyP != null ? (string)keyP.GetValue(txt, null) : null;
-                if (!string.IsNullOrEmpty(k)) Main.PlayClip(k);
-
-                if (dispP == null) dispP = cue.GetType().GetProperty("DisplayText");
-                if (dispP != null)
-                {
-                    object dt = dispP.GetValue(cue, null);
-                    if (dt != null && dt is string && ((string)dt).IndexOf("Let it be known") >= 0)
-                        Main.PlayClip("36a60f39-1962-464e-8bdc-ea78e5559370");
-                }
+                catch (Exception ex) { UnityEngine.Debug.Log("[W40KRTAudioDirectMod] Init err: " + ex.Message); }
             }
-            catch { }
+        }
+
+        private static object findDialogController(object gi)
+        {
+            foreach (var p in gi.GetType().GetProperties())
+                if (p.Name.ToLower().Contains("dialog")) return p.GetValue(gi, null);
+            foreach (var f in gi.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
+                if (f.Name.ToLower().Contains("dialog")) return f.GetValue(gi);
+            return null;
         }
     }
 }
