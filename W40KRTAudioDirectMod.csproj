@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net481</TargetFramework>
+    <AssemblyName>W40KRTAudioDirectMod</AssemblyName>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>W40KRTAudioDirectMod</RootNamespace>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony" HintPath="C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader\WH40KRT_Data\Managed\0Harmony.dll" Private="false" />
+    <Reference Include="Code" HintPath="C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader\WH40KRT_Data\Managed\Code.dll" Private="false" />
+    <Reference Include="Kingmaker.GameInfo" HintPath="C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader\WH40KRT_Data\Managed\Kingmaker.GameInfo.dll" Private="false" />
+    <Reference Include="Kingmaker.Controllers.Interfaces" HintPath="C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader\WH40KRT_Data\Managed\Kingmaker.Controllers.Interfaces.dll" Private="false" />
+    <Reference Include="Kingmaker.PubSubSystem.Core.Interfaces" HintPath="C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader\WH40KRT_Data\Managed\Kingmaker.PubSubSystem.Core.Interfaces.dll" Private="false" />
+    <Reference Include="Kingmaker.ElementsSystem.Interfaces" HintPath="C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader\WH40KRT_Data\Managed\Kingmaker.ElementsSystem.Interfaces.dll" Private="false" />
+    <Reference Include="Code.DialogueSystem.Interfaces" HintPath="C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader\WH40KRT_Data\Managed\Code.DialogueSystem.Interfaces.dll" Private="false" />
+    <Reference Include="Owlcat.Runtime.UI" HintPath="C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader\WH40KRT_Data\Managed\Owlcat.Runtime.UI.dll" Private="false" />
+    <Reference Include="Owlcat.Runtime.Core" HintPath="C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader\WH40KRT_Data\Managed\Owlcat.Runtime.Core.dll" Private="false" />
+    <Reference Include="RogueTrader.GameCore" HintPath="C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader\WH40KRT_Data\Managed\RogueTrader.GameCore.dll" Private="false" />
+    <Reference Include="UnityEngine" HintPath="C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader\WH40KRT_Data\Managed\UnityEngine.dll" Private="false" />
+    <Reference Include="UnityEngine.CoreModule" HintPath="C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader\WH40KRT_Data\Managed\UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="UnityEngine.AudioModule" HintPath="C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader\WH40KRT_Data\Managed\UnityEngine.AudioModule.dll" Private="false" />
+    <Reference Include="UnityModManager" HintPath="C:\Users\Domo\AppData\LocalLow\Owlcat Games\Warhammer 40000 Rogue Trader\UnityModManager\UnityModManager.dll" Private="false" />
+  </ItemGroup>
+</Project>

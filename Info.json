@@ -1,0 +1,11 @@
+{
+    "Id": "W40KRTAudioDirectMod",
+    "DisplayName": "W40K - Audio Direct Mod",
+    "Author": "custom",
+    "ManagerVersion": "0.25.0",
+    "Requirements": [],
+    "AssemblyName": "W40KRTAudioDirectMod.dll",
+    "EntryMethod": "W40KRTAudioDirectMod.Main.Load",
+    "HomePage": "",
+    "Version": "0.0.1"
+}
