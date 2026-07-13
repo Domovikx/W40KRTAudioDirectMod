@@ -13,6 +13,7 @@ namespace W40KRTAudioDirectMod
     public class Settings : UnityModManager.ModSettings
     {
         public int Volume = 100;
+        public string Language = "ruRU";
 
         public override void Save(UnityModManager.ModEntry modEntry)
         {
@@ -22,7 +23,7 @@ namespace W40KRTAudioDirectMod
 
     public static class Main
     {
-        private static string clipsDir;
+        private static string localizationDir;
         private static string modPath;
         private static Settings settings;
         private static List<KeyValuePair<string, string>> textMappings = new List<KeyValuePair<string, string>>();
@@ -38,8 +39,8 @@ namespace W40KRTAudioDirectMod
             int idx = modPath.LastIndexOf('\\');
             if (idx > 0) modPath = modPath.Substring(0, idx);
 
-            clipsDir = modPath + "\\clips\\";
             settings = UnityModManager.ModSettings.Load<Settings>(modEntry);
+            localizationDir = modPath + "\\Localization\\" + settings.Language + "\\";
             LoadMappings();
 
             var harmony = new Harmony(modEntry.Info.Id);
@@ -85,6 +86,7 @@ namespace W40KRTAudioDirectMod
         {
             GUILayout.BeginVertical();
             GUILayout.Label("W40KRT Audio Direct Mod", GUILayout.ExpandWidth(true));
+
             int v = (int)GUILayout.HorizontalSlider((float)settings.Volume, 0f, 100f, GUILayout.Width(200f));
             if (v != settings.Volume)
             {
@@ -92,6 +94,26 @@ namespace W40KRTAudioDirectMod
                 settings.Save(modEntry);
             }
             GUILayout.Label("Громкость: " + settings.Volume + "%");
+
+            GUILayout.Space(10f);
+            GUILayout.BeginHorizontal();
+            GUILayout.Label("Язык:", GUILayout.Width(50f));
+            string lang = GUILayout.TextField(settings.Language, GUILayout.Width(80f));
+            if (lang != settings.Language && lang.Length > 0)
+            {
+                settings.Language = lang;
+                settings.Save(modEntry);
+                localizationDir = modPath + "\\Localization\\" + settings.Language + "\\";
+                LoadMappings();
+            }
+            if (GUILayout.Button("Reload", GUILayout.Width(60f)))
+            {
+                LoadMappings();
+            }
+            GUILayout.EndHorizontal();
+            GUILayout.Label("Доступные: ruRU, enGB, deDE, frFR, esES, jaJP, zhCN, trTR", GUILayout.ExpandWidth(true));
+            GUILayout.Label("WAV: " + textMappings.Count, GUILayout.ExpandWidth(true));
+
             GUILayout.EndVertical();
         }
 
@@ -100,29 +122,36 @@ namespace W40KRTAudioDirectMod
 
         private static void LoadMappings()
         {
-            // Scan clips for WAV files -> GUID list
+            textMappings.Clear();
+            localizationDir = modPath + "\\Localization\\" + settings.Language + "\\";
+
             try
             {
-                string[] files = System.IO.Directory.GetFiles(clipsDir, "*.wav");
-                // Load ruRU.json
-                string locPath = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Warhammer 40,000 Rogue Trader\\WH40KRT_Data\\StreamingAssets\\Localization\\ruRU.json";
-                string json = System.IO.File.ReadAllText(locPath);
+                if (!Directory.Exists(localizationDir)) return;
+
+                string[] files = Directory.GetFiles(localizationDir, "*.wav");
+                if (files.Length == 0) return;
+
+                string gameLocalizationPath = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Warhammer 40,000 Rogue Trader\\WH40KRT_Data\\StreamingAssets\\Localization\\";
+                string jsonPath = gameLocalizationPath + settings.Language + ".json";
+                if (!File.Exists(jsonPath)) return;
+
+                string json = File.ReadAllText(jsonPath);
                 var jObj = Newtonsoft.Json.Linq.JObject.Parse(json);
                 var strings = jObj["strings"] as Newtonsoft.Json.Linq.JObject;
+                if (strings == null) return;
 
                 foreach (string file in files)
                 {
-                    string guid = System.IO.Path.GetFileNameWithoutExtension(file);
-                    if (guid.Length == 36 && strings != null)
-                    {
-                        var entry = strings[guid];
-                        if (entry != null)
-                        {
-                            string text = entry["Text"].ToString();
-                            if (text.Length > 3)
-                                textMappings.Add(new KeyValuePair<string, string>(guid, text));
-                        }
-                    }
+                    string guid = Path.GetFileNameWithoutExtension(file);
+                    if (guid.Length != 36) continue;
+
+                    var entry = strings[guid];
+                    if (entry == null) continue;
+
+                    string text = entry["Text"].ToString();
+                    if (text.Length > 3)
+                        textMappings.Add(new KeyValuePair<string, string>(guid, text));
                 }
             }
             catch { }
@@ -151,14 +180,14 @@ namespace W40KRTAudioDirectMod
         public static void PlayClip(string guid)
         {
             if (!Enabled) return;
-            string path = clipsDir + guid + ".wav";
-            if (!System.IO.File.Exists(path)) return;
+            string path = localizationDir + guid + ".wav";
+            if (!File.Exists(path)) return;
 
             mciSendString("close voice", null, 0, IntPtr.Zero);
             System.Threading.Thread.Sleep(10);
 
             string tmp = System.IO.Path.GetTempPath() + "rt_voice.wav";
-            try { System.IO.File.Copy(path, tmp, true); }
+            try { File.Copy(path, tmp, true); }
             catch { return; }
 
             StringBuilder buf = new StringBuilder(256);
