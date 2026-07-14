@@ -1,6 +1,7 @@
 *.dll
 *.dll.*
 *.cache
+__pycache__
 temp
 session*
 tasks

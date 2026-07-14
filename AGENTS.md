@@ -65,10 +65,25 @@ W40KRTAudioDirectMod/
 | Движок | Тип | Голоса | Дока | Конфиг |
 |--------|-----|--------|------|--------|
 | **Silero** 🏆 | Офлайн | 5 (2М+3Ж) | `tools/silero_tts.py` | `config/default.yaml` → `silero_*` |
+| **Gemini TTS** 🆕 | Онлайн | 30 (15М+15Ж) | `tools/gemini_tts.py` | `config/default.yaml` → `gemini_*` |
 | **Edge-TTS** | Онлайн | 2 (1М+1Ж) | `tools/edge_tts.py` | `config/default.yaml` → `edge_*` |
 | SAPI | Офлайн | 2 (1М+1Ж) | — | `config/default.yaml` → `sapi_*` |
 
-Активный бэкенд: `config/default.yaml` → `backend`.
+Активный бэкенд: `config/default.yaml` → `backend` (silero | gemini | edge | sapi).
+
+### Gemini voices распределение
+
+См. `config/characters.yaml` → поле `gemini_voice`. Ключевые пары: Ключевые пары:
+- `Kore` (F, Firm) → Теодора
+- `Sadaltager` (M, Knowledgeable) → Кунрад
+- `Algenib` (M, Gravelly) → Абеляр
+- `Charon` (M, Informative) → Хайнрикс
+- `Orus` (M, Firm) → Ульфар, Соломон
+- `Schedar` (M, Even) → Паскаль
+- `Gacrux` (F, Mature) → Идира
+- `Laomedeia` (F, Upbeat) → Арджента
+- `Aoede` (F, Breezy) → Джаэ
+- `Sulafat` (F, Warm) → Кассия
 
 ### Распределение голосов
 
@@ -102,7 +117,8 @@ csc -target:library -out:W40KRTAudioDirectMod.dll \
 ## Референсы
 
 - SpeechMod: `https://github.com/Osmodium/W40KRogueTraderSpeechMod`
-- Движки: см. `.opencode/skills/russian-tts/SKILL.md`
+- Движки: см. `.opencode/skills/russian-tts/SKILL.md`, `.opencode/skills/gemini-tts/SKILL.md`
 - SSML: см. `.opencode/skills/ssml-builder/SKILL.md`
-- Голоса: см. `config/characters.yaml`
+- Голоса: см. `catalog/people/*.yaml`
 - Конфиги: см. `config/default.yaml`
+- Каталог фраз: см. `.opencode/skills/text-catalog/SKILL.md`, файлы в `catalog/people/`

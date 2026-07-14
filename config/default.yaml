@@ -6,6 +6,7 @@
 # ─── Backend ───────────────────────────────────
 # Выбор активного движка:
 #   silero  — офлайн (PyTorch, 5 голосов)
+#   gemini  — онлайн (Google Gemini 3.1 Flash, 30 голосов, нужен прокси)
 #   edge    — онлайн (Azure Neural, 2 голоса, нужен интернет)
 #   sapi    — запасной (SAPI5 Windows)
 backend: silero
@@ -31,6 +32,20 @@ edge_sample_rate: 24000          # фиксировано Azure
 edge_rate: 0                     # -50..+50 (проценты)
 edge_volume: 0                   # -50..+50
 edge_pitch: 0                    # -50..+50 Hz
+
+# ─── Gemini 3.1 Flash TTS (онлайн, Google) ────
+# Дока: tools/gemini_tts.py, .opencode/skills/gemini-tts/SKILL.md
+# Зависимости: google.genai (уже установлен)
+# Голоса: 30 (15М + 15Ж)
+# Формат: WAV 24000 Гц, 16-bit, mono
+# Лимит: ~5 RPM (пауза 25с между вызовами)
+# Прокси: HTTPS_PROXY env var или параметр --proxy
+
+gemini_api_key: ""               # или $env:GEMINI_API_KEY (приоритет)
+gemini_voice_male: Orus
+gemini_voice_female: Kore
+gemini_sample_rate: 24000
+gemini_proxy: ""                 # "http://ip:port"
 
 # ─── SAPI Fallback (Windows) ──────────────────
 sapi_voice_male: Microsoft Dmitry Online

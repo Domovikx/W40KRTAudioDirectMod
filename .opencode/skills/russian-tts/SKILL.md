@@ -42,6 +42,7 @@ def generate(text: str, output: str, voice: str = "eugene") -> float:
 | Движок | Тип | Рус. голоса | Качество | Нужен интернет | Путь к доке |
 |--------|-----|-------------|----------|----------------|-------------|
 | **Silero** | Офлайн | 5 (2М+3Ж) | 🎯 Natural | Нет (кроме 1-го раза) | `tools/silero_tts.py` |
+| **Gemini TTS** 🆕 | Онлайн | 30 (15М+15Ж) | 🎯 Premium | Да (+ прокси) | `tools/gemini_tts.py`, `.opencode/skills/gemini-tts/SKILL.md` |
 | **Edge-TTS** | Онлайн | 2 (1М+1Ж) | 🎯 Neural | Да | `tools/edge_tts.py` |
 | SAPI | Офлайн | 2 (1М+1Ж) | 🤖 Базовый | Нет | — |
 
