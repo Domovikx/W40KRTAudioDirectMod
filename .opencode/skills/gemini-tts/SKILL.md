@@ -114,6 +114,9 @@ gemini-tts (SKILL.md) — точка входа
 
 ## Прокси
 
+⚠️ **Прокси быстро протухают (5-15 минут).** Не использовать один прокси дважды в разных сессиях.
+Если запрос упал с 429/timeout/ProxyError — **не ждать, не ретраить**, сразу брать новый прокси из списка.
+
 Обязателен для Беларуси (геоблок). Использовать:
 
 ```bash
@@ -126,7 +129,10 @@ python .opencode/skills/gemini-tts/scripts/gemini_tts.py \
     --proxy http://ip:port
 ```
 
-Свежие прокси: https://proxyscrape.com/free-proxy-list
+**Перед каждой сессией генерации — получить свежий список:**
+- https://proxyscrape.com/free-proxy-list (выбирать HTTP)
+- Или через API: `curl -s "https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all"`
+- Тестировать прокси перед использованием (если 429/таймаут — прокси мёртв, взять другой)
 
 ## Формат
 

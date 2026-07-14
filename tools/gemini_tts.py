@@ -20,7 +20,33 @@ Gemini TTS — генерация WAV (онлайн, Google Gemini 3.1 Flash)
 """
 
 from __future__ import annotations
-import os, tempfile, struct, time
+import os, tempfile, struct
+
+def build_prompt(text: str, character_name: str, personality: str = "", scene: str = "") -> str:
+    """Оборачивает текст в промпт для Gemini 3.1 Flash TTS.
+
+    Без полного промпта Gemini обрезает текст до первого предложения.
+    """
+    if not personality:
+        personality = "neutral"
+    if not scene:
+        scene = f"{character_name} говорит."
+
+    return (
+        "Synthesize speech for the performance defined below.\n"
+        "The profile, scene, and performance notes are direction only.\n"
+        "Do NOT speak them.\n"
+        "Speak ONLY the lines under #### TRANSCRIPT.\n"
+        "\n"
+        f"# AUDIO PROFILE: {character_name}\n"
+        f'## "{personality}"\n'
+        "\n"
+        f"## SCENE: {scene}\n"
+        "\n"
+        "#### TRANSCRIPT\n"
+        f"{text}"
+    )
+
 
 VOICES = {
     # Male (15)
@@ -73,8 +99,6 @@ def generate(text: str, output: str, voice: str = "Kore", proxy: str = "") -> fl
     if proxy:
         os.environ["HTTPS_PROXY"] = proxy
         os.environ["HTTP_PROXY"] = proxy
-        # дать время на установку соединения
-        time.sleep(0.5)
 
     from google import genai
     from google.genai import types
