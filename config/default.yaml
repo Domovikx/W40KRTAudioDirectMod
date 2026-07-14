@@ -1,0 +1,39 @@
+# ──────────────────────────────────────────────
+# TTS Engine Configuration
+# Справочник: .opencode/skills/russian-tts/SKILL.md
+# ──────────────────────────────────────────────
+
+# ─── Backend ───────────────────────────────────
+# Выбор активного движка:
+#   silero  — офлайн (PyTorch, 5 голосов)
+#   edge    — онлайн (Azure Neural, 2 голоса, нужен интернет)
+#   sapi    — запасной (SAPI5 Windows)
+backend: silero
+
+# ─── Silero TTS (офлайн) ──────────────────────
+# Дока: tools/silero_tts.py
+
+silero_model: v5_5_ru           # v5_ru | v5_5_ru (вопросительная)
+silero_voice_male: eugene       # eugene (командный) | aidar (спокойный)
+silero_voice_female: xenia      # xenia | baya | kseniya
+silero_sample_rate: 48000       # 8000 | 24000 | 48000
+silero_put_accent: true         # авто-ударения (мо+локо)
+silero_put_stress_homo: true    # омографы (замок/замок)
+silero_put_yo: true             # замена е → ё
+silero_put_stress_single: true  # ударение на одиноких гласных
+
+# ─── Edge TTS (онлайн) ─────────────────────────
+# Дока: tools/edge_tts.py
+
+edge_voice_male: ru-RU-DmitryNeural
+edge_voice_female: ru-RU-SvetlanaNeural
+edge_sample_rate: 24000          # фиксировано Azure
+edge_rate: 0                     # -50..+50 (проценты)
+edge_volume: 0                   # -50..+50
+edge_pitch: 0                    # -50..+50 Hz
+
+# ─── SAPI Fallback (Windows) ──────────────────
+sapi_voice_male: Microsoft Dmitry Online
+sapi_voice_female: Microsoft Svetlana Online
+sapi_rate: 0                     # -10..10
+sapi_volume: 100                 # 0..100

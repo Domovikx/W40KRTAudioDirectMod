@@ -2,6 +2,11 @@
 
 Замена английских диалоговых реплик в Warhammer 40K: Rogue Trader на русскую озвучку (AI-голос / TTS).
 
+## Статус генерации
+
+- **Сгенерировано WAV:** ~150 (36 Кунрад + 76 Теодора + 40 Эдельтрад)
+- **Движок:** Silero v5_5_ru (48kHz) | **Активный бэкенд:** silero
+
 ## Путь к игре
 
 ```
@@ -53,16 +58,35 @@ W40KRTAudioDirectMod/
 2. **`TMP_Text.set_text`** (патч ставится на 1-м кадре в OnUpdate) — ловит ЛЮБОЙ текст на экране через TextMeshPro
 3. **GUID → WAV сопоставление** — если GUID текста есть в словаре, играет соответствующую WAV
 
-## Доступные языки в игре
+## TTS Engine Architecture
 
-- `ruRU`, `enGB`, `deDE`, `frFR`, `esES`, `jaJP`, `zhCN`, `trTR`
+Справочник движков: `.opencode/skills/russian-tts/SKILL.md`
+
+| Движок | Тип | Голоса | Дока | Конфиг |
+|--------|-----|--------|------|--------|
+| **Silero** 🏆 | Офлайн | 5 (2М+3Ж) | `tools/silero_tts.py` | `config/default.yaml` → `silero_*` |
+| **Edge-TTS** | Онлайн | 2 (1М+1Ж) | `tools/edge_tts.py` | `config/default.yaml` → `edge_*` |
+| SAPI | Офлайн | 2 (1М+1Ж) | — | `config/default.yaml` → `sapi_*` |
+
+Активный бэкенд: `config/default.yaml` → `backend`.
+
+### Распределение голосов
+
+См. `config/characters.yaml` (полный список, rationale, возраст, характер).
+
+| Голос | Пол | Характер | Кому |
+|-------|-----|----------|------|
+| `eugene` | М | Командный | Абеляр, Маражай, Ульфар, Соломон |
+| `aidar` | М | Спокойный | **Кунрад**, Хайнрикс, Паскаль, Эдельтрад |
+| `xenia` | Ж | Энергичный | **Теодора**, Идира, Арджента, Кибелла |
+| `baya` | Ж | Тёплый | Кассия, Йрлиет |
+| `kseniya` | Ж | Звонкий | Джаэ |
 
 ## Компиляция
 
 ```bash
 MANAGED="C:/Program Files (x86)/Steam/steamapps/common/Warhammer 40,000 Rogue Trader/WH40KRT_Data/Managed"
 UMM="C:/Users/Domo/AppData/LocalLow/Owlcat Games/Warhammer 40000 Rogue Trader/UnityModManager"
-
 csc -target:library -out:W40KRTAudioDirectMod.dll \
   -reference:"$MANAGED/netstandard.dll" \
   -reference:"$MANAGED/UnityEngine.dll" \
@@ -75,20 +99,10 @@ csc -target:library -out:W40KRTAudioDirectMod.dll \
   Main.cs
 ```
 
-## Генерация аудио
-
-```powershell
-powershell -ExecutionPolicy Bypass -File ".opencode/skills/russian-tts/scripts/tts_wav.ps1" `
-  -Text "текст" -Output "Localization\ruRU\GUID.wav" `
-  -Voice "Microsoft Dmitry Online" -TargetDuration 8.5
-```
-
-## Голоса SAPI (доступны в системе)
-
-- `Microsoft Dmitry Online` — мужской, ru-RU
-- `Microsoft Svetlana Online` — женский, ru-RU
-
 ## Референсы
 
-- SpeechMod (исходники): `https://github.com/Osmodium/W40KRogueTraderSpeechMod`
-- SpeechMod на Nexus: `https://www.nexusmods.com/warhammer40kroguetrader/mods/75`
+- SpeechMod: `https://github.com/Osmodium/W40KRogueTraderSpeechMod`
+- Движки: см. `.opencode/skills/russian-tts/SKILL.md`
+- SSML: см. `.opencode/skills/ssml-builder/SKILL.md`
+- Голоса: см. `config/characters.yaml`
+- Конфиги: см. `config/default.yaml`
