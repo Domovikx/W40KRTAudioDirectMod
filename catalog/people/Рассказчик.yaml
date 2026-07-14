@@ -12,50 +12,98 @@ phrases:
 - guid: 533d625a-6204-4087-9b4f-d20bffcdb5da
   event: NARR_BoardedShip_VoxTransmission_Play
   text: '"Внимание всему экипажу — на борт "Бессердечного" пожаловали арбитры! Окажем им подобающий прием!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 7b782574-1405-4336-bc55-49a8c564416b
   event: NARR_BoardedShip_VoxTransmission_Play
   text: '"Наши гости высадились на верхнюю палубу над топливным залом. Убейте их всех, никакой пощады!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 15640343-56b8-4c5b-b1bd-35035c8e73b1
   event: NARR_BoardedShip_VoxTransmission_Play
   text: '"За голову каждого законника даю двойную долю от добычи!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: be026ea8-5961-4521-b028-f76b69847fff
   event: NARR_BoardedShip_VoxTransmission_Play
   text: '"В реакторной только что поджарили вражеский отряд — жаль, вы не слышали их вопли!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 48d25573-239f-47aa-8d87-2b0e20619e3f
   event: NARR_BoardedShip_VoxTransmission_Play
   text: '"Связь с арсеналом потеряна. Ничего, нам сейчас нужны не макропушки, а старая добрая резня!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 389fc80f-971f-4227-8a68-82a1c163eda2
   event: NARR_BoardedShip_VoxTransmission_Play
   text: '"На офицерскую палубу нужны еще подкрепления — живее тащите свои туши туда!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 232c2f35-ada7-4de7-81e8-36cc1bc25011
   event: NARR_BoardedShip_VoxTransmission_Play
   text: '"Отбивайте мой корабль, паразиты подпалубные, или я проветрю пару отсеков с вами!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 64cd8256-9960-49a1-8801-d8de81fdd7aa
   event: NARR_BoardedShip_VoxTransmission_Play
   text: '"Защищайте подступы к мостику, все силы на верхнюю палубу!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 0b745ef6-4616-4f96-939b-656a114781cb
   event: NARR_BoardedShip_VoxTransmission_Play
   text: '"Ах да, к нам пожаловал{rt_mf||а} еще и Вольный Торговец. Украсьте отсек {rt_mf|его|ее} кишками, ребятки!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 5d8cb121-4255-4cf8-8acc-7aac864d5ddb
   event: NARR_BoardedShip_VoxTransmission_Play
   text: '"О, вы наверняка так довольны собой, законники..."'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 934874bf-8cac-40df-bacc-27d1e46e4678
   event: NARR_BoardedShip_VoxTransmission_Play
   text: '"Но даже не думайте, что я или "Бессердечный" вам достанутся! У капитана с кораблем всегда одна судьба, всегда..."'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: ae044af6-7f86-4a04-b16a-8208cf30ef0d
   event: NARR_BoardedShip_VoxTransmission_Play
   text: '"Идите же ко мне. Идите и возьмите... Если сможете!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 9d825368-698f-4abb-82d5-63bb02107e71
   event: NARR_MonsterRandomMoans
   text: '*Бессвязно мычит*'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 3f437149-5209-4531-b586-17f7a846d0eb
   event: NARR_Prison_RTFallingGrunt
   text: '{n}Те немногие силы, что еще оставались в вашем теле, подошли к концу. Вы рушитесь на пол, и мрак, который однажды
     чуть не погасил ваше сознание навечно, вновь застит глаза.{/n}'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 0efef0ad-534a-47b6-bd26-84b63c5fc40e
   event: NARR_ServitorMechNoise
   text: При вашем приближении в теле сервитора начинает что-то гудеть, словно реагируя на ваше присутствие. Через пару секунд
     шум стихает.
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: f5fa88d9-ab6a-49cf-9e61-a6f9284660a2
   event: NARR_ServitorMechNoise
   text: Механические части сервитора издают тихое жужжание, изредка прерываемое щелчками.
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null

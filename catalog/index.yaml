@@ -38,7 +38,7 @@ characters:
   role: Интеррогатор
   voice: aidar
   gemini_voice: Charon
-  total_phrases: 114
+  total_phrases: 0
 - name: Йрлиет Ланаэвисс
   gender: F
   role: Аэльдари-рейнджер
@@ -140,7 +140,7 @@ characters:
   role: Интеррогатор Инквизиции
   voice: aidar
   gemini_voice: Charon
-  total_phrases: 296
+  total_phrases: 410
 - name: Эдельтрад
   gender: M
   role: Наследник-псайкер

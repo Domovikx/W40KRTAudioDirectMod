@@ -9,13 +9,19 @@ Outputs:
     catalog/people/  -- one YAML per character (metadata + phrases)
     catalog/index.yaml -- summary table
 
+Speaker auto-detection:
+    Parses {n}...{/n} narration blocks in each phrase. If a known character's
+    first name appears at the start of any narration block, that character is
+    identified as the speaker. If no match is found, speaker defaults to the
+    file's character name.
+
 Usage:
     python generate_catalog.py
     python generate_catalog.py --verify-only
 """
 
 from __future__ import annotations
-import argparse, json, sys, yaml
+import argparse, json, re, sys, yaml
 from collections import defaultdict
 from pathlib import Path
 from datetime import date
@@ -69,6 +75,49 @@ def key_position(key: str, event_name: str) -> int:
     return idx if idx >= 0 else 999999
 
 
+def build_name_to_char(chars: list[dict]) -> dict[str, str]:
+    """Build {first_name → full_name} + {last_name → full_name} lookup."""
+    m = {}
+    for c in chars:
+        name = c["name"]
+        parts = name.split()
+        if parts:
+            m[parts[0]] = name          # first name
+        if len(parts) > 1:
+            m[parts[-1]] = name         # last name
+        # Also add full name as-is
+        m[name] = name
+    # Hardcoded aliases for roles that appear in narration
+    # but aren't character names in the catalog
+    m["Архмилитант"] = "__NPC__"
+    m["Морт"] = "__NPC__"
+    m["Мастер шепотов"] = "__NPC__"
+    m["Сенешаль"] = "__NPC__"
+    return m
+
+
+def detect_speaker(text: str, name_map: dict[str, str]) -> str | None:
+    """Detect speaker from {n}...{/n} narration blocks.
+
+    Scans all narration blocks. If any starts with a known character name,
+    returns that character's full name. If multiple different characters
+    are found, returns the one that appears in the most blocks.
+    """
+    blocks = re.findall(r'\{n\}(.*?)\{/n\}', text)
+    if not blocks:
+        return None
+    counts: dict[str, int] = {}
+    for block in blocks:
+        stripped = block.strip()
+        for token, char_name in name_map.items():
+            if stripped.startswith(token):
+                counts[char_name] = counts.get(char_name, 0) + 1
+                break
+    if counts:
+        return max(counts, key=counts.get)
+    return None
+
+
 def resolve_character(
     event_name: str, char_map: dict[str, str], chars: list[dict]
 ) -> tuple[str | None, dict | None]:
@@ -93,6 +142,9 @@ def build_output(chars: list[dict]) -> tuple[dict[str, dict], int]:
     events = load_sound_json()
     texts = load_texts()
     char_map = build_char_map(chars)
+
+    name_map = build_name_to_char(chars)
+    voice_map = {c["name"]: c.get("gemini_voice", "Charon") for c in chars}
 
     by_char = {}
     for c in chars:
@@ -121,7 +173,23 @@ def build_output(chars: list[dict]) -> tuple[dict[str, dict], int]:
 
         name, _ = resolve_character(event_name, char_map, chars)
         if name:
-            by_char[name]["phrases"].append({"guid": guid, "event": event_name, "text": text})
+            speaker = detect_speaker(text, name_map)
+            if speaker == "__NPC__":
+                phrase_voice = None
+                speaker = None
+            elif speaker:
+                phrase_voice = voice_map.get(speaker)
+            else:
+                phrase_voice = voice_map.get(name)
+            phrase = {
+                "guid": guid,
+                "event": event_name,
+                "text": text,
+                "speaker": speaker,
+                "gemini_voice": phrase_voice,
+                "gemini_text": None,
+            }
+            by_char[name]["phrases"].append(phrase)
             by_char[name]["total_phrases"] += 1
         else:
             unassigned += 1

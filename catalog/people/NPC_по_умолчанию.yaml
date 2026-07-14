@@ -11,384 +11,651 @@ phrases:
 - guid: a36c76a2-4a3c-47af-b396-1c9d45bcdb13
   event: BNTRS_PickUps _129
   text: '"Вольный Торговец не против культа, теперь и инквизитор... Видимо, это логово убийц теперь никак не прикрыть".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: f63b4179-9c62-44e9-ba70-95fb54253e63
   event: CH2_CeremonyInquisitorCutscn_MasterOfCeremonies_01
   text: '"Покои приготовлены, Ваша Светлость".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 4113c34c-2984-4fdd-8e79-ecea0c8abc63
   event: CH2_Dargonus_InquisitorTruth_01
   text: '{n}Человек, которого вы видели среди гостей, ожидает вас в ваших покоях с таким видом, словно и должен здесь быть.
     Он бросает на вас холодный взгляд — оценивающий, сверху вниз. Прежде лишь Теодора позволяла себе так смотреть на вас.{/n}
     "Нам есть о чем побеседовать, {name} фон Валанциус".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: f6cc591b-56d3-4a50-a548-16e4c5b17506
   event: CH2_Dargonus_InquisitorTruth_02
   text: '{n}Инквизитор смотрит на вас с интересом.{/n} "Это очень опасная игра, {name}. "Я использую меньшее зло, чтобы истребить
     большее, и я точно не проморгаю момент, когда меньшее зло под моей опекой превратится в великое" — так вы думали? Поверьте,
     любителям не стоит играть в подобные игры".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 8a994317-e230-49bf-8f09-a9d8fd01b349
   event: CH2_Dargonus_InquisitorTruth_03
   text: '"Чем было продиктовано ваше решение {d|Encyclopedia:Ch2_JanusVistenzaAlive}оставить{/d} во главе планеты еретичку
     и слугу {g|Encyclopedia:Chaos}Архиврага{/g}?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: f2fdabaa-a7bf-40bf-8a53-7584ed5a9eed
   event: CH2_Dargonus_InquisitorTruth_04
   text: '"Чем вы руководствовались, когда позволили {g|Encyclopedia:Xenos}ксеносам{/g}, врагам Человечества, {d|Encyclopedia:Ch2_JanusEldarAllies}жить{/d}
     и действовать на принадлежащей вам планете?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 6acdc37c-629b-4990-982b-2d27e34a66d1
   event: CH2_Dargonus_InquisitorTruth_05
   text: '"Ну вот, теперь мы оба знаем, что я имею право приказывать. Когда на кону безопасность целого сектора, игра перестает
     быть игрой и становится войной. Надеюсь, эта маленькая демонстрация власти не нанесла значимого ущерба чувству вашего
     достоинства".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 20548b10-9b41-4d83-9c9c-c5d7dd00423e
   event: CH2_Dargonus_InquisitorTruth_06
   text: '{n}Инквизитор поднимает бровь.{/n} "Вот как? Интересный ответ. Мы действительно не первый год пристально следим за
     Вистенцой и маленькими мерзостями, которые позволяют себе члены ее свиты. Следим и готовы положить им конец, как только
     они перешагнут черту и станут представлять настоящую опасность. Теперь это и ваша ответственность. Будьте бдительны".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: a29a32bc-470c-4ea1-959e-2229923f80e5
   event: CH2_Dargonus_InquisitorTruth_07
   text: '"Как любят говорить мои коллеги, невинность ничего не доказывает. Вы унаследовали не только славу и богатство Теодоры,
     но и ее ошибки".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: a45be895-7f1d-4254-9bbf-91fc4c05832c
   event: CH2_Dargonus_InquisitorTruth_08
   text: '"Лорд-инквизитор Ксавьер Калькасар, глава конклава Коронус. Милостью {g|Encyclopedia:Emperor}Императора{/g}, я уполномочен
     надзирать за {g|Encyclopedia:KoronusExpanse}Простором Коронус{/g}, искоренять ереси и предупреждать угрозу {g|Encyclopedia:Xenos}ксеносов{/g}".
     {n}Породистое лицо и роскошная седеющая грива больше подходят аристократу, чем служителю пугающей {g|Encyclopedia:Inquisition}Инквизиции{/g}.{/n}'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: b05ca653-65bd-49bc-8b10-a8d4c160434b
   event: CH2_Dargonus_InquisitorTruth_09
   text: '"Вероятно". {n}Инквизитор пожимает плечами.{/n} "Если он не страдал от скрытых недугов, то в скором придет в себя,
     и его здоровье не понесет серьезного ущерба. В любом случае, пребывание в беспамятстве для него куда безопаснее, чем опасная
     привилегия быть свидетелем этой беседы".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: afecf890-3b5b-4b61-b1c2-0f73e83ba3c0
   event: CH2_Dargonus_InquisitorTruth_10
   text: '"Мы воспользовались иными методами перемещения, чтобы нанести вам визит". {n}Хейнрикс взирает на вас с непроницаемым
     видом.{/n} "Заверяю, Вольный Торговец, что все ваши запоры и замки в полном порядке".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 991610e7-291e-4404-9557-9339d5ee283b
   event: CH2_Dargonus_InquisitorTruth_100
   text: '"Это моя работа — знать все. И я справляюсь с ней очень хорошо. Помните об этом, {name}".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 56bd8155-af28-4880-ad10-06bcfb4d9f61
   event: CH2_Dargonus_InquisitorTruth_101
   text: '"Потому что вы не хотите знать, какова цена этой ошибки. И какие формы она может принять".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: e1823027-3e5c-4adb-b0c7-c072b67b35a1
   event: CH2_Dargonus_InquisitorTruth_102
   text: '"Инквизиции известно, что Вистенца Вьятт много лет назад подпала под влияние еретиков, проникших в ее свиту, и исповедует
     богохульные верования, нашептанные Архиврагом. Ваше решение не предпринимать мер по этому вопросу было напрасным. Что
     же, я приму их сам".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 65c50ec6-f626-49d3-8c3b-ac690640e8e9
   event: CH2_Dargonus_InquisitorTruth_103
   text: '"Уважаем{mf|ый|ая} госпо{mf|дин|жа} фон Валанциус, я не знаю, кто убедил вас, что Инквизиция не расстреливает идиотов.
     Но я заверяю вас, что это не так. Поэтому прошу вас, перестаньте изображать из себя идиот{mf|а|ку}. Не дай Император я
     поверю".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 45595d8c-f3d1-467e-81bb-863d0efb9bb1
   event: CH2_Dargonus_InquisitorTruth_104
   text: '"Меня радует ваше смирение, {name}. Не сомневайтесь, что при разбирательстве вашего прискорбного промаха оно будет
     зачтено".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 21ecfcef-769b-4356-97e4-bef27ffbf22f
   event: CH2_Dargonus_InquisitorTruth_105
   text: '{n}Калькасар предупреждающе поднимает руку.{/n} "И прошу, не утомляйте меня пояснениями, что он "не погиб, а пропал
     без вести". Молчание Хейнрикса говорит о том, что он либо мертв, либо в плену — что тоже означает, что он уже мертв. А
     значит, возвращает нас к моему вопросу — как же так вышло?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 0b06e5b8-d2d1-4c75-82b1-be4875cdd1b1
   event: CH2_Dargonus_InquisitorTruth_106
   text: '{n}Глаза инквизитора стекленеют.{/n} "Вы... что сделали? Мы говорим не о пистолете, автопере или чувстве стыда. Мы
     говорим о дознавателе Инквизиции. Моем агенте. Нельзя "потерять" моего агента... без последствий".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: aee84d00-3b1f-401f-bec4-eb3f39898bce
   event: CH2_Dargonus_InquisitorTruth_107
   text: '"Будьте осторожнее с пустыми угрозами". {n}Марево отражающего поля окружает фигуру Лорд-инквизитора. Ксавьер Калькасар
     бросает на вас тяжелый взгляд.{/n} "Помните, я говорил, что готов закрывать глаза на некоторые вольности? Это была первая.
     И — последняя такого рода".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 1819c0fa-d98e-4874-8936-3c6f6a3755bd
   event: CH2_Dargonus_InquisitorTruth_108
   text: '"Вы — слишком значимая фигура, чтобы не влиять на мои планы в секторе. А значит, вы — либо мой союзник, либо враг.
     Предпочитаю думать, что все таки первое, так что мы еще увидимся. Постарайтесь свыкнуться с этой мыслью".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: aebe381c-01f9-4b25-9454-895b71834b21
   event: CH2_Dargonus_InquisitorTruth_109
   text: '{n}Инквизитор достает из-за пояса широкий кинжал с выгравированными вдоль лезвия литаниями и протягивает позолоченной
     рукоятью вперед.{/n} "Этот подарок — знак, что ваше рвение не осталось незамеченным. Если оно не угаснет и в будущем,
     то однажды этот кинжал переплавят в вашу инквизиторскую розетту. Такова традиция нашего конклава".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 5162ea4b-8c9c-4b45-93b0-c7edb21e7296
   event: CH2_Dargonus_InquisitorTruth_11
   text: '"Полагаете?" {n}Инквизитор слегка улыбается, но без какого-либо намека на теплоту.{/n} "Я прекрасно осознаю, что
     делаю — я расставляю акценты в нашем общении. Напоминаю, что недреманное око {g|Encyclopedia:Imperium}Империума{/g} следит
     за вами даже в вашей спальне. И не только око, но и чуткие руки Империума — в моем лице и лице моих помощников".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: c8bc4004-0e7b-4750-bb20-d86e8b52bb56
   event: CH2_Dargonus_InquisitorTruth_111
   text: '"{name}?" {n}Хейнрикс смотрит на вас с тревогой во взгляде.{/n} "Полагаю, теперь ты понимаешь, о чем я предупреждал
     тебя. Молю Трон, что понимаешь и то, почему я не мог рассказать тебе все".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: a4b7ed60-f7fc-4bef-9890-9ee8152121cf
   event: CH2_Dargonus_InquisitorTruth_112
   text: '{n}Хейнрикс переводит дух и кивает. В уголках его губ появляется намек на мягкую улыбку.{/n} "Сегодня у тебя был
     тяжелый день, {name}. Я оставлю тебя, чтобы ты могла выспаться — утром тебя будет ждать протекторат и твои подданные.
     Доброй ночи, {name}".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 8d31310f-5a9a-4d7e-9aea-732044819df0
   event: CH2_Dargonus_InquisitorTruth_113
   text: '{n}Хейнрикс столбенеет, его скулы напрягаются так, что, кажется, сейчас прорвут кожу.{/n} "Я вас услышал, Лорд-капитан.
     Ваша воля будет исполнена. Доброй ночи, {name}". {n}Дознаватель отрывисто откланивается и направляется к выходу, не оглядываясь.{/n}'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: af5fc19a-d280-4290-8d81-d62ef66f5e1d
   event: CH2_Dargonus_InquisitorTruth_114
   text: '{n}Хейнрикс сдержанно улыбается.{/n} "Мне хотелось бы на это рассчитывать, {name}. Что ж, тяжелый день подошел к
     концу, и мне пора оставить Вольного Торговца, чтобы новоиспеченная глава протектората могла выспаться. Доброй ночи, {name}".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: c85914ea-63c6-4fa1-8b0a-5bdc47bae251
   event: CH2_Dargonus_InquisitorTruth_115
   text: '{n}Хейнрикс едва заметно качает головой.{/n} "Доброй. Ночи. {name}". {n}Отчеканив каждое слово, дознаватель склоняет
     голову и направляется к выходу.{/n}'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: bf3dd933-3715-484b-80c0-fdb737ea38d1
   event: CH2_Dargonus_InquisitorTruth_116
   text: '"Вы правда считаете, что у меня есть время играть в ваши политические игры? С сожалением вынужден признать, что вы
     так до сих пор и не поняли, кто я такой и чем занимаюсь".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: d6aac174-a8c1-4c1c-901b-39903a594365
   event: CH2_Dargonus_InquisitorTruth_117
   text: '"А вы полагаете, что слуги Инквизиции имеют обыкновение нарекать еретиками невинных? Какое прискорбное недоверие,
     я его запомню".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: f0d389c1-6332-4da3-b4f8-5e19f0e98359
   event: CH2_Dargonus_InquisitorTruth_118
   text: '"Либо у вас сильная интуиция, либо хорошая реакция на изменение ситуации. Я ценю оба эти качества".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: ea78db85-b960-406e-9d32-2f995187a501
   event: CH2_Dargonus_InquisitorTruth_119
   text: '"Ценю, что вы не пытаетесь увиливать и валить вину на других. С подобными людьми я могу иметь дело".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: f45c7781-21f5-48d4-b414-c1c49ef5a1ff
   event: CH2_Dargonus_InquisitorTruth_12
   text: '"Похвальная готовность к сотрудничеству. Вам это зачтется". {n}Колкий взгляд инквизитора упирается в вашу переносицу.{/n}'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: c641e53a-8cfa-4c3d-badd-97385d876b26
   event: CH2_Dargonus_InquisitorTruth_120
   text: '"Инквизиции известно, что Вистенца Вьятт много лет назад подпала под влияние еретиков, проникших в ее свиту, и исповедует
     богохульные верования, нашептанные Архиврагом. Мы не первый год пристально следим за Вистенцой и готовы положить конец
     ее маленьким мерзостям, как только они перешагнут черту и станут представлять настоящую опасность".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 3a385853-065f-414a-85b7-a9d8ed6ce197
   event: CH2_Dargonus_InquisitorTruth_121
   text: '"Я не исключаю, что Леди Теодора сожалела об утрате свободы, полнотой которой она обладала до моего вступления в
     чин. И не отрицаю, что начало оного сотрудничества было сопряжено с некоторыми... воздействиями с моей стороны".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: c24e68a9-688b-4f15-9ac8-f744859264b5
   event: CH2_Dargonus_InquisitorTruth_122
   text: '{n}Калькасар бросает на вас острый взгляд.{/n} "Однако вы — не Леди Теодора. Пусть сложности, отягощавшие наши отношения,
     упокоятся с ней. Не советую вам забивать голову делами минувшего, не имеющими к вам никакого отношения. Теодора предпочла
     забыть об этом — последуйте ее примеру, и ваша судьба сложится хорошо".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 222feed0-3767-4216-9450-0896ac3833bf
   event: CH2_Dargonus_InquisitorTruth_123
   text: '{n}Инквизитор задумчиво поднимает бровь.{/n} "Ваше рвение впечатляет, {name}. Однако я не могу принять вашу присягу,
     по крайней мере не сейчас. Вы будете полезнее Инквизиции в текущем статусе, нежели в статусе члена моей свиты. Тем не
     менее..."'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: eb34c2a0-dfa3-48d7-a4e0-96db5f232317
   event: CH2_Dargonus_InquisitorTruth_13
   text: '{n}Инквизитор неодобрительно смотрит на вас.{/n} "Вы зря лжете, госпо{mf|дин|жа} фон Валанциус. Этот путь не приведет
     нас к плодотворному сотрудничеству".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 5d9ce3dd-422b-4dfd-9b81-79b8c509e22e
   event: CH2_Dargonus_InquisitorTruth_133
   text: '"Известно ли вам о появлении подозрительного культа на Футфоле? Установлена прямая связь между этим явлением и началом
     поставок {d|Encyclopedia:Ch2_JanusChaosFood}зерна{/d} с вашей планеты. Расследование показало, что над зерном не был прочитан
     весь цикл молитв и литургий обработки. Без сомнения, в этом вина конкретных исполнителей, нарушающих священные ритуалы
     или даже занимающихся саботажем, не так ли? Но вина за этот недосмотр лежит на вашей династии, не так ли?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 4e61fa23-2bec-4564-aaea-1a9c28b7e3fe
   event: CH2_Dargonus_InquisitorTruth_14
   text: '{n}Инквизитор недовольно морщится.{/n} "Ваше необдуманное поведение не только неуместно, но и опасно. Для вас. Мне
     оно, впрочем, не доставит неудобств и не помешает задать свои вопросы".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 53c83a88-aa06-484e-b1e2-81f518f67d40
   event: CH2_Dargonus_InquisitorTruth_15
   text: '"Давайте начнем с главного. Как так вышло, что Хейнрикс ван Калокс, которого вашей почтенной предшественнице было
     поручено доставить ко мне, покинул этот мир? Признаюсь, я очень не люблю, когда мои агенты гибнут — как правило, по их
     кровавому следу я выхожу на очень неприятные и неблагочестивые секреты".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: fcd4e215-d3e7-4252-8780-b05bb7645ab8
   event: CH2_Dargonus_InquisitorTruth_16
   text: '"Господин ван Калокс достаточно долго пробыл рядом с вами. Он поручится за ваши слова".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: c863a535-9495-4c5e-811b-af3ad379e4cb
   event: CH2_Dargonus_InquisitorTruth_17
   text: '{n}Инквизитор не сдерживает усмешки.{/n} "А вы, значит, уже в компанию к святому Друзу метите? Амбициозно. Что же,
     буду иметь это в виду".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 1304082e-8baa-4992-8274-987b825434c4
   event: CH2_Dargonus_InquisitorTruth_18
   text: '"Я пришел не торговаться. Но не переживайте, в накладе вы не останетесь... Если будете поступать правильно".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: bacc17e3-d563-4f91-a7ac-689b8d211a55
   event: CH2_Dargonus_InquisitorTruth_19
   text: '{n}Вспышка отражающего поля останавливает ваш удар. Генератор щита должен быть настоящим техническим чудом, раз Лорд-инквизитор
     смог скрыть его под одеянием. Ксавьер Калькасар бросает на вас тяжелый взгляд.{/n} "Помните, я говорил, что готов закрывать
     глаза на некоторые вольности? Это была первая. И — последняя такого рода".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 756a2814-dfcb-4503-9bc1-72e7f9575997
   event: CH2_Dargonus_InquisitorTruth_20
   text: '"Заключать сделки — безусловно. Сотрудничать — до определенной степени. Но не дарить же населенные людьми миры. Вы
     бы хоть {g|Encyclopedia:Warrant}Патент{/g} свой изучили повнимательнее. Помните — мудрость {g|Encyclopedia:RogueTrader}Вольного
     Торговца{/g} заключается в том, чтобы понимать: фраза "мне можно все" означает "мне можно почти все".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: e68a87f1-48ab-49ed-8d7e-8f7f8657a160
   event: CH2_Dargonus_InquisitorTruth_21
   text: '"Конечно. Господин ван Калокс выполнял мое задание, а также, после смерти Теодоры, приглядывал за вами от лица моей
     организации. Прискорбно, что теперь он не может сказать ни одного доброго слова про вашу персону". {n}Сожаление в голосе
     инквизитора почему-то звучит как угроза.{/n}'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 5be50f02-dac0-4353-971c-6f03055f0f64
   event: CH2_Dargonus_InquisitorTruth_22
   text: '{n}Лицо Калькасара непроницаемо, а голос сух.{/n} "Допустим, я вам верю. Допустим".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 13b87c06-43c1-4734-be44-16f3a52e79de
   event: CH2_Dargonus_InquisitorTruth_23
   text: '"Вы делаете смелую ставку, {name}. Ставку на то, что интересность вашей персоны перевешивает ценность персоны господина
     ван Калокса в моих глазах. И на то, что я с годами не приобрел сентиментальной тяги мстить за своих людей. Что ж. Пока
     что ваше предположение верно".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 8baa92da-d163-497f-8d16-d01f291d518a
   event: CH2_Dargonus_InquisitorTruth_24
   text: '"Инквизиция в моем лице готова проявить экстраординарную лояльность к вашей персоне. Во имя нашего бесценного сотрудничества
     я закрою глаза на... мелкие вольности, которые вы, почтенный Вольный Торговец, позволяли себе или позволите в будущем".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 45c3c217-7f44-406c-99a0-c183ece08dc1
   event: CH2_Dargonus_InquisitorTruth_25
   text: '"Места, затронутые Хаосом, надлежит предавать огню и оставлять в забвении. Кьяву Гамма стоило разбомбить до самого
     основания и объявить запретным миром. Но вы рассудили иначе и восстановили работу колонии. И даже не потрудились скрыть
     следы допущенного вашей династией небрежения. Ведь именно фон Валанциус предоставили Кубису Дельфиму столько свободы,
     что он впал в отступническую ересь. Чем вы руководствовались?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: ce5102e4-394d-433e-a565-d257a4c63552
   event: CH2_Dargonus_InquisitorTruth_26
   text: '"Я не заключаю сделок и, упаси Император, не собираюсь отдавать вам распоряжения — это было бы покушением на ваши
     привилегии. Я лишь даю благожелательные рекомендации и рассчитываю, что в момент, когда Простору будет угрожать опасность,
     вы оторветесь от своих дел и прислушаетесь к ним".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 50ff6b40-aaec-4c6f-acf4-865562647ab9
   event: CH2_Dargonus_InquisitorTruth_27
   text: '"И извлекала из этого огромную выгоду. Власть {g|Encyclopedia:Warrant}Патента{/g} не бесконечна, как и защита, даруемая
     им. Все эти таинственные экспедиции, сомнительные эксперименты, коллекционирование ксенотехнологических диковинок — опасные
     забавы. Чтобы предаваться им без последствий, мало иметь лишь разрешение {g|Encyclopedia:Emperor}Императора{/g}. Нужно
     еще, чтобы не рассердился я".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 28b4a2c9-373e-4927-99ca-0cf264acfd13
   event: CH2_Dargonus_InquisitorTruth_28
   text: '{n}Улыбка Лорд-инквизитора выглядит немного хищно.{/n} "Давайте я продемонстрирую, как это работает. В вашей свите
     находится не получившая санкции {g|Encyclopedia:HolyTerra}Терры{/g} {g|Encyclopedia:Psyker}псайкерша{/g}, что, как мы
     оба знаем, есть страшнейшая угроза и богохульство против законов {g|Encyclopedia:Imperium}Империума{/g}. Мне ведом этот
     секрет, но... я совсем не сержусь. И она живет дальше, полезная псайкерша Идира Тласс".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: d8d133c2-4218-4f57-a5dc-d2b22ba01859
   event: CH2_Dargonus_InquisitorTruth_29
   text: '"Вы бы этого хотели? А ты, Хейнрикс, хотел бы продолжить работу при достопочтенном Вольном Торговце?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: d83ba411-95d2-4763-88f1-e705b70895dd
   event: CH2_Dargonus_InquisitorTruth_30
   text: '"Ваш протекторат — это живое тело. И вы оставили в нем занозу, которая может нагноиться. Подумайте, к каким масштабным
     ампутациям это может привести в будущем".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 7457fdf7-5339-41d1-a7b3-e30054cde80e
   event: CH2_Dargonus_InquisitorTruth_31
   text: '"Я в нетерпении ожидаю, когда вы покажете мне свою розетту священной Инквизиции. Наверняка она у вас есть... Нет?
     Как странно. Мне казалось, что такие эксперименты в ведении моих почтенных коллег из Ордо Еретикус".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 6ff18ff7-0d5e-40f9-9d06-59324c9ab7e8
   event: CH2_Dargonus_InquisitorTruth_32
   text: '"Думаете, маска безалаберного {g|Encyclopedia:RogueTrader}Вольного Торговца{/g} защитит от обвинения в ереси? Ваша
     вера в то, что я являюсь неосведомленным идиотом, весьма прискорбна".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 2bae2112-ad8d-497d-a94d-9713c45dc549
   event: CH2_Dargonus_InquisitorTruth_33
   text: '"Вы удивлены? Предполагали, что {g|Encyclopedia:Inquisition}Инквизиции{/g} неведомы обстоятельства ваших деяний?
     Часто у вас возникают мысли о том, что нам не стоит чего-то знать о вашей жизни?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 7193a830-5503-4cd6-88f1-b7d14d6120ae
   event: CH2_Dargonus_InquisitorTruth_34
   text: '"В таком случае господин ван Калокс продолжит сопровождать вас. И мне будет спокойнее знать, что есть, кому о вас
     позаботиться". {n}Последняя реплика инквизитора звучит двусмысленно.{/n}'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 9ba3ff01-ef95-4af8-8e72-7a77002d7696
   event: CH2_Dargonus_InquisitorTruth_35
   text: '{n}Хейнрикс официально кланяется вам.{/n} "Почту за честь сопровождать тебя, {name}".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 2c007ee5-a745-4601-abcf-97f6f94efd01
   event: CH2_Dargonus_InquisitorTruth_36
   text: '"В таком случае, господин ван Калокс будет отозван в мою свиту. У меня много работы для тебя, Хейнрикс".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 2a352795-acf6-4058-8a4c-07098bd7796f
   event: CH2_Dargonus_InquisitorTruth_37
   text: '"Вы недолго у власти, вам простительно пока не замечать тревожных перемен. В {g|Encyclopedia:KoronusExpanse}Просторе
     Коронус{/g} распространяется культ Последнего восхода — не первая и не последняя ересь, поразившая сектор, но на удивление
     живучая. К системам Безбожных звезд проскальзывают таинственные конвои судов — банальная торговля с пиратами, не так ли?
     Но почему сами пираты об этом не в курсе?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 84fb02ca-a98b-4b68-9f63-bba02250d1b8
   event: CH2_Dargonus_InquisitorTruth_38
   text: '"{g|Encyclopedia:Xenos}Ксеносы{/g}, тревожившие сектор и раньше, в последние десятилетия активизировались, в их прежде
     хаотичных налетах видны логика и системность. Даже две стаи Космических волков, — благословенных {g|Encyclopedia:AdeptusAstartes}космодесантников{/g},
     призванных моим именем — не умерили их интерес к Простору".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: cc24457b-b704-46c2-8be2-20adbc788642
   event: CH2_Dargonus_InquisitorTruth_39
   text: '{n}Символ на перстне черен, словно пустота.{/n} "Цвет определяет степень близости подателя перстня к Лорд-инквизитору.
     Черный означает принадлежность к ближнему кругу. Любые ресурсы будут в вашем распоряжении".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 842161a2-12ee-4928-bd92-1bc9fd1eb1c4
   event: CH2_Dargonus_InquisitorTruth_40
   text: '{n}Символ на перстне ал, как кровь праведников.{/n} "Цвет определяет степень близости подателя перстня к Лорд-инквизитору.
     Алый означает, что вам довелось пролить кровь во благо Империума. Значит, и вы стоите того, чтобы за вас пролили кровь
     Его слуги".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: ff367635-7675-4753-9989-d233d457ce88
   event: CH2_Dargonus_InquisitorTruth_41
   text: '{n}Символ на перстне бел, как волосы {g|Encyclopedia:AdeptaSororitas}Сестер Сороритас{/g}.{/n} "Цвет определяет степень
     близости подателя перстня к Лорд-инквизитору. Белый — красивый, но уязвимый цвет. Его легко запятнать, и так же легко
     утратить оказанное нами доверие. Дорожите им".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 1054a1a9-b9de-40f5-bdd2-d6986099e997
   event: CH2_Dargonus_InquisitorTruth_42
   text: '"Я бы сказал, что вашей династии стоило избавиться от нее раньше лет на десять. А если бы вы прождали еще пару лет,
     то делать это уже пришлось бы мне. Небрежность со временем может быть роковой, {name}".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 9d09928b-ca04-4a16-9e2f-a3d65359f62b
   event: CH2_Dargonus_InquisitorTruth_43
   text: '"С господином ван Калоксом мы разобрались. Перейдем к иным вашим деяниям".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: bf7b1e3f-d639-4eeb-9a1e-8a44a241b597
   event: CH2_Dargonus_InquisitorTruth_44
   text: '"Я не могу удовлетворить ваше любопытство, не нарушив секретность сведений. Скажу лишь следующее: мы держали ситуацию
     под контролем. В {g|Encyclopedia:KoronusExpanse}Просторе Коронус{/g} завязался столь плотный клубок опасных событий, что
     действовать в нем приходится с великими точностью и осторожностью, без права на ошибку".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 3ea03335-6627-42dd-8dd7-559af9d8048e
   event: CH2_Dargonus_InquisitorTruth_45
   text: '"Хорошо, что вы отдаете себе в этом отчет. Милость Императора велика, Он дает своим раскаивающимся слугам исправить
     их ошибки... порой".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 88329a89-3408-4d84-a3bc-873a06c31b6c
   event: CH2_Dargonus_InquisitorTruth_46
   text: '"Ксеносы, именуемые {g|Encyclopedia:Aeldari}эльдарами{/g}, обрели такое влияние на ваших легковерных подданных, что
     я поневоле задаюсь вопросом — кто сейчас в действительности правит Янусом? Я вынужден уведомить вас, что первое же свидетельство
     о дальнейшем расширении власти ксеносов в ваших владениях станет приговором для данной колонии".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 73d9ca78-7067-424d-82f3-e5ef506a4724
   event: CH2_Dargonus_InquisitorTruth_47
   text: '"Мое расположение имеет и иные формы".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 62a03dc0-03fa-4345-a07e-80507bfdf7e1
   event: CH2_Dargonus_InquisitorTruth_48
   text: '"Есть преступления, на которые нельзя закрывать глаза даже Вольным Торговцам. Помните об этом. Если Вистенца Вьятт
     окажется уличена в подобном проступке, вина за недосмотр за слугой будет лежать на вас".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: e728eb78-32ad-400c-910c-e423ac276472
   event: CH2_Dargonus_InquisitorTruth_49
   text: '{n}Помолчав, инквизитор веско изрекает:{/n} "Надеюсь, вы были достаточно тщательны в этом вопросе. В противном случае
     вас ждет ответственность".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: bde4776a-e8d5-40b9-896d-eb16b27d76df
   event: CH2_Dargonus_InquisitorTruth_50
   text: '{n}Инквизитор качает головой.{/n} "И перед каким трибуналом вы будете оспаривать мои полномочия?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: e5a61fcc-763b-426a-a451-899decb877b3
   event: CH2_Dargonus_InquisitorTruth_51
   text: '"Я прослежу, чтобы он был возвращен на корабль. Прошу прощения, Ваша Светлость, но поручение Лорд-инквизитора не
     терпело промедления. Я вынужден был воспользоваться вашими ресурсами".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: c484f9a1-2812-41d3-8b43-4064e198da64
   event: CH2_Dargonus_InquisitorTruth_52
   text: '{n}Лорд-инквизитор одобрительно кивает.{/n} "Уже лучше. Вы больше не пытаетесь лгать. Кажется, наше общение выходит
     в правильное русло".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 5e295e8c-8f90-47e4-916e-289c15ca7e45
   event: CH2_Dargonus_InquisitorTruth_53
   text: '"И даже более того — из тени {d|Encyclopedia:Ch2_JanusEldarGovern}руководить{/d} самим миром. Думаете, это достойная
     участь для ваших собратьев по расе — стать невольниками в лапах ксеносов? Действительно ли вы полагаете, что они будут
     чтить условия какой бы то ни было сделки, заключенной с вами?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 9c463e7e-d5b5-4d89-9d47-d7ef60b50a71
   event: CH2_Dargonus_InquisitorTruth_54
   text: '"Ваших прегрешений более чем достаточно, чтобы предстать перед трибуналом Инквизиции. И, уверяю, если вы не сделаете
     выводов из моих слов, так однажды и случится... Но пока я готов проявить милость, что мне не слишком свойственно".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: cc0dc584-c3fa-4e62-a4a7-c33402af8697
   event: CH2_Dargonus_InquisitorTruth_55
   text: '"Помнится, ваши достойные аристократы поднесли вам много подарков. Было бы грубо не последовать их примеру".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 850f4438-bab3-45ce-9f65-9cd3a0d2a74e
   event: CH2_Dargonus_InquisitorTruth_56
   text: '"Благочестиво ли было позволять затронутым {g|Encyclopedia:Warp}варпом{/g} пустотникам {d|Encyclopedia:Ch2_MutatedCrewRescued}присоединяться{/d}
     к экипажу вашего корабля? Тем самым, что служили на судне, превращенном в ловушку для вас Кунрадом Войгтвиром — может,
     и они являлись частью рассеянной им скверны?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: f73c5bb1-18a3-4070-9ab1-d8df39432451
   event: CH2_Dargonus_InquisitorTruth_57
   text: '"Значит, вам придется делать это без желания, почтенн{mf|ый|ая} {name}. Похоже, вы так и не уловили важный нюанс
     — я не интересуюсь вашим мнением, а ставлю вас перед фактом. Когда на кону безопасность целого сектора, игра перестает
     быть игрой и становится войной. Считайте, что династия фон Валанциус... мобилизована мной по повелению {g|Encyclopedia:GoldenThrone}Золотого
     Трона{/g}".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: d423e297-797d-4124-abb5-9b73fb1e9fa4
   event: CH2_Dargonus_InquisitorTruth_58
   text: '{n}Инквизитор смотрит на вас с интересом.{/n} "Вы мыслите в любопытном направлении, опасном, но любопытном. Рекомендую
     быть очень осторожн{mf|ым|ой}, если решите двинуться по нему дальше".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 18d1bf85-39f8-4a03-b29f-b883bdee77fc
   event: CH2_Dargonus_InquisitorTruth_59
   text: '{n}Инквизитор устало вздыхает.{/n} "Вы не даете мне забыть, что я имею дело с Вольным Торговцем. Хорошо, в знак доброй
     воли я также окажу вашему протекторату значимую поддержку. Но с этого момента я жду от вас ответного содействия".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 5c411f9c-1fa0-4b87-843d-68c75748d6b6
   event: CH2_Dargonus_InquisitorTruth_60
   text: '"Надеюсь, вы понимаете, что мы говорим не о судьбе какой-то колонии. Мне нет дела до одной планеты, сколь угодно
     прибыльной и многолюдной. Но если скверна вновь поднимет голову на Кьяве Гамма и попытается распространиться — я выжгу
     ее. А вы... На вас ляжет вина в преступном небрежении".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 37c28d1d-ce81-418b-9ec3-56868befb2a3
   event: CH2_Dargonus_InquisitorTruth_61
   text: '"Рад слышать это, {name}. Ваша клятва услышана и внесена в протокол".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: d1167084-1006-44f8-80fc-92b4ac976ad6
   event: CH2_Dargonus_InquisitorTruth_62
   text: '"Вы же не пытаетесь умилостивить члена Инквизиции взяткой? Это был бы не слишком проницательный шаг".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 39bb27ad-e112-4d1f-a6bb-fa100e24e7d5
   event: CH2_Dargonus_InquisitorTruth_63
   text: '"Если для безопасности этих владений я сочту необходимым казнить любое лицо и заменить его двойником-марионеткой,
     обратить в пепел его владения, предать смерти его слуг — я имею право так поступить. Потому что угрозы, от которых защищаю
     Простор я, экстраординарны и оправдывают самые жестокие меры. Добро пожаловать в мой мир, в котором слова "излишняя строгость"
     являются забавным оксюмороном".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 6c95f324-4ee1-4f15-9ed1-fdf1c1c601d7
   event: CH2_Dargonus_InquisitorTruth_64
   text: '"Вы, кажется, желаете сравнить, чей статус более весом? Извольте". {n}Калькасар демонстрирует инквизиторскую розетту.{/n}
@@ -396,18 +663,30 @@ phrases:
     Коронус{/g} от множественных угроз, как внешних, так и внутренних. {name} фон Валанциус, вам надлежит в готовности ожидать
     распоряжений Инквизиции и приступить к их исполнению немедленно по получении таковых. В случае ослушания вы будете объявлены
     предател{mf|ем|ьницей} Империума".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: ebfb6d36-d18b-4348-856c-2dcff255fdd9
   event: CH2_Dargonus_InquisitorTruth_66
   text: '"Что же, вы явно захотите обсудить это происшествие, {name}". {n}На лице Хейнрикса впервые за весь разговор появляются
     эмоции — ожидание неприятной беседы.{/n} "Но, полагаю, не сейчас — сейчас вам будет полезнее отдохнуть и осмыслить слова
     Лорд-инквизитора в одиночестве. Доброй ночи, Вольный Торговец".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 70cbef56-f522-4cdd-9244-66a85027ff47
   event: CH2_Dargonus_InquisitorTruth_67
   text: '"В свете того, что их агент теперь сопровождает вас, как член свиты, у многих могут возникнуть подозрения — не отреклась
     ли династия фон Валанциус от служения Империуму?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: e4619b4b-f8ba-471b-8e8c-b1aa07a67cb9
   event: CH2_Dargonus_InquisitorTruth_68
   text: '"Прощайте". {n}По лицу Хейнрикса невозможно прочитать, что он чувствует и чувствует ли хоть что-то.{/n}'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: daf7fa43-d0a6-47d2-8eeb-388ddd414898
   event: CH2_Dargonus_InquisitorTruth_69
   text: '"Могучий Эксплораторский флот, изучающий Простор не первое столетие, внезапно перестал отвечать на сообщения и погрузился
@@ -415,142 +694,238 @@ phrases:
     жестокими действиями плодит бунтарей с той же скоростью, с которой казнит, и эта кровавая карусель полностью поглощает
     внимание почтенной Инцендии. Каллигос Винтерскейл внезапно утратил интерес к своим владениям и, кажется, интересуется
     лишь тем, как прикончить новую ксенотварь поопаснее".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: fa0cf062-43e3-4957-90ff-d600cd24c40b
   event: CH2_Dargonus_InquisitorTruth_70
   text: '{n}Инквизитор снимает с пальца перстень и протягивает вам. На нем начертан замысловатый личный герб.{/n} "Примите
     этот подарок в знак моего расположения. В трудный час отдайте его любому верному слуге Императора, и Инквизиция придет
     на помощь".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 8c3a5093-5d4e-45b7-99bb-59328c2a8fda
   event: CH2_Dargonus_InquisitorTruth_71
   text: '"Повлияла? Как интересно вы валите все на госпожу Вьятт, а себя выставляете жертвой".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: a8a1b303-cf60-422a-8315-a2ca7decc619
   event: CH2_Dargonus_InquisitorTruth_72
   text: '"Какого рода {d|Encyclopedia:Ch2_BottomlessPitDarkness}жертвы{/d} вы приносили ксеноаномалии, принявшей формы бездонной
     пропасти и являвшей вам свои богохульные видения? Или вы предполагали, что это тоже тайна?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 3887eed7-a6c7-4500-b074-6065324513ed
   event: CH2_Dargonus_InquisitorTruth_73
   text: '{n}Помолчав, инквизитор тяжело произносит:{/n} "Не сегодня, но так мы и поступим. Пока мы попробуем обернуть ваше
     промедление к нашей пользе. Впереди нас ждут непростые времена, и оружие, которое способно производить данная планета,
     не будет лишним. Но помните, что это — лишь отсрочка приговора".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 9b12cf00-33e1-4676-8051-437ccad37f14
   event: CH2_Dargonus_InquisitorTruth_74
   text: '"Я исполню любой приказ, Лорд-инквизитор. Если вы повелите мне продолжить сопровождать наследни{mf|ка|цу} династии
     фон Валанциус, я не буду опечален".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 6d1af5c7-16f4-46e9-a36e-831add9a03b6
   event: CH2_Dargonus_InquisitorTruth_75
   text: '"В знак серьезности надежд, которые я питаю на ваш счет, я могу выделить в сопровождение вам Хейнрикса. Он — мой
     лучший агент, и я не стал бы предлагать его компанию никому, кроме самого доверенного союзника".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 8a645b97-6f75-47b5-a039-c9fb7f53d328
   event: CH2_Dargonus_InquisitorTruth_76
   text: '"Надеюсь, вы оцените щедрость этого предложения, как оценила в свое время ваша предшественница".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: a8bbff00-c8ae-49a9-ac54-cade02748315
   event: CH2_Dargonus_InquisitorTruth_77
   text: '"Да-да, ваша с ними вражда общеизвестна... Но можно посмотреть на нее иначе. На Веабос-6 вы встретились с архонтом
     могучего кабала — чье присутствие там уже само по себе странно, — и выжили. Впоследствии вы неоднократно сталкивались
     с ее ближайшими прихвостнями — и вновь уцелели. Ваша столица пала жертвой коварной атаки, но и тут кинжалы убийц разминулись
     с вашим сердцем".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: b34f2cfb-7a62-4f7c-910e-c3c67cd89966
   event: CH2_Dargonus_InquisitorTruth_78
   text: '"Без сомнения. Господин ван Калокс заслужил мое полное доверие, неоднократно проявив отвагу, преданность и смекалку.
     Его математический, не склонный к сантиментам ум очень полезен в экстренных ситуациях. Из тебя, дорогой Хейнрикс, получился
     куда лучший агент, чем вышел бы пилот Имперского Рыцаря".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 47dfd4f0-b2d4-4fb6-8606-936c5d117bc9
   event: CH2_Dargonus_InquisitorTruth_79
   text: '"А третий и последний Вольный Торговец внезапно гибнет в результате предательского удара собственного Мастера шепотов.
     Простор стремительно остается без защитников в тот самый момент, когда сообщение с Империумом прервано разбушевавшимся
     варпом. Фактически, он может рассчитывать лишь на меня... и на вас, если вы будете следовать моим инструкциям".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 608db193-b1ac-4108-aae0-3d131419e5d6
   event: CH2_Dargonus_InquisitorTruth_80
   text: '"Среди недавних ваших свершений выделяются подавление мятежа на Янусе, схватка со слугами {g|Encyclopedia:Chaos}Архиврага{/g}
     на Кьяве Гамма и, конечно, особый интерес, питаемый к вам {g|Encyclopedia:Drukhari}друкари{/g}. Их и обсудим". {n}Произнеся
     это, инквизитор бросает на вас внимательный взгляд исподлобья — словно игрок в {g|Encyclopedia:Regicide}регицид{/g}, сделавший
     первый ход и наблюдающий за реакцией оппонента.{/n}'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 50f4ed64-1f87-449d-9bf3-d788ea3ac290
   event: CH2_Dargonus_InquisitorTruth_81
   text: '"В таком случае мы достигли консенсуса, чему я весьма рад".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: ab010ba7-4a99-4588-9611-1d7bf275104f
   event: CH2_Dargonus_InquisitorTruth_82
   text: '"Отнюдь, дорог{mf|ой|ая} {name}. Вопросов множество. Как вышло, что вам удалось уцелеть в схватке, в которой погибла
     Теодора, многократно более опытная и умелая? Является ли совпадением, что именно вам — единственно{mf|му|й} — удалось
     после этого вырваться из ловушки на Райкаде Минорис? Сколько правды в слухах еретика Кунрада Войгтвира, распространяемых
     о вас?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 83a966ea-55f6-453a-9b5d-beecb1a4c027
   event: CH2_Dargonus_InquisitorTruth_83
   text: '"Удивительное везение — быть персональным врагом столь влиятельного ксеноса, столько раз подвергнуться ее атакам,
     но остаться в живых. Настолько удивительное, что поневоле задумаешься — а не разыгрывают ли для тебя спектакль? И не являются
     ли все эти зрелищные мясорубки своеобразным алиби, призванным раз и навсегда зарекомендовать вас как врага ксеносов, но
     никоим образом не союзника или даже агента?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 79ee8ab5-d7cd-4598-8e82-cdf42ddeee01
   event: CH2_Dargonus_InquisitorTruth_84
   text: '{n}Калькасар умолкает, словно дает понять, что обсуждение данной темы закончено, а затем вкрадчиво, словно невзначай,
     интересуется:{/n} "Ну а машину-то вы зачем сломали? Столько важных разведданных было утрачено... В донесении господина
     ван Калокса значится, что он ясно дал вам понять, насколько они ценны, и однозначно потребовал не вмешиваться в расследование".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 5e323305-dfd4-4bf2-856a-80500d7e175c
   event: CH2_Dargonus_InquisitorTruth_85
   text: '{n}Инквизитор не сдерживает усмешки.{/n} "А вы, значит, уже в компанию к святому Друзу метите? Амбициозно. Что же,
     буду иметь это в виду".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: ecd19881-5a2b-444d-a2f4-93387fc9a678
   event: CH2_Dargonus_InquisitorTruth_86
   text: '"Осторожнее со словами, Вольный Торговец. Поверьте, если понадобится — я осужу. И если вам мои аргументы кажутся
     неубедительными, это решительно ничего не поменяет. Главное, чтобы они казались убедительными мне".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: ba3b3232-babb-4b07-80ed-d2d36c9423e7
   event: CH2_Dargonus_InquisitorTruth_87
   text: '"На этом нам пора проститься. Шаттл уже ждет меня. Мне пора возвращаться к своему дозору, вам — спать..." {n}Лорд-инквизитор
     бросает взгляд на завозившегося церемониймейстера.{/n} "А вашему слуге — просыпаться. До встречи, {name}".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 86e00510-4bf1-478e-89d2-89fd7c86db96
   event: CH2_Dargonus_InquisitorTruth_88
   text: '"Грубо, Вольный Торговец. Очень грубо и неубедительно вы строите из себя легкомысленн{mf|ого|ую} дур{mf|ачка|очку}.
     Так вы не обманете и самого завалящего арбитра в Империуме. Старайтесь лучше".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: d3aa69b5-dab5-473a-9f99-810ee5fbeaad
   event: CH2_Dargonus_InquisitorTruth_89
   text: '"По крайней мере вы не отрицаете очевидное. Это уже хорошее начало. Просто запомните, что, если вдруг пожелаете покаяться,
     я приму чистосердечное признание с тем же снисхождением, с которым принял эти ваши слова".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: b66c638f-5866-4ce6-ab92-ef0510139108
   event: CH2_Dargonus_InquisitorTruth_90
   text: '"Похвальная мотивация, но никуда не годное исполнение. В следующий раз доверьте задачу трактовки своего долга перед
     Императором сотруднику Инквизиции подле вас. Иначе рискуете очень сильно задолжать".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 91c0e308-e7ba-45c3-b871-ca99719009ca
   event: CH2_Dargonus_InquisitorTruth_91
   text: '"Вы считаете, что более компетентны в оценке угроз, чем я и господин ван Калокс? Это любопытное суждение". {n}Лорд-инквизитор
     как-то по-особенному смотрит на вас... без выражения смотрит.{/n}'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 424954bb-e3ce-4b30-aea7-4f9dda775d30
   event: CH2_Dargonus_InquisitorTruth_92
   text: '"Остроумный ход. Но всех повинных в небрежении в рядах {g|Encyclopedia:AdeptusMechanicus}Братства Марса{/g} я уже
     обнаружил и наказал. Сейчас я оцениваю деятельность вашей династии".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 49a56a08-7510-468d-a047-3a3ee9c7c54f
   event: CH2_Dargonus_InquisitorTruth_93
   text: '"Рад слышать, что вы пересмотрели свои взгляды и осознали ошибки. Это не уменьшает долг, в котором вы находитесь
     перед Инквизицией, но внушает надежду, что долг этот закроете вы, а не ваш наследник".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 75eb919a-227b-4d31-9cdb-908338820c85
   event: CH2_Dargonus_InquisitorTruth_94
   text: '{n}Голос инквизитора становится еще более вкрадчивым и тихим.{/n} "Опасное заблуждение. Возможно, вас это расстроит,
     но я буду вам указывать, какую богохульную мерзость вы имеете право уничтожить, а какую не посмеете тронуть и пальцем".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 62f1f80a-8d52-4b39-93c8-371a58ae405f
   event: CH2_Dargonus_InquisitorTruth_95
   text: '"Разве? Мы в ваших покоях, а не в исповедальной камере. Вы в полном здравии, к вам не применяются разнообразные интересные
     инструменты и методики, способствующие искренности. Уверяю, вы бы сразу поняли, если бы наша беседа превратилась в допрос".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 0739f433-c02e-4f01-8223-0037b697ce76
   event: CH2_Dargonus_InquisitorTruth_96
   text: '"О, я и так все знаю. Хотя вы и эффективно {d|Encyclopedia:Ch2_JanusVistenzaDead}избавились{/d} от всех свидетельств,
     способных указать на просчет династии фон Валанциус. Печально осознавать, что с попустительства Вольного Торговца к власти
     пришла еретичка, которая не один год пестовала свой культ".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 8660f492-a49d-4246-8a1b-531ee66ffcc2
   event: CH2_Dargonus_InquisitorTruth_97
   text: '{n}Заметив ваше промедление, инквизитор блекло усмехается.{/n} "Не утруждайте свою память. Моя война ведется на тайных
     фронтах, и боевые сводки с них тщательно фильтруются. Поверьте, вам не нужно знать, с чем мне приходится сталкиваться
     и какие меры приходится порой принимать. Это — опасное для разума знание".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: cebbb0f0-14a4-47f0-a345-e22f1d068e00
   event: CH2_Dargonus_InquisitorTruth_98
   text: '"Почему вы предпочли {d|Encyclopedia:Ch1_RaycadNoExterminatus}проигнорировать{/d} предупреждение сотрудника Инквизиции,
     что длительное пребывание возле гибнущего Райкада Минорис может принести порчу на ваш корабль? Было ли это продиктовано
     заботой о людях или... запретным интересом?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 09f5c98e-3cce-489c-afe2-a58e9f7fc810
   event: CH2_Dargonus_InquisitorTruth_99
   text: '"Само наличие этих вопросов вызвало бы сомнения в вашей благонадежности у многих моих коллег. Но, в данной ситуации,
     не вызовет".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: dc98b063-ea01-4ec2-88fa-b719fd7fb5c0
   event: CH3_ArenaFirstVisit_05
   text: '{n}Возвысив голос, Комиссар триумфально восклицает:{/n} "Император смотрит на нас! Не оплошаем под взором Его, соратники!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 4140f941-eca2-42e7-8b15-e6a91b517b79
   event: PRL_AfterKillingBeast_01
   text: '"Какой... подозрительно своевременный несчастный случай. Сервиторы вышли из строя на офицерской палубе как раз тогда,
@@ -558,150 +933,255 @@ phrases:
     полу, Кунрад снимает с пояса {g|Encyclopedia:Vox}вокс-передатчик{/g} и отрывисто отдает несколько команд в переговорное
     устройство. Затем он поворачивается к вам.{/n} "Я отдал команду блокировать переходы между верхним и средним сегментами
     обитаемых палуб. В случае намеренной атаки это должно помешать злоумышленникам... развить свой план".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 3236d0ef-c82c-4a1e-bd58-1a7b4b0554d6
   event: PRL_AfterKillingBeast_02
   text: '{n}Складки на лбу Кунрада разглаживаются, его голос приобретает обычную обходительность.{/n} "Я вынужден остаться
     здесь, {name} — для безопасности Леди Теодоры я должен лично проконтролировать выполнение приказов. Надеюсь, вам не составит
     труда самостоятельно добраться до смотровой площадки — она расположена в конце этого коридора". {n}Мастер шепотов коротко
     откланивается.{/n}'
+  speaker: null
+  gemini_voice: null
+  gemini_text: null
 - guid: ef4aed7f-a832-408f-8892-f7a1e270cfee
   event: PRL_BeforeFinalBattle_01
   text: '{n}Эдельтрад, держащийся за багряную рану в груди, бросает на вас ненавидящий взгляд.{/n} "Предатель{mf||ница}...
     В минуту, когда нужны были все силы для решительного удара, ты остал{mf|ся|ась} в стороне! Только не утверждай, что {g|Encyclopedia:Vox}вокс{/g}-трансляции
     не достигли тебя!"'
+  speaker: Эдельтрад
+  gemini_voice: Umbriel
+  gemini_text: null
 - guid: a879a612-e07f-44f2-8c22-235d4f67873e
   event: PRL_BeforeFinalBattle_02
   text: '{n}Эдельтрад выглядит потрепанным, но целым. Взглянув на вас, он встревоженно переводит взгляд за вашу спину.{/n}
     "Ты здесь, {name}... но где же Лорд-капитан?"'
+  speaker: Эдельтрад
+  gemini_voice: Umbriel
+  gemini_text: null
 - guid: 9c131aa3-d0ea-4dab-8a97-bd2aa7dcae02
   event: PRL_BeforeFinalBattle_03
   text: '{n}Эдельтрад, держащийся за багряную рану в груди, бросает на вас измученный взгляд.{/n} "Подмога? Боюсь, {d|Encyclopedia:Prologue_WentBack}уже
     поздно{/d}, чтобы переломить ход событий. Но, если у тебя достанет чести, мы можем хотя бы с достоинством отдать свои
     жизни — за {g|Encyclopedia:RogueTrader}Вольного Торговца{/g}".'
+  speaker: Эдельтрад
+  gemini_voice: Umbriel
+  gemini_text: null
 - guid: 1f20bb7d-7b31-4bbd-b8bf-7037377a5bf4
   event: PRL_BeforeFinalBattle_04
   text: '{n}Эдель морщится, его перекошенное лицо искажается еще больше.{/n} "Я еще стою на ногах. И моих сил хватит на еще
     одно сражение. Одно волнует меня по настоящему — где Лорд-капитан?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 73adc381-2509-49e0-a1a3-f1a2f85e34fd
   event: PRL_BeforeFinalBattle_05
   text: '{n}Эдель распахивает глаза.{/n} "Бессовестная мразь. Как ты..."'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 89dd86b4-7c08-4950-9362-49cf067802ce
   event: PRL_BeforeFinalBattle_06
   text: '"Что! Ты!" {n}Эдель обращает взор к вам.{/n} "Это твоих рук дело!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: a6ecc92b-80d6-4d9a-8303-b832fc3e087a
   event: PRL_BeforeFinalBattle_07
   text: '{n}Глаза Эдельтрада расширяются.{/n} "Храни нас {g|Encyclopedia:Emperor}Бог-Император{/g}, Вольный Торговец... мертва?!
     Судно лишилось Лорд-капитана, а династия — своей главы..."'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 9aa701d6-def0-4656-90c6-91dd898d5fee
   event: PRL_BeforeFinalBattle_08
   text: '{n}{g|Encyclopedia:Psyker}Псайкер{/g} суживает глаза.{/n} "Я чувствую на тебе печать {g|Encyclopedia:Warp}варпа{/g}...
     {d|Encyclopedia:Prologue_WentWithTheodora}отголосок тех сил{/d}, что терзают корабль. Что это? Эхо ужасов, с которыми
     тебе пришлось столкнуться, или же признание вины?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: a1c44e5d-8622-42c5-ac0f-4f8c8554eb72
   event: PRL_BeforeFinalBattle_09
   text: '"Господин Эдельтрад... нет. Мы были неразлучны все время с момента, когда {name} освободил{mf|ся|ась} от козней Кунрада.
     Лорд-капитан пала от другой руки... и клянусь {g|Encyclopedia:GoldenThrone}Золотым Троном{/g}, я догадываюсь, от чьей!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 350b6d8c-e741-45a6-b831-7c63c7ed2152
   event: PRL_BeforeFinalBattle_10
   text: '"Я не могу поручиться за твои поступки, {name} — ибо то, что произошло на офицерской палубе..." {n}Взгляд Ардженты
     смутен, она смотрит мимо вас.{/n}'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: bd4541e3-cf86-4282-b35c-606f591bc95a
   event: PRL_BeforeFinalBattle_11
   text: '{n}Эдель прожигает вас взглядом еще несколько секунд.{/n} "Возможно. Видит {g|Encyclopedia:Emperor}Бог-Император{/g},
     в рядах этого экипажа уже довольно скверны..."'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: f5a5b896-7f37-4e32-90e0-d7a76db8aad3
   event: PRL_BeforeFinalBattle_12
   text: '"Оставьте эти разговоры на потом. Господин Эдельтрад, с прискорбием сообщаю вам, что Леди Теодора фон Валанциус мертва".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 7e9d7bea-d6c6-4df8-9aa6-0a2698a338f2
   event: PRL_BeforeFinalBattle_13
   text: '{n}Эдельтрад вздрагивает и хватается за плечо — на ваших глазах рукав его камзола лопается, и сквозь ткань пробивается
     два костяных нароста.{/n} "Что за ритуал ни творит там Кунрад... варп слишком силен, я не могу ему противостоять. Я чувствую,
     как меняется тело... как варп звенит в воздухе... Это конец. Мы сгинем в {g|Encyclopedia:Warp}варпе{/g}... вместе с {g|Encyclopedia:Warrant}Патентом{/g}
     и всеми наследниками династии. Враг Человечества торжествует победу".'
+  speaker: Эдельтрад
+  gemini_voice: Umbriel
+  gemini_text: null
 - guid: 14a7692b-2fc4-4116-a9ac-f4a9b264d933
   event: PRL_BeforeFinalBattle_14
   text: '"Время вышло!" {n}Эдельтрад прикусывает костяшку, мучительно о чем-то размышляя. Вы видите, как по белкам его глаз
     словно пробегает волна — очи Эдельтрада наливаются болезненной желтизной.{/n}'
+  speaker: Эдельтрад
+  gemini_voice: Umbriel
+  gemini_text: null
 - guid: db2cc575-8ea3-4383-838c-3e930c02b9b4
   event: PRL_BeforeFinalBattle_15
   text: '{n}Эдель пристально смотрит на вас — в его глазах вновь появляется холодная решимость.{/n} "Тогда мы не имеем права
     склонять головы..."'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 16960dd9-5905-442b-bd28-4c1682740faa
   event: PRL_BeforeFinalBattle_16
   text: '"Слова, достойные праведного!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: c4464629-eede-4bef-be99-31c88cf3ba5e
   event: PRL_BeforeFinalBattle_17
   text: '"Хватит болтать почем зря! {g|Encyclopedia:Navigator}Навигатор{/g} жив и готов вывести корабль из варпа — если с
     мостика ему помогут!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 16ab3ae1-35c8-4fac-b4c5-87972c81839c
   event: PRL_BeforeFinalBattle_18
   text: '"Может, довольно высокопарных слов? {g|Encyclopedia:Navigator}Навигатор{/g} готов вывести корабль из варпа — если
     с мостика ему помогут!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: d9833d24-6495-47d0-90fc-3d6e2b124d9a
   event: PRL_BeforeFinalBattle_19
   text: '{n}Эдель взирает на вас с недоумением. Затем, по мере того, как на псайкера нисходит осознание, его взгляд наполняется
     неверием.{/n} "Нет... Вольный Торговец... мертва?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: dac77cc9-64cc-48c6-8e64-67be943696a0
   event: PRL_BeforeFinalBattle_20
   text: '"Эдельтрад! Стойте!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 57354e67-be94-4625-9003-aee1aed82c23
   event: PRL_BeforeFinalBattle_21
   text: '"Проклятый предатель! Придет время — и ты прольешь свою кровь за смерть Ее Светлости Теодоры! Запомни мои слова,
     ибо это клятва идущего на смерть!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: d84db758-f656-4c3b-88aa-23a1aa815302
   event: PRL_BeforeFinalBattle_22
   text: '"Нет, {name}. Умереть всем вместе — значит позволить огню династии исчезнуть во тьме. Не так. Не сегодня".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: cb198aa7-ff5b-482d-86ad-ed214c20f777
   event: PRL_BeforeFinalBattle_23
   text: '{n}Идира тревожно смотрит на Эдельтрада. Затем — на вас.{/n} "Я такое видала. Лучше... нам лучше отойти от него.
     Изменения уже ускоряются..."'
+  speaker: Идира Тласс
+  gemini_voice: Gacrux
+  gemini_text: null
 - guid: bd236b8f-94cb-4a53-a6b9-01bad5d29b17
   event: PRL_BeforeFinalBattle_24
   text: '{n}Эдельтрад издает разъяренный рев фанатика-безумца.{/n} "Я не буду гибнуть без дела рядом с {mf|тем|той}, кто предал{mf||а}
     свой род. Если последнее, чем я послужу Империуму — это разорву горло врагу Человечества... значит, на то воля Бога-Императора!"'
+  speaker: Эдельтрад
+  gemini_voice: Umbriel
+  gemini_text: null
 - guid: c7571803-1037-4d97-a9c1-3c58c1cf9428
   event: PRL_BeforeFinalBattle_25
   text: '{n}Эдельтрад склоняет голову. Затем вздыхает и смотрит на вас в упор — холодным, надменным взглядом фанатика.{/n}
     "Ритуал не будет завершен — я позабочусь об этом. А ты... позаботься о том, чтобы пустотный корабль вырвался из варпа.
     Позаботься о наших владениях. И прощай".'
+  speaker: Эдельтрад
+  gemini_voice: Umbriel
+  gemini_text: null
 - guid: 45e70f48-5b98-4e51-9ce6-7a0148188d26
   event: PRL_BeforeFinalBattle_26
   text: '"Что? Теодора... мертва?" {n}Кунрад взирает на вас в изумлении — кажется, искреннем.{/n} "Нет! Этого не могло произойти!
     Не сейчас! Я еще не успел..."'
+  speaker: Кунрад Войгтвир
+  gemini_voice: Sadaltager
+  gemini_text: null
 - guid: c6d2ac06-fa7b-43d0-ad71-6e96b4c334c1
   event: PRL_EdgeOfDaybreak_01
   text: '{n}Видение издает каркающий смешок.{/n} "Я есть начало и финал, а также все, что проистекает между ними. Я — глас
     Истины, которой суждено восторжествовать, ибо к этому триумфу ведут все хитросплетения лабиринтов рока".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 58c5bc71-03cf-4b18-a2a4-0cc16e9d2cb5
   event: PRL_EdgeOfDaybreak_02
   text: '"Ты пош{mf|ел|ла} наперекор чужой участи, чтобы украсть ее. Ты принял{mf||а} зов Истины Изначальной — чтобы завладеть
     иной судьбой. Да будет так. Я сплел нити судьбы и {d|Encyclopedia:Prologue_WentWithTheodora}протянул тебе руку{/d}, когда
     пламя воздвиглось на твоем пути. Ты принял{mf||а} ее и тем самым запечатал{mf||а} свою судьбу. В будущем... в будущем
     ты сполна отплатишь мне за эту милость".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 4f9231c5-3fdd-4803-bd03-4e87fb58d02f
   event: PRL_EdgeOfDaybreak_03
   text: '"Кто ты так{mf|ой|ая}, чтобы {d|Encyclopedia:Prologue_WentBack}перечить самой судьбе{/d} во имя чужих участей? Столько
     нитей, протянутых к другим созданиям твоего мира — жалкие, ничтожные связи, что можно смахнуть одним движением. Запутанный,
     небрежный, бессмысленный клубок".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 13b71db8-ba22-4067-8687-82a76fa0ca47
   event: PRL_EdgeOfDaybreak_04
   text: '"Смертн{mf|ый|ая}. Кто ты так{mf|ой|ая}, чтобы перечить самим токам рока?" {n}Видение опускает голову, не отрывая
     уничтожающего взгляда от вас. На мгновение в лице Теодоры что-то меняется — словно на него набегает... {d|Encyclopedia:Prologue_WentThroughFire}тень
     страха{/d}?{/n} "Неважно. Твои шаги — эхо песка, что пересыпается из одной чаши весов в другую. Твои чаяния и вера — моя
     насмешка".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 8bad3e7b-edb8-4093-9fe0-34b9e8c85535
   event: PRL_EdgeOfDaybreak_05
   text: '"Воистину, ибо Истина всеобъемлюща и безбрежна. Лишь часть ее коснулась тебя — но ты откликнул{mf|ся|ась}. Ты можешь
     быть новым чемпионом".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 5c76b4b2-2db5-43ce-9a31-c564e15819ac
   event: PRL_EdgeOfDaybreak_06
   text: '{n}Теодора клекочет — кажется, под этим скрежещущим, разрывающим перепонки звуком подразумевается смех.{/n} "Веди
     за собой, смертн{mf|ый|ая}. Веди, убеждай, заставляй их вступить на твою дорожку. Судьба предначертана — тебе нужны будут
     последователи".'
+  speaker: Теодора фон Валанциус
+  gemini_voice: Kore
+  gemini_text: null
 - guid: ebe853b5-0487-46f2-9dd3-9010557a324f
   event: PRL_EdgeOfDaybreak_07
   text: '{n}Теодора шипит — почти болезненно, словно ваши слова ранят ее.{/n} "Сопротивление неизбежному значит лишь одно
     — осознание и подчинение принесут больше боли. Против токов судьбы нет силы, способной изменить их".'
+  speaker: Теодора фон Валанциус
+  gemini_voice: Kore
+  gemini_text: null
 - guid: 30261dbe-ff01-46cc-b897-9f391a0f78d6
   event: PRL_EdgeOfDaybreak_08
   text: '{n}В голове начинает мутиться, а по вашим щекам скользят тягучие капли. Вы моргаете — и вот перед вами уже не Теодора,
@@ -709,64 +1189,106 @@ phrases:
     "Претендент обещал вернуться с трофеем — реликвией, что может послужить Пределу рассвета. Судьба была предначертана, шаги
     — определены. И все же... ты нарушил{mf||а} нерушимое, заняв место претендента. Я вижу тебя — в день, когда последний
     восход воздвигнется над железным миром. Я вижу тебя подле себя в день, когда я воскресну".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 1de0b6ff-9c01-4f7b-9df4-a6ddaf1a77bb
   event: PRL_EdgeOfDaybreak_09
   text: '{n}Образ сдувает незримыми ветрами колдовства — и вы видите Идиру, в чьих глазах то же пламя и древнее зло.{/n} "Твой
     облик запечатлен в гобеленах грядущего. Я — воля Ткача Судеб, и сегодня я сплету новую нить из прихотливых вероятностей
     и ускользающих шансов. Нить, что выведет тебя из пасти необратимости. Нить, что позволит тебе отыскать ключи к спасению.
     Нить, что приведет тебя и орудие нашего возрождения ко мне".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: f2e57fee-5a95-4ca8-82d6-14fee2e16974
   event: PRL_EdgeOfDaybreak_10
   text: '{n}Перед глазами проносятся смазанные картины еще неизвестного вам будущего. Вспышка алого... пурпурного... словно
     калейдоскоп, картины сменяют друг друга в бешеном ритме, не позволяя даже разглядеть себя. Сквозь марево на вас смотрит
     искаженный лик Абеляра, верного сенешаля династии.{/n} "Путь проложен, Дитя Рассвета. Нить сплетена. Ступай же по ней...
     мо{mf|й|я} слуга".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 87a9c996-3112-471c-9226-57310ca0ef01
   event: PRL_EmperorProtects_01
   text: '"...по{mf|дин|жа}! Госпо{mf|дин|жа}, вы меня слышите?" {n}Сквозь гул и биение прорывается знакомый голос — это сенешаль
     Абеляр Версериан, склонившийся над вами и обеспокоенно заглядывающий вам в лицо. Заметив ваш взгляд, он облегченно вздыхает:{/n}
     "Вы живы... это больше, чем я от вас ожидал после того, что вы устроили!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 6639a730-c634-48f4-9717-0bfcb8d8c07b
   event: PRL_EmperorProtects_02
   text: '"Ваши попытки пошутить неуместны". {n}Абеляр хмурится.{/n} "Вы едва не сгубили нас всех..."'
+  speaker: Абеляр Версериан
+  gemini_voice: Algenib
+  gemini_text: null
 - guid: bc6b3b9a-c559-4348-80ba-69cf22ac093f
   event: PRL_EmperorProtects_03
   text: '{n}Идира отирает рот и хрипит:{/n} "Что стало с Леди Теодорой? Она пошла за нами?"'
+  speaker: Идира Тласс
+  gemini_voice: Gacrux
+  gemini_text: null
 - guid: 8328df7e-f3ac-4630-9efa-1db566e0d6f0
   event: PRL_EmperorProtects_04
   text: '"Не было никакой Теодоры, ведьма". {n}Арджента смотрит прямо перед собой, а затем складывает руки на груди, осеняя
     себя святым знамением.{/n} "Был морок, и искушение, и скверна, что пыталась сбить нас от пути. Но {name} распознал{mf||а}
     их природу!"'
+  speaker: Сестра Арджента
+  gemini_voice: Laomedeia
+  gemini_text: null
 - guid: cfa9a312-b948-4b6b-b851-b586f79acb28
   event: PRL_EmperorProtects_05
   text: '"Да неужели, святоша? А что же, Лорд-капитан нам, значит, привиделась всем? Абеляр, ну скажи хоть ты!.."'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: b8bbb2d4-0fef-4937-8d46-80c6cc5fcaa1
   event: PRL_EmperorProtects_06
   text: '"Что бы там ни было... уже не важно". {n}Сенешаль вздыхает.{/n} "Ваш поступок, {name}, граничит с безумием... или
     святостью. За вами словно проход открылся: там, где пламя секунду назад бушевало — вдруг одни угли тусклые... хотя что
     я несу! Показалось мне, дымом надышался — были бы у вас такие раны, если бы огонь вас не тронул!"'
+  speaker: null
+  gemini_voice: null
+  gemini_text: null
 - guid: 4dbe50f5-33dd-425a-a12b-5528583b840e
   event: PRL_EmperorProtects_07
   text: '{n}От вашего тона Абеляр замирает, а затем торопливо осеняет себя святым знамением.{/n} "Воистину защищает, {name}.
     Не видел бы сейчас сам — никогда бы не поверил..."'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 291021a2-3907-4005-8212-29929212c5bb
   event: PRL_EmperorProtects_08
   text: '{n}Абеляр окидывает взглядом помещение, а затем снова смотрит на вас — с удвоенным беспокойством.{/n} "Вы бредите,
     {name}. Что бы вам там не померещилось..." {n}Офицер явно смущен вашими словами — он еще раз, украдкой, бросает взгляд
     на указанную вами аквилу.{/n}'
+  speaker: Абеляр Версериан
+  gemini_voice: Algenib
+  gemini_text: null
 - guid: 125ac37d-8b1e-4489-bf7f-ff3fefdb54a2
   event: PRL_EmperorProtects_09
   text: '"Слава {g|Encyclopedia:Emperor}Императору{/g}!" {n}Арджента опускается на одно колено, и вы впервые видите в ее глазах
     ничем не замутненную, сияющую радость.{/n} "Мы прошли сквозь пламя! О, разве это не знамение... Ибо сказано ясно — Император
     благословит достойнейших и упорных в вере!"'
+  speaker: Сестра Арджента
+  gemini_voice: Laomedeia
+  gemini_text: null
 - guid: 27882352-332a-4aee-b957-40ce227773e6
   event: PRL_EmperorProtects_10
   text: '"Раны — лишь знак пройденного с честью испытания. Ими надлежит гордиться, как орденами и наградами". {n}Теперь в
     голосе Ардженты звучит гордость, даже задор.{/n}'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: c743aeb0-7cfd-4da5-add2-1822e8c5a5a2
   event: PRL_MutinyBegins_01
   text: '{n}Теодора властно взмахивает рукой.{/n} "Морт! Бери людей и расчисти дорогу до транспортной линии! Убедись, что
     ни один выродок не выжил!"'
+  speaker: Теодора фон Валанциус
+  gemini_voice: Kore
+  gemini_text: null
 - guid: 032d76f9-0c09-4c7c-8052-996e664740ed
   event: PRL_MutinyBegins_02
   text: '{n}{g|Encyclopedia:RogueTrader}Вольный Торговец{/g} переводит взгляд на вас.{/n} "Не моргнул{mf||а} и глазом, когда
@@ -774,72 +1296,117 @@ phrases:
     — ощущение ложной безопасности делает их чувствительными к жестоким реалиям {g|Encyclopedia:Warp}варп{/g}-переходов".
     {n}Теодора опускает взгляд на {g|Encyclopedia:Vox}вокс{/g}, который держит в руке. До вас доносится звук безжизненной
     статики.{/n}'
+  speaker: Теодора фон Валанциус
+  gemini_voice: Kore
+  gemini_text: null
 - guid: 136dd2cb-bdcf-4f1e-a65b-855ecbafa413
   event: PRL_MutinyBegins_03
   text: '"Из того, что мы успели увидеть, {name}, могу предполагать, что мы имеем дело с варп-психозом той или иной разновидности".
     {n}Абеляр поразительно спокоен для человека, только что пережившего внезапное нападение.{/n} "Для пустотников, оказавшихся
     за пределами реального мира, подобные эксцессы не редкость... хотя обычно они остаются в пределах палуб".'
+  speaker: Абеляр Версериан
+  gemini_voice: Algenib
+  gemini_text: null
 - guid: 218468d2-0b13-42bb-98f4-158fb6b1a409
   event: PRL_MutinyBegins_04
   text: '{n}Теодора несколько раз щелкает воксом.{/n} "Ретрансляторы не работают. Или выведены из строя. Либо варп играет
     с нами шутки, либо кто-то постарался оборвать связь на корабле. Мне нужно связаться с Главным {g|Encyclopedia:Enginseer}технопровидцем{/g}
     по выделенному каналу, прежде чем станет ясно, с чем именно мы столкнулись. В любом случае — держите оружие под рукой.
     Сомневаюсь, что оно нам больше не пригодится".'
+  speaker: Теодора фон Валанциус
+  gemini_voice: Kore
+  gemini_text: null
 - guid: 59a7b57e-4ba1-4776-a251-38e8d8b61a29
   event: PRL_MutinyBegins_05
   text: '{n}Сенешаль бросает на вас мрачный взгляд.{/n} "Поверьте, {name}, для экипажа, насчитывающего тысячи человек, это
     неудивительно. Нижние палубы — благодатная среда для разведения недовольств и ересей, сколько не выжигай их ростки. Стоит
     небольшому варп-влиянию затуманить мозги обычно покорному скоту..."'
+  speaker: null
+  gemini_voice: null
+  gemini_text: null
 - guid: ea724255-9ae5-4d75-a08c-315ef9ccec94
   event: PRL_MutinyBegins_06
   text: '"Вероятно. Очень вероятно". {n}Теодора морщится, щелкая тумблером на воксе.{/n} "Разбираться будем позже — прямо
     сейчас нужно изолировать затронутые отсеки и попытаться понять, что происходит".'
+  speaker: Теодора фон Валанциус
+  gemini_voice: Kore
+  gemini_text: null
 - guid: 733f2512-f962-4a39-8db5-8dbea983a71e
   event: PRL_MutinyBegins_07
   text: '{n}Теодора кидает взгляд в сторону.{/n} "Морт отправился расчищать нам дорогу — если хочешь быть полезн{mf|ым|ой},
     ступай по его следам и убедись, что архмилитанту не нужна помощь. И поживее".'
+  speaker: Теодора фон Валанциус
+  gemini_voice: Kore
+  gemini_text: null
 - guid: 2a4eed4f-ebd2-43cb-a31f-75648f12a64c
   event: PRL_MutinyBegins_08
   text: '"Спорадические бунты нижних палуб никогда не докатываются до этих отсеков!" {n}- огрызается Теодора, от чего старый
     офицер, кажется, чуть приседает.{/n} "Нет, бузотерство швали всегда остается в пределах их собственных территорий. Тут
     слишком хорошая организация. Слишком эффективное продвижение..."'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: fdb14699-616e-4862-8eab-cec0f8c56766
   event: PRL_NewRogueTrader_01
   text: '{n}Абеляр отвечает не сразу: вы видите, как гуляют его желваки, как старый офицер бесплодно силится начать говорить.
     Наконец, одернув окровавленный китель и выпрямившись, сенешаль произносит:{/n} "Как Первый офицер, я обязан... я обязан
     уведомить вас, с величайшим прискорбием и неизбывным трауром в душе, что Лорд-капитан Теодора фон Валанциус мертва. Да
     хранится вечно память ее в анналах династии".'
+  speaker: Абеляр Версериан
+  gemini_voice: Algenib
+  gemini_text: null
 - guid: 39d85534-2bc3-4e82-bed0-c83e3a8ed847
   event: PRL_NewRogueTrader_02
   text: '{n}Переждав первую волну изумленных вскриков, Абеляр бросает на вас взгляд — и продолжает:{/n} "По праву кровной
     преемственности и за отсутствием иных родичей, способных опротестовать сие решение..."'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 30651f28-8615-4f8f-8216-6d22f037b312
   event: PRL_NewRogueTrader_03
   text: '{n}Сенешаль оборачивается к вам — кажется, постарев на добрый пяток лет.{/n} "Дело сделано, {name}... прощу прощения.
     Я хотел сказать — Ваша Светлость Лорд-капитан".'
+  speaker: null
+  gemini_voice: null
+  gemini_text: null
 - guid: ff9ac85c-bb3d-4a81-9d5d-0569196eaaaf
   event: PRL_NewRogueTrader_04
   text: '"...правопреемником Теодоры фон Валанциус становится {name} — законн{mf|ый|ая} наследни{mf|к|ца} Торгового Патента
     и звания Вольного Торговца. Официальная церемония возвышения будет проведена позже, а пока..." {n}Абеляр осекается и смотрит
     на растерявшихся офицеров.{/n} "Языки проглотили? Приветствуйте сво{mf|его|ю} влады{mf|ку|чицу} — {mf|его|ее} чаяниями
     мы все с вами все еще живы!"'
+  speaker: Абеляр Версериан
+  gemini_voice: Algenib
+  gemini_text: null
 - guid: 3a95cb24-9072-484c-a1ae-ae2671204240
   event: PRL_NewRogueTrader_06
   text: '{n}Абеляр рассеянно кивает в ответ.{/n} "Навигатор отдал свою жизнь в борьбе со штормом, что захватил судно фон Валанциус.
     Мы почтим его память вместе с памятью всех, кто погиб в этот день".'
+  speaker: Абеляр Версериан
+  gemini_voice: Algenib
+  gemini_text: null
 - guid: 19ace1c5-6572-4115-ba15-89824c314309
   event: PRL_NewRogueTrader_07
   text: '{n}Равор и не думает отворачиваться — он пристально разглядывает вас, сведя вместе белые брови.{/n} "Сенешаль...
     теперь-то скажете нам... кто это? Где Лорд-капитан?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: e669a6cf-3bd5-4459-98d0-6cb0d28a667b
   event: PRL_NewRogueTrader_08
   text: '{n}Равор оборачивается и взирает на вас снизу вверх. Помедлив несколько секунд, он обращается к стоящему рядом с
     вами Абеляру.{/n} "Сенешаль, Святилище Навигатора молчит. Вокс-сигнал в норме, так что..."'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 603ff722-64d8-44b0-9a34-a4606d377284
   event: PRL_OfficerReadyToTranslate_01
   text: '"Храни нас Император, сенешаль! Живой!" {n}Беловолосый мужчина с болезненно-бледной кожей берет под козырек.{/n}
     "Полегче чего спросили бы — тут все вокруг какой-то богомерзкой дрянью так поросло, что полгода вид-скрины раскапывать
     будем..."'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: efa3e435-7594-4c58-9db2-b1d80a06a714
   event: PRL_OfficerReadyToTranslate_02
   text: '"Восстановить вокс-канал со Святилищем Навигатора. Подготовить персональный состав. Начать подготовку к трансляции
@@ -847,30 +1414,51 @@ phrases:
     но трансляция — не та вещь, которую хочется делать не по правилам. Вы — единственн{mf|ый|ая} представитель{mf||ница} династии
     фон Валанциус. Пускай вы и не Лорд-капитан, но вы более всех остальных заслуживаете занять ее место в предстоящем ритуале".
     {n}Абеляр указывает глазами вверх — на трон, красующийся на вершине высоких ступеней.{/n}'
+  speaker: Абеляр Версериан
+  gemini_voice: Algenib
+  gemini_text: null
 - guid: ced566d2-a912-40a2-a33f-4c708a24e4e9
   event: PRL_OfficerReadyToTranslate_03
   text: '"Займите место Лорд-капитана. Отдайте приказ о финальной подготовке. Дождитесь рапортов офицеров... а-а, проклятье!
     Это же наука целая, за пять минут не объяснишь! Просто поднимитесь на трон, госпо{mf|дин|жа} {name} — людям предстоит
     совершить невозможное, пускай их хоть силуэт на привычном месте успокоит. Давайте же, каждая секунда на счету!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 579bb3b9-2359-44c5-8c34-b79132946896
   event: PRL_OfficerReadyToTranslate_04
   text: '"Равор! Главный кормчий! Рапорт о состоянии систем!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: af273c17-2531-4977-a64b-01336118fdef
   event: PRL_OfficerReadyToTranslate_05
   text: '{n}Мужчина оглядывается, окидывая взглядом мостик.{/n} "Провидением чьим-то разве что... только и надежд, что Императоровым,
     а не кого другого. Когда сюда ворвались эти, с Мастером шепотов, часть офицеров бросилась в атаку, да куда там... я тех,
     кого успел, затащил за когитаторы, а потом начал молиться, чтобы подмога подоспела".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: bad20e5a-555f-4572-9c7c-75e51a326c05
   event: PRL_ToTheBridgeLate_01
   text: '"{d|Encyclopedia:Prologue_WentBack}Опоздали! Опоздали!{/d}" {n}Абеляр сокрушенно всплескивает руками.{/n} "Либо Эдельтрад
     и его люди вообще не добрались сюда — что еще хуже!"'
+  speaker: Абеляр Версериан
+  gemini_voice: Algenib
+  gemini_text: null
 - guid: 6471bc28-0b21-4d08-80bb-646c178e4447
   event: PRL_ToTheBridgeLate_02
   text: '"Либо они дают бой на командном мостике", {n}Арджента сжимает оружие.{/n} "Без нас!"'
+  speaker: Сестра Арджента
+  gemini_voice: Laomedeia
+  gemini_text: null
 - guid: e45bd0a0-c8aa-43f4-940f-fff0c360a31f
   event: PRL_ToTheBridgeLate_03
   text: '"Ваша светлость, простите, что отрываю..." {n}Офицер торопливо кланяется.{/n} "Люди спрашивают, что им делать? После
     того, как вы не бросили нас, подданные за вами и в огонь, и в воду..."'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: e04a1d67-7c65-4856-8e26-7c4b198a45e3
   event: PRL_ToTheBridgeLate_04
   text: '"На мостик, немедленно! Если Эдельтрад там, значит, ему нужна помощь". {n}Абеляр поворачивается к вам.{/n} "Знаете,
@@ -878,131 +1466,224 @@ phrases:
     самое место — на мостике, во главе контрудара... Неспокойно мне. А если Вольного Торговца осадили в собственных палатах?
     С вашего дозволения — давайте удостоверимся, что это не так. Мы можем воспользоваться тем же подъемником, к которым ушли
     Леди Теодора и Морт".'
+  speaker: Абеляр Версериан
+  gemini_voice: Algenib
+  gemini_text: null
 - guid: 0e075bcc-e3d1-4ae5-8575-e2244404bab4
   event: PRL_ToTheBridge_01
   text: '{n}Эдельтрад фон Валанциус взирает на вас с нескрываемым изумлением — и трепетом.{/n} "{name}... не подводят ли меня
     мои глаза? Готов поклясться, что я только что видел, как ты {d|Encyclopedia:Prologue_WentThroughFire}прош{mf|ел|ла} сквозь
     столб пламени{/d}, ведя за собой остальных..."'
+  speaker: Эдельтрад
+  gemini_voice: Umbriel
+  gemini_text: null
 - guid: 1876d007-d113-4488-adad-45fec2616170
   event: PRL_ToTheBridge_02
   text: '"Воистину, {name}". {n}Эдельтрад осеняет себя знамением {g|Encyclopedia:Aquila}аквилы{/g} и бросает на вас еще один
     взгляд — на этот раз обеспокоенный.{/n} "Твои раны..."'
+  speaker: Эдельтрад
+  gemini_voice: Umbriel
+  gemini_text: null
 - guid: 9e71b97e-872c-4441-bedb-e15953a26983
   event: PRL_ToTheBridge_03
   text: '"Я не ожидал, что ты сможешь добраться вовремя — в конце концов, бунт застал весь экипаж врасплох в разных концах
     судна... послушай, и все же — твои раны..."'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 48349fde-3248-4885-b6cb-4c2020676443
   event: PRL_ToTheBridge_04
   text: '"Подобная горячность не доводит до добра... но {g|Encyclopedia:Emperor}Император{/g} благоволит к тебе". {n}Эдельтрад
     оглядывает вас еще раз.{/n} "И все же — твои раны внушают мне беспокойство".'
+  speaker: Эдельтрад
+  gemini_voice: Umbriel
+  gemini_text: null
 - guid: 44fa1078-c11b-435a-84ba-e21f7303f494
   event: PRL_ToTheBridge_05
   text: '{n}Эдельтрад примирительно поднимает руку.{/n} "Прости мою настойчивость. Не мне сомневаться в вере то{mf|го|й},
     что прош{mf|ел|ла} крещение огнем".'
+  speaker: Эдельтрад
+  gemini_voice: Umbriel
+  gemini_text: null
 - guid: 768c0f74-9c7b-459a-a983-5004764bcd95
   event: PRL_ToTheBridge_06
   text: '{n}Эдельтрад кивает, удовлетворенный ответом.{/n} "Тогда — скрепим души. Впереди нас ждет главное испытание".'
+  speaker: Эдельтрад
+  gemini_voice: Umbriel
+  gemini_text: null
 - guid: 2548b94f-14b4-4685-a84d-7478cfd913b1
   event: PRL_ToTheBridge_07
   text: '{n}Эдельтрад высокомерно фыркает.{/n} "Не думаю, что ты можешь позволить себе подобную роскошь, но благодарю за откровенность
     — вряд ли я могу положиться на тебя в бою".'
+  speaker: Эдельтрад
+  gemini_voice: Umbriel
+  gemini_text: null
 - guid: 27db0291-3656-4741-8dc1-1307e89a9923
   event: PRL_ToTheBridge_08
   text: '"У этого лифта, господин Эдельтрад. Лорд-капитан в сопровождении архмилитанта направилась в свои покои за предметом
     необычайной важности. После этого мы получали только общие {g|Encyclopedia:Vox}вокс{/g}-трансляции".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 2cd3326c-e9cf-41ab-a911-917057233dce
   event: PRL_ToTheBridge_09
   text: '"Я собрал всех, кто смог откликнуться на вокс-призыв и кто способен держать оружие в руках... но я не вижу Лорд-капитана
     и ее архмилитанта. Сообщения с ее голосом продолжают поступать в эфир, однако она не откликается на прямые запросы. Последний
     раз я видел Леди Теодору на смотровой — когда вы расстались с ней?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 4ef84aaa-efc4-478b-b1c3-18fbd116d451
   event: PRL_ToTheBridge_10
   text: '"Нет, {name}". {n}Голос Абеляра сух, однако в нем сквозит искренняя обеспокоенность.{/n} "Не готовы, совершенно.
     Вы едва стоите на ногах после того, что произошло... нам лучше отправиться за Леди Теодорой и предоставить Эдельтраду
     дать бой Войгтвиру". {n}Что-то в голосе сенешаля заставляет вас думать, что в первую очередь Абеляр хочет убедиться в
     безопасности Вольного Торговца, а не вашей.{/n}'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 931d58c8-e03c-4ca9-8079-68911e9899d9
   event: PRL_ToTheBridge_11
   text: '"Это тревожные известия... и весьма не вовремя. Я получаю отрывочные сведения с мостика корабля — там замечен Кунрад
     Войгтвир, и даже скупые рапорты о его действиях воскрешают в моей памяти описания того, как выглядят ведьмовские ритуалы...
     если предатель Кунрад взялся за колдовство — нужно немедленно помешать ему".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 27a2c209-8c1e-4da8-8549-4c4065725f05
   event: PRL_ToTheBridge_12
   text: '{n}Эдельтрад кивает.{/n} "Разумно. Возьми с собой свой отряд — вас могут поджидать по пути. Как только вы встретитесь
     с Лорд-капитаном — умоляйте ее отправляться на мостик и возглавить контратаку. Появление {g|Encyclopedia:RogueTrader}Вольного
     Торговца{/g} вселит надежду в сердца защитников, сколь бы напуганы или усталы они ни были".'
+  speaker: Эдельтрад
+  gemini_voice: Umbriel
+  gemini_text: null
 - guid: 260347e6-a3a2-4be8-9e86-638aa9b91740
   event: PRL_ToTheBridge_13
   text: '"До встречи, {name}. Да благословит {g|Encyclopedia:Emperor}Император{/g} ваши деяния, и увидимся на поле боя". {n}Эдельтрад
     салютует вам оружием и поворачивается к своей свите.{/n}'
+  speaker: Эдельтрад
+  gemini_voice: Umbriel
+  gemini_text: null
 - guid: 2bda68a8-f2d9-429e-9610-7ff9ee5810ea
   event: PRL_ToTheBridge_14
   text: '{n}Псайкер скалится вам в ответ.{/n} "Видишь следы моего "благословения", {name}? Да, варп забирает свое... но я
     еще в трезвом уме и в силах держать оружие. Я буду биться за род фон Валанциус до конца — даже если мне это будет стоить
     вечного проклятия мутанта!"'
+  speaker: Псайкер (NPC)
+  gemini_voice: Gacrux
+  gemini_text: null
 - guid: efbfaf32-9763-41c2-a1b6-55ac180391c8
   event: PRL_WarrantSentinel_01
   text: '"Что-то забыл{mf||а}, {name}? Поторопись".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: cd1f2d20-78a2-4dfa-9158-86279d3519ce
   event: PRL_WarrantSentinel_02
   text: '"...окое содержание едких гуморов. Объект в состоянии повышенного стресса. Вам нужна помощь?"
 
     {n}Вы не понимаете, откуда исходит этот тихий голос, напоминающий треск статики. От Стража? От когитатора? Появляется
     в вашем усталом сознании сам собой? Как бы то ни было, вы отчетливо слышите каждое слово.{/n}'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: a3f7f6df-78e1-46e7-8871-e0c8d90b6bc6
   event: PRL_WarrantSentinel_03
   text: '{n}Вы слышите голос вновь — и теперь отчетливо понимаете, что он льется из двух динамиков, вмонтированных в плечи
     Стража.{/n} "Генетический код распознан. Дитя династии фон Валанциус, требуется ли тебе помощь?"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 1ae93bb8-36de-45a5-bfda-93bf071d38a1
   event: PRL_WarrantSentinel_04
   text: '"Запрос взят в исполнение. Исполняю протокол защиты".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 93eaeadd-6adb-47aa-af0d-45e37840a92d
   event: PRL_WarrantSentinel_05
   text: '{n}Скрип, который издает сервочереп, постепенно складывается в разборчивые слова:{/n} "...сопровождать дитя династии
     до безопасного места".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 2c20fb71-fb44-404d-9743-d06fff3cfae6
   event: PRL_WarrantSentinel_06
   text: '"...передвижная единица Стража {g|Encyclopedia:Warrant}Патента{/g} для персонального сопровождения дитя династии
     и обеспечения связи с подданными Вольного Торговца. Передвижная единица готова к исполнению приказов".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 5354580b-ec0a-4e03-8073-73198ef1a07e
   event: PRL_WarrantSentinel_07
   text: '"...временное помрачение рассудка ввиду переживания острой стрессовой ситуации. Передвижная единица Стража {g|Encyclopedia:Warrant}Патента{/g}
     готова к исполнению приказов".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 107124fa-7890-4fbb-82dc-ebaa259733e4
   event: PRL_WarrantSentinel_08
   text: '"...частоты {g|Encyclopedia:Vox}вокс{/g}-передач нарушены, провожу настройку... осуществляю подключение..."'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 64f05955-3b79-4022-b5ce-58d1fc990cdd
   event: PRL_WarrantSentinel_09
   text: '{n}Вместо механического скрежета из вокса сервочерепа начинает литься голос Теодоры фон Валанциус — нечеткий и прерываемый
     помехами, однако совершенно различимый.{/n} "Мастер вокса, восстановите связь со Святилищем Навигатора! Я пытаюсь связаться
     с мостиком... Если меня слышит кто-то на этой частоте — немедленно перегруппируйте имеющиеся силы и направляйтесь на верхние
     палубы! Повторяю: перегруппируйте имеющиеся силы и направляйтесь..."'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 4113c1e0-5f62-4e20-906d-d4b625862924
   event: PRL_WarrantSentinel_10
   text: '"...нарушены протоколы связи, оценка задержки сигнала недоступна. Установление двустороннего соединения невозможна".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 40126079-351a-4b32-9fa8-1695f857d325
   event: PRL_WarrantSentinel_11
   text: '"...удаленность арсеналов от текущей дислокации. Начинаю ситуационные исчисления..." {n}Сервочереп умолкает, щелкая
     реле. Секунда проходит за секундой, и вы понимаете, что сервочереп вам не ответит.{/n}'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: bd651264-d8c5-4ba5-87c5-edcd1ca078ea
   event: PRL_WarrantSentinel_12
   text: '"...средние и верхние палубы. Допускаю вероятность безопасного размещения в местах скопления вооруженных единиц.
     Вычисляю..." {n}Сервочереп дергается и издает несколько щелчков.{/n} "Во избежание прорыва неавторизованных единиц в святилище
     Патента необходимо превентивно запечатать камеру. Мобильная единица приступит к исполнению указа сразу после обеспечения
     безопасности Патента".'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 08a1f7fc-73fe-4c66-813d-910530337b60
   event: speaker_1_bark_Play
   text: '"Сюрприз, {mf|мерзкий ублюдок|мерзкая тварь}! Не ожидал{mf||а} такого поворота? Думал{mf||а}, можешь так просто сюда
     заявиться? Если ты там еще не подох{mf||ла} — ходи и оглядывайся, то ли еще будет!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: bf208e0a-3a2a-42f8-91da-8a089f571dfe
   event: speaker_2_bark_Play
   text: '"Надеюсь, ты еще дышишь? Я намерен продлить твои страдания. Моли о пощаде так, как молили мои ребята, погибая от
     твоих проклятых ксеноигрушек!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: 3f216337-9555-432d-8b32-63b478e8b6e3
   event: speaker_3_bark_Play
   text: '"Видишь эти трупы? Хорошие парни и девки поплатились из-за моей ненасытности. И твоей лжи. Мы оба примем кару Императора,
     готовься!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
 - guid: acd970c0-4368-4d9e-8468-cd7280e84cfd
   event: speaker_4_bark_Play
   text: '"Будь ты проклят{mf||а}, Мерд''Ки! Будь проклят день, когда я с тобой связался! Сдохни от своего же товара, ксеноская
     тварь!"'
+  speaker: null
+  gemini_voice: Charon
+  gemini_text: null
