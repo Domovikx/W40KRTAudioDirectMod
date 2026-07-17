@@ -13,26 +13,28 @@
 
 references:
   wh40k_narrator:
-    wav: refs/narrator/reference.wav
+    wav: refs/narrator/15s_m.wav
     txt: refs/narrator/reference.txt
     x_vector_only: true
-    description: "Наталья Фролова — женский, книжный, спокойный (клон из аудиокниги)"
+    description: "Нарратор — мужской (клон из sampleb)"
     characters:
       - narrator
       - system
       - loading_screen
 
   teodora:
-    wav: refs/teodora/reference.wav
+    wav: refs/teodora/15s_ref.wav
     txt: refs/teodora/reference.txt
-    description: "Теодора — низкий/средний женский, властный, аристократичный"
+    x_vector_only: true
+    description: "Теодора — клон из sampleb (2)"
     characters:
       - Теодора
 
   kunrad:
-    wav: refs/kunrad/reference.wav
+    wav: refs/kunrad/15s.wav
     txt: refs/kunrad/reference.txt
-    description: "Кунрад — средний/низкий мужской, холодный, кибернетический оттенок"
+    x_vector_only: true
+    description: "Кунрад — клон из sampleb"
     characters:
       - Кунрад_Войгтвир
       - Кунрад

@@ -8,5 +8,6 @@ tasks
 nul
 samples
 .env
-tools
+# tools
 tests
+output
