@@ -23,7 +23,7 @@ references:
       - loading_screen
 
   teodora:
-    wav: refs/teodora/15s_ref.wav
+    wav: refs/teodora/15s.wav
     txt: refs/teodora/reference.txt
     x_vector_only: true
     description: "Теодора — клон из sampleb (2)"

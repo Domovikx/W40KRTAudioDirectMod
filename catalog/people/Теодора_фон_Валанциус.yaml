@@ -5,6 +5,7 @@ age: ''
 personality: властная, жёсткая, решительная
 voice: xenia
 gemini_voice: Kore
+qwen3_voice: teodora
 sound_keys:
 - Theodora
 total_phrases: 99
