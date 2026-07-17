@@ -47,6 +47,84 @@ gemini_voice_female: Kore
 gemini_sample_rate: 24000
 gemini_proxy: ""                 # "http://ip:port"
 
+# ─── Qwen3-TTS (локальный, офлайн) ──────────────
+# Дока: tools/qwen3_tts.py, .opencode/skills/qwen3-tts/SKILL.md
+# Зависимости: qwen-tts (pip install qwen-tts)
+# Голоса: 9 встроенных (Dylan, Vivian, Ryan, Aiden и др.)
+# Формат: WAV 24000 Гц, 16-bit, mono
+# Требования: CPU (PyTorch) или NVIDIA GPU (CUDA)
+# Модель: Qwen3-TTS-12Hz-1.7B-CustomVoice (~6GB на диске)
+
+qwen3_model: Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice
+qwen3_voice_male: Ryan
+qwen3_voice_female: Vivian
+qwen3_sample_rate: 24000
+qwen3_device: cpu                    # cpu или cuda:0
+qwen3_dtype: float32                 # float32 (качество) | bfloat16 (быстрее, меньше RAM)
+qwen3_top_k: 50
+qwen3_repetition_penalty: 1.05
+qwen3_max_new_tokens: 8192
+
+# ─── Qwen3-TTS Base Model (Full ICL / Voice Clone) ──
+# Дока: .opencode/skills/qwen3-full-icl/SKILL.md
+# Используется для генерации реплик по референсу (Voice Design → Base + Full ICL)
+# Модель: Qwen/Qwen3-TTS-12Hz-1.7B-Base (~4GB на диске)
+
+qwen3_base_model: Qwen/Qwen3-TTS-12Hz-1.7B-Base
+qwen3_base_device: cpu
+qwen3_base_dtype: float32
+qwen3_base_temperature: 0.2
+qwen3_base_top_p: 0.9
+qwen3_base_repetition_penalty: 1.05
+qwen3_base_max_new_tokens: 2048
+qwen3_base_x_vector_only: false          # false = Full ICL (рекомендуется)
+qwen3_base_voices_config: config/voices.yaml
+
+# ─── Scene Presets (Qwen3-TTS) ────────────────────
+# Параметры генерации в зависимости от типа сцены/персонажа.
+# Переопределяют глобальные qwen3_temperature / qwen3_top_p.
+# Используются генератором для выбора режима под контекст.
+#
+# temp  | top_p | Когда
+# ──────┼───────┼─────────────────────────────────────
+# 0.2   | 0.85  | Закадровый нарратор (макс. стабильность)
+# 0.25  | 0.8   | Массовка / фоновые NPC
+# 0.3   | 0.9   | Диалоги NPC / Капитан
+# 0.4   | 0.95  | Боевые реплики / Приказы
+# 0.6   | 0.98  | Варп-сущности / Демоны (+ пост-обработка)
+
+qwen3_scene_presets:
+  narrator:
+    temperature: 0.2
+    top_p: 0.85
+    instruct: ""
+    description: "Закадровый нарратор — макс. стабильность"
+  background_npc:
+    temperature: 0.2
+    top_p: 0.85
+    instruct: ""
+    description: "Массовка / фоновые NPC — консистентность"
+  dialog:
+    temperature: 0.2
+    top_p: 0.85
+    instruct: ""
+    description: "Диалоги NPC / Капитан — естественно"
+  combat:
+    temperature: 0.4
+    top_p: 0.95
+    instruct: "[Тон: напряжённый]"
+    description: "Боевые реплики / Приказы — энергично"
+  warp:
+    temperature: 0.65
+    top_p: 0.98
+    instruct: ""
+    description: "Варп-сущности / Демоны — макс. вариативность + реверб"
+  default:
+    temperature: 0.2
+    top_p: 0.85
+    instruct: ""
+    description: "Универсальный профиль"
+
 # ─── SAPI Fallback (Windows) ──────────────────
 sapi_voice_male: Microsoft Dmitry Online
 sapi_voice_female: Microsoft Svetlana Online

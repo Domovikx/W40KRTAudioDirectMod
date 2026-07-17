@@ -1,0 +1,36 @@
+# ──────────────────────────────────────────────
+# Voice References for Full ICL (Base model)
+# Справочник: .opencode/skills/qwen3-full-icl/SKILL.md
+# ──────────────────────────────────────────────
+# Каждая запись — результат прогона tools/qwen3_voice_design.py
+# Формат:
+#   voice_name:
+#     wav: path/to/reference.wav       # эталонное аудио (голос)
+#     txt: path/to/reference.txt       # транскрипт референса (обязательно для Full ICL)
+#     instruct: "..."                  # текстовое описание голоса (для VoiceDesign)
+#     description: "..."               # понятное описание
+#     characters: []                   # список персонажей, использующих этот голос
+
+references:
+  wh40k_narrator:
+    wav: refs/wh40k_narrator_reference.wav
+    txt: refs/wh40k_narrator_reference.txt
+    instruct: >
+      Low male voice, age 45-55, chest resonance,
+      slow measured pace, clear Imperial diction,
+      restrained emotion with a hint of reverence and fatalism,
+      like a voiceover in a documentary about war or a religious sermon.
+    description: "Имперский нарратор — низкий, торжественный, фаталистичный"
+    characters:
+      - narrator
+      - system
+      - loading_screen
+
+# Когда появятся новые референсы — добавлять сюда же
+#   teodora:
+#     wav: refs/teodora_reference.wav
+#     txt: refs/teodora_reference.txt
+#     instruct: "..."
+#     description: "Теодора — уверенный женский командный голос"
+#     characters:
+#       - Теодора

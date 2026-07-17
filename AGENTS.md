@@ -64,12 +64,13 @@ W40KRTAudioDirectMod/
 
 | Движок | Тип | Голоса | Дока | Конфиг |
 |--------|-----|--------|------|--------|
-| **Silero** 🏆 | Офлайн | 5 (2М+3Ж) | `tools/silero_tts.py` | `config/default.yaml` → `silero_*` |
-| **Gemini TTS** 🆕 | Онлайн | 30 (15М+15Ж) | `tools/gemini_tts.py` | `config/default.yaml` → `gemini_*` |
+| **Qwen3-TTS** 🏆 | Офлайн | 9 (5М+4Ж) | `tools/qwen3_tts.py` | `config/default.yaml` → `qwen3_*` |
+| **Silero** | Офлайн | 5 (2М+3Ж) | `tools/silero_tts.py` | `config/default.yaml` → `silero_*` |
+| **Gemini TTS** | Онлайн | 30 (15М+15Ж) | `tools/gemini_tts.py` | `config/default.yaml` → `gemini_*` |
 | **Edge-TTS** | Онлайн | 2 (1М+1Ж) | `tools/edge_tts.py` | `config/default.yaml` → `edge_*` |
 | SAPI | Офлайн | 2 (1М+1Ж) | — | `config/default.yaml` → `sapi_*` |
 
-Активный бэкенд: `config/default.yaml` → `backend` (silero | gemini | edge | sapi).
+Активный бэкенд: `config/default.yaml` → `backend` (silero | gemini | edge | sapi | qwen3).
 
 ### Gemini voices распределение
 
@@ -85,15 +86,25 @@ W40KRTAudioDirectMod/
 - `Aoede` (F, Breezy) → Джаэ
 - `Sulafat` (F, Warm) → Кассия
 
-### Распределение голосов
+### Qwen3 voices распределение
 
-См. `config/characters.yaml` (полный список, rationale, возраст, характер).
+См. `.opencode/skills/qwen3-tts/SKILL.md`. Ключевые пары:
+- `Ryan` (M, Dynamic) → **Кунрад**, Паскаль, Хайнрикс
+- `Dylan` (M, Youthful) → Эдельтрад
+- `Vivian` (F, Bright) → **Теодора**, Арджента
+- `Serena` (F, Warm) → Кассия
+- `Sohee` (F, Rich) → Джаэ
+- `Uncle_Fu` (M, Mellow) → Абеляр, Ульфар
+
+### Распределение голосов (Silero)
+
+См. `config/characters.yaml`.
 
 | Голос | Пол | Характер | Кому |
 |-------|-----|----------|------|
 | `eugene` | М | Командный | Абеляр, Маражай, Ульфар, Соломон |
-| `aidar` | М | Спокойный | **Кунрад**, Хайнрикс, Паскаль, Эдельтрад |
-| `xenia` | Ж | Энергичный | **Теодора**, Идира, Арджента, Кибелла |
+| `aidar` | М | Спокойный | Кунрад, Хайнрикс, Паскаль, Эдельтрад |
+| `xenia` | Ж | Энергичный | Теодора, Идира, Арджента, Кибелла |
 | `baya` | Ж | Тёплый | Кассия, Йрлиет |
 | `kseniya` | Ж | Звонкий | Джаэ |
 
@@ -114,11 +125,27 @@ csc -target:library -out:W40KRTAudioDirectMod.dll \
   Main.cs
 ```
 
+## Full ICL Pipeline (Qwen3-TTS Base + VoiceClone)
+
+Генерация реплик через Voice Clone (Base модель + референс от VoiceDesign).
+
+```
+VoiceDesign → refs/{voice}_reference.wav + .txt  (tools/qwen3_voice_design.py)
+Base model → create_voice_clone_prompt() → VoiceClonePromptItem
+Base model → generate_voice_clone(text, prompt) → output/full_icl/{voice}/*.wav
+```
+
+Скрипт: `tools/qwen3_full_icl.py` — читает `config/voices.yaml` + `catalog/people/*.yaml`.
+Скилл: `.opencode/skills/qwen3-full-icl/SKILL.md`.
+Дока: `docs/qwen3-tts.md` → раздел Full ICL Pipeline.
+
 ## Референсы
 
 - SpeechMod: `https://github.com/Osmodium/W40KRogueTraderSpeechMod`
 - Движки: см. `.opencode/skills/russian-tts/SKILL.md`, `.opencode/skills/gemini-tts/SKILL.md`
 - SSML: см. `.opencode/skills/ssml-builder/SKILL.md`
+- VoiceDesign: см. `.opencode/skills/qwen3-voice-design/SKILL.md`
+- Full ICL: см. `.opencode/skills/qwen3-full-icl/SKILL.md`
 - Голоса: см. `catalog/people/*.yaml`
-- Конфиги: см. `config/default.yaml`
+- Конфиги: см. `config/default.yaml`, `config/voices.yaml`
 - Каталог фраз: см. `.opencode/skills/text-catalog/SKILL.md`, файлы в `catalog/people/`
