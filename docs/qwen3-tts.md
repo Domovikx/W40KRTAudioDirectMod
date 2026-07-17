@@ -195,7 +195,15 @@ python tools/qwen3_voice_design.py voice_name [instruct.txt] [text.txt]
 python tools/qwen3_full_icl.py
 ```
 
-Читает `config/voices.yaml` и `catalog/people/*.yaml`, генерирует `output/full_icl/{voice_name}/*.wav`.
+Читает `config/voices.yaml` и `catalog/people/*.yaml` с multi-part фразами, генерирует `output/full_icl/{voice_name}/{guid}__{N}.wav` (по файлу на часть).
+
+### Шаг 3: Склейка частей
+
+```bash
+python .opencode/skills/qwen3-full-icl/concat_parts.py output/full_icl/kunrad/
+```
+
+Собирает `guid__1.wav + guid__2.wav + ... → guid.wav` с паузой 300ms между частями.
 
 ### Конфигурация
 

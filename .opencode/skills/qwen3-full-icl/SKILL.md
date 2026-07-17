@@ -1,62 +1,138 @@
-# Qwen3-TTS Full ICL — генерация реплик через Voice Clone
+# Qwen3-TTS Full ICL — Voice Clone генерация
 
-Генерация диалоговых реплик через **Base модель** с **Full ICL** (In-Context Learning) — voice clone по референсу.
+Генерация диалоговых реплик через **Base модель** + **Full ICL** (In-Context Learning).
+Голос клонируется из референса (WAV + TXT), созданного через VoiceDesign.
 
-## Pipeline
+---
 
-```
-VoiceDesign → reference.wav + reference.txt  (1 раз на персонажа)
-       ↓
-Base model → create_voice_clone_prompt(ref_audio, ref_text, x_vector_only=False)
-       ↓
-Base model → generate_voice_clone(text, voice_clone_prompt)  ← для каждой фразы
-```
+## Входной контракт
 
-## Конфигурация
+### 1. Референсы голосов — `config/voices.yaml`
 
-`config/voices.yaml` — маппинг персонаж → файл референса:
 ```yaml
 references:
+  kunrad:                          # логическое имя (voice_name)
+    wav: refs/kunrad_reference.wav
+    txt: refs/kunrad_reference.txt
   wh40k_narrator:
     wav: refs/wh40k_narrator_reference.wav
     txt: refs/wh40k_narrator_reference.txt
+  teodora:
+    wav: refs/teodora_reference.wav
+    txt: refs/teodora_reference.txt
 ```
 
-`config/default.yaml` → секция `qwen3_base_*`:
+Каждая запись = результат `tools/qwen3_voice_design.py`.
+
+### 2. Фразы — `catalog/people/{Персонаж}.yaml`
+
+```yaml
+name: Кунрад Войгтвир
+qwen3_voice: kunrad                    # voice_name из voices.yaml
+phrases:
+  - guid: ca2ef6c0-...
+    text_original: (сырой текст игры)
+    parts:
+      - speaker: Кунрад_Войгтвир       # кто говорит — проверяется в voices.yaml
+        text_clean: Прекрасное место для размышлений.
+      - speaker: narrator               # специальное имя — маппится на wh40k_narrator
+        text_clean: Взгляд приблизившегося...
+      - speaker: Кунрад_Войгтвир
+        text_clean: Отсюда открывается лучший вид...
+```
+
+**Правила маппинга speaker → voice_name:**
+- Если `speaker == "narrator"` → используем `wh40k_narrator`
+- Если `speaker == имя_персонажа` → берём `qwen3_voice` из YAML-заголовка этого персонажа
+- Если персонаж не найден в открытых YAML → fallback на `wh40k_narrator`
+
+### 3. Параметры генерации — `config/default.yaml`
+
 ```yaml
 qwen3_base_model: Qwen/Qwen3-TTS-12Hz-1.7B-Base
 qwen3_base_device: cpu
 qwen3_base_dtype: float32
 qwen3_base_temperature: 0.2
+qwen3_base_top_p: 0.9
+qwen3_base_repetition_penalty: 1.05
+qwen3_base_max_new_tokens: 2048
 ```
 
-## Скрипт
+---
+
+## Выход
+
+```
+output/full_icl/{voice_name}/
+  {guid}__1.wav     — часть 1
+  {guid}__2.wav     — часть 2
+  {guid}__3.wav     — если есть
+  {guid}.wav        — склейка всех частей (конкатенация)
+```
+
+---
+
+## Скрипты
+
+### `tools/qwen3_full_icl.py` — батчевая генерация
 
 ```bash
-python tools/qwen3_full_icl.py
+python tools/qwen3_full_icl.py [voice_name]
 ```
 
-Читает `config/voices.yaml` + каталоги персонажей из `catalog/people/*.yaml`.
-Генерирует WAV во `output/full_icl/{voice_name}/`.
+- Без аргумента — все голоса из `config/voices.yaml`
+- С аргументом — только указанный voice_name
+- Пропускает уже сгенерированные WAV (idempotent)
+
+### `.opencode/skills/qwen3-full-icl/concat_parts.py` — склейка частей
+
+Отдельный скрипт для конкатенации WAV-частей в один файл.
+Используется если генерация шла порционно или нужно пересклеить.
+
+```bash
+python .opencode/skills/qwen3-full-icl/concat_parts.py output/full_icl/kunrad/
+```
+
+---
+
+## Процесс (Full ICL)
+
+```
+1. VoiceDesign                    → refs/{voice_name}_reference.wav + .txt
+   (tools/qwen3_voice_design.py)
+
+2. create_voice_clone_prompt()   → VoiceClonePromptItem
+   (ref_audio, ref_text, x_vector_only=False)
+
+3. generate_voice_clone()         → output/full_icl/{voice}/{guid}__N.wav
+   (text, voice_clone_prompt, language="Russian")
+
+4. concat_parts.py                → output/full_icl/{voice}/{guid}.wav
+   (склейка частей одной фразы)
+```
+
+---
 
 ## Рекомендации
 
 | Параметр | Значение | Почему |
 |----------|----------|--------|
-| `x_vector_only_mode` | `false` | Full ICL — референс влияет и на тембр, и на стиль |
+| `x_vector_only_mode` | `false` | Full ICL — тембр + стиль из референса |
 | `temperature` | 0.2–0.3 | Стабильность, голос не плавает между фразами |
 | `top_p` | 0.9 | Умеренный отсев хвостов |
-| `max_new_tokens` | 2048 | Для коротких фраз (диалоговые реплики) |
-| `dtype` | float32 | Максимальное качество |
+| `max_new_tokens` | 2048 | Короткие диалоговые реплики |
+| `dtype` | float32 | Максимальное качество на CPU |
 
-## Текст
+**Текст:** чистый русский, без ударений, без SSML, без разметки.
+WH40k термины (Варп, Империум, Лекс Империалис) — стандартная транслитерация, модель знает.
 
-- Никаких ударений, SSML, разметки — чистый русский текст
-- WH40k термины (Варп, Империум) — стандартная транслитерация, модель знает
-- Длинные фразы (>30с) разбивать на части черех `tools/qwen3_phrase_split.py`
+---
 
 ## Референсы
 
-- `docs/qwen3-tts.md` — полный справочник
-- `tools/qwen3_voice_design.py` — создание референса
+- `docs/qwen3-tts.md` — полный справочник Qwen3-TTS
+- `.opencode/skills/qwen3-voice-design/SKILL.md` — создание референса (VoiceDesign)
+- `tools/qwen3_voice_design.py` — скрипт создания референса
 - `tools/qwen3_full_icl.py` — батчевая генерация
+- `config/voices.yaml` — конфиг референсов
+- `catalog/people/*.yaml` — каталог фраз персонажей

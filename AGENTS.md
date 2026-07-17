@@ -135,9 +135,23 @@ Base model → create_voice_clone_prompt() → VoiceClonePromptItem
 Base model → generate_voice_clone(text, prompt) → output/full_icl/{voice}/*.wav
 ```
 
-Скрипт: `tools/qwen3_full_icl.py` — читает `config/voices.yaml` + `catalog/people/*.yaml`.
+Скрипт: `tools/qwen3_full_icl.py` — читает `config/voices.yaml` + `catalog/people/*.yaml` (формат с `parts: [{speaker, text_clean}]`).
+Склейка частей: `.opencode/skills/qwen3-full-icl/concat_parts.py`.
 Скилл: `.opencode/skills/qwen3-full-icl/SKILL.md`.
 Дока: `docs/qwen3-tts.md` → раздел Full ICL Pipeline.
+
+Формат `catalog/people/*.yaml`:
+```yaml
+qwen3_voice: kunrad     # voice_name из voices.yaml
+phrases:
+  - guid: ...
+    parts:
+      - speaker: Кунрад_Войгтвир  # персонаж
+        text_clean: ...
+      - speaker: narrator          # специальное имя → wh40k_narrator
+        text_clean: ...
+```
+Выход: `output/full_icl/{voice_name}/{guid}__{N}.wav` + `{guid}.wav` (склейка).
 
 ## Референсы
 

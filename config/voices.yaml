@@ -13,24 +13,27 @@
 
 references:
   wh40k_narrator:
-    wav: refs/wh40k_narrator_reference.wav
-    txt: refs/wh40k_narrator_reference.txt
-    instruct: >
-      Low male voice, age 45-55, chest resonance,
-      slow measured pace, clear Imperial diction,
-      restrained emotion with a hint of reverence and fatalism,
-      like a voiceover in a documentary about war or a religious sermon.
-    description: "Имперский нарратор — низкий, торжественный, фаталистичный"
+    wav: refs/narrator/reference.wav
+    txt: refs/narrator/reference.txt
+    x_vector_only: true
+    description: "Наталья Фролова — женский, книжный, спокойный (клон из аудиокниги)"
     characters:
       - narrator
       - system
       - loading_screen
 
-# Когда появятся новые референсы — добавлять сюда же
-#   teodora:
-#     wav: refs/teodora_reference.wav
-#     txt: refs/teodora_reference.txt
-#     instruct: "..."
-#     description: "Теодора — уверенный женский командный голос"
-#     characters:
-#       - Теодора
+  teodora:
+    wav: refs/teodora/reference.wav
+    txt: refs/teodora/reference.txt
+    description: "Теодора — низкий/средний женский, властный, аристократичный"
+    characters:
+      - Теодора
+
+  kunrad:
+    wav: refs/kunrad/reference.wav
+    txt: refs/kunrad/reference.txt
+    description: "Кунрад — средний/низкий мужской, холодный, кибернетический оттенок"
+    characters:
+      - Кунрад_Войгтвир
+      - Кунрад
+
