@@ -140,6 +140,17 @@ Base model → generate_voice_clone(text, prompt) → output/full_icl/{voice}/*.
 Скилл: `.opencode/skills/qwen3-full-icl/SKILL.md`.
 Дока: `docs/qwen3-tts.md` → раздел Full ICL Pipeline.
 
+## Ударения в Qwen3-TTS (CAPS Stress)
+
+Полный справочник: `.opencode/skills/qwen3-caps-stress/SKILL.md`
+
+Правила:
+1. CAPS на ударной гласной — модель читает заглавную букву как ударную: `зАмок`, `ужЕ`, `плАчу`
+2. Только **одна** заглавная гласная на слово
+3. `ё` всегда ударная, капс не нужен
+4. Односложные, числительные, предлоги — капс не нужен
+5. В файле персонажа его собственное имя stress не требует (модель знает свой голос)
+
 Формат `catalog/people/*.yaml`:
 ```yaml
 qwen3_voice: kunrad     # voice_name из voices.yaml
