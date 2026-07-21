@@ -1,0 +1,597 @@
+generated: '2026-07-21'
+total_characters: 40
+characters:
+  NPC (по умолчанию):
+    name: NPC (по умолчанию)
+    gender: M
+    role: generic
+    age: ''
+    personality: ''
+    voice: aidar
+    qwen3_voice: ''
+    sound_keys: []
+    total_phrases: 227
+    voice_actor:
+      name: Михаил Георгиу
+      reason: Универсальный мужской голос, нейтральная подача
+      demo: 'LitRes: Михаил Георгиу'
+  Абеляр Версериан:
+    name: Абеляр Версериан
+    gender: M
+    role: Сенешаль
+    age: ~80-120
+    personality: суровый, верный, строгий, отеческий
+    voice: eugene
+    qwen3_voice: ''
+    sound_keys:
+    - Abelard
+    - Abel
+    total_phrases: 255
+    voice_actor:
+      name: Михаил Георгиу
+      reason: Зрелый баритон, офицерская чёткость, скрытая теплота
+      demo: 'LitRes: Михаил Георгиу'
+  Арбитрес (NPC):
+    name: Арбитрес (NPC)
+    gender: M
+    role: Арбитрес
+    age: ''
+    personality: суровый, официальный
+    voice: eugene
+    qwen3_voice: ''
+    sound_keys:
+    - Arbites
+    total_phrases: 1
+    voice_actor:
+      name: Дмитрий Филимонов
+      reason: Грубоватый, авторитарный, «полевая» хрипотца
+      demo: 'LitRes: Дмитрий Филимонов'
+  Джаэ Хейдари:
+    name: Джаэ Хейдари
+    gender: F
+    role: Агент Касабаллики
+    age: ~30-45
+    personality: хитрая, игривая, скользкая
+    voice: kseniya
+    qwen3_voice: ''
+    sound_keys:
+    - Jae
+    total_phrases: 248
+    voice_actor:
+      name: Наталья Тетенова
+      reason: Ироничная подача, «уличная» хрипотца, прагматизм
+      demo: 'LitRes: Наталья Тетенова'
+  Идира Тласс:
+    name: Идира Тласс
+    gender: F
+    role: Псайкер
+    age: ~20-30
+    personality: уставшая, дерзкая, циничная
+    voice: xenia
+    qwen3_voice: ''
+    sound_keys:
+    - Idira
+    total_phrases: 247
+    voice_actor:
+      name: Елена Ивасишина
+      reason: Эфирная подача, мистическая интонация, паузы «видений»
+      demo: 'Audiobook.ru: Елена Ивасишина'
+  Интеррогатор (NPC):
+    name: Интеррогатор (NPC)
+    gender: M
+    role: Интеррогатор
+    age: ''
+    personality: холодный, официальный
+    voice: aidar
+    qwen3_voice: ''
+    sound_keys:
+    - Interrogator
+    total_phrases: 0
+    voice_actor:
+      name: Андрей Ярославцев
+      reason: Холодный, безэмоциональный, «следственный» тембр
+      demo: 'LitRes: Андрей Ярославцев'
+  Йрлиет Ланаэвисс:
+    name: Йрлиет Ланаэвисс
+    gender: F
+    role: Аэльдари-рейнджер
+    age: ~200-500
+    personality: меланхоличная, гордая, спокойная
+    voice: baya
+    qwen3_voice: ''
+    sound_keys:
+    - Yrliet
+    - Ranger
+    total_phrases: 329
+    voice_actor:
+      name: Мария Виноградова
+      reason: Инопланетная плавность, паузы, без человеческой эмоциональности
+      demo: 'Ardis: Мария Виноградова'
+  Кассия Орселлио:
+    name: Кассия Орселлио
+    gender: F
+    role: Навигатор
+    age: ~18-25
+    personality: ранимая, застенчивая, аристократичная
+    voice: baya
+    qwen3_voice: ''
+    sound_keys:
+    - Cassia
+    - Navigator
+    total_phrases: 440
+    voice_actor:
+      name: Татьяна Канаева
+      reason: Эмоциональная динамика, «варп-надрыв», хрупкость + сила
+      demo: 'STUDIOREC: Татьяна Канаева'
+  Кибелла:
+    name: Кибелла
+    gender: F
+    role: Ассасин Культа Смерти
+    age: ~20-35
+    personality: тихая, смертоносная, холодная
+    voice: kseniya
+    qwen3_voice: ''
+    sound_keys:
+    - Kibellah
+    - DeathCult
+    total_phrases: 400
+    voice_actor:
+      name: Анна Калашникова
+      reason: Тихая, «призрачная» подача, внезапные вспышки
+      demo: 'STUDIOREC: Анна Калашникова'
+  Контрабандист:
+    name: Контрабандист
+    gender: M
+    role: Footfall-контрабандист
+    age: ''
+    personality: хитрый, скользкий
+    voice: aidar
+    qwen3_voice: ''
+    sound_keys:
+    - Smugler
+    total_phrases: 175
+    voice_actor:
+      name: Алексей Колган
+      reason: Ядовито-вежливый, скользкая интонация
+      demo: 'LitRes: Алексей Колган'
+  Кунрад Войгтвир:
+    name: Кунрад Войгтвир
+    gender: M
+    role: Мастер шепотов
+    age: ~35-50
+    personality: коварный, манипулятивный, вкрадчивый
+    voice: aidar
+    qwen3_voice: kunrad
+    sound_keys:
+    - Kunrad
+    total_phrases: 66
+    voice_actor:
+      name: Владимир Зайцев
+      reason: Холодный расчёт, скрытая угроза, «кибернетический» оттенок
+      demo: 'LitRes: Владимир Зайцев'
+  Манипулус:
+    name: Манипулус
+    gender: M
+    role: Магос-манипулус
+    age: ''
+    personality: логичный, техничный
+    voice: aidar
+    qwen3_voice: ''
+    sound_keys:
+    - Manipulus
+    total_phrases: 175
+    voice_actor:
+      name: Владимир Левашев
+      reason: Механистичная чёткость, ровный «цифровой» тембр
+      demo: 'LitRes: Владимир Левашев'
+  Маражай Аэзирраэш:
+    name: Маражай Аэзирраэш
+    gender: M
+    role: Друкари-архонт
+    age: ~300-3000
+    personality: хищный, садистичный, надменный
+    voice: eugene
+    qwen3_voice: ''
+    sound_keys:
+    - Marazhai
+    total_phrases: 325
+    voice_actor:
+      name: Алексей Колган
+      reason: Ядовито-вежливый, «змеиная» интонация, манерность
+      demo: 'LitRes: Алексей Колган'
+  Паскаль Ханеуманн:
+    name: Паскаль Ханеуманн
+    gender: M
+    role: Магос Адептус Механикус
+    age: ~200-400
+    personality: логичный, отстранённый, монотонный
+    voice: aidar
+    qwen3_voice: ''
+    sound_keys:
+    - Pascal
+    - Pasqal
+    - Haneumann
+    - Techpriest
+    total_phrases: 319
+    voice_actor:
+      name: Владимир Левашев
+      reason: Механистичная чёткость, ровный «цифровой» тембр
+      demo: 'LitRes: Владимир Левашев'
+  Псайкер (NPC):
+    name: Псайкер (NPC)
+    gender: F
+    role: Псайкер
+    age: ''
+    personality: напряжённая, взволнованная
+    voice: xenia
+    qwen3_voice: ''
+    sound_keys:
+    - Psyker
+    total_phrases: 91
+    voice_actor:
+      name: Елена Ивасишина
+      reason: Эфирная подача, мистическая интонация, паузы «видений»
+      demo: 'Audiobook.ru: Елена Ивасишина'
+  Рассказчик:
+    name: Рассказчик
+    gender: M
+    role: Narrator
+    age: ''
+    personality: эпичный, повествовательный
+    voice: eugene
+    qwen3_voice: ''
+    sound_keys:
+    - NARR
+    total_phrases: 16
+    voice_actor:
+      name: Всеволод Кузнецов
+      reason: «Стеклянный» ровный тембр, эпичная повествовательная подача
+      demo: 'LitRes: Всеволод Кузнецов'
+  Сенешаль (NPC):
+    name: Сенешаль (NPC)
+    gender: M
+    role: Сенешаль
+    age: ''
+    personality: чинный, официальный
+    voice: eugene
+    qwen3_voice: ''
+    sound_keys:
+    - Seneschal
+    total_phrases: 63
+    voice_actor:
+      name: Михаил Георгиу
+      reason: Зрелый баритон, офицерская чёткость
+      demo: 'LitRes: Михаил Георгиу'
+  Сестра Арджента:
+    name: Сестра Арджента
+    gender: F
+    role: Сестра Битвы
+    age: ~20-35
+    personality: пламенная, фанатичная, дерзкая
+    voice: xenia
+    qwen3_voice: ''
+    sound_keys:
+    - Argenta
+    - Sororitas
+    total_phrases: 264
+    voice_actor:
+      name: Ольга Голубева
+      reason: Воинственно-религиозный тембр, «праведный гнев» без крика
+      demo: 'STUDIOREC: Ольга Голубева'
+  Соломон Антар:
+    name: Соломон Антар
+    gender: M
+    role: Арбитр
+    age: ~35-55
+    personality: суровый, справедливый, неподкупный
+    voice: eugene
+    qwen3_voice: ''
+    sound_keys:
+    - Solomorne
+    - Solomorn
+    total_phrases: 486
+    voice_actor:
+      name: Дмитрий Филимонов
+      reason: Грубоватый, прямой, «полевая» хрипотца
+      demo: 'LitRes: Дмитрий Филимонов'
+  Теодора фон Валанциус:
+    name: Теодора фон Валанциус
+    gender: F
+    role: Вольный Торговец
+    age: ~60-100
+    personality: властная, жёсткая, решительная
+    voice: xenia
+    qwen3_voice: teodora
+    sound_keys:
+    - Theodora
+    total_phrases: 99
+    voice_actor:
+      name: Марина Бакина
+      reason: Властная аристократка, «груз наследия», зрелый тембр
+      demo: 'LitRes: Марина Бакина'
+  Тразин:
+    name: Тразин
+    gender: M
+    role: Некрон
+    age: ''
+    personality: загадочный, коллекционер, саркастичный
+    voice: aidar
+    qwen3_voice: ''
+    sound_keys:
+    - Trazyn
+    total_phrases: 63
+    voice_actor:
+      name: Всеволод Кузнецов
+      reason: «Стеклянный» ровный тембр, педантичная вежливость
+      demo: 'LitRes: Всеволод Кузнецов'
+  Ульфар Громолёт:
+    name: Ульфар Громолёт
+    gender: M
+    role: Космический Волк
+    age: ~200-500
+    personality: грубый, воинственный
+    voice: eugene
+    qwen3_voice: ''
+    sound_keys:
+    - Ulfar
+    total_phrases: 286
+    voice_actor:
+      name: Борис Эйфман
+      reason: Былинная глубина, «северный» резонанс, мудрость воина
+      demo: 'LitRes: Борис Эйфман'
+  Хайнрикс ван Калокс:
+    name: Хайнрикс ван Калокс
+    gender: M
+    role: Интеррогатор Инквизиции
+    age: ~30-45
+    personality: холодный, строгий, принципиальный
+    voice: aidar
+    qwen3_voice: ''
+    sound_keys:
+    - Heinrix
+    - Interrogator
+    - HC
+    total_phrases: 410
+    voice_actor:
+      name: Андрей Ярославцев
+      reason: Ровный, безэмоциональный, «следственный» тембр
+      demo: 'LitRes: Андрей Ярославцев'
+  Эдельтрад:
+    name: Эдельтрад
+    gender: M
+    role: Наследник-псайкер
+    age: ~20-35
+    personality: испуганный, неуверенный, сломленный
+    voice: aidar
+    qwen3_voice: ''
+    sound_keys: []
+    total_phrases: 0
+    voice_actor:
+      name: Дмитрий Быковский-Ромашов
+      reason: Раненый воин, «металлическая» усталость, стойкость
+      demo: 'LitRes: Дмитрий Быковский-Ромашов'
+  Эоганн:
+    name: Эоганн
+    gender: M
+    role: Навигатор
+    age: ~100-300
+    personality: спокойный, задумчивый
+    voice: aidar
+    qwen3_voice: ''
+    sound_keys:
+    - Eogann
+    total_phrases: 104
+    voice_actor:
+      name: Михаил Росляков
+      reason: Низкий, медлительный, с детской простотой и силой
+      demo: 'LitRes: Михаил Росляков'
+  Incendia Bastaal-Chorda:
+    name: Incendia Bastaal-Chorda
+    gender: F
+    role: Роговой Торговец (Dogmatic)
+    age: ''
+    personality: ''
+    voice: ''
+    qwen3_voice: ''
+    sound_keys: []
+    total_phrases: 0
+    voice_actor:
+      name: Елена Шульман
+      reason: Фанатичная подача, «огненная» интонация, имперская догма
+      demo: 'STUDIOREC: Елена Шульман'
+  Calligos Winterscale:
+    name: Calligos Winterscale
+    gender: M
+    role: Роговой Торговец (Iconoclast)
+    age: ''
+    personality: ''
+    voice: ''
+    qwen3_voice: ''
+    sound_keys: []
+    total_phrases: 0
+    voice_actor:
+      name: Игорь Тарадайкин
+      reason: Циничный, ироничный, холодный расчёт
+      demo: 'LitRes: Игорь Тарадайкин'
+  Uralon the Cruel:
+    name: Uralon the Cruel
+    gender: M
+    role: Тёмный Апостол (Heretical)
+    age: ''
+    personality: ''
+    voice: ''
+    qwen3_voice: ''
+    sound_keys: []
+    total_phrases: 0
+    voice_actor:
+      name: Александр Новиков
+      reason: Мрачный, проповеднический, с «хаотичным» подтекстом
+      demo: 'LitRes: Александр Новиков'
+  Lord Inquisitor Xavier Calcazar:
+    name: Lord Inquisitor Xavier Calcazar
+    gender: M
+    role: Лорд-Инквизитор
+    age: ''
+    personality: ''
+    voice: ''
+    qwen3_voice: ''
+    sound_keys: []
+    total_phrases: 0
+    voice_actor:
+      name: Борис Клюев
+      reason: Монументальный, догматичный, «голос Империума»
+      demo: 'LitRes: Борис Клюев'
+  Nomos:
+    name: Nomos
+    gender: M
+    role: Древний ИИ / сущность
+    age: ''
+    personality: ''
+    voice: ''
+    qwen3_voice: ''
+    sound_keys: []
+    total_phrases: 0
+    voice_actor:
+      name: Михаил Тихонов
+      reason: Безэмоциональный, «космический», без дыхания
+      demo: 'LitRes: Михаил Тихонов'
+  Felek Orsellio:
+    name: Felek Orsellio
+    gender: M
+    role: Навигатор, параноик
+    age: ''
+    personality: ''
+    voice: ''
+    qwen3_voice: ''
+    sound_keys: []
+    total_phrases: 0
+    voice_actor:
+      name: Алексей Багдасаров
+      reason: Нервный, тревожный, с «варп-надрывом»
+      demo: 'Audiobook.ru: Алексей Багдасаров'
+  Malice:
+    name: Malice
+    gender: F
+    role: Друхари-интриганка
+    age: ''
+    personality: ''
+    voice: ''
+    qwen3_voice: ''
+    sound_keys: []
+    total_phrases: 0
+    voice_actor:
+      name: Ксения Бржезовская
+      reason: Ядовито-игривая, «змеиная» интонация, контрасты
+      demo: 'LitRes: Ксения Бржезовская'
+  Nocturne of Oblivion:
+    name: Nocturne of Oblivion
+    gender: M
+    role: Ассасин / тёмный агент
+    age: ''
+    personality: ''
+    voice: ''
+    qwen3_voice: ''
+    sound_keys: []
+    total_phrases: 0
+    voice_actor:
+      name: Сергей Чихачёв
+      reason: Тихий, «призрачный», внезапная угроза
+      demo: 'LitRes: Сергей Чихачёв'
+  Arch-Militant Mort:
+    name: Arch-Militant Mort
+    gender: M
+    role: Наёмник / телохранитель
+    age: ''
+    personality: ''
+    voice: ''
+    qwen3_voice: ''
+    sound_keys: []
+    total_phrases: 0
+    voice_actor:
+      name: Павел Севастопольский
+      reason: Грубый, прямой, «полевая» хрипотца
+      demo: 'LitRes: Павел Севастопольский'
+  Plaguebearer:
+    name: Plaguebearer
+    gender: M
+    role: Демон Хаоса (Nurgle)
+    age: ''
+    personality: ''
+    voice: ''
+    qwen3_voice: ''
+    sound_keys: []
+    total_phrases: 0
+    voice_actor:
+      name: Всеволод Кузнецов
+      reason: Искажённый, «нечеловеческий», с эхом/дисторшном
+      demo: Audiobook.ru
+  Daemonette:
+    name: Daemonette
+    gender: F
+    role: Демон Хаоса (Slaanesh)
+    age: ''
+    personality: ''
+    voice: ''
+    qwen3_voice: ''
+    sound_keys: []
+    total_phrases: 0
+    voice_actor:
+      name: Елена Ивасишина
+      reason: Искажённая, «нечеловеческая», с эхом/дисторшном
+      demo: Audiobook.ru
+  Pirate Captain:
+    name: Pirate Captain
+    gender: M
+    role: Пиратский капитан
+    age: ''
+    personality: ''
+    voice: ''
+    qwen3_voice: ''
+    sound_keys: []
+    total_phrases: 0
+    voice_actor:
+      name: Дмитрий Филимонов
+      reason: Грубый, прямой, «полевая» хрипотца
+      demo: LitRes
+  Pirate Bandit:
+    name: Pirate Bandit
+    gender: F
+    role: Пиратка / бандитка
+    age: ''
+    personality: ''
+    voice: ''
+    qwen3_voice: ''
+    sound_keys: []
+    total_phrases: 0
+    voice_actor:
+      name: Наталья Тетенова
+      reason: Ироничная, «уличная» хрипотца
+      demo: LitRes
+  Eldar NPC:
+    name: Eldar NPC
+    gender: F
+    role: Эльдар
+    age: ''
+    personality: ''
+    voice: ''
+    qwen3_voice: ''
+    sound_keys: []
+    total_phrases: 0
+    voice_actor:
+      name: Мария Виноградова
+      reason: Инопланетная плавность, паузы, без человеческой эмоциональности
+      demo: Ardis
+  Drukhari NPC:
+    name: Drukhari NPC
+    gender: M
+    role: Тёмный эльдар
+    age: ''
+    personality: ''
+    voice: ''
+    qwen3_voice: ''
+    sound_keys: []
+    total_phrases: 0
+    voice_actor:
+      name: Алексей Колган
+      reason: Ядовито-вежливый, «змеиная» интонация, манерность
+      demo: 'LitRes: Алексей Колган'

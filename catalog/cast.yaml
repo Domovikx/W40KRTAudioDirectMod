@@ -1,0 +1,81 @@
+characters:
+- name: NPC (по умолчанию)
+  voice_actor: Михаил Георгиу
+- name: Абеляр Версериан
+  voice_actor: Михаил Георгиу
+- name: Арбитрес (NPC)
+  voice_actor: Дмитрий Филимонов
+- name: Джаэ Хейдари
+  voice_actor: Наталья Тетенова
+- name: Идира Тласс
+  voice_actor: Елена Ивасишина
+- name: Интеррогатор (NPC)
+  voice_actor: Андрей Ярославцев
+- name: Йрлиет Ланаэвисс
+  voice_actor: Мария Виноградова
+- name: Кассия Орселлио
+  voice_actor: Татьяна Канаева
+- name: Кибелла
+  voice_actor: Анна Калашникова
+- name: Контрабандист
+  voice_actor: Алексей Колган
+- name: Кунрад Войгтвир
+  voice_actor: Владимир Зайцев
+- name: Манипулус
+  voice_actor: Владимир Левашев
+- name: Маражай Аэзирраэш
+  voice_actor: Алексей Колган
+- name: Паскаль Ханеуманн
+  voice_actor: Владимир Левашев
+- name: Псайкер (NPC)
+  voice_actor: Елена Ивасишина
+- name: Рассказчик
+  voice_actor: Всеволод Кузнецов
+- name: Сенешаль (NPC)
+  voice_actor: Михаил Георгиу
+- name: Сестра Арджента
+  voice_actor: Ольга Голубева
+- name: Соломон Антар
+  voice_actor: Дмитрий Филимонов
+- name: Теодора фон Валанциус
+  voice_actor: Марина Бакина
+- name: Тразин
+  voice_actor: Всеволод Кузнецов
+- name: Ульфар Громолёт
+  voice_actor: Борис Эйфман
+- name: Хайнрикс ван Калокс
+  voice_actor: Андрей Ярославцев
+- name: Эдельтрад
+  voice_actor: Дмитрий Быковский-Ромашов
+- name: Эоганн
+  voice_actor: Михаил Росляков
+- name: Incendia Bastaal-Chorda
+  voice_actor: Елена Шульман
+- name: Calligos Winterscale
+  voice_actor: Игорь Тарадайкин
+- name: Uralon the Cruel
+  voice_actor: Александр Новиков
+- name: Lord Inquisitor Xavier Calcazar
+  voice_actor: Борис Клюев
+- name: Nomos
+  voice_actor: Михаил Тихонов
+- name: Felek Orsellio
+  voice_actor: Алексей Багдасаров
+- name: Malice
+  voice_actor: Ксения Бржезовская
+- name: Nocturne of Oblivion
+  voice_actor: Сергей Чихачёв
+- name: Arch-Militant Mort
+  voice_actor: Павел Севастопольский
+- name: Plaguebearer
+  voice_actor: Всеволод Кузнецов
+- name: Daemonette
+  voice_actor: Елена Ивасишина
+- name: Pirate Captain
+  voice_actor: Дмитрий Филимонов
+- name: Pirate Bandit
+  voice_actor: Наталья Тетенова
+- name: Eldar NPC
+  voice_actor: Мария Виноградова
+- name: Drukhari NPC
+  voice_actor: Алексей Колган
