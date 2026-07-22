@@ -950,14 +950,14 @@ phrases:
   text: '{n}Эдельтрад, держащийся за багряную рану в груди, бросает на вас ненавидящий взгляд.{/n} "Предатель{mf||ница}...
     В минуту, когда нужны были все силы для решительного удара, ты остал{mf|ся|ась} в стороне! Только не утверждай, что {g|Encyclopedia:Vox}вокс{/g}-трансляции
     не достигли тебя!"'
-  speaker: Эдельтрад
+  speaker: Edelthrad
   gemini_voice: Umbriel
   gemini_text: null
 - guid: a879a612-e07f-44f2-8c22-235d4f67873e
   event: PRL_BeforeFinalBattle_02
   text: '{n}Эдельтрад выглядит потрепанным, но целым. Взглянув на вас, он встревоженно переводит взгляд за вашу спину.{/n}
     "Ты здесь, {name}... но где же Лорд-капитан?"'
-  speaker: Эдельтрад
+  speaker: Edelthrad
   gemini_voice: Umbriel
   gemini_text: null
 - guid: 9c131aa3-d0ea-4dab-8a97-bd2aa7dcae02
@@ -965,7 +965,7 @@ phrases:
   text: '{n}Эдельтрад, держащийся за багряную рану в груди, бросает на вас измученный взгляд.{/n} "Подмога? Боюсь, {d|Encyclopedia:Prologue_WentBack}уже
     поздно{/d}, чтобы переломить ход событий. Но, если у тебя достанет чести, мы можем хотя бы с достоинством отдать свои
     жизни — за {g|Encyclopedia:RogueTrader}Вольного Торговца{/g}".'
-  speaker: Эдельтрад
+  speaker: Edelthrad
   gemini_voice: Umbriel
   gemini_text: null
 - guid: 1f20bb7d-7b31-4bbd-b8bf-7037377a5bf4
@@ -1035,14 +1035,14 @@ phrases:
     два костяных нароста.{/n} "Что за ритуал ни творит там Кунрад... варп слишком силен, я не могу ему противостоять. Я чувствую,
     как меняется тело... как варп звенит в воздухе... Это конец. Мы сгинем в {g|Encyclopedia:Warp}варпе{/g}... вместе с {g|Encyclopedia:Warrant}Патентом{/g}
     и всеми наследниками династии. Враг Человечества торжествует победу".'
-  speaker: Эдельтрад
+  speaker: Edelthrad
   gemini_voice: Umbriel
   gemini_text: null
 - guid: 14a7692b-2fc4-4116-a9ac-f4a9b264d933
   event: PRL_BeforeFinalBattle_14
   text: '"Время вышло!" {n}Эдельтрад прикусывает костяшку, мучительно о чем-то размышляя. Вы видите, как по белкам его глаз
     словно пробегает волна — очи Эдельтрада наливаются болезненной желтизной.{/n}'
-  speaker: Эдельтрад
+  speaker: Edelthrad
   gemini_voice: Umbriel
   gemini_text: null
 - guid: db2cc575-8ea3-4383-838c-3e930c02b9b4
@@ -1102,14 +1102,14 @@ phrases:
   event: PRL_BeforeFinalBattle_23
   text: '{n}Идира тревожно смотрит на Эдельтрада. Затем — на вас.{/n} "Я такое видала. Лучше... нам лучше отойти от него.
     Изменения уже ускоряются..."'
-  speaker: Идира Тласс
+  speaker: Idira Tlass
   gemini_voice: Gacrux
   gemini_text: null
 - guid: bd236b8f-94cb-4a53-a6b9-01bad5d29b17
   event: PRL_BeforeFinalBattle_24
   text: '{n}Эдельтрад издает разъяренный рев фанатика-безумца.{/n} "Я не буду гибнуть без дела рядом с {mf|тем|той}, кто предал{mf||а}
     свой род. Если последнее, чем я послужу Империуму — это разорву горло врагу Человечества... значит, на то воля Бога-Императора!"'
-  speaker: Эдельтрад
+  speaker: Edelthrad
   gemini_voice: Umbriel
   gemini_text: null
 - guid: c7571803-1037-4d97-a9c1-3c58c1cf9428
@@ -1117,14 +1117,14 @@ phrases:
   text: '{n}Эдельтрад склоняет голову. Затем вздыхает и смотрит на вас в упор — холодным, надменным взглядом фанатика.{/n}
     "Ритуал не будет завершен — я позабочусь об этом. А ты... позаботься о том, чтобы пустотный корабль вырвался из варпа.
     Позаботься о наших владениях. И прощай".'
-  speaker: Эдельтрад
+  speaker: Edelthrad
   gemini_voice: Umbriel
   gemini_text: null
 - guid: 45e70f48-5b98-4e51-9ce6-7a0148188d26
   event: PRL_BeforeFinalBattle_26
   text: '"Что? Теодора... мертва?" {n}Кунрад взирает на вас в изумлении — кажется, искреннем.{/n} "Нет! Этого не могло произойти!
     Не сейчас! Я еще не успел..."'
-  speaker: Кунрад Войгтвир
+  speaker: Kunrad Voigtvir
   gemini_voice: Sadaltager
   gemini_text: null
 - guid: c6d2ac06-fa7b-43d0-ad71-6e96b4c334c1
@@ -1172,14 +1172,14 @@ phrases:
   text: '{n}Теодора клекочет — кажется, под этим скрежещущим, разрывающим перепонки звуком подразумевается смех.{/n} "Веди
     за собой, смертн{mf|ый|ая}. Веди, убеждай, заставляй их вступить на твою дорожку. Судьба предначертана — тебе нужны будут
     последователи".'
-  speaker: Теодора фон Валанциус
+  speaker: Theodora von Valancius
   gemini_voice: Kore
   gemini_text: null
 - guid: ebe853b5-0487-46f2-9dd3-9010557a324f
   event: PRL_EdgeOfDaybreak_07
   text: '{n}Теодора шипит — почти болезненно, словно ваши слова ранят ее.{/n} "Сопротивление неизбежному значит лишь одно
     — осознание и подчинение принесут больше боли. Против токов судьбы нет силы, способной изменить их".'
-  speaker: Теодора фон Валанциус
+  speaker: Theodora von Valancius
   gemini_voice: Kore
   gemini_text: null
 - guid: 30261dbe-ff01-46cc-b897-9f391a0f78d6
@@ -1221,13 +1221,13 @@ phrases:
 - guid: 6639a730-c634-48f4-9717-0bfcb8d8c07b
   event: PRL_EmperorProtects_02
   text: '"Ваши попытки пошутить неуместны". {n}Абеляр хмурится.{/n} "Вы едва не сгубили нас всех..."'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: bc6b3b9a-c559-4348-80ba-69cf22ac093f
   event: PRL_EmperorProtects_03
   text: '{n}Идира отирает рот и хрипит:{/n} "Что стало с Леди Теодорой? Она пошла за нами?"'
-  speaker: Идира Тласс
+  speaker: Idira Tlass
   gemini_voice: Gacrux
   gemini_text: null
 - guid: 8328df7e-f3ac-4630-9efa-1db566e0d6f0
@@ -1235,7 +1235,7 @@ phrases:
   text: '"Не было никакой Теодоры, ведьма". {n}Арджента смотрит прямо перед собой, а затем складывает руки на груди, осеняя
     себя святым знамением.{/n} "Был морок, и искушение, и скверна, что пыталась сбить нас от пути. Но {name} распознал{mf||а}
     их природу!"'
-  speaker: Сестра Арджента
+  speaker: Sister Argenta
   gemini_voice: Laomedeia
   gemini_text: null
 - guid: cfa9a312-b948-4b6b-b851-b586f79acb28
@@ -1264,7 +1264,7 @@ phrases:
   text: '{n}Абеляр окидывает взглядом помещение, а затем снова смотрит на вас — с удвоенным беспокойством.{/n} "Вы бредите,
     {name}. Что бы вам там не померещилось..." {n}Офицер явно смущен вашими словами — он еще раз, украдкой, бросает взгляд
     на указанную вами аквилу.{/n}'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: 125ac37d-8b1e-4489-bf7f-ff3fefdb54a2
@@ -1272,7 +1272,7 @@ phrases:
   text: '"Слава {g|Encyclopedia:Emperor}Императору{/g}!" {n}Арджента опускается на одно колено, и вы впервые видите в ее глазах
     ничем не замутненную, сияющую радость.{/n} "Мы прошли сквозь пламя! О, разве это не знамение... Ибо сказано ясно — Император
     благословит достойнейших и упорных в вере!"'
-  speaker: Сестра Арджента
+  speaker: Sister Argenta
   gemini_voice: Laomedeia
   gemini_text: null
 - guid: 27882352-332a-4aee-b957-40ce227773e6
@@ -1286,7 +1286,7 @@ phrases:
   event: PRL_MutinyBegins_01
   text: '{n}Теодора властно взмахивает рукой.{/n} "Морт! Бери людей и расчисти дорогу до транспортной линии! Убедись, что
     ни один выродок не выжил!"'
-  speaker: Теодора фон Валанциус
+  speaker: Theodora von Valancius
   gemini_voice: Kore
   gemini_text: null
 - guid: 032d76f9-0c09-4c7c-8052-996e664740ed
@@ -1296,7 +1296,7 @@ phrases:
     — ощущение ложной безопасности делает их чувствительными к жестоким реалиям {g|Encyclopedia:Warp}варп{/g}-переходов".
     {n}Теодора опускает взгляд на {g|Encyclopedia:Vox}вокс{/g}, который держит в руке. До вас доносится звук безжизненной
     статики.{/n}'
-  speaker: Теодора фон Валанциус
+  speaker: Theodora von Valancius
   gemini_voice: Kore
   gemini_text: null
 - guid: 136dd2cb-bdcf-4f1e-a65b-855ecbafa413
@@ -1304,7 +1304,7 @@ phrases:
   text: '"Из того, что мы успели увидеть, {name}, могу предполагать, что мы имеем дело с варп-психозом той или иной разновидности".
     {n}Абеляр поразительно спокоен для человека, только что пережившего внезапное нападение.{/n} "Для пустотников, оказавшихся
     за пределами реального мира, подобные эксцессы не редкость... хотя обычно они остаются в пределах палуб".'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: 218468d2-0b13-42bb-98f4-158fb6b1a409
@@ -1313,7 +1313,7 @@ phrases:
     с нами шутки, либо кто-то постарался оборвать связь на корабле. Мне нужно связаться с Главным {g|Encyclopedia:Enginseer}технопровидцем{/g}
     по выделенному каналу, прежде чем станет ясно, с чем именно мы столкнулись. В любом случае — держите оружие под рукой.
     Сомневаюсь, что оно нам больше не пригодится".'
-  speaker: Теодора фон Валанциус
+  speaker: Theodora von Valancius
   gemini_voice: Kore
   gemini_text: null
 - guid: 59a7b57e-4ba1-4776-a251-38e8d8b61a29
@@ -1328,14 +1328,14 @@ phrases:
   event: PRL_MutinyBegins_06
   text: '"Вероятно. Очень вероятно". {n}Теодора морщится, щелкая тумблером на воксе.{/n} "Разбираться будем позже — прямо
     сейчас нужно изолировать затронутые отсеки и попытаться понять, что происходит".'
-  speaker: Теодора фон Валанциус
+  speaker: Theodora von Valancius
   gemini_voice: Kore
   gemini_text: null
 - guid: 733f2512-f962-4a39-8db5-8dbea983a71e
   event: PRL_MutinyBegins_07
   text: '{n}Теодора кидает взгляд в сторону.{/n} "Морт отправился расчищать нам дорогу — если хочешь быть полезн{mf|ым|ой},
     ступай по его следам и убедись, что архмилитанту не нужна помощь. И поживее".'
-  speaker: Теодора фон Валанциус
+  speaker: Theodora von Valancius
   gemini_voice: Kore
   gemini_text: null
 - guid: 2a4eed4f-ebd2-43cb-a31f-75648f12a64c
@@ -1352,7 +1352,7 @@ phrases:
     Наконец, одернув окровавленный китель и выпрямившись, сенешаль произносит:{/n} "Как Первый офицер, я обязан... я обязан
     уведомить вас, с величайшим прискорбием и неизбывным трауром в душе, что Лорд-капитан Теодора фон Валанциус мертва. Да
     хранится вечно память ее в анналах династии".'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: 39d85534-2bc3-4e82-bed0-c83e3a8ed847
@@ -1375,14 +1375,14 @@ phrases:
     и звания Вольного Торговца. Официальная церемония возвышения будет проведена позже, а пока..." {n}Абеляр осекается и смотрит
     на растерявшихся офицеров.{/n} "Языки проглотили? Приветствуйте сво{mf|его|ю} влады{mf|ку|чицу} — {mf|его|ее} чаяниями
     мы все с вами все еще живы!"'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: 3a95cb24-9072-484c-a1ae-ae2671204240
   event: PRL_NewRogueTrader_06
   text: '{n}Абеляр рассеянно кивает в ответ.{/n} "Навигатор отдал свою жизнь в борьбе со штормом, что захватил судно фон Валанциус.
     Мы почтим его память вместе с памятью всех, кто погиб в этот день".'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: 19ace1c5-6572-4115-ba15-89824c314309
@@ -1414,7 +1414,7 @@ phrases:
     но трансляция — не та вещь, которую хочется делать не по правилам. Вы — единственн{mf|ый|ая} представитель{mf||ница} династии
     фон Валанциус. Пускай вы и не Лорд-капитан, но вы более всех остальных заслуживаете занять ее место в предстоящем ритуале".
     {n}Абеляр указывает глазами вверх — на трон, красующийся на вершине высоких ступеней.{/n}'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: ced566d2-a912-40a2-a33f-4c708a24e4e9
@@ -1443,13 +1443,13 @@ phrases:
   event: PRL_ToTheBridgeLate_01
   text: '"{d|Encyclopedia:Prologue_WentBack}Опоздали! Опоздали!{/d}" {n}Абеляр сокрушенно всплескивает руками.{/n} "Либо Эдельтрад
     и его люди вообще не добрались сюда — что еще хуже!"'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: 6471bc28-0b21-4d08-80bb-646c178e4447
   event: PRL_ToTheBridgeLate_02
   text: '"Либо они дают бой на командном мостике", {n}Арджента сжимает оружие.{/n} "Без нас!"'
-  speaker: Сестра Арджента
+  speaker: Sister Argenta
   gemini_voice: Laomedeia
   gemini_text: null
 - guid: e45bd0a0-c8aa-43f4-940f-fff0c360a31f
@@ -1466,7 +1466,7 @@ phrases:
     самое место — на мостике, во главе контрудара... Неспокойно мне. А если Вольного Торговца осадили в собственных палатах?
     С вашего дозволения — давайте удостоверимся, что это не так. Мы можем воспользоваться тем же подъемником, к которым ушли
     Леди Теодора и Морт".'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: 0e075bcc-e3d1-4ae5-8575-e2244404bab4
@@ -1474,14 +1474,14 @@ phrases:
   text: '{n}Эдельтрад фон Валанциус взирает на вас с нескрываемым изумлением — и трепетом.{/n} "{name}... не подводят ли меня
     мои глаза? Готов поклясться, что я только что видел, как ты {d|Encyclopedia:Prologue_WentThroughFire}прош{mf|ел|ла} сквозь
     столб пламени{/d}, ведя за собой остальных..."'
-  speaker: Эдельтрад
+  speaker: Edelthrad
   gemini_voice: Umbriel
   gemini_text: null
 - guid: 1876d007-d113-4488-adad-45fec2616170
   event: PRL_ToTheBridge_02
   text: '"Воистину, {name}". {n}Эдельтрад осеняет себя знамением {g|Encyclopedia:Aquila}аквилы{/g} и бросает на вас еще один
     взгляд — на этот раз обеспокоенный.{/n} "Твои раны..."'
-  speaker: Эдельтрад
+  speaker: Edelthrad
   gemini_voice: Umbriel
   gemini_text: null
 - guid: 9e71b97e-872c-4441-bedb-e15953a26983
@@ -1495,27 +1495,27 @@ phrases:
   event: PRL_ToTheBridge_04
   text: '"Подобная горячность не доводит до добра... но {g|Encyclopedia:Emperor}Император{/g} благоволит к тебе". {n}Эдельтрад
     оглядывает вас еще раз.{/n} "И все же — твои раны внушают мне беспокойство".'
-  speaker: Эдельтрад
+  speaker: Edelthrad
   gemini_voice: Umbriel
   gemini_text: null
 - guid: 44fa1078-c11b-435a-84ba-e21f7303f494
   event: PRL_ToTheBridge_05
   text: '{n}Эдельтрад примирительно поднимает руку.{/n} "Прости мою настойчивость. Не мне сомневаться в вере то{mf|го|й},
     что прош{mf|ел|ла} крещение огнем".'
-  speaker: Эдельтрад
+  speaker: Edelthrad
   gemini_voice: Umbriel
   gemini_text: null
 - guid: 768c0f74-9c7b-459a-a983-5004764bcd95
   event: PRL_ToTheBridge_06
   text: '{n}Эдельтрад кивает, удовлетворенный ответом.{/n} "Тогда — скрепим души. Впереди нас ждет главное испытание".'
-  speaker: Эдельтрад
+  speaker: Edelthrad
   gemini_voice: Umbriel
   gemini_text: null
 - guid: 2548b94f-14b4-4685-a84d-7478cfd913b1
   event: PRL_ToTheBridge_07
   text: '{n}Эдельтрад высокомерно фыркает.{/n} "Не думаю, что ты можешь позволить себе подобную роскошь, но благодарю за откровенность
     — вряд ли я могу положиться на тебя в бою".'
-  speaker: Эдельтрад
+  speaker: Edelthrad
   gemini_voice: Umbriel
   gemini_text: null
 - guid: 27db0291-3656-4741-8dc1-1307e89a9923
@@ -1555,14 +1555,14 @@ phrases:
   text: '{n}Эдельтрад кивает.{/n} "Разумно. Возьми с собой свой отряд — вас могут поджидать по пути. Как только вы встретитесь
     с Лорд-капитаном — умоляйте ее отправляться на мостик и возглавить контратаку. Появление {g|Encyclopedia:RogueTrader}Вольного
     Торговца{/g} вселит надежду в сердца защитников, сколь бы напуганы или усталы они ни были".'
-  speaker: Эдельтрад
+  speaker: Edelthrad
   gemini_voice: Umbriel
   gemini_text: null
 - guid: 260347e6-a3a2-4be8-9e86-638aa9b91740
   event: PRL_ToTheBridge_13
   text: '"До встречи, {name}. Да благословит {g|Encyclopedia:Emperor}Император{/g} ваши деяния, и увидимся на поле боя". {n}Эдельтрад
     салютует вам оружием и поворачивается к своей свите.{/n}'
-  speaker: Эдельтрад
+  speaker: Edelthrad
   gemini_voice: Umbriel
   gemini_text: null
 - guid: 2bda68a8-f2d9-429e-9610-7ff9ee5810ea
@@ -1570,7 +1570,7 @@ phrases:
   text: '{n}Псайкер скалится вам в ответ.{/n} "Видишь следы моего "благословения", {name}? Да, варп забирает свое... но я
     еще в трезвом уме и в силах держать оружие. Я буду биться за род фон Валанциус до конца — даже если мне это будет стоить
     вечного проклятия мутанта!"'
-  speaker: Псайкер (NPC)
+  speaker: Psyker (NPC)
   gemini_voice: Gacrux
   gemini_text: null
 - guid: efbfaf32-9763-41c2-a1b6-55ac180391c8

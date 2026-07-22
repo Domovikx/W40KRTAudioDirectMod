@@ -1143,7 +1143,7 @@ phrases:
   event: Companions_Sororitas_01
   text: '{n}Сестра Арджента кажется уставшей — под глазами залегли темные круги, волосы в легком беспорядке, в движениях —
     легкая нервозность.{/n} "{g|Encyclopedia:RogueTrader}Вольный Торговец{/g}?"'
-  speaker: Сестра Арджента
+  speaker: Sister Argenta
   gemini_voice: Laomedeia
   gemini_text: null
 - guid: f32a68a7-2515-4977-86e2-525cf18c9736
@@ -1152,7 +1152,7 @@ phrases:
     извинения за прежнюю... холодность. После нашей первой встречи я опасалась, что вы окажетесь еще одним гнилым ростком
     семейного древа фон Валанциус, как... как предатель Кунрад. Но теперь я вижу перед собой достойного лидера и слугу {g|Encyclopedia:Imperium}Империума{/g}.
     Я рада быть вам соратницей".'
-  speaker: Сестра Арджента
+  speaker: Sister Argenta
   gemini_voice: Laomedeia
   gemini_text: null
 - guid: 9cf145c1-22a5-44d5-909b-b74443e7a288
@@ -1196,7 +1196,7 @@ phrases:
   event: Companions_Sororitas_08
   text: '"О себе!" {n}Сестра кажется удивленной.{/n} "Я — дщерь {g|Encyclopedia:Emperor}Императора{/g} и служительница его.
     Что еще можно сказать обо мне?"'
-  speaker: Сестра Арджента
+  speaker: Sister Argenta
   gemini_voice: Laomedeia
   gemini_text: null
 - guid: b982f9a2-068c-42f2-818b-be8d6da2701c
@@ -1288,7 +1288,7 @@ phrases:
   text: '"С радостью. Мы служим Императору и Человечеству с незапамятных времен, бьемся со злом по воле святой {g|Encyclopedia:AdeptusMinistorum}Экклезиархии{/g},
     мы..." {n}Арджента обрывает сама себя и фыркает под нос.{/n} "Прошу простить меня, {g|Encyclopedia:RogueTrader}Вольный
     Торговец{/g}. Начала рассказывать то, что знает любой мелкий дворянин в Империуме! Так что же именно вас интересует?"'
-  speaker: Сестра Арджента
+  speaker: Sister Argenta
   gemini_voice: Laomedeia
   gemini_text: null
 - guid: a08ed819-7b02-4f9b-8791-e3604ae3718e
@@ -1318,7 +1318,7 @@ phrases:
   text: '{n}Арджента заметно мрачнеет.{/n} "Впервые я появилась здесь, когда мне требовалось добраться от {g|Encyclopedia:Footfall}Футфола{/g}
     до одной окраинной планеты. Но, верно, вопрос не о том, первом путешествии, а о том, как я попала сюда перед нападением
     культистов. Это непростая история. Так случилось, что я..." {n}— она осекается.{/n}'
-  speaker: Сестра Арджента
+  speaker: Sister Argenta
   gemini_voice: Laomedeia
   gemini_text: null
 - guid: 2db13e48-850a-4fb9-8c55-6a87665465e8
@@ -1335,7 +1335,7 @@ phrases:
     поясе.{/n} "Моя память — как клочки дыма над полем отгремевшего боя. Серость корабельной обшивки, четкий ритм жизни военных
     лагерей. Форма матери — я любила разглядывать ее. Потом — тот бой... грохот, крики и копоть. Вопли горящих заживо солдат.
     И золото полковой аквилы — последняя незапятнанная гарью и кровью частичка сходящего с ума мира".'
-  speaker: Сестра Арджента
+  speaker: Sister Argenta
   gemini_voice: Laomedeia
   gemini_text: null
 - guid: 4c084c88-96e6-4541-afc1-735c35e145b0
@@ -1372,7 +1372,7 @@ phrases:
 - guid: 20c6d7b8-4cbc-48d2-a1dd-b037d92c3d3c
   event: Companions_Sororitas_31
   text: '{n}Арджента склоняет голову.{/n} "Я... рада быть откровенной".'
-  speaker: Сестра Арджента
+  speaker: Sister Argenta
   gemini_voice: Laomedeia
   gemini_text: null
 - guid: c013e83f-a55c-4b51-a2ef-06f38707eaa4
@@ -1449,7 +1449,7 @@ phrases:
     Я удивлена, что она не оказалась сообщницей культистов. И удивлена, как глубоко ересь и измена пустили корни здесь..."
     {n}Арджента хмурится и качает головой.{/n} "Хорошо, что все мы пережили темный час. Пусть день, следующий за ним, будет
     ярок!"'
-  speaker: Сестра Арджента
+  speaker: Sister Argenta
   gemini_voice: Laomedeia
   gemini_text: null
 - guid: 71537d7b-2180-4121-930c-341fe5e3062b
@@ -1485,7 +1485,7 @@ phrases:
 - guid: 747c5a90-e2fa-4552-b707-b784e30c174b
   event: Companions_Sororitas_46
   text: '{n}Арджента резко вздергивает подбородок.{/n} "Как вам будет угодно, Вольный Торговец".'
-  speaker: Сестра Арджента
+  speaker: Sister Argenta
   gemini_voice: Laomedeia
   gemini_text: null
 - guid: a1629257-6289-4504-a62a-1e864e42b757
@@ -1705,7 +1705,7 @@ phrases:
   event: PRL_ArgentaRecruit_04
   text: '"Сестра Арджента — гостья Лорд-капитана". {n}Абеляр бросает быстрый взгляд на девушку.{/n} "И эта история заслуживает
     отдельного времени и разговора — в более подходящей ситуации".'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: 17905916-481b-445c-91e2-b540ed0d197b
@@ -1726,7 +1726,7 @@ phrases:
   event: PRL_ArgentaRecruit_08
   text: '"Этот ответ делает вам честь. Только истинному праведнику будет столь нестерпимо само обвинение в ереси". {n}Арджента
     кивает.{/n}'
-  speaker: Сестра Арджента
+  speaker: Sister Argenta
   gemini_voice: Laomedeia
   gemini_text: null
 - guid: dc3c3356-85b4-479e-949e-0acc7783a0f4
@@ -1752,13 +1752,13 @@ phrases:
   text: '"Сестра, прошу!" {n}Абеляр, похоже, теряет терпение.{/n} "Сейчас не время для допросов. Корабль атакован еретиками,
     нас предал дражайший Мастер шепотов, наследник Эдельтрад ожидает нашей помощи, а Лорд-капитан Теодора — доклада об успешных
     действиях. Мы здесь, чтоб навести порядок — так давайте этим и займемся".'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: 6b8370c0-ac31-439d-bb98-8c0a6c697b48
   event: PRL_ArgentaRecruit_13
   text: '{n}Идира издает каркающий смешок.{/n} "Ха! Впервые вижу, чтобы кто-то на борту говорил с сестричкой в таком тоне!"'
-  speaker: Идира Тласс
+  speaker: Idira Tlass
   gemini_voice: Gacrux
   gemini_text: null
 - guid: 0f60dfb7-ec54-43d9-a756-8b107aaa0860
@@ -1775,13 +1775,13 @@ phrases:
     друзей проступают усмешки еретиков, в глазах товарищей вспыхивает голод {g|Encyclopedia:Chaos}Архиврага{/g}. Я сделаю
     то что должно, чтобы остановить поступь темных сил, но в эти мрачные мгновения верить нельзя ничему. Потому я должна знать
     — зачем вы здесь?"'
-  speaker: Сестра Арджента
+  speaker: Sister Argenta
   gemini_voice: Laomedeia
   gemini_text: null
 - guid: b35f6d72-aa90-43f3-8a93-1852280789a7
   event: PRL_ArgentaRecruit_16
   text: '"Что ж, пусть будет так... пока что". {n}Арджента гордо вскидывает голову.{/n}'
-  speaker: Сестра Арджента
+  speaker: Sister Argenta
   gemini_voice: Laomedeia
   gemini_text: null
 - guid: b2d21fd6-2700-45b7-87dc-1a21742c573a
@@ -1810,6 +1810,6 @@ phrases:
   event: PRL_ArgentaRecruit_20
   text: '"Через эту дверь". {n}Арджента кивает на проход справа от вас.{/n} "Я пойду с вами, ибо долг мой перед Богом-Императором
     — уничтожить эту ересь".'
-  speaker: Сестра Арджента
+  speaker: Sister Argenta
   gemini_voice: Laomedeia
   gemini_text: null

@@ -1532,7 +1532,7 @@ phrases:
   event: PRL_AbelardRecruit_05
   text: '"Верно, верно..." {n}Абеляр хмурится.{/n} "Проще сказать, чем сделать, конечно. Но уже то, что один из наследников
     Леди Теодоры жив, внушает хотя бы немного оптимизма".'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: a4b4fb88-f083-43b0-ae89-08b764854572
@@ -1548,14 +1548,14 @@ phrases:
   event: PRL_AbelardRecruit_07
   text: '{n}Абеляр смотрит на вас так, словно изо рта у вас только что выпрыгнула жаба.{/n} "Госпо{mf|дин|жа} {name}, со всем
     уважением — что вы несете? Кунрад? Предатель?"'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: fe7f2cfa-fed4-4ef0-9ce7-04c41d3c25cd
   event: PRL_AbelardRecruit_08
   text: '"Служит... богам {g|Encyclopedia:Warp}варпа{/g}?! Кунрад — еретик? Ох, Войгтвир, пустотная ты крыса..." {n}Абеляр
     трясет головой.{/n} "Безумие. Не сомневаюсь, восстание на корабле тоже его рук дело?"'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: 2184319f-548f-4ffe-8232-8c8363b6c792
@@ -1582,7 +1582,7 @@ phrases:
   text: '"О святый {g|Encyclopedia:Emperor}Бог-Император{/g}..." {n}Абеляр хватается за лоб, на его лице на мгновение появляется
     выражение полной растерянности — которая, впрочем, сменяется решимостью.{/n} "Полагаю, к восстанию на корабле причастен
     именно он? И, госпо{mf|дин|жа} {name}, хотел бы напомнить, что для вас Лорд-капитан — Леди Теодора".'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: 1e06006a-3ec2-450d-bfad-041372360833
@@ -1597,7 +1597,7 @@ phrases:
   event: PRL_AbelardRecruit_13
   text: '"Страж Патента?" {n}Абеляр переводит взгляд на сервочереп, кружащий около вас.{/n} "Лорд-капитан практически никогда
     не спускалась в Камеру... и я присутствовал в этот момент с ней всего пару раз, и ни разу не видел ничего подобного".'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: 7a6750ab-d6a6-47b7-bf81-8de86b275436
@@ -1610,7 +1610,7 @@ phrases:
   event: PRL_AbelardRecruit_15
   text: '{n}Абеляр склоняет голову и встревоженно оглядывает вас.{/n} "Вы отправили мне вокс-сообщение... точнее, вокс-передачу
     на офицерской частоте, которую мне посчастливилось услышать... разве вы не делали этого?"'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: a109c56b-ca02-453b-8016-d04926caeb67
@@ -1619,19 +1619,19 @@ phrases:
     как нарушение уединения Навигатора приравнивается к самоубийству. Сейчас же наша с вами жертва может предотвратить гибель
     {g|Encyclopedia:RogueTrader}Вольного Торговца{/g}, пустотного судна {g|Encyclopedia:Imperium}Империума{/g} и всего его
     экипажа, арсенала и снаряжения. Выбор очевиден".'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: 47a3826e-3fe9-4369-83ef-d9eb4a08adbf
   event: PRL_AbelardRecruit_17
   text: '"Разумеется, {name}". {n}Абеляр небрежным движением одергивает замаранный кровью китель.{/n} "За мной".'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: a1b1c7ad-f958-4bdf-a7d9-2ac89adca503
   event: PRL_AbelardRecruit_18
   text: '{n}Абеляр довольно кивает.{/n} "Идемте, {name}".'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: aceadac1-6b70-469b-8a52-a12e4f736688
@@ -1661,7 +1661,7 @@ phrases:
   event: PRL_AbelardRecruit_22
   text: '{n}Абеляр бросает на вас сумрачный взгляд.{/n} "Безусловно. С дозволения Лорд-капитана прочту вам часовую лекцию
     про связь титулования и проявления должной веры в помазанников Бога-Императора. А пока что займемся более насущными вопросами".'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: 53220070-fd38-4e46-ba75-90a0c998fb7a
@@ -1671,7 +1671,7 @@ phrases:
     святилище должно быть погружено в энергии Имматериума. Только навигатор способен выдержать такое испытание — для обычных
     смертных контакт с варпом грозит помрачением рассудка, спонтанными мутациями и гибелью". {n}Абеляр перечисляет все предстоящие
     вам ужасы, не меняясь в лице.{/n}'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: 1483e02a-c1a1-4998-936d-b44242b097c5
@@ -1679,13 +1679,13 @@ phrases:
   text: '{n}Абеляр оглядывает вас критическим взглядом.{/n} "Вы в плохой форме, {name}. У меня есть с собой меднабор — я могу
     обработать ваши раны. И, Трона ради, сейчас не время разгуливать по палубам без средств самообороны — вот, возьмите".
     {n}Сенешаль протягивает вам оружие.{/n}'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: c44bf78a-5027-48bf-a9f6-05bdc76a6c83
   event: PRL_AbelardRecruit_25
   text: '{n}Абеляр удовлетворенно кивает.{/n} "Намного лучше, {name}. Теперь вы готовы к грядущим испытаниям".'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: 2fd67580-64d7-4634-a6c0-b593e531fbbb
@@ -1693,7 +1693,7 @@ phrases:
   text: '{n}Абеляр бросает на вас усталый и немного раздраженный взгляд — так смотрят на дерзящего ребенка.{/n} "Я был бы
     счастлив соблюдать формальный протокол, госпо{mf|дин|жа} {name}, однако обстоятельства позволяют оценивать текущую ситуацию
     как экстраординарную, а следовательно — позволяющую отойти от наших обычных процедур".'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: 9a552559-648e-4add-b8b9-efe9f6f37a7f

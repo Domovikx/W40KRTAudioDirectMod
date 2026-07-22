@@ -1378,7 +1378,7 @@ phrases:
   event: BS_KTCStolenTithe_Solomorne_19
   text: '"{d|Encyclopedia:CharGen_Arbitrator}Бывших арбитров{/d} не бывает, верно?" {n}Соломон уважительно кивает.{/n} "Не
     в обиду вашим навыкам — предпочитаю перестраховаться на стадии подготовки".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: b9b67ef5-8096-4124-8849-67bf58d0c1a5
@@ -1418,14 +1418,14 @@ phrases:
 - guid: a184a447-d48f-4291-8bf2-ae93e095f9e7
   event: BS_KTCStolenTithe_Solomorne_25
   text: '"Штейн — выгрузи последние данные, Брайс — голограмму". {n}Соломон передает вам инфопластину.{/n} "Здесь полное досье".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 61d36439-0e5d-4cfe-9340-160d4fab6629
   event: BS_KTCStolenTithe_Solomorne_26
   text: '"Принято". {n}Соломон кладет руку на холку мастифа и говорит скорее ему, чем вам:{/n} "Саргона уже мертвец — просто
     еще не знает об этом".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 2ee5e290-aca2-42fc-b0f7-493bb88ae85e
@@ -1447,7 +1447,7 @@ phrases:
   text: '"На миссии будут следующие позывные для связи по воксу: вы — ВТ-1, я — ДК-1. Также попрошу вас использовать язык
     жестов арбитес. Невербальные команды быстрее слов и позволяют застать врасплох противника. Короткий список здесь". {n}Соломон
     протягивает вам инфопластину.{/n}'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 9707a9a8-9782-43e0-bf96-d0371693d72d
@@ -1495,7 +1495,7 @@ phrases:
 - guid: c69efb05-b087-4e93-82db-bfc931c9505d
   event: CompanionDialogue_Solomorne_01
   text: '{n}Соломон чуть кивает вам в знак приветствия.{/n} "Вольный Торговец?"'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: a1ea53ce-2d66-4e24-b379-0e11922faee9
@@ -1509,7 +1509,7 @@ phrases:
   event: CompanionDialogue_Solomorne_03
   text: '"Предпочитаете лучше понимать, с кем путешествуете? Разумно". {n}Соломон смотрит на вас долгим внимательным взглядом.{/n}
     "Спрашивайте".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 43344192-34a9-4a0e-99db-f61a39cec0ad
@@ -1526,7 +1526,7 @@ phrases:
     Прогениум. Но такой ответ вряд ли вас устроит. Мой отец был Арбитес, и весьма хорошим. Иначе бы его не нашли в переулке,
     изрешеченного пулями. Сослуживец отца сказал, что его убили из десяти разных оружий, и что минимум четверых ублюдков он
     успел забрать с собой".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: b833bd38-296c-4be5-9a83-0bdcddf7daba
@@ -1550,7 +1550,7 @@ phrases:
   text: '{n}Соломон качает головой.{/n} "Он сделал, что мог, но вытащить из Глейто неизвестную друкарскую дрянь в полевых
     условиях не выйдет. Надо дотянуть до возвращения на флагман, иначе никак. Не знаю, выберемся ли мы, но на всякий случай
     я должен..."'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: faea44e8-be0e-4465-bc13-0fa1ae3bbd30
@@ -1623,7 +1623,7 @@ phrases:
   event: CompanionDialogue_Solomorne_107
   text: '"Потребуются крепкие снаряды и мишени — Глейто неудержим, когда действует в полную силу". {n}Соломон приподнимает
     уголки губ.{/n} "Благодарю".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 71c122c0-9a2b-4abd-9a6a-c69057ebed07
@@ -1669,7 +1669,7 @@ phrases:
     с чего начать. Стракс оставил мне руины, и Арбитес придется компенсировать его позор и свою малую численность служением
     яростным и внушающим благоговейный ужас. Я перекую арбитров в новую элиту и начну писать Лекс Коронус — кровью тех, кто
     хоть в чем-то дерзнет не покориться нам".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 189d02c9-1294-4c53-8969-62eed1ab80cf
@@ -1724,7 +1724,7 @@ phrases:
   event: CompanionDialogue_Solomorne_12
   text: '{n}Соломон немедленно ставит руку между вами и мордой пса.{/n} "Любую ответственность за действия кибермастифа несет
     хозяин. Наказывайте меня — и только меня".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 97297f38-10d5-4ba5-b2ed-c39105958cde
@@ -1739,7 +1739,7 @@ phrases:
   event: CompanionDialogue_Solomorne_121
   text: '{n}Соломон морщится.{/n} "Глейто, разве ты не мог уважить Вольного Торговца менее глубоким укусом? Не вините его,
     это был стандартный предупредительный захват, тем более весьма чистый — понадобится всего десяток швов".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 88bd4e46-6720-4cdc-b710-b0285d365b10
@@ -1748,7 +1748,7 @@ phrases:
     кивает.{/n} "Приветствую, Вольный Торговец. Докладываю: провел первичную инспекцию верхних палуб с Глейто — список нарушений
     оказался на пять страниц короче ожидаемого. Начинаю опасаться, что служителю {g|Encyclopedia:LexImperialisGlossary}Лекса{/g}
     будет нечем заняться на вашем судне".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: f449c74d-796d-4a1b-90e1-2f86eef8bceb
@@ -1794,7 +1794,7 @@ phrases:
   event: CompanionDialogue_Solomorne_128
   text: '"Если бы мне давали трон каждый раз, когда я отвечаю отказом на мольбу, я бы мог купить ваш флагман". {n}Соломон
     потирает переносицу.{/n} "Ради вашей же сохранности — оставьте эту идею".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: af6f445d-14d8-4e55-8c9e-5bdd13033239
@@ -1864,14 +1864,14 @@ phrases:
   event: CompanionDialogue_Solomorne_137
   text: '"Невозможно — вы меня раскусили". {n}Соломон поднимает бровь.{/n} "Я действительно на одну сотую процента менее равнодушен,
     чем выгляжу".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 50658e3c-4155-4487-b136-7a56e39352fc
   event: CompanionDialogue_Solomorne_138
   text: '"Однажды я участвовал в рейде на банду мутантов — отличился в бою, был награжден и повышен до проктора". {n}Соломон
     выдерживает паузу.{/n} "Это все".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: df6149da-da64-44b2-94a2-a5d81ee4b466
@@ -1972,7 +1972,7 @@ phrases:
   text: '{n}Соломон склонился над Глейто, его пальцы ощупывают каждый шов на теле кибермастифа.{/n} "Уплотнения здесь и здесь...
     А тут что еще такое?" {n}Железный кулак обрушивается в пол, оставляя вмятину.{/n} "Ублюдочные отродья, распотрошить моего
     пса! Я... Гхм, Вольный Торговец? Вы… давно тут стоите?"'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 51e6bce6-6375-4d84-a49b-a8e6d724b09c
@@ -1998,7 +1998,7 @@ phrases:
   event: CompanionDialogue_Solomorne_154
   text: '{n}Соломон вскидывает бровь:{/n} "Вольный Торговец и арбитр — интересные у вас представления о "нормальном". Попробую
     поддержать беседу на уровне ожиданий".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 43304fb4-b2ae-43d8-ad95-6ab354eb3433
@@ -2018,7 +2018,7 @@ phrases:
 - guid: 803334cb-215f-4806-ba62-8f4ac56cb6a7
   event: CompanionDialogue_Solomorne_157
   text: '"Слушаюсь, отложим этот разговор". {n}Соломон не меняется в лице, только старается пореже встречаться с вами взглядом.{/n}'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 9a15b760-e482-42d0-a8b9-cb76704b4015
@@ -2031,7 +2031,7 @@ phrases:
   event: CompanionDialogue_Solomorne_159
   text: '"Я не стану оспаривать суждения префекта, но..." {n}Соломон пристально смотрит вам в глаза.{/n} "Вам надо было принять
     решение по непростому вопросу, и вы это сделали. Взяли ответственность на себя. Я ценю в людях подобные качества".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: d529a2d1-604e-45be-b9cb-d4ffa397f0c2
@@ -2051,7 +2051,7 @@ phrases:
   event: CompanionDialogue_Solomorne_161
   text: '{n}Соломон с достоинством поднимает подбородок.{/n} "Вы можете утверждать, что моя рекомендация была неверной, но
     я не заставлял вас принимать именно это решение. Мне больше нечего добавить".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: b8541983-48e1-485f-bbf7-4156da101b5f
@@ -2073,14 +2073,14 @@ phrases:
   event: CompanionDialogue_Solomorne_164
   text: '{n}Соломон касается железными пальцами щеки.{/n} "Лучше бы вы прострелили мне ногу... Ах да, перечить не дозволено.
     Тогда благодарю, что преподали урок — он пойдет на пользу такому наглецу, как я".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 42e3e996-b68c-41d9-b792-b86239bed50a
   event: CompanionDialogue_Solomorne_165
   text: '{n}Соломон выглядит немного озадаченным вашим ответом.{/n} "Не мне учить Вольного Торговца жизни, но... В общем,
     вы можете на меня рассчитывать по части честности и непредвзятости".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 580c457e-6221-4100-a825-b86e87788319
@@ -2134,7 +2134,7 @@ phrases:
   event: CompanionDialogue_Solomorne_172
   text: '"Наверное, ко мне применимо то, что зовут богатым послужным списком: расследования, подавление бунтов, карательные
     рейды. На моем счету десятки операций". {n}Соломон перечисляет сухо, без намека на гордость.{/n}'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: eba56544-adec-411c-a3a5-9eb8bcfe6265
@@ -2153,7 +2153,7 @@ phrases:
   event: CompanionDialogue_Solomorne_175
   text: '"Сейчас, когда я вспоминаю Тассеру, то явно вижу лишь один момент радости — возвращение на корабль". {n}Соломон отвечает
     сдержаннее обычного, глядя куда-то поверх вашего плеча.{/n}'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 1c36affd-4d06-4646-942f-84b3676d609a
@@ -2187,7 +2187,7 @@ phrases:
 - guid: 4171b1f2-1cb1-4f7d-811c-3947b65cd628
   event: CompanionDialogue_Solomorne_18
   text: '{n}Соломон одаривает вас долгим взглядом.{/n} "Нет".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 76c72d37-7340-4d9d-ba12-75af65607697
@@ -2247,7 +2247,7 @@ phrases:
     я выстрелил ему в затылок". {n}Соломон кладет руку на голову кибермастифа.{/n} "Я решил, что живыми мы отсюда не выберемся,
     поэтому прицепил свой вокс с последним докладом к ошейнику Глейто и приказал ему возвращаться в штаб. Потом снова отключился,
     а пришел в себя уже в плену. Еретики пытали меня сутками напролет, но я продержался достаточно, чтобы дождаться Взыскателей".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: df5856c0-1e7b-4254-8616-9ee3522b6f91
@@ -2267,7 +2267,7 @@ phrases:
 - guid: 95ea0487-301a-49ac-a53f-6b3be6dd9252
   event: CompanionDialogue_Solomorne_19
   text: '{n}Соломон кивает.{/n} "Разумное решение".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 3a148d14-067c-483b-bb4f-12f9e736acdb
@@ -2307,7 +2307,7 @@ phrases:
     я покидал Каликсис, наше судно провело на станции несколько дней, и я позволил себе прийти туда, где убили отца. Немного
     постоял там и…" {n}Соломон задерживает на вас взгляд.{/n} "Ничего. Я просто знал, что другой арбитр довел расследование
     до конца, и мне здесь нечего делать".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 8a36c0e0-4ee5-4656-90e0-fa1dc977ae7c
@@ -2337,21 +2337,21 @@ phrases:
 - guid: 21e25f06-7d62-4e9d-bc96-1bc14302b1bd
   event: CompanionDialogue_Solomorne_24
   text: '"Вас понял. Мой ответ был неуместным и неуважительным". {n}Соломон склоняет голову в знак смирения.{/n}'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: ca4b60ab-4f67-4c65-86df-e3f005bbd11f
   event: CompanionDialogue_Solomorne_25
   text: '"Прежде я не бывал в свите Вольного Торговца. В остальном..." {n}Соломон окидывает мостик взглядом.{/n} "Я приспосабливаюсь
     быстрее, чем вы думаете. И пока Глейто со мной, я готов к любым перестановкам".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: abcf7063-e34b-4f93-9202-0f38827efdca
   event: CompanionDialogue_Solomorne_26
   text: '"Он передал мне сообщение — неожиданно душевное". {n}Соломон прикрывает глаза и почтительно цитирует ровным тоном:{/n}
     "Соломон Антар, ты вновь возведен в ранг проктора — впредь пусть и тени недостойности не ложится на твой мундир".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 45f385e1-3a4b-4d9e-8b6b-d0b3082c3d5d
@@ -2386,7 +2386,7 @@ phrases:
     оценивать обстановку и действовать соответствующе. Еще Глейто умеет вести слежку, распознавать элементарные улики. Он
     знает больше сотни команд и в целом..." {n}Соломон замолкает, задумчиво глядя на сидящего по струнке кибермастифа.{/n}
     "Он полезнее и исполнительнее большинства людей, которых я встречал".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: af1a8401-cf99-4ed6-ae15-5292058da9a8
@@ -2470,7 +2470,7 @@ phrases:
   text: '{n}Соломон треплет пса за холку, пристально глядя ему в глаза.{/n} "Я не знаю и десятой доли того, чем начинен Глейто,
     но поверьте — список внушительный. Взять хотя бы сенсоры в носу, которые делают из кибермастифа мини-лабораторию по анализу
     запахов". {n}Арбитес похлопывает пса по спине.{/n} "Все. Глейто, смирно".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 0e554297-937c-42cc-ad70-0e5241a5eafe
@@ -2500,7 +2500,7 @@ phrases:
   event: CompanionDialogue_Solomorne_47
   text: '"Вы понимаете". {n}Соломон шумно выдыхает.{/n} "Долго же это меня глодало... Наверное, мне просто надо было, чтобы
     другой человек озвучил мои собственные мысли. Спасибо".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: cc3aa569-6c6d-48d7-ae97-f4652c9cd872
@@ -2508,7 +2508,7 @@ phrases:
   text: '{n}Соломон встречает вас, выпятив грудь, точно собирается на битву.{/n} "Благодарю, что нашли время поговорить о
     моем рапорте. Смею просить, чтобы этот разговор состоялся в приватной обстановке. Позвольте продолжить в вашем кабинете,
     Вольный Торговец".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 35bd5a8f-f45b-4eee-89f8-0cdb4a8c0d42
@@ -2521,7 +2521,7 @@ phrases:
 - guid: 3c4ee89e-ab39-4d00-bc06-bd7cadeebdaf
   event: CompanionDialogue_Solomorne_50
   text: '"Может быть, вы правы". {n}Соломон задумчиво поправляет на Глейто совершенно ровно сидящий ошейник.{/n} "Может быть".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: e1e3e273-7998-4681-b0b5-c1b6eeb5ed0f
@@ -2547,7 +2547,7 @@ phrases:
 - guid: f205d245-3e6c-4965-92e1-01da63937ddc
   event: CompanionDialogue_Solomorne_54
   text: '"Конечно, {name}". {n}Соломон невозмутим, но глаза его улыбаются.{/n}'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 3f0ee87e-721f-436f-8776-4f581a575f31
@@ -2567,7 +2567,7 @@ phrases:
   event: CompanionDialogue_Solomorne_57
   text: '"Вы просто обезоруживаете меня такими словами". {n}Соломон отвечает тише обычного, точно это признание дается ему
     непросто.{/n}'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 1615f157-bf49-4821-a526-69c11e8b6cf0
@@ -2593,7 +2593,7 @@ phrases:
 - guid: cbdb8bd7-5f41-45d8-a059-0f70a5c8d90c
   event: CompanionDialogue_Solomorne_61
   text: '{n}Соломон почтительно кивает.{/n} "Как вам угодно".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 91b6087b-0238-4b75-bb6e-2ddd35fd278c
@@ -2628,7 +2628,7 @@ phrases:
   text: '"О ней и ее людях можно не беспокоиться — они ждут возможности отчитаться перед маршалом. Уж что-что, а терпеливо
     ждать они умеют". {n}Соломон немного понижает голос.{/n} "Я не сообщал Йегер о связи стража Летуса с леди Теодорой — ей
     ни к чему это знать".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 9daac29c-0fdd-4820-a7a7-49cc8b1428bc
@@ -2687,7 +2687,7 @@ phrases:
   text: '"Ваши действия говорят за себя лучше любых слов, но..." {n}Соломон смотрит вам прямо в глаза.{/n} "Будь я проклят,
     если не признаюсь, что рад услышать лично от вас о верности Лекс Империалис. Когда мир летит в бездну, я хочу знать, что
     мы сражаемся за одни идеалы".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 712256a5-960e-4fe0-8020-57b59fc0a1f5
@@ -2723,14 +2723,14 @@ phrases:
   event: CompanionDialogue_Solomorne_79
   text: '"Отвратительно". {n}Соломон поднимает к лицу слегка дрожащую железную ладонь и сжимает в кулак.{/n} "Но я не дам
     себе развалиться на куски — одной позорной слабости более чем достаточно".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: d959a87f-9075-4236-8df5-f5895e0d1510
   event: CompanionDialogue_Solomorne_80
   text: '{n}Соломон поглощен тем, что оттирает тряпицей кровь с аугментированной руки. Оторвав взгляд от импланта, он устало
     кивает.{/n} "Вольный Торговец?"'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 6d0878ca-2064-465c-8e74-ff9f38e236b2
@@ -2762,7 +2762,7 @@ phrases:
     про развлечения, то само это слово плохо применимо к служебной собаке Арбитес. Однако мне кажется, что Глейто с энтузиазмом
     воспринимает мои персональные тренировки. Ему нравится сопровождать меня в беге на долгие дистанции, и во время стрелковой
     практики он всегда ждет, что я дам ему приказ атаковать мишень".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: b47c822f-f05a-4d75-b272-d6e034d21f34
@@ -2848,7 +2848,7 @@ phrases:
   event: CompanionDialogue_Solomorne_97
   text: '"Не умею? Да я танцевал". {n}Соломон говорит это таким голосом, каким иные признаются в страшной ереси.{/n} "Боюсь
     представить, что для вас значит веселье, если нашего танца на Тассере вам оказалось мало".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: b37dda54-6ac1-4a18-99b1-225cfcbaa4f9
@@ -2960,7 +2960,7 @@ phrases:
   text: '{n}Соломон кивает.{/n} "Намного больше. И намного значимее для меня. Не смею претендовать на официальный статус,
     но обещаю вам свои дружбу, верность, терпение..." {n}Арбитр хмыкает.{/n} "Говорю как идиот, верно? Вы мне просто очень
     нравитесь, {name}. И я хотел бы выражать это чувство открыто".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: ca543040-3424-44ae-874a-9ade0bddcb4f
@@ -2973,7 +2973,7 @@ phrases:
   event: OfficialPropos_Solomorne_17
   text: '{n}Соломон клятвенно поднимает сжатый кулак и качает головой.{/n} "Нет. Я не выведываю чужих тайн и не осуществляю
     тайного наблюдения. Лишь записываю то, что вижу. Хранить бдительность — мой долг".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 11d06807-617e-45a1-9924-3f84c4194b6d
@@ -3020,7 +3020,7 @@ phrases:
   event: OfficialPropos_Solomorne_23
   text: '{n}Соломон вновь надолго задумывается, а затем с сомнением произносит:{/n} "Поди знай... Если я скажу, что вы — особенн{mf|ый|ая},
     это будет звучать банально, да? Но так и есть. Прежде я не встречал людей, подобных вам".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 83734272-96bc-4709-b009-890fd02f5039
@@ -3041,7 +3041,7 @@ phrases:
 - guid: 9bbf2ef5-c943-4846-930e-f3dce5931882
   event: OfficialPropos_Solomorne_26
   text: '{n}Соломон кисло изрекает:{/n} "Да, мне она тоже подарила... незабываемые ощущения".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: ccfa52cb-c200-4adf-8f36-f2745c6d20a0
@@ -3156,7 +3156,7 @@ phrases:
   event: RM_ArbitesFirstMeeting_Solomorne_14
   text: '{n}Соломон бьет кулаком в грудь и покорно произносит:{/n} "Я прошу меня простить и не судить по моему поведению о
     других арбитрах".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 28bb4ca2-fd94-4f7c-9895-dcd82cddb5f6
@@ -3194,7 +3194,7 @@ phrases:
   event: RM_ArbitesFirstMeeting_Solomorne_19
   text: '"В этой стычке Глейто не показал и десятой доли того, на что способен". {n}Соломон треплет пса за холку.{/n} "Но
     он уверенно догоняет меня по числу убитых за сегодня еретиков".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 7a04e00b-9d56-4d69-b170-68226fbb970f
@@ -3215,14 +3215,14 @@ phrases:
   event: RM_ArbitesFirstMeeting_Solomorne_22
   text: '{n}Соломон склоняет голову.{/n} "Ваша предшественница в свое время заключила союз с арбитрами — я чту это и более
     не смею вас задерживать".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 74f7e1fa-c0a1-4453-92fc-7598f5952c58
   event: Solomorn_RomanceFinalSolomorne_01
   text: '{n}Соломон осторожно берет его кончиками пальцев. Его взгляд наполнен теплом.{/n} "Спасибо, что сохранил{mf||а} его.
     Это мое... признание вины много для меня значило. Я сидел над этой жалкой парой строчек всю ночь".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 452d2c0b-7c07-4a47-8afb-95dc8965be2a
@@ -3234,20 +3234,20 @@ phrases:
 - guid: 858a54d1-8404-4689-ae82-a7401f4a3475
   event: Solomorn_RomanceFinalSolomorne_03
   text: '"Смотрю, как горит правосудие. Мое правосудие". {n}Соломон смотрит в пламя. Вид у него не скорбный, а скорее задумчивый.{/n}'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 92ef9eca-e5ed-473f-999e-c67526bf4f6a
   event: Solomorn_RomanceFinalSolomorne_04
   text: '{n}Соломон ухмыляется.{/n} "Остроумно. Но грустно".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 9513e88d-3eea-433c-971f-350783bdb3c6
   event: Solomorn_RomanceFinalSolomorne_05
   text: '{n}Соломон вздыхает.{/n} "Я понимаю. Давай еще немного посидим, а потом пойдем". {n}Он кладет вашу ладонь в свою
     и надолго застывает.{/n}'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 64ce36a0-dac7-44e5-a1c3-ed6ababeb135
@@ -3276,19 +3276,19 @@ phrases:
   text: '{n}Соломон поворачивается к вам, в его зрачках пляшут огни пожара.{/n} "Если ты не шутишь... Если ты не боишься,
     что пожалеешь об этих словах... Если я тебе правда нужен... То я согласен". {n}Он берет вашу ладонь в свои.{/n} "Я согласен
     быть твоим. Навсегда и во всем".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: f0fbcdd0-ad89-4a42-910f-f88e5bb09f61
   event: Solomorn_RomanceFinalSolomorne_10
   text: '{n}Соломон печально кивает.{/n} "Чистая правда".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: 9b02d7e5-01e2-4bcf-b04d-1673fb74cd9d
   event: Solomorn_RomanceFinalSolomorne_11
   text: '{n}Соломон неторопливо встает и протягивает вам руку.{/n} "Кажется, на Тассере я задолжал тебе танец".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: ca8bd4c9-1985-4ee8-8781-e17023f47389
@@ -3349,7 +3349,7 @@ phrases:
 - guid: 10d8d837-c803-4e39-b8e7-5a07a3f02755
   event: Solomorn_RomanceFinalSolomorne_20
   text: '{n}Соломон не отстраняется, его прикосновения бережны и полны затаенной силы.{/n} "Спасибо".'
-  speaker: Соломон Антар
+  speaker: Solomon Antar
   gemini_voice: Orus
   gemini_text: null
 - guid: e86ec0ca-647e-40bd-84ba-5fe14e9ded56

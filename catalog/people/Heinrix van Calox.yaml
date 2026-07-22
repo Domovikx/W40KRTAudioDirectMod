@@ -1382,7 +1382,7 @@ phrases:
 - guid: 25dfff9a-2478-4704-90e7-484d2c49ffd9
   event: CH1_HeinrixFirstMeet_09
   text: '"Н-не надо меня тут инквизировать! Я под защитой Вольного Торговца!" {n}Идира с мольбой смотрит на вас.{/n}'
-  speaker: Идира Тласс
+  speaker: Idira Tlass
   gemini_voice: Gacrux
   gemini_text: null
 - guid: f5209b78-794d-40bc-aee9-ef9a5da1c8dd
@@ -1473,7 +1473,7 @@ phrases:
   event: CH1_HeinrixFirstMeet_21
   text: '"Реквизирует!" {n}Абеляр на мгновение теряет дар речи.{/n} "Ваши формулировки, молодой человек, недостойны беседы
     с Вольным Торговцем".'
-  speaker: Абеляр Версериан
+  speaker: Abelard Werserian
   gemini_voice: Algenib
   gemini_text: null
 - guid: 0013fa1a-83e8-4749-b2ea-16c7270c182c
@@ -1511,7 +1511,7 @@ phrases:
     тень, что заслоняет солнца и плетет цепи! Ниточки вижу, мириады их ко всем нам тянутся, все к нему ползут словно змеи,
     ядом нас окутывают. Беду чую, ой-ой-ой, аж в горле скребет!" {n}Изо рта {g|Encyclopedia:Psyker}псайкера{/g} вырывается
     облачко черного дыма, который тут же рассеивается в воздухе.{/n}'
-  speaker: Идира Тласс
+  speaker: Idira Tlass
   gemini_voice: Gacrux
   gemini_text: null
 - guid: caf460db-bfb5-4d57-8e3c-c0ab4e46ac30
