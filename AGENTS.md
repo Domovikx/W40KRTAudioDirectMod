@@ -173,4 +173,5 @@ phrases:
 - Full ICL: см. `.opencode/skills/qwen3-full-icl/SKILL.md`
 - Голоса: см. `catalog/people/*.yaml`
 - Конфиги: см. `config/default.yaml`, `config/voices.yaml`
+- Референсы голосов: см. `.opencode/skills/voice-ref-collect/SKILL.md`, скрипт `dl_ref.py`
 - Каталог фраз: см. `.opencode/skills/text-catalog/SKILL.md`, файлы в `catalog/people/`
