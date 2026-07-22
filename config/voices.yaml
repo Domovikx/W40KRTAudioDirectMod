@@ -13,8 +13,8 @@
 
 references:
   wh40k_narrator:
-    wav: refs/narrator/15s_m.wav
-    txt: refs/narrator/reference.txt
+    wav: refs/characters/narrator/15s_m.wav
+    txt: refs/characters/narrator/reference.txt
     x_vector_only: true
     description: "Нарратор — мужской (клон из sampleb)"
     characters:
@@ -23,16 +23,16 @@ references:
       - loading_screen
 
   teodora:
-    wav: refs/teodora/15s.wav
-    txt: refs/teodora/reference.txt
+    wav: refs/characters/teodora/15s.wav
+    txt: refs/characters/teodora/reference.txt
     x_vector_only: true
     description: "Теодора — клон из sampleb (2)"
     characters:
       - Теодора
 
   kunrad:
-    wav: refs/kunrad/15s.wav
-    txt: refs/kunrad/reference.txt
+    wav: refs/characters/kunrad/15s.wav
+    txt: refs/characters/kunrad/reference.txt
     x_vector_only: true
     description: "Кунрад — клон из sampleb"
     characters:
