@@ -174,4 +174,5 @@ phrases:
 - Голоса: см. `catalog/people/*.yaml`
 - Конфиги: см. `config/default.yaml`, `config/voices.yaml`
 - Референсы голосов: см. `.opencode/skills/voice-ref-collect/SKILL.md`, скрипт `dl_ref.py`
+- Референсы актёров: `refs/samples/README.md` (нормализация, формат)
 - Каталог фраз: см. `.opencode/skills/text-catalog/SKILL.md`, файлы в `catalog/people/`
