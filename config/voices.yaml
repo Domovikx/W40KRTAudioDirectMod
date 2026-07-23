@@ -1,190 +1,165 @@
-# ──────────────────────────────────────────────
-# Voice References for Full ICL (Base model)
-# Маппинг speaker_name → reference WAV
-# characters: — имена спикеров как в parts[].speaker в catalog/people/*.yaml
-# ──────────────────────────────────────────────
-
 references:
   wh40k_narrator:
     wav: refs/samples/Всеволод Кузнецов.wav
     x_vector_only: true
-    description: "Нарратор — Всеволод Кузнецов"
+    description: Нарратор — Всеволод Кузнецов
     characters:
-      - narrator
-      - system
-      - loading_screen
-
+    - narrator
+    - system
+    - loading_screen
+    - Рассказчик
   kunrad:
     wav: refs/samples/Сергей Чонишвили.wav
-
     x_vector_only: true
-    description: "Кунрад — Сергей Чонишвили"
+    description: Кунрад — Сергей Чонишвили
     characters:
-      - Kunrad Voigtvir
-      - Kunrad
-
+    - Kunrad Voigtvir
+    - Kunrad
+    - Кунрад Войгтвир
   teodora:
     wav: refs/samples/Наталья Казначеева.wav
-
     x_vector_only: true
-    description: "Теодора — Наталья Казначеева"
+    description: Теодора — Наталья Казначеева
     characters:
-      - Theodora
-      - Теодора фон Валанциус
-
+    - Theodora
+    - Теодора фон Валанциус
   abelard:
     wav: refs/samples/Михаил Пшеничный.wav
-
     x_vector_only: true
-    description: "Абеляр — Михаил Пшеничный"
+    description: Абеляр — Михаил Пшеничный
     characters:
-      - Abelard Werserian
-      - Abelard
-
+    - Abelard Werserian
+    - Abelard
+    - Абеляр Версериан
   heinrix:
     wav: refs/samples/Никита Прозоровский.wav
-
     x_vector_only: true
-    description: "Хайнрикс — Никита Прозоровский"
+    description: Хайнрикс — Никита Прозоровский
     characters:
-      - Heinrix van Calox
-      - Heinrix
-
+    - Heinrix van Calox
+    - Heinrix
+    - Хайнрикс ван Калокс
   pasqal:
     wav: refs/samples/Александр Клюквин.wav
-
     x_vector_only: true
-    description: "Паскаль — Александр Клюквин"
+    description: Паскаль — Александр Клюквин
     characters:
-      - Pasqal Haneumann
-      - Pasqal
-
+    - Pasqal Haneumann
+    - Pasqal
+    - Паскаль Ханеуманн
   solomon:
     wav: refs/samples/Олег Куценко.wav
-
     x_vector_only: true
-    description: "Соломон — Олег Куценко"
+    description: Соломон — Олег Куценко
     characters:
-      - Solomon Antar
-      - Solomon
-
+    - Solomon Antar
+    - Solomon
+    - Соломон Антар
   ulfar:
     wav: refs/samples/Алексей Мясников.wav
-
     x_vector_only: true
-    description: "Ульфар — Алексей Мясников"
+    description: Ульфар — Алексей Мясников
     characters:
-      - Ulfar
-
+    - Ulfar
+    - Ульфар Громолёт
   marazhai:
     wav: refs/samples/Сергей Чихачёв.wav
-
     x_vector_only: true
-    description: "Маражай — Сергей Чихачёв"
+    description: Маражай — Сергей Чихачёв
     characters:
-      - Marazhai Aezyrraesh
-      - Marazhai
-
+    - Marazhai Aezyrraesh
+    - Marazhai
+    - Маражай Аэзирраэш
   edelthrad:
     wav: refs/samples/Иван Литвинов.wav
-
     x_vector_only: true
-    description: "Эдельтрад — Иван Литвинов"
+    description: Эдельтрад — Иван Литвинов
     characters:
-      - Edelthrad
-
+    - Edelthrad
+    - Эдельтрад
   eogann:
     wav: refs/samples/Андрей Кравец.wav
-
     x_vector_only: true
-    description: "Эоганн — Андрей Кравец"
+    description: Эоганн — Андрей Кравец
     characters:
-      - Eohann
-
+    - Eohann
+    - Эоганн
   manipulus:
     wav: refs/samples/Владимир Антоник.wav
-
     x_vector_only: true
-    description: "Манипулус — Владимир Антоник"
+    description: Манипулус — Владимир Антоник
     characters:
-      - Manipulus
-
+    - Manipulus
+    - Манипулус
   argenta:
     wav: refs/samples/Елена Соловьёва.wav
-
     x_vector_only: true
-    description: "Арджента — Елена Соловьёва"
+    description: Арджента — Елена Соловьёва
     characters:
-      - Sister Argenta
-      - Argenta
-
+    - Sister Argenta
+    - Argenta
+    - Сестра Арджента
   idira:
     wav: refs/samples/Аглая Шиловская.wav
-
     x_vector_only: true
-    description: "Идира — Аглая Шиловская"
+    description: Идира — Аглая Шиловская
     characters:
-      - Idira Tlass
-      - Idira
-
+    - Idira Tlass
+    - Idira
+    - Идира Тласс
   cassia:
     wav: refs/samples/Анастасия Лапина.wav
-
     x_vector_only: true
-    description: "Кассия — Анастасия Лапина"
+    description: Кассия — Анастасия Лапина
     characters:
-      - Cassia Orsellio
-      - Cassia
-
+    - Cassia Orsellio
+    - Cassia
+    - Кассия Орселлио
   jae:
     wav: refs/samples/Ирина Киреева.wav
-
     x_vector_only: true
-    description: "Джаэ — Ирина Киреева"
+    description: Джаэ — Ирина Киреева
     characters:
-      - Jae Heydari
-      - Jae
-
+    - Jae Heydari
+    - Jae
+    - Джаэ Хейдари
   kibellah:
     wav: refs/samples/Ольга Голованова.wav
-
     x_vector_only: true
-    description: "Кибелла — Ольга Голованова"
+    description: Кибелла — Ольга Голованова
     characters:
-      - Kibellah
-
+    - Kibellah
+    - Кибелла
   yrliet:
     wav: refs/samples/Лина Иванова.wav
-
     x_vector_only: true
-    description: "Йрлиет — Лина Иванова"
+    description: Йрлиет — Лина Иванова
     characters:
-      - Yrliet Lanaeviss
-      - Yrliet
-
+    - Yrliet Lanaeviss
+    - Yrliet
+    - Йрлиет Ланаэвисс
   trazyn:
     wav: refs/samples/Вадим Медведев.wav
-
     x_vector_only: true
-    description: "Тразин — Вадим Медведев"
+    description: Тразин — Вадим Медведев
     characters:
-      - Trazyn
-
+    - Trazyn
+    - Тразин
   default_male:
     wav: refs/samples/Денис Некрасов.wav
-
     x_vector_only: true
-    description: "NPC (муж.) — Денис Некрасов"
+    description: NPC (муж.) — Денис Некрасов
     characters:
-      - NPC (по умолчанию)
-      - Default NPC
-      - Контрабандист
-      - Smuggler
+    - NPC (по умолчанию)
+    - Default NPC
+    - Контрабандист
+    - Smuggler
       - Псайкер (NPC)
       - Psyker NPC
-      - Арбитрес (NPC)
-      - Arbites NPC
-      - Сенешаль (NPC)
-      - Seneschal NPC
-      - Интеррогатор (NPC)
-      - Interrogator NPC
+      - Psyker (NPC)
+    - Арбитрес (NPC)
+    - Arbites NPC
+    - Сенешаль (NPC)
+    - Seneschal NPC
+    - Интеррогатор (NPC)
+    - Interrogator NPC
