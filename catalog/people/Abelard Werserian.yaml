@@ -3,8 +3,6 @@ gender: M
 role: Сенешаль
 age: ''
 personality: суровый, верный, строгий, отеческий
-voice: eugene
-gemini_voice: Algenib
 sound_keys:
 - Abelard
 - Abel
@@ -14,1488 +12,1032 @@ phrases:
   event: BNTRS_AreaPeaceful_Abelard_14
   text: '"Мечтать о пире во время чумы... Как это на вас похоже, госпожа Хейдари".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 120bef4f-90ab-4bb3-9d1d-fa2389a06531
   event: BNTRS_AreaPeaceful_Abelard_4
   text: '"Полагаю, губернатор не желает оставаться без личной охраны — даже за метровыми стенами бункера. Весьма типично".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 21e37821-6b7b-4252-a5c2-5749dd3a5bcd
   event: BNTRS_AreaStressful_Abelard_103
   text: '"Ваше ''не представляет непосредственной угрозы'', ван Калокс, можно трактовать слишком широко для моего личного
     спокойствия".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: a2bd769f-505c-465c-94bc-03b1b1f14bbf
   event: BNTRS_AreaStressful_Abelard_106
   text: '"И вы здесь, досточтимый ван Калокс. Инквизиция никогда не дремлет?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 8f1207fb-b8a8-4bbf-a87f-37571d24b3c4
   event: BNTRS_AreaStressful_Abelard_108
   text: '"До сих пор не понимаю, зачем мы здесь".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 656c106e-7b7f-4e23-99f0-293b5def2268
   event: BNTRS_AreaStressful_Abelard_112
   text: '"Эти слухи... О Лорд-капитане Теодоре. Вы же не верите в них, правда?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 4f994820-0955-49cc-a0f0-d930bc66d27e
   event: BNTRS_AreaStressful_Abelard_117
   text: '"Молчание станции вряд ли можно считать хорошим признаком. Быть может, станцию атаковали культисты? Или же, как в
     случае с нашим кораблем — нанесли удар изнутри?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 78e56209-9178-49b5-9a78-389e3e4c2c19
   event: BNTRS_AreaStressful_Abelard_121
   text: '"Молчание станции в ответ на бортовые запросы уже было подозрительным. После слов магоса на душе легче не стало.
     Держите руки поближе к оружию".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: bf29b05b-9746-4a5f-85bc-ba92601ca3cd
   event: BNTRS_AreaStressful_Abelard_124
   text: '"Веабос-6 всегда был миром-тюрьмой, но это... Даже местные мерзавцы не заслуживают подобной участи".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 737e8b79-2941-4a15-8097-f3f2f99ccf8f
   event: BNTRS_AreaStressful_Abelard_140
   text: '"Не думаю, что Вольному Торговцу должно быть дело до какого-то рядового психа. Казнь в поле и довольно с него".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 081b74b0-1d44-4a33-bf13-814c7b6ab4e9
   event: BNTRS_AreaStressful_Abelard_142
   text: '"Час от часу не легче... Я рассчитывал на обычный скучный прием у губернатора, а не очередную резню!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: f3d9e9c9-7d66-4428-ac57-4291941a4ce0
   event: BNTRS_AreaStressful_Abelard_146
   text: '"Если мы найдем исправный шаттл... при всем моем почтении к вашей вере, Ханейманн, душевным равновесием машинных
     духов мы сможем заняться, когда вернемся на борт!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 62a273df-49b5-4307-96bc-a1b6daaa1007
   event: BNTRS_AreaStressful_Abelard_147
   text: '"Райкад Минорис — не тот мир, который должен сгореть в пожаре, разведенном неорганизованной чернью. Все ли усилия
     губернатор прикладывает для того, чтобы навести здесь порядок? Не уверен".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 0afd2720-507d-455c-8ced-e471474b0e4c
   event: BNTRS_AreaStressful_Abelard_15
   text: '"Поверить не могу... Атак на мир-столицу не случалось ни разу за все существование протектората фон Валанциус".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 71168807-afb0-437b-a754-ce16a2fdb327
   event: BNTRS_AreaStressful_Abelard_152
   text: '"Насколько мне известно, улицы Райкада Минорис имеют многоярусную структуру. Под этим проспектом определенно что-то
     есть. Как минимум, складские помещения".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: e79b4340-536a-425b-a35e-18f72d4af27e
   event: BNTRS_AreaStressful_Abelard_154
   text: '"Эта конструкция и то, для чего она предназначалась, воистину вызывают одно лишь омерзение".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 827aa477-fe0b-484b-8748-c21d559d320e
   event: BNTRS_AreaStressful_Abelard_157
   text: '"Зная вас, госпожа Тласс, и будучи невольно знакомым с вашими... кхм, голосами, я все же предпочту оставаться начеку".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 39d87264-c69c-4223-b27e-e16d9280ed16
   event: BNTRS_AreaStressful_Abelard_164
   text: '"Выход завален, лестницы обрушены, всюду мертвые техножрецы. Что здесь, черт возьми, произошло?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 1e431b2c-5a13-40f6-87ad-f63bee8df64b
   event: BNTRS_AreaStressful_Abelard_172
   text: '"Старый имперский бункер... На Даргонусе тоже такие есть. Надежное место, чтобы спрятаться, когда весь мир летит
     в бездну".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: f583cca9-30f6-46d1-8ad6-568d7899e737
   event: BNTRS_AreaStressful_Abelard_22
   text: '"Идира, возьми себя в руки. Губернатор отправил запрос о помощи — едва ли эту мольбу можно считать "темной".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 3449d526-afe0-4416-a49c-f2f974999c9c
   event: BNTRS_AreaStressful_Abelard_26
   text: '"Если здесь нам грозит опасность, логичнее вернуться на корабль и избавиться от этого судна с помощью макропушек".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: d9e1a2e3-7008-42d2-a702-5775f1931ab4
   event: BNTRS_AreaStressful_Abelard_32
   text: '"Надеюсь, это не уловка, чтобы заставить нас подойти поближе. Впрочем, выглядят достаточно мертвыми".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: cb35e5e6-4290-4fe5-91c8-2354e137bda1
   event: BNTRS_AreaStressful_Abelard_35
   text: '"Альфа-Ро, лучший док Футфола. Считается чистым, обустроенным, почетным... по местным меркам".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: fd53c619-c550-4667-8ac8-6b9e38314d3f
   event: BNTRS_AreaStressful_Abelard_44
   text: '"А я вот едва не глохну здесь и без всяких колдовских голосов в голове. То ругань, то вопли торговцев, то стрельба
     — на Футфоле везде так!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: e7dac989-26bb-484e-b196-2788bf0fbc90
   event: BNTRS_AreaStressful_Abelard_47
   text: '"Всегда удивляло, что преподобный Иеронимус использует крошечную часовню в Атриуме для проповедей. На Футфоле есть
     куда более подходящие его статусу храмы".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 4c9d6b74-419b-4dd4-85c1-45aef8a59ac6
   event: BNTRS_AreaStressful_Abelard_52
   text: '"Есть лидеры, которые держат власть железным кулаком, но Токара не из них. Он приспособленец... гениальный приспособленец".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: d454b187-4f45-4407-99d9-14b3bbabe751
   event: BNTRS_AreaStressful_Abelard_55
   text: '"Касбаллика на Футфоле почти в открытую торгует ксеноартефактами. И Ордо Ксенос не торопится с этим разобраться..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 1417151b-fa0d-47a8-885d-86fed2327cd1
   event: BNTRS_AreaStressful_Abelard_6
   text: '"Насколько мне известно, монастырь снабжает питанием несколько крупных городов-ульев на Райкаде. В недрах этого здания
     скрыт реактор чудовищной, непознаваемой силы".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 81061b89-dcb1-428b-83df-06e19761b9bd
   event: BNTRS_AreaStressful_Abelard_62
   text: '"Ван Калокс, и все же — откуда у вас были сведения, что именно производится на Кьяве Гамма? Династия не то чтобы
     разбрасывается такими сведениями..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: f05a437a-0c92-4d39-86a3-e19c6b72f698
   event: BNTRS_AreaStressful_Abelard_78
   text: '"Лорд-капитан, вы считаете все это... предприятие... разумным решением? Не удивлюсь, если все это закончится засадой".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 9b1a7510-373d-4c6a-80cc-76a5f62a92a9
   event: BNTRS_AreaStressful_Abelard_85
   text: '"Занятная метафора. Я бы только добавил, что хранить эти шестерни — зачастую трата питбрикетов и кислорода".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 48d55818-ace2-418a-9614-60e2d9a185d0
   event: BNTRS_AreaStressful_Abelard_87
   text: '"Порой ставленникам Империума угодно, чтобы преступник провел остатки дней в карьере, трудясь до последнего вздоха
     на благо праведных".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 307774ac-56c9-4f28-b6d6-cf8b2f247d02
   event: BNTRS_AreaStressful_Abelard_92
   text: '"Когда-то мы с Лорд-капитаном Теодорой высаживались на похожем зеленом мире. Две трети команды сгинули в зубах хищников,
     а оставшиеся — от лихорадки".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: a300c62c-47fc-468d-b735-5c737f089c7c
   event: BNTRS_AreaStressful_Abelard_97
   text: '"Жаль, вам не довелось самой вырасти в подобном месте. Так и вижу юную леди, отдыхающую с книгой в саду после занятий".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 7a81e08e-b61f-4fa0-8990-51f193038471
   event: BNTRS_Bark_Abelard_01
   text: '"Вы ранены. Мне следует перевязать ваши раны прежде, чем мы выйдем отсюда".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: ae0e5198-f67d-44ae-99a0-bfd3fb98dd91
   event: BNTRS_Bark_Abelard_02
   text: '"Да куда же вы, Трон вас обереги! Пока не перевяжем раны и вы не возьмете в руки оружие, я вас, при всем уважении
     к наследнику Леди Теодоры, за порог не выпущу!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 16ef92f6-6f45-407a-ae2c-a2182586cbeb
   event: BNTRS_Bark_Abelard_03
   text: '"Возьмите в руки оружие — враги могут найти нас в любой момент".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 16967dcc-2319-41c1-8ed4-edab94edd4e9
   event: BNTRS_Chapter1_Abelard_03
   text: '"Монахи Электродинамической Обители проявили небывалое мужество перед лицом ереси. Достойные сыны Омниссии!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: dd80eab7-1154-42a9-818a-74d434084d2f
   event: BNTRS_Chapter1_Abelard_08
   text: '"Ох, леди Кассия, напрасно вы считаете такое поведение чем-то достойным... мир гораздо сложнее, чем его рисует себе
     юность".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: de35f8c9-cfc1-4091-b2d6-aca59340de42
   event: BNTRS_Chapter1_Abelard_12
   text: '"Губернатор Медина считает, что у него все под контролем. Хм. Я в этом не уверен".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: eb34a7a9-3d81-4f11-9807-2c2200bb7d5e
   event: BNTRS_Chapter1_Abelard_17
   text: '"Я думаю, все дело в лизоблюдстве. Лизоблюдстве и трусости. Порой гонцы оказываются на виселице в первую очередь
     — а туда никто не торопится".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 25effa89-dad5-43f2-a277-4fe85db28541
   event: BNTRS_Chapter1_Abelard_22
   text: '"Будьте спокойны, леди Кассия. Присутствующих здесь хватит, чтобы уберечь вас от чужих злых помыслов".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 79e7e5f4-603b-43bd-90d6-eb49afe0e648
   event: BNTRS_Chapter1_Abelard_24
   text: '"Теперь, когда с нами дитя Навис Нобилите, одной проблемой стало меньше. Что не может меня не радовать".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: f763c595-2b74-424a-b0b5-25664aa76380
   event: BNTRS_Chapter1_Abelard_35
   text: '"Отсутствие связи с флагманом заставляет меня нервничать... надеюсь, звездную гавань удержат до нашего прибытия".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: c0cc3a4f-8fe7-44ef-ac73-dd0a0aa7dbc2
   event: BNTRS_Chapter1_Abelard_36
   text: '"Команда продолжает оплакивать Леди Теодору. Боюсь, это может сказаться на эффективности их трудов во благо Лорд-капитана".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 08619d30-e5c3-49c8-b2a4-d65425926fd4
   event: BNTRS_Chapter1_Abelard_40
   text: '"Идира... перестань корить себя. Твои предсказания всегда были... расплывчаты. Даже если бы и услышала — кто бы из
     нас понял, что беда грозит именно Леди Теодоре?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: ec87cf0c-0766-448a-b53b-4fbbda6cd41d
   event: BNTRS_Chapter1_Abelard_45
   text: '"Нужно убедиться, что все шлюзовые запоры работают как полагается... и проверить систему паролей у персонала..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: e6abcc3f-b034-484c-bd6c-092d8c01b411
   event: BNTRS_Chapter1_Abelard_52
   text: '"Ваше присутствие с нами — знак высшего благоволения. Символ того, что Омниссия милосерден к династии фон Валанциус,
     раз послал нам своего пастыря!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 70bed7c5-7eb7-4d53-bc43-ac14820acfd1
   event: BNTRS_Chapter1_Abelard_55
   text: '"Хм. Могу понять ваш сантимент, но лоботомировать весь экипаж — предприятие дорогостоящее и в конечном итоге не оправдывающее
     себя. Пока мы справляемся традиционными методами — пускай оно идет как заведено".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: ab11570e-b06b-48c6-a4f9-1a6d0d4f1fe8
   event: BNTRS_Chapter1_Abelard_58
   text: '"С каких пор ты начала интересоваться моей работой, Идира? Я действовал по уставу, который был принят много лет назад
     и согласован с Леди Теодорой — думаю, с ее-то решением ты спорить не стала бы?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: b35e644a-cf7d-4fa0-8c3f-7ff0866f0e00
   event: BNTRS_Chapter2_Abelard_05
   text: '"Хм. Один из пилотов шаттла, на котором мы спустились, покончил с собой вскоре после того полета. Впрочем, его тело
     давно сожгли, так что беспокоиться не о чем".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 3b41229b-3200-4cf9-a3b3-b1f4e757f5aa
   event: BNTRS_Chapter2_Abelard_110
   text: '"С Леди Теодорой было... непросто. Но своими деяниями перед лицом опасности она заслужила глубочайшее уважение в
     глазах офицеров... а своей непримиримостью к слабостям — вечное благоговение простых работяг".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 3e1e9f46-d4a4-4403-9734-9b1dd06ed352
   event: BNTRS_Chapter2_Abelard_122
   text: '"Хейнрикс, к слову о новой спутнице Лорд-капитана... вы же бывали на Футфоле. Нет ли у вас особого, хм... досье на
     Хейдари?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: a326e24e-8371-4468-a7c1-32f204920d23
   event: BNTRS_Chapter2_Abelard_129
   text: '"Как-то раз Леди Теодора отправила меня лично в Дворец Администратума за нужной ей справкой. Две недели моей жизни,
     которые никто не вернет назад".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 4d0733ff-e873-499b-9174-dbfd4c665b82
   event: BNTRS_Chapter2_Abelard_13
   text: '"Все это не приведет ни к чему хорошему... нам хватает бед и без появления этой анафемы под нашим боком".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: c983a6c9-9c89-4ea4-872e-63116aaca491
   event: BNTRS_Chapter2_Abelard_138
   text: '"Попытка арестовать спутника Вольного Торговца прямо на его судне... немыслимо! Надеюсь, в будущем за вами не явится
     сама Инквизиция, магос".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: f99d97b0-ad48-4383-8008-f4371e25825d
   event: BNTRS_Chapter2_Abelard_23
   text: '"Официальная версия — он не успел прибыть на место событий из-за атак в других местах. У меня есть другие соображения,
     но я, пожалуй, придержу их при себе".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 63eba222-3a4b-4421-ab39-c88974528c00
   event: BNTRS_Chapter2_Abelard_27
   text: '"Будь проклят тот день, когда Кунрад заступил на службу к Леди Теодоре... теперь по его вине Даргонус потерял целый
     корабль со всем экипажем!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: d4e8aec8-9cc3-444e-8c18-cef5f101291f
   event: BNTRS_Chapter2_Abelard_33
   text: '"Падение Райкада Минорис — удар для всего Простора. Полагаю, Винтерскейл будет в ярости, когда узнает об этом".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 45c088be-f6dc-4225-89b0-9613139c4983
   event: BNTRS_Chapter2_Abelard_39
   text: '"Итак, теперь Владайм склонился перед династией фон Валанциус... ох и интересные времена нас ждут".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 61be9ade-4b13-4df2-ad5e-229d4d0150f0
   event: BNTRS_Chapter2_Abelard_44
   text: '"Да? Я бы в тот момент предпочел находиться как можно дальше от глубокоуважаемой госпожи Чорда..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: d3a973e6-6dd6-4475-be57-818a404fdd31
   event: BNTRS_Chapter2_Abelard_46
   text: '"Я понял ваш... намек, глубокоуважаемый дознаватель. А теперь давайте закроем тему".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: e756dd85-fb9b-4c76-add1-abcb25cbf73b
   event: BNTRS_Chapter2_Abelard_52
   text: '"Хм. Не забывайте, что на пустотном корабле вы гостья, а не владыка. Не хватало еще, чтобы решения на мостике начал
     принимать ксенос..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 903272d4-543e-4155-b926-f10515ca405c
   event: BNTRS_Chapter2_Abelard_57
   text: '"Ох, чую, тяжким ударом будет то, что случилось с Кьявой Гамма, для рода Гапрак... Как бы после этого их соседи по
     Даргонусу не сожрали окончательно".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: ee299a84-8e49-432d-b8d7-89fe1cde85b4
   event: BNTRS_Chapter2_Abelard_68
   text: '"За время своей службы сенешалем я слишком часто видел, как паломничество смелых обращалось катастрофой. Уверен,
     Лорд-капитан увидит еще не одно печальное зрелище подобное этому".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: aec25321-4bdc-4f64-9b1f-7fec22501d3f
   event: BNTRS_Chapter2_Abelard_77
   text: '"Мда, поступок похвальный... только, зная Футфол, вряд ли очищенное от ереси место будет оставаться пустым так уж
     долго. Эта станция притягивает мерзость словно... кхм, ну вы поняли".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 5298b0c5-ae0e-40a0-bf7a-6e8548fbe544
   event: BNTRS_Chapter2_Abelard_86
   text: '"Мне не по чину комментировать деяния благородных Навис Нобилите... скажу только, что надеюсь, что в следующий визит
     мы обойдемся без лишних расходов на восстановление числа блюстителей и ремонт".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 2f179a9c-7a43-4f3a-8b8d-2897959f2e9e
   event: BNTRS_Chapter2_Abelard_93
   text: '"Признаться, вначале я был... обеспокоен особым интересом Священной Инквизиции к Кьяве Гамма. После того, что мы
     увидели на индустриальном мире, я рад, что глубокоуважаемый дознаватель все же был с нами".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 25ffeb20-3d33-40c9-87e0-74addf147378
   event: BNTRS_Chapter3_Abelard_02
   text: '"Ума не приложу, Идира. Но знаешь что? Давай продолжим эту нашу с тобой маленькую традицию".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 95891857-ab66-473d-8988-8614be2a5c23
   event: BNTRS_Chapter3_Abelard_04
   text: '"Я уже почти было собрался в отставку, сестра... но куда ж Лорд-капитан без меня, а? Нет, рановато еще".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 33bbfab5-6057-43be-8dbd-c51002345926
   event: BNTRS_Chapter3_Abelard_05
   text: '"Тссс, родная. Не сейчас".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 5aa5b9ff-5538-43b8-9573-24ae002b035a
   event: BNTRS_Chapter3_Abelard_07
   text: '"Леди-Навигатор... слов нет, чтобы описать, как я рад тому, что вы уцелели".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 11c89fcf-ad2b-4a46-afd1-778a67511011
   event: BNTRS_Chapter3_Abelard_10
   text: '"Благодарю за щедрость, господин Ханейманн. Но лучше позволю своим воспоминаниям взорвать мне голову, чем избавлюсь
     от них".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 577b58bc-1bdf-4b5d-8ae9-cb2c90079975
   event: BNTRS_Chapter3_Abelard_12
   text: '"Слишком долго он оставался среди живых. Пришло время физически стать тем, чем он и так является в душе — падалью".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: b3db5e97-d4f0-4d75-8032-852e5f4c6b4a
   event: BNTRS_Chapter3_Abelard_127
   text: '"Кстати, глубокоуважаемый дознаватель... я давно не видел Ахиллеаса. Что с ним произошло после событий на Даргонусе?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 091f0300-ff56-4d4c-87a3-621789a9bcfb
   event: BNTRS_Chapter3_Abelard_132
   text: '"Я виню себя, что проморгал предательство изменницы Ирлиэт. Но рад, что она недолго торжествовала над нами. Фон Валанциусы
     не прощают измен".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: e813bf2b-2626-4e16-960d-d507395515ba
   event: BNTRS_Chapter3_Abelard_139
   text: '"Лорд-капитан... вы уверены в своем решении вернуть в свиту ту, что предала вас?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 9454f3fa-db5e-4402-9049-5a5ee267bc89
   event: BNTRS_Chapter3_Abelard_22
   text: '"Лишний повод найти способ выбраться отсюда и больше никогда не ступать по этим темным улицам. Разбираться в интригах
     ксеносов — увольте!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 46b99966-1a3a-41b9-abee-dc78800b1320
   event: BNTRS_Chapter3_Abelard_30
   text: '"Сестра, при всем уважении к Экклезиархии — избавьте меня от звука вашего голоса".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: c7a7719c-4cc0-4766-9c02-ff6ac7e834bc
   event: BNTRS_Chapter3_Abelard_38
   text: '"Еще раз, сестра... вы говорите, вам удалось вырваться из заточения, куда вас упекли ксеносы?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: acd29cf4-af0e-4976-b698-f434d75d0c2f
   event: BNTRS_Chapter3_Abelard_57
   text: '"Ну, я, конечно, сходил в небольшую самоволку... только не по своей воле".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: b71b05a6-ea98-4803-b11f-3205269cae05
   event: BNTRS_Chapter3_Abelard_70
   text: '"Знаете, кого вы мне напоминаете, госпожа Хейдари? Пустотного паразита. Выживете хоть без атмосферы, хоть в экстремальных
     условиях".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 5f078177-0c91-44ae-a758-17f6d2443e6b
   event: BNTRS_Chapter3_Abelard_77
   text: '"Я продолжаю размышлять, как прошла Магнэ Ацессио... вроде бы вполне достойно. Только вот церемониймейстер жаловался,
     что позабыл конец вечера..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 06989d0d-b557-4cdf-b41b-16b6790ff1f9
   event: BNTRS_Chapter3_Abelard_89
   text: '"Я все еще не могу поверить, что Лорд-капитан решил{mf||а} взять в свиту этого... этого..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 4df8850b-c44c-48f8-bfd9-32dc5a79c0fb
   event: BNTRS_Chapter4_Abelard_08
   text: '"Надеюсь, другие силы Империума в Просторе подхватят это начинание. Довольно всякой мерзости шляться по владениям
     Империума без дозволения и присмотра!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 2c518373-39c4-4276-9531-b710e2ac6b66
   event: BNTRS_Chapter4_Abelard_102
   text: '"При первом визите на Салис Прайм я и не подозревал, какое сокровище скрывается под его снегами. Сестра, вы явили
     Простору истинное чудо веры".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 209cb278-70c1-4bdb-91d8-f00be77348b2
   event: BNTRS_Chapter4_Abelard_113
   text: '"Леди Кассия, вернитесь в настоящее. Не пристало юной деве ломать свою голову столь мрачными размышлениями, когда
     их причина уже осталась в прошлом".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: ac199a83-dc6a-4bbe-9071-2e64a89f6863
   event: BNTRS_Chapter4_Abelard_118
   text: '"Хотел бы я знать, какими методами вы и ваши коллеги лечите подобный кадровый голод. Савант... пожалуй, найти такого
     человека может быть сложнее, чем псайкера".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 1f1c8d8b-17c3-4a48-b16d-cac76c1bd82a
   event: BNTRS_Chapter4_Abelard_123
   text: '"Я... надеюсь, что теперь на корабле станет спокойнее. Хотя не доверяю я этой штуковине... мало ли что она с тобой
     сделает, если надолго ее оставить..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 96101a4c-fbaf-4808-b481-7ad3bc7d56bf
   event: BNTRS_Chapter4_Abelard_131
   text: '"Должен сказать, Лорд-капитан, экипаж... с непониманием отнесся к тому, что после своей выходки ваш ксенос не был
     усыплен".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: b9c73c5a-b229-424d-b60c-6219476472f7
   event: BNTRS_Chapter4_Abelard_141
   text: '"Идира, Трона ради — осторожнее с этим созданием. Мы даже до конца не понимаем, что это такое. И пока не поймем —
     лучше считай его чем-то вроде опасного ксеноса. Для собственной безопасности".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: f1c1132b-3302-4dc6-a3f1-4acf73a53b02
   event: BNTRS_Chapter4_Abelard_150
   text: '"Я не сомневался в вас, господин Ханейманн. Приятно знать, что корабль {mf|Его|Ее} Светлости доверен под опеку человеку,
     которому знакомы понятия "честь" и "преданность".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: f3023c73-ed0b-48d4-bda4-7218db960210
   event: BNTRS_Chapter4_Abelard_155
   text: '"Хех. Янрис чуть воротником не удавился, когда увидел стоимость всего, что вы с вашими уважаемыми братьями успели
     разгромить и переломать..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 595a33e4-fee7-4273-84e6-ee9f51cd3aab
   event: BNTRS_Chapter4_Abelard_24
   text: '"Комморра испытала нас всех на прочность, и я рад, что выдержал эту проверку. Значит, на покой мне пока рано".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 8b743a7d-7e8d-489a-80bb-015747edb588
   event: BNTRS_Chapter4_Abelard_34
   text: '"Не думал, что когда-либо скажу это... но мне нравился старый Футфол больше нынешнего".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 184306c0-697e-442f-abc9-b7e6bbb22b90
   event: BNTRS_Chapter4_Abelard_38
   text: '"А был ли у него выбор, ван Калокс? Винтерскейлу плевать на станцию, а Лорд-капитан... отсутствовал{mf||а} по весьма
     уважительной причине".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 66cd3600-44ea-4536-8a47-18ba5b0159e7
   event: BNTRS_Chapter4_Abelard_41
   text: '"Главный вывод, который ему нужно сделать — это добавить почтительности и неизбывной благодарности в манеру общения
     с Лорд-капитаном. Только {mf|его|ее} вмешательство спасло ему голову".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: c71e466f-c354-4421-938e-6736aea222c4
   event: BNTRS_Chapter4_Abelard_43
   text: '"Охохо... сдается мне, участие Лорд-капитана в падении Инцендии Чорда еще припомнят..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 192e82e6-6743-4338-bd9a-6f55c6cdc7ff
   event: BNTRS_Chapter4_Abelard_57
   text: '"Я горжусь тем, что династия фон Валанциус не оставляет старые обиды без ответа. Пусть каждый ксенос знает — преступление
     против Вольного Торговца обернется для него гибелью!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 22bfb334-0532-412a-8220-31120f68ef87
   event: BNTRS_Chapter4_Abelard_58
   text: '"Я не сожалею, что некоторые соратники предпочли покинуть нас. В последнее время они подозрительно шептались о Лорд-капитане".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: fa83cc0d-b4f8-4d8d-893c-547f0b2607ac
   event: BNTRS_Chapter4_Abelard_65
   text: '"Думаю, даже для вас, уважаемый Ульфар, воцарившийся там пандемониум был бы слишком тяжким испытанием. Хотя соглашусь
     — хоть бы чуток понаблюдать, как ксеносы платят за свои пороки..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 789e71da-b94c-4943-9938-155ac957a63f
   event: BNTRS_Chapter4_Abelard_69
   text: '"Каллигос Винтерскейл пал! Не думал, что доживу до этого дня — он казался неистребимым, практически бессмертным".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 477fe7c8-2c63-4508-9bb6-3b6b82c782d4
   event: BNTRS_Chapter4_Abelard_77
   text: '"Могу представить себе, какая грызня начнется за Торговый Патент... если потомки Винтерскейла пошли в него, династии
     грозит долгая междоусобица и кровавая баня".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 56e59fe2-f887-4e1c-a488-9e09accc335b
   event: BNTRS_Chapter4_Abelard_82
   text: '"Я и без дара провидения с таким же ощущением остался. В общем-то, нетрудно догадаться, что Инквизиция не все карты
     на стол выложила".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 04eb50d7-ca04-49df-b637-1ecba2ef9c06
   event: BNTRS_Chapter4_Abelard_87
   text: '"Кунрад умудрился найти себе приспешницу в самом сердце Даргонуса... Регина! Кто бы мог подумать!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 15287e18-eee7-402b-bd7a-3739a4a682a2
   event: BNTRS_Chapter4_Abelard_91
   text: '"Справедливости ради, Ирлиэт, не вам упрекать Человечество в междоусобицах. Все, что я успел узнать за последнее
     время о вашем племени, говорит о том, что склонность к распрям — универсальное стремление".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: dfee812d-6e1d-4654-82aa-73ed3271fd88
   event: BNTRS_Chapter4_Abelard_93
   text: '"Когда-нибудь я припомню Драйвстему его готовность похоронить мою семью по надуманным обвинениям. Когда-нибудь...
     позже".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 7a4a6f8a-e039-4e92-b9a6-8ca29d3ab9a4
   event: BNTRS_Chapter5_Abelard_05
   text: '"У меня отменная память на астронавигационные параметры, и мы не бывали в подобных местах. Но... ты права, Идира.
     Что-то странное в этих мирах есть".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: d3813dd8-3e53-4b82-bb38-22a16064f240
   event: BNTRS_Chapter5_Abelard_18
   text: '"Признаю, поход, что предприняли эти Ангелы Императора, сделал бы честь отважнейшим из офицеров Флота. Уверен, Император
     отметил героизм своих избранных".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: c15cc5db-8898-44f2-a3c8-c07210bfbadc
   event: BNTRS_Companion_DLC3_Abelard_01
   text: '"Благодарю, генетор, но нет. Прошлое не избыть алхимическими снадобьями и имплантами. Оно всегда будет с нами".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 33f56aa5-489c-4946-81d2-54f03818f68c
   event: BNTRS_Companion_DLC3_Abelard_100
   text: '"Если вы способны заниматься мысленными экзерсисами несколько суток кряду, могу лишь выразить свое почтение, но более
     приземленные люди к этому не расположены".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: dcf441c6-d5d6-425c-8db2-0cf422c25db3
   event: BNTRS_Companion_DLC3_Abelard_21
   text: '"Почтенный генетор, я высоко оцениваю ваше ремесло, но категорически отказываюсь проводить на себе экспериментальные
     ювенильные процедуры. Сделайте милость, найдите себе другую жертву".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: f79d489e-850c-415c-997a-5dab0de7501a
   event: BNTRS_Companion_DLC3_Abelard_36
   text: '"Разумеется, господин Фебрус. Один сигил для вас, другой — для вашего коллеги Нунциуса. Я занимаю пост достаточно
     долго, чтобы не удивляться даже самым эксцентричным гостям на судне".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 9b4686b1-9289-43f8-ab5e-bef928bdca83
   event: BNTRS_Companion_DLC3_Abelard_62
   text: '"Отмечу, что это не первозданная форма архитектуры. Дворец несколько раз перестраивался и улучшался в соответствии
     с растущим статусом династии. Подробности вы можете найти в инфохранилище".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 2e36d97f-8898-4e5b-9e66-f09e16f324c4
   event: BNTRS_Companion_DLC3_Abelard_75
   text: '"Не думаю, что нашлось бы много желающих попасть в ваш кабинет, господин Фебрус. Я, к примеру, точно не из их числа".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: ad877e82-2b0e-4e14-9cb9-8e46643e3401
   event: BNTRS_DLC2_Abelard_01
   text: '"Проктор, так ли необходимо держать на мостике вашего кибермастифа? Он, кхм, нервирует экипаж".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 65afd6f5-e05b-4f28-bf60-9bdd65736610
   event: BNTRS_DLC2_Abelard_109
   text: '"С возрастом приходит опыт. Префект оказалась искушеннее всех нас вместе взятых".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: b996d79b-db09-46dc-a076-7ceeefad90d4
   event: BNTRS_DLC2_Abelard_111
   text: '"Надеюсь, Администратум извлечет урок из произошедшего и позаботится, чтобы на Даргонусе больше не появлялось таких
     опасных карьеристов, как Вультур".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 42dadf16-0c57-4f24-a0cd-75f02e91b012
   event: BNTRS_DLC2_Abelard_122
   text: '"Милосердие Лорд-капитана велико — лучше бы проктору помнить об этом и быть благодарным до конца дней своих".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 39e19623-f77c-4a93-b30a-efa428828a14
   event: BNTRS_DLC2_Abelard_126
   text: '"Какое вероломство! После всего, что Лорд-капитан сделал для Арбитес, Соломон пошел на предательство".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 234a999f-2eda-4624-8c95-47fd501ee3e2
   event: BNTRS_DLC2_Abelard_137
   text: '"Вы напомнили мне: надо поблагодарить Лорд-капитана за то, что я не чахну за бумажной работой, как другие офицеры".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 57364749-c1a4-47e3-9e7c-9d4d6b74d9b6
   event: BNTRS_DLC2_Abelard_138
   text: '"Поскольку вы официально присоединились к свите, проктор, я напомню, что теперь слово Лорд-капитана будет для вас
     законом".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 642492d0-0a51-4880-b401-0dc840cef289
   event: BNTRS_DLC2_Abelard_145
   text: '"Вам виднее, господин дознаватель. Как никому другому".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: a6078fd6-ad65-4f32-8e30-a38ed1e01c86
   event: BNTRS_DLC2_Abelard_147
   text: '"Чужая палуба под сапогами, свет аварийных ламп — давненько я не принимал участия в абордаже. Будто стал моложе на
     десяток лет!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 41e19633-d087-4619-a682-1b84ea6a674b
   event: BNTRS_DLC2_Abelard_150
   text: '"Простите за прямоту, Леди Кассия, но ни одна книга не способна охватить весь спектр того, что обычно идет не по
     плану во время абордажа. Лучше доверьтесь моему практическому опыту".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 44f5888e-d93b-4166-80d1-83c3f31adb18
   event: BNTRS_DLC2_Abelard_153
   text: '"У корабля хороший потенциал! Если сменить оснащение, поменять офицерские посты и сделать еще перестановок по мелочи,
     выйдет совсем недурно".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: b6623376-6ddb-4e43-9278-87ec0a22351e
   event: BNTRS_DLC2_Abelard_161
   text: '"Появление арбитров — добрый знак. Надеюсь, они помогут навести порядок на Райкаде".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 4c6e57b4-286c-422c-b1ef-6286f6c1cfd7
   event: BNTRS_DLC2_Abelard_20
   text: '"Следите лучше за своим псом, а не за людьми на мостике. Их столько, сколько нужно Лорд-капитану — и ни человеком
     больше".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 8e693f46-0cbe-49c4-8de6-395ddad6f60d
   event: BNTRS_DLC2_Abelard_213
   text: '"Проктор, вы неплохо держите себя в руках. Не ожидал, что ксенос в свите Вольного Торговца вас совсем не будет смущать".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 8f8c4772-9269-41b3-b3dd-353688975a78
   event: BNTRS_DLC2_Abelard_235
   text: '"Воистину, это место нас не балует. Но такие, как мы, выдерживают все. У нас просто нет иного выбора".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 33be2588-3a20-4b4c-a758-c2c137d733d8
   event: BNTRS_DLC2_Abelard_288
   text: '"Давно не слышал от проктора порицаний дисциплины на мостике. Не то чтобы я жалуюсь, просто отмечаю тревожную перемену".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 134d476c-c220-4676-bc95-f77a1785b1ae
   event: BNTRS_DLC2_Abelard_291
   text: '"Давно не видел вас на мостике, проктор. Были заняты чем-то важным?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: df5c91bf-28a3-4605-a957-5faa4fcfbed9
   event: BNTRS_DLC2_Abelard_316
   text: '"Вы глядите на местных жителей с большим подозрением, чем обычно, проктор. Наш Янус вам не по нраву?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: b3c23e8e-4454-436d-a3e3-6337069b8e24
   event: BNTRS_DLC2_Abelard_49
   text: '"Я не могу не сожалеть о потере Висиря. Как бы ни был он стоек и почтителен к смерти, но потерять свое дитя... Это
     ужасно".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 628dff5f-d8a7-4c81-988d-2986570f62c3
   event: BNTRS_DLC2_Abelard_60
   text: '"Никогда бы не подумал, что Арбитес в Коронусе перестанут существовать. Интересно, что бы сказала Леди Теодора..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: d8a3ed8d-05b3-4140-b726-724a78b1cfd7
   event: BNTRS_DLC2_Abelard_66
   text: '"Подумать только, направить корабль в варп без поля Геллера — чистое безумие! Я возмущен, что Арбитес не учли все
     риски и подвергли жизнь Лорд-капитана опасности".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: f41c53f9-e520-4852-a567-91ef77f8f70e
   event: BNTRS_DLC2_Abelard_80
   text: '"Мне больно это говорить, но вам должно было пойти на пользу посещение Тассеры. Подобное сильно... расширяет кругозор".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: a9f962bf-e96a-41e2-ac00-379168cb7f2e
   event: BNTRS_DLC2_Abelard_87
   text: '"Страж Летуса... Мне все еще не верится, что Леди Теодора хранила от нас такие страшные секреты. Чего еще мы не знаем?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 08a96bf3-10b8-4bf9-8963-6a6f34fe1901
   event: BNTRS_DLC2_Abelard_99
   text: '"Я начинаю понимать, почему Леди Теодора почти никогда не садилась в кресло судьи. От таких разбирательств больше
     вреда, чем пользы".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 975d2a77-9483-4d0e-88db-bfe6fa3164d9
   event: BNTRS_DLC3_Abelard_05
   text: '"Ваша идея имела бы смысл, если бы здесь работал хоть один вокс-приемник. Без связи невозможно навести орудия достаточно
     точно, чтобы получить хоть сколько-то удовлетворительный результат".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 28582b02-cda2-4b98-a59a-8238b86cb24d
   event: BNTRS_DLC3_Abelard_11
   text: '"Хороший вопрос, дознаватель. Уверен, вы в курсе, что попытка осквернить усыпальницу Вольного Торговца — страшное
     оскорбление для династии фон Валанциус".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: f4fa70d3-77fe-4c1b-8936-ebdf45fd2061
   event: BNTRS_DLC3_Abelard_110
   text: '"Спасибо, проктор. Я предупрежу Высокого фактотума и возьму под контроль посвящение меровцев в корабельные войска.
     Планетарная пехота... придется хорошенько обучить".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 618a9451-1d58-4cff-ba16-412d8f4c2cd7
   event: BNTRS_DLC3_Abelard_111
   text: '"Лорд-капитан, вы уверены, что это хорошая идея? Я не могу позволить вам участвовать в бою насмерть... это безответственно!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: f0dc748e-0471-4eca-aa64-7a4030f208eb
   event: BNTRS_DLC3_Abelard_119
   text: '"О меровском штрафном легионе не слышали уже более сотни лет. Даже самые старые книги в библиотеке династии фон Валанциус
     считают их канувшей в пустоту легендой".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: e1ee6d3e-7c72-4212-8112-9fab2b47f323
   event: BNTRS_DLC3_Abelard_15
   text: '"Во имя всего святого... это что, дворец Даргонуса там, внизу? Не может быть! Лорд-капитан, я клянусь, уверяю вас,
     это не может быть оригинал! Из столицы не приходило никаких вестей о том, что ваша родовая резиденция... утеряна!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: e6edc6f7-f3b8-43e6-b787-c612e41bd0b6
   event: BNTRS_DLC3_Abelard_27
   text: '"Трон Терры, неужели это сыны Крига? В последний раз я слышал о них еще в бытность офицером, и тогда они сражались
     с ксеносами бесконечно далеко от Простора Коронус. Как это богомерзкое создание ухитрилось доставить их... в этот музей?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 6d17617b-d0c4-48d1-8e77-cc53d16c8958
   event: BNTRS_DLC3_Abelard_29
   text: '"Немыслимо! Этот ксенос похитил реликвии всех трех великих династий Простора и до сих пор разгуливает на своих двоих?
     Мы окажем династиям Винтерскейл и Чорда неоценимую услугу, если вернем принадлежащие им святыни, Лорд-капитан!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: e0e92e4b-2022-4f75-828b-97bf0e54f060
   event: BNTRS_DLC3_Abelard_37
   text: '"Так вот оно какое, место, где ступала легенда династии. А если точнее, место, где он сгинул. Будьте осторожны, не
     хотелось бы, чтобы история повторилась".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 7712324d-cb37-4657-8ebc-23d1dbd22abd
   event: BNTRS_DLC3_Abelard_40
   text: '"Коллекция ереси, собранная иной ересью... я в многих местах бывал за свою жизнь, но в столь гнилом углу галактики
     оказываюсь впервые".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: e3b90845-6843-4387-814c-c41bfbced69a
   event: BNTRS_DLC3_Abelard_58
   text: '"Не поймите неправильно, Лорд-капитан, но я не люблю появляться в этом месте. Барахлящие импланты и без того приводят
     меня сюда слишком часто".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 89ce6b2b-1540-46c9-b895-a55a8993133d
   event: BNTRS_DLC3_Abelard_72
   text: '"Хм. Не могу согласиться с этим суждением. На мой взгляд, Сектор Бионика стал выглядеть пристойнее. И кому может
     не нравиться чуть больше тишины?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: ca990ceb-43d2-4b01-9e24-884276ed31a3
   event: BNTRS_DLC3_Abelard_80
   text: '"Приятно видеть, что в медотсеке появились пациенты, которым до сих пор не были доступны чудеса врачевания. Но вам,
     леди Кассия, действительно не место в столь мрачном помещении".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 28e57ffa-9b30-446b-8109-d76e0e1459d2
   event: BNTRS_DLC3_Abelard_89
   text: '"Должен отметить, в этот раз техножречество Коронуса действительно превзошло мои ожидания".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 04a405b7-a7f1-42b5-b231-ed8b42c98f5c
   event: BNTRS_PickUps_Abelard_01
   text: '"Сколько же вам было лет, когда вы впервые отняли жизнь? Вы же... еще девочка почти. Ужасно".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 31685766-6fc3-48ea-b878-c971d17d1da6
   event: BNTRS_PickUps_Abelard_105
   text: '"О, святый Трон... Надеюсь, нет. Этой династии и так хватает беспорядка!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 76e970c7-3a29-4fd6-bab5-0529243eb069
   event: BNTRS_PickUps_Abelard_109
   text: '"Если он смог заметить слежку и замести следы, то это впрямь повод для беспокойства. Каким-то бездомным музыкантам
     подобное не под силу".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 02d2fea8-b906-45c6-8810-35964839acc6
   event: BNTRS_PickUps_Abelard_119
   text: '"Хватит меня на покой отправлять, госпожа Тласс. Быть захороненным здесь почетно, но я бы предпочел упокоиться на
     Даргонусе, поближе к семье".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 7ff4ef4a-6d21-4932-aa61-ed2bec2deda5
   event: BNTRS_PickUps_Abelard_125
   text: '"Мы — пустотники. Наши мертвые предпочитают спать в тишине. Им прислуживает лишь малое число сервиторов".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: a673af88-ad70-4811-b1dd-1aa38d2721ec
   event: BNTRS_PickUps_Abelard_131
   text: '"Как и то, что они умудрились заграбастать целый отсек, а офицеры "не заметили этого". Я устрою проверку".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: d30f5ab2-e3d0-4beb-ba0a-3855b3457754
   event: BNTRS_PickUps_Abelard_135
   text: '"Жду не дождусь, когда эта удаль выветрится, и Лорд-капитан осознает, насколько комфортен {mf|его|ее} трон".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 5a4216a5-5899-4563-891a-2c6bbc656818
   event: BNTRS_PickUps_Abelard_143
   text: '"Это нутро жизнь может не только давать, но и забирать. Особенно если кому-то понравятся твои сапоги".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: ca2d54e5-8977-4305-82f5-c85efbbf5fc9
   event: BNTRS_PickUps_Abelard_145
   text: '"Корабль отравила измена. И, чтобы ее избыть, я, так и быть, потерплю этот уродливый вихрь".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 71d43c88-7b98-4081-96a9-0b71632253c9
   event: BNTRS_PickUps_Abelard_151
   text: '"Держите свои ужимки и руки при себе. Я лишь слежу, чтобы реликвии династии не оказались у перекупщиков Миссии Касбаллики".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 56942bd2-7e7a-4a6e-b912-c80ef3c60bcb
   event: BNTRS_PickUps_Abelard_153
   text: '"Мир рушится, звезда погасла, а она ищет плюсы. Закалка настоящей пустотнорожденной!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 07209bd1-22eb-435b-87d6-bd7e5062b588
   event: BNTRS_PickUps_Abelard_156
   text: '"Не только имена. Воистину, их постигла судьба хуже смерти".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: c4857e6e-2259-4609-9b1f-e01e14f9ebf6
   event: BNTRS_PickUps_Abelard_18
   text: '"Кхм... Регулярная беготня вслед за Лорд-капитаном держит меня в тонусе".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 40a590f1-4623-45ec-967b-55efa91c7e3c
   event: BNTRS_PickUps_Abelard_182
   text: '"Госпожа Кибелла, пощадите мое старое сердце — еще немного, и я вас удочерю".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: d9fbfcd2-59b6-47f5-a0f4-c48450d1d9e4
   event: BNTRS_PickUps_Abelard_190
   text: '"Вы определенно настоящая, госпожа Кибелла, а не двойник гемункула. Уж я бы понял, если бы телохранительницу Лорд-капитана
     подменили".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: e7c3a996-c3f2-4313-95b4-ca61bfb96fee
   event: BNTRS_PickUps_Abelard_195
   text: '"Что же вы сразу по больному... Давайте считать это прихотью Лорд-капитана".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: a121a4a4-4193-4e63-878d-e60e3a8b9009
   event: BNTRS_PickUps_Abelard_200
   text: '"Мы называем их "бюрократией", госпожа Кибелла".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 8078125b-36dd-4048-adb2-e6319866fef3
   event: BNTRS_PickUps_Abelard_211
   text: '"Вольному Торговцу можно многое. На Футфоле — все. Но некоторым, все же, хватает мудрости не пользоваться этим правом
     настолько".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: baeb1a2b-5ca7-4c9e-97c3-f27c78f5b738
   event: BNTRS_PickUps_Abelard_224
   text: '"Как сенешаль не могу не обеспокоиться: личные чувства не повлияют на долг Кибеллы как телохранительницы?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 9593c588-fc18-49eb-8264-8492801db09a
   event: BNTRS_PickUps_Abelard_230
   text: '"Слыхал, Леди Кибелла произвела впечатление на высший свет Даргонуса. Не устаю поражаться тому, какой воспитательный
     эффект оказало влияние {mf|Его|Ее} Светлости".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 4ec2959a-05f9-4f94-91d4-ce4dde0224ff
   event: BNTRS_PickUps_Abelard_236
   text: '"Надеюсь, на нашем корабле он будет вести себя с нашими механизмами сдержаннее, чем ткачи Кровавой паутины — с членами
     экипажа".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: eb70008f-f284-4548-aa8f-a26b7adf55f3
   event: BNTRS_PickUps_Abelard_243
   text: '"Нет. Есть вещи, которые забывать нельзя, госпожа Кибелла".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: da34db54-4fa2-4160-a83f-a16f9c856361
   event: BNTRS_PickUps_Abelard_248
   text: '"Госпожа Кибелла, вы весьма уверенно действуете в незнакомых местах. А ведь вы всю жизнь провели на корабле".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 1517b931-03ae-4d3b-b695-617604acb9d9
   event: BNTRS_PickUps_Abelard_264
   text: '"Уверен, госпожа Кибелла как пустотнорожденная радеет за благо корабля и довольна, что у флагмана появился навигатор".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: c7986783-2e18-4b79-810d-450051ba9f7a
   event: BNTRS_PickUps_Abelard_275
   text: '"Госпожа Кибелла, я понимаю, вас взрастил культ смерти, но... Обычные люди скорбят о тех, с кем вместе служили много
     лет".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 58685aad-f92e-4a5a-ba51-66f7fba5fb38
   event: BNTRS_PickUps_Abelard_284
   text: '"Я бы предпочел больше не доводить проблему до показательной экзекуции. Лучше, когда не страх, а верность интересам
     династии руководит дворянством".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 9760fb3b-679f-4899-9fc2-bb3c3a3de2cd
   event: BNTRS_PickUps_Abelard_49
   text: '"По крайней мере мы способны это пережить и одолеть. А у вас как дела?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 42b16f27-47af-4da0-86ed-c54389673723
   event: BNTRS_PickUps_Abelard_54
   text: '"Целый культ отродий скрывался среди почтеннейших покойных династии... Немыслимо!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 1cca6b1d-8755-4e32-bc24-8b7d54e5e876
   event: BNTRS_PickUps_Abelard_60
   text: '"Мне не по душе, как ткачи Кровавой паутины помыкают экипажем. Мы чтим их, но это не значит, что они встали выше
     офицеров!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 632befc6-4f53-465f-a07e-91b79a0e0339
   event: BNTRS_PickUps_Abelard_84
   text: '"Кибелла... Бедная девчонка. Служение дважды лишило ее семьи".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 08eef5cd-b73c-46be-9b10-cf41e8b1c79b
   event: BNTRS_PickUps_Abelard_87
   text: '"Лорд-капитан лично посещает грузовую магистраль... Говорит с нижайшими из серфов... Воистину, мне пора в отставку!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 9a2a8588-04cc-429b-ab8c-3ba0a0e47a52
   event: BNTRS_PickUps_Abelard_93
   text: '"Надеюсь, что это был последний Немезит. Я уже сбился со счета мертвым смутьянам, претендовавшим на это скверное
     имя".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 000f46ba-15fa-4760-a10a-0f2af61c6e9b
   event: BNTRS_Reactivity_Abelard_01
   text: '"Святилище Навигатора прямо по коридору. Молюсь Богу-Императору, что мы не опоздали..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: ffc6cfa4-2f95-4d0e-877b-a02ff64f7f45
   event: BNTRS_Reactivity_Abelard_03
   text: '"Мельта-заряд поможет расчистить дорогу. Наверняка где-то здесь найдется такой..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 262f7589-b9fc-4876-bcaa-a35ccac96895
   event: BNTRS_Reactivity_Abelard_04
   text: '"Что... что это за место?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 265955c1-68ae-442f-850b-b81be256f362
   event: BNTRS_Reactivity_Abelard_09
   text: '"Нам надо торопиться".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 721bfef7-b308-4246-aa2d-978b08713b88
   event: BNTRS_Reactivity_Abelard_11
   text: '"Наследник... мертв. Пожертвовал собой... чтобы спасти всю династию..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: e025279a-8779-4e99-9d96-eea208eeb2fb
   event: BNTRS_Reactivity_Abelard_18
   text: '"Это тоже внесете в свои отчеты, ван Калокс? Ни стыда, ни совести. Посмеете расстроить Леди Кассию, и, видят звезды,
     с рук я вам этого не спущу".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 9e1a9462-5c90-4e85-8300-c945cba436b8
   event: BNTRS_Reactivity_Abelard_21
   text: '"Трудности закаляют чувства. Чтобы достичь понимания, иногда нужно хорошенько повздорить".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 3cb60983-8b1e-41a4-9001-abd152f2b739
   event: BNTRS_Reactivity_Abelard_25
   text: '"Значит, кхм, брак Леди Кассии и Лорд-капитана... Достойный союз двух глав великих династий".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: a92cf53b-31d1-4b6b-9826-3549cd5b992a
   event: BNTRS_Reactivity_Abelard_35
   text: '"Вот что, ван Калокс, зарубите себе на носу: будете морочить Лорд-капитану голову — я не посмотрю ни на какую Инквизицию
     и буду разбираться с вами лично".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: e226793a-bffa-48fa-a96e-4309164d7361
   event: BNTRS_Reactivity_Abelard_39
   text: '"Знаете, ван Калокс... мы с вами не всегда ладили, но... как оказалось, ваша персона рядом с Лорд-капитаном была
     далеко не самой худшей кандидатурой..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 3a81e36b-5b76-4d3e-9654-5e4bbc7d5b61
   event: BNTRS_Reactivity_Abelard_48
   text: '"Я разрываюсь между двумя желаниями — прочитать вам лекцию про неудачное время и место или же выразить свое удивление
     методами моральной поддержки Инквизиции".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 9c7c484c-3d09-4492-8e0e-dc4b8724851f
   event: BNTRS_Reactivity_Abelard_52
   text: '"Не нравится мне этот интерес Лорд-капитана к госпоже Хейдари. Она полезна, но подпускать ее столь близко неосмотрительно".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: e67ebc53-ddd0-4ab6-be10-1596ddb1b1f5
   event: BNTRS_Reactivity_Abelard_62
   text: '"Признаю, я несколько смущен, что Лорд-капитан продолжает крутить роман с Джай после того, как вскрылась правда о
     ее происхождении. Это и раньше был мезальянс, а теперь..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: c247659d-40dd-43a0-9673-ef4d44b64215
   event: BNTRS_Reactivity_Abelard_73
   text: '"Никогда бы не подумал, что на флагмане фон Валанциус будет происходить такое... чудовищное непотребство. Я уже устал
     наказывать офицеров за неуставные разговоры о том, что вытворяет Лорд-капитан и ксенос на нижних палубах..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 48a832a0-dc0b-4ff0-a709-884db77807ba
   event: BNTRS_Reactivity_Abelard_78
   text: '"Я говорил вам, Лорд-капитан? Экипаж отметил, что вы перестали, эээ, наносить визиты на нижние палубы, и молил передать
     свои глубочайшие благодарности за ваше милосердие".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: a628b189-baaf-4f92-964f-1660b2d4a158
   event: BNTRS_Reactivity_Abelard_86
   text: '"Эта чужачка повадилась отвлекать Лорд-капитана по любому удобному случаю. Ее разговоры отнимают бесценное время".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: e99d8000-679a-4ef9-ab14-7dd59a83ad5b
   event: BNTRS_Reactivity_Abelard_96
   text: '"Может, Ирлиэт и спасла Лорд-капитана, пожертвовав своим камнем душ. Но опасность возникла именно из-за нее. Опять".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 8f1ea127-cec3-4717-89a8-33b4c1e79514
   event: BNTRS_Reactivity_DLC3_Abelard_03
   text: '"Кхм... В Секторе Бионика стали внимательней относиться к аугментациям старшего офицерского состава. После последней
     ревизии окуляра головная боль по вечерам меня почти не мучает".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: dbfc89e8-0bd8-4895-a13e-a85f5f2ff69b
   event: BNTRS_Reactivity_DLC3_Abelard_14
   text: '"Идира, будь добра, демонстрируй свою трактовку правил вежливости и воспитания с меньшим энтузиазмом. Господин генетор
     Эоганн — ценный союзник и гость Лорд-капитана".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 04f5c38a-95a3-45d7-842c-1687acf1d4dd
   event: BNTRS_Reactivity_DLC3_Abelard_25
   text: '"Не могу поверить. Патент Вольного Торговца украден прямо из хранилища Лорда-капитана. В мою смену".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 9d40abd5-f6bd-4af8-b878-dccbfae4adb8
   event: BNTRS_Reactivity_DLC3_Abelard_42
   text: '"О, никто в этом не сомневается, госпожа Хейдари. Потому династия фон Валанциус сотни лет прославляет свое имя в
     Просторе Коронус, а вы известны разве что в кругах всяческой шушеры с Футфола".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: af15138d-1930-41cc-a6b1-da41707dada8
   event: BNTRS_Reactivity_DLC3_Abelard_47
   text: '"Подумать только — сам Себериан фон Валанциус разгуливает по палубам корабля! Если бы я не видел его своими глазами
     — не поверил бы".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: b66d1feb-eb40-401b-997b-24138da08828
   event: BNTRS_Reactivity_DLC3_Abelard_55
   text: '"Участь, что постигла Себериана, закономерна. Время великого Вольного Торговца прошло, и проделки ксеносов лишь нарушают
     привычный ход событий и времени — не перекраивают его начисто".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 00d35046-9dc2-47b9-93b0-151481de378b
   event: BNTRS_Reactivity_DLC3_Abelard_62
   text: '"Вы напрасно беспокоитесь, господин проктор. То, что люди искренне выражают уважение к своему правителю — проявление
     почтительности. К тому же я лично слежу, чтобы подобные шествия проходили строго согласно уставу, и ваше личное вмешательство
     тут не требуется".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 80a99e67-960d-4670-9a18-b36d30f2f67c
   event: BNTRS_Reactivity_DLC3_Abelard_67
   text: '"Я уже и забыл, как выглядят результаты странствий настоящего Вольного Торговца. Целый новый мир в управлении династии
     фон Валанциус... Работы прибавится".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 78dd2ab5-840e-4cab-8dbb-60710188b5da
   event: BNTRS_Stressful_Abelard_01
   text: '"Арджента, не тяжело ли вам без ваших сестер? Я бы предположил, что это — как быть солдатом без отряда".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 5a33aedd-2c5e-4836-bdd8-225c0fb98cb8
   event: BNTRS_Stressful_Abelard_03
   text: '"Никак не могу привыкнуть видеть такую юную девушку в роли боевого соратника..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 43d333ae-16fa-4c69-b0ab-ea55cd6f0265
   event: BNTRS_Stressful_Abelard_05
   text: '"Я недавно беседовал с госпожой Толиман... вам не кажется, Хейнрикс, что вы злоупотребляете гостеприимством Лорд-капитана?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: c192ef63-e9b8-4062-9c2b-904f9b1005a0
   event: BNTRS_Stressful_Abelard_07
   text: '"Идира, ты не хочешь мне ничего рассказать? Например, о погроме в кают-компании неделю назад?"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 7237df84-935c-4a39-84c0-bd2b01fe7ede
   event: BNTRS_Stressful_Abelard_09
   text: '"Вот честное слово, госпожа Хейдари, не могу поверить, что разгильдяйка вроде вас могла быть успешна хоть в чем-то,
     даже в контрабанде".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: a3620508-0cc8-4862-ab9c-752c75154415
   event: BNTRS_Stressful_Abelard_11
   text: '"Юношеству стоит выучить жизненный урок — приземлять седалище можно только на те троны, которые получил законно или
     завоевал безвозвратно".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 21eae5c2-5530-4f69-bb09-f4b63057b2e4
   event: BNTRS_Stressful_Abelard_110
   text: '"Список того, ради чего мне хочется жить, значительно длиннее перечня того, что, кхм, развлекает тебя. Так что, пожалуй,
     я еще повлачу существование, спасибо за заботу".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 70b10202-d778-4797-8ea5-80210b7b6d74
   event: BNTRS_Stressful_Abelard_128
   text: '"Знаешь, я к нему как-то привязался. Имей терпение. Вот сейчас мне что-нибудь отстрелят, и ты сможешь меня улучшить".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: d367f04d-e65a-4bb6-a1a8-ded6577366c1
   event: BNTRS_Stressful_Abelard_13
   text: '"Должен вас поблагодарить, почтенный магос. После вашего вмешательства я будто лет пятьдесят сбросил — оба коленных
     импланта как новые!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 26368899-41d2-44bd-b5ac-35bbaf77b51f
   event: BNTRS_Stressful_Abelard_148
   text: '"Во-первых, я — не ваш слуга, а во-вторых... Ох. Конечно, господин Ульфар, я решу эту проблему. Только умоляю, никаких
     саг".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 9aa53c93-b3f6-4e91-8898-4461e8a291b9
   event: BNTRS_Stressful_Abelard_15
   text: '"Видит Терра, многие предметы обихода и устройства на корабле просто не предназначены для вашей комплекции и силы,
     многоуважаемый Ульфар".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 70e315e1-8e53-45cd-95dc-a3f021c76263
   event: BNTRS_Stressful_Abelard_166
   text: '"Где юнцы берут напором, старики берут знанием. Уверен, даже ксеносы должны понимать, как важен опыт!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 264e7086-5942-4a17-a11f-80536bb738c7
   event: BNTRS_Stressful_Abelard_17
   text: '"Госпожа Ирлиэт, команда корабля тревожилась бы меньше, если бы вы хоть немного усилий прилагали к тому, чтобы их
     не пугать".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 47985c02-e697-40d2-8025-8f316193efb1
   event: BNTRS_Stressful_Abelard_20
   text: '"Нет, ничуть не жалею. Служба на флоте почетна, но только под началом Леди Теодоры я по-настоящему ощутил… значимость
     того, что делаю".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 5ca4d14a-5fa6-41e1-8a81-8021afaf7224
   event: BNTRS_Stressful_Abelard_38
   text: '"Я, кхм, всегда желал лишь уважения, а не страха. Приятно знать, что мои старания не прошли даром. Благодарю... что
     рассказали об этом".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 83639446-fd68-44be-b926-d8f4ac7524f1
   event: BNTRS_Stressful_Abelard_56
   text: '"Молодой человек, есть у вас розетта или нет — прекратите одаривать меня столь снисходительными комплиментами. Будь
     я в вашем возрасте — вы бы за мной не поспели".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: abbb8f50-b3bb-43ff-af34-5b05d8d9fef0
   event: BNTRS_Stressful_Abelard_75
   text: '"Отставить, Тласс. У нас есть долг перед новым Вольным Торговцем — лучше побеспокойся об этом. И поверь — с занятой
     делом головой ты будешь реже забивать ее чем-то невыносимым".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 4fd13350-f994-47da-a2dc-2fc8219a27e0
   event: BNTRS_Stressful_Abelard_92
   text: '"Не беспокойтесь, госпожа Хейдари, я себя прекрасно чувствую. А уж ваша забота-то как помогает..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 0ac59ae0-da31-4d06-b928-bccd9bf161d4
   event: PRL_AbelardRecruit_01
   text: '{n}Сенешаль Абеляр Версериан растерял часть своего прежнего лоска: на его лбу выступил пот, а рукав кителя разорван
@@ -1504,37 +1046,27 @@ phrases:
     Как вы..." {n}Он оглядывается, осматривая место побоища. Его лоб собирается в мелкую складку, а рука ложится на оружие.{/n}
     "{g|Encyclopedia:GoldenThrone}Трон{/g} меня храни, что здесь творится?!"'
   speaker: null
-  gemini_voice: null
-  gemini_text: null
 - guid: 7c7e5f7f-3ebe-4746-a350-f2787d6b8078
   event: PRL_AbelardRecruit_02
   text: '{n}Глаза сенешаля расширяются.{/n} "Что?!"'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 101f7129-62a4-48fe-9b29-e8517045130d
   event: PRL_AbelardRecruit_03
   text: '"Камера Патента — древний, особо священный механизм, к которому с величайшим почтением относятся наши бортовые {g|Encyclopedia:TechPriest}техножрецы{/g}.
     Полагаю, если вы так или иначе разбудили Стража, вы активировали некие процессы... но тогда почему этого не происходило,
     когда то же самое проделывала Леди Теодора?" {n}Сенешаль хмурится.{/n}'
   speaker: null
-  gemini_voice: null
-  gemini_text: null
 - guid: 0e320211-dea2-4617-bbcd-00ae36ea9aea
   event: PRL_AbelardRecruit_04
   text: '{n}Сенешаль оживляется, на его лице появляется мрачная улыбка.{/n} "Лорд-капитан призывает свой экипаж к борьбе —
     значит, вокс-сети работают на общую трансляцию, а не обмен сообщениями. Прекрасно. Пока Вольный Торговец внушает своим
     подданным должное рвение к борьбе, мы с вами отправимся оправдывать ее доверие. Вперед!"'
   speaker: null
-  gemini_voice: null
-  gemini_text: null
 - guid: 1ef74d16-2a3f-4687-8ddc-a7aa02010809
   event: PRL_AbelardRecruit_05
   text: '"Верно, верно..." {n}Абеляр хмурится.{/n} "Проще сказать, чем сделать, конечно. Но уже то, что один из наследников
     Леди Теодоры жив, внушает хотя бы немного оптимизма".'
   speaker: Abelard Werserian
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: a4b4fb88-f083-43b0-ae89-08b764854572
   event: PRL_AbelardRecruit_06
   text: '"Кровь святых! Тогда понятно, почему еретики действуют столь слаженно! Я думал, что блокирование переходов между
@@ -1542,22 +1074,16 @@ phrases:
     затруднить доступ блюстителям! По крайней мере вы живы и теперь в безопасности, госпо{mf|дин|жа} {name}. Только, боюсь,
     отсидеться в безопасном отсеке нам не удастся".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: c2a549dd-518e-463b-a2ae-00531f286984
   event: PRL_AbelardRecruit_07
   text: '{n}Абеляр смотрит на вас так, словно изо рта у вас только что выпрыгнула жаба.{/n} "Госпо{mf|дин|жа} {name}, со всем
     уважением — что вы несете? Кунрад? Предатель?"'
   speaker: Abelard Werserian
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: fe7f2cfa-fed4-4ef0-9ce7-04c41d3c25cd
   event: PRL_AbelardRecruit_08
   text: '"Служит... богам {g|Encyclopedia:Warp}варпа{/g}?! Кунрад — еретик? Ох, Войгтвир, пустотная ты крыса..." {n}Абеляр
     трясет головой.{/n} "Безумие. Не сомневаюсь, восстание на корабле тоже его рук дело?"'
   speaker: Abelard Werserian
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 2184319f-548f-4ffe-8232-8c8363b6c792
   event: PRL_AbelardRecruit_09
   text: '"Нижние палубы кишат еретиками, подбивающими чернь на бунт, но это меньшая из наших проблем — корабельные блюстители
@@ -1565,8 +1091,6 @@ phrases:
     при этом связь с мостиком и инженерным отсеком прервана — помимо обрывочных {g|Encyclopedia:Vox}вокс{/g}-передач мы не
     имеем никакого источника информации о происходящем".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: efdde414-f007-408c-8893-b5908f7f5826
   event: PRL_AbelardRecruit_10
   text: '"Однако не это хуже всего..." {n}Сенешаль умолкает, когда свет в очередной раз тухнет и вспыхивает.{/n} "Эти перепады
@@ -1575,44 +1099,32 @@ phrases:
     остаются считанные мгновения. В лучшем... возможно, если нам удастся добраться до Святилища Навигатора и разобраться,
     в чем дело, кто-то на судне уцелеет".'
   speaker: null
-  gemini_voice: null
-  gemini_text: null
 - guid: 4def9a1d-bcee-467d-9f54-d921438f443b
   event: PRL_AbelardRecruit_11
   text: '"О святый {g|Encyclopedia:Emperor}Бог-Император{/g}..." {n}Абеляр хватается за лоб, на его лице на мгновение появляется
     выражение полной растерянности — которая, впрочем, сменяется решимостью.{/n} "Полагаю, к восстанию на корабле причастен
     именно он? И, госпо{mf|дин|жа} {name}, хотел бы напомнить, что для вас Лорд-капитан — Леди Теодора".'
   speaker: Abelard Werserian
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 1e06006a-3ec2-450d-bfad-041372360833
   event: PRL_AbelardRecruit_12
   text: '"От Леди Теодоры... которую? Последняя, полученная мной, была про Святилище Навигатора, и это было... изрядно давно.
     В любом случае будем надеяться, что Лорд-капитан в здравии и в безопасности командует обороной судна — а мы тем временем
     сделаем все возможное, чтобы остановить сход корабля с курса".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: dbbdc309-1765-404d-8f2d-f580597cf5bf
   event: PRL_AbelardRecruit_13
   text: '"Страж Патента?" {n}Абеляр переводит взгляд на сервочереп, кружащий около вас.{/n} "Лорд-капитан практически никогда
     не спускалась в Камеру... и я присутствовал в этот момент с ней всего пару раз, и ни разу не видел ничего подобного".'
   speaker: Abelard Werserian
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 7a6750ab-d6a6-47b7-bf81-8de86b275436
   event: PRL_AbelardRecruit_14
   text: '"Безусловно, {name}. Идемте же".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: d35f820f-0732-4bc2-ba5d-1d69ebfc2c13
   event: PRL_AbelardRecruit_15
   text: '{n}Абеляр склоняет голову и встревоженно оглядывает вас.{/n} "Вы отправили мне вокс-сообщение... точнее, вокс-передачу
     на офицерской частоте, которую мне посчастливилось услышать... разве вы не делали этого?"'
   speaker: Abelard Werserian
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: a109c56b-ca02-453b-8016-d04926caeb67
   event: PRL_AbelardRecruit_16
   text: '{n}Абеляр вздыхает, его голос начинает немного звенеть.{/n} "Я допускаю, что в обычных обстоятельствах такой шаг
@@ -1620,50 +1132,36 @@ phrases:
     {g|Encyclopedia:RogueTrader}Вольного Торговца{/g}, пустотного судна {g|Encyclopedia:Imperium}Империума{/g} и всего его
     экипажа, арсенала и снаряжения. Выбор очевиден".'
   speaker: Abelard Werserian
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 47a3826e-3fe9-4369-83ef-d9eb4a08adbf
   event: PRL_AbelardRecruit_17
   text: '"Разумеется, {name}". {n}Абеляр небрежным движением одергивает замаранный кровью китель.{/n} "За мной".'
   speaker: Abelard Werserian
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: a1b1c7ad-f958-4bdf-a7d9-2ac89adca503
   event: PRL_AbelardRecruit_18
   text: '{n}Абеляр довольно кивает.{/n} "Идемте, {name}".'
   speaker: Abelard Werserian
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: aceadac1-6b70-469b-8a52-a12e4f736688
   event: PRL_AbelardRecruit_19
   text: '"Я не кормчий и, упаси меня Бог-Император, не Навигатор — однако я всю свою жизнь провел на пустотных кораблях, оснащенных
     варп-двигателями, и знаю, что подобные знаки — не к добру. Быть может, Поле Геллера дало осечку. Может быть, Навигатор
     был охвачен варп-скверной и борется за остатки своей человечности прямо сейчас..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 291c9f84-9220-4ee4-a4a9-607e7ec54b67
   event: PRL_AbelardRecruit_20
   text: '"Если мы сойдем с курса, то навсегда затеряемся в варпе. Конечно, долго мы с вами при этом не проживем, но даже при
     таком условии соглашаться на подобный исход я пока не намерен".'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: e8d0e17e-ef7c-4927-9db8-be3b3272b319
   event: PRL_AbelardRecruit_21
   text: '{n}Сервочереп внезапно разражается потоком статики, сквозь которую пробивается голос Теодоры:{/n} "...верные сыны
     и дочери Бога-Императора, к оружию! Сопротивляйтесь ереси и скверне, что грозит поглотить нашу обитель, и направьте все
     силы на уничтожение тех, кто посмел..."'
   speaker: null
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: cd7a50a4-0793-4461-a161-6014a49eb84a
   event: PRL_AbelardRecruit_22
   text: '{n}Абеляр бросает на вас сумрачный взгляд.{/n} "Безусловно. С дозволения Лорд-капитана прочту вам часовую лекцию
     про связь титулования и проявления должной веры в помазанников Бога-Императора. А пока что займемся более насущными вопросами".'
   speaker: Abelard Werserian
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 53220070-fd38-4e46-ba75-90a0c998fb7a
   event: PRL_AbelardRecruit_23
   text: '"Во время перехода в варпе святилище изолировано для всех, кто не участвует в процессе прокладки маршрута сквозь
@@ -1672,30 +1170,22 @@ phrases:
     смертных контакт с варпом грозит помрачением рассудка, спонтанными мутациями и гибелью". {n}Абеляр перечисляет все предстоящие
     вам ужасы, не меняясь в лице.{/n}'
   speaker: Abelard Werserian
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 1483e02a-c1a1-4998-936d-b44242b097c5
   event: PRL_AbelardRecruit_24
   text: '{n}Абеляр оглядывает вас критическим взглядом.{/n} "Вы в плохой форме, {name}. У меня есть с собой меднабор — я могу
     обработать ваши раны. И, Трона ради, сейчас не время разгуливать по палубам без средств самообороны — вот, возьмите".
     {n}Сенешаль протягивает вам оружие.{/n}'
   speaker: Abelard Werserian
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: c44bf78a-5027-48bf-a9f6-05bdc76a6c83
   event: PRL_AbelardRecruit_25
   text: '{n}Абеляр удовлетворенно кивает.{/n} "Намного лучше, {name}. Теперь вы готовы к грядущим испытаниям".'
   speaker: Abelard Werserian
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 2fd67580-64d7-4634-a6c0-b593e531fbbb
   event: PRL_AbelardRecruit_26
   text: '{n}Абеляр бросает на вас усталый и немного раздраженный взгляд — так смотрят на дерзящего ребенка.{/n} "Я был бы
     счастлив соблюдать формальный протокол, госпо{mf|дин|жа} {name}, однако обстоятельства позволяют оценивать текущую ситуацию
     как экстраординарную, а следовательно — позволяющую отойти от наших обычных процедур".'
   speaker: Abelard Werserian
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 9a552559-648e-4add-b8b9-efe9f6f37a7f
   event: RM_ArbitesFirstMeeting_Abelard_01
   text: '"Полагаю, потому что это представитель {g|Encyclopedia:AdeptusArbitesGlossary}Адептус Арбитес{/g}, Ваша Светлость,
@@ -1704,5 +1194,3 @@ phrases:
     на планете — вы не в праве требовать ответа. Относитесь к Лорд-капитану с тем же уважением, которое выказывали Леди Теодоре...
     Ныне покойной".'
   speaker: null
-  gemini_voice: null
-  gemini_text: null

@@ -2,7 +2,7 @@
 Batch dialog generation via Qwen3-TTS Base model + Full ICL (voice clone).
 
 Reads catalog/people/*.yaml with multi-part phrases (parts: [{speaker, text_clean}]).
-Resolves speaker → voice reference from config/voices.yaml + qwen3_voice field.
+Resolves speaker → voice reference from config/voices.yaml characters lists.
 Generates per-part WAVs, then concatenates into final per-phrase WAV.
 
 Usage:
@@ -47,7 +47,7 @@ def load_voices_config() -> dict:
 
 def load_catalog_phrases() -> Dict[str, dict]:
     """Load all YAMLs from catalog/people/.
-    Returns dict: character_name -> yaml_data (with qwen3_voice, phrases list)
+    Returns dict: character_name -> yaml_data (with phrases list)
     """
     catalog = {}
     for yaml_path in glob.glob(os.path.join(CATALOG_DIR, "*.yaml")):
@@ -64,24 +64,23 @@ def normalize_name(name: str) -> str:
 
 def resolve_speaker_to_voice(
     speaker: str,
-    catalog: Dict[str, dict],
     voices_config: dict,
 ) -> Optional[str]:
-    """Map a speaker name to a voice_name from voices.yaml."""
-    if normalize_name(speaker) == "narrator":
-        return "wh40k_narrator" if "wh40k_narrator" in voices_config.get("references", {}) else None
-
+    """Map a speaker name to a voice_name from voices.yaml by matching characters lists."""
     norm_speaker = normalize_name(speaker)
-    for char_name, data in catalog.items():
-        norm_char = normalize_name(char_name)
-        if norm_speaker == norm_char:
-            return data.get("qwen3_voice")
 
-    # Partial match
-    for char_name, data in catalog.items():
-        norm_char = normalize_name(char_name)
-        if norm_speaker in norm_char or norm_char in norm_speaker:
-            return data.get("qwen3_voice")
+    if norm_speaker == "narrator":
+        for vname, ref in voices_config.get("references", {}).items():
+            for c in ref.get("characters", []):
+                if normalize_name(c) == "narrator":
+                    return vname
+        return None
+
+    for vname, ref in voices_config.get("references", {}).items():
+        for c in ref.get("characters", []):
+            norm_c = normalize_name(c)
+            if norm_speaker == norm_c or norm_speaker in norm_c or norm_c in norm_speaker:
+                return vname
 
     return None
 
@@ -91,7 +90,6 @@ def get_voice_prompt(
     voice_name: str,
     voices_config: dict,
     prompt_cache: dict,
-    default_x_vector: bool,
 ):
     """Create or retrieve cached voice clone prompt items for a voice."""
     if voice_name in prompt_cache:
@@ -102,29 +100,17 @@ def get_voice_prompt(
         print(f"    !! Voice '{voice_name}' not found in config/voices.yaml")
         return None
 
-    xv = ref.get("x_vector_only", default_x_vector)
     ref_wav = os.path.join(ROOT, ref["wav"])
-    ref_txt_path = os.path.join(ROOT, ref["txt"])
-
     if not os.path.exists(ref_wav):
         print(f"    !! Reference WAV missing for '{voice_name}'")
         return None
 
-    if xv:
-        ref_text = ""
-    else:
-        if not os.path.exists(ref_txt_path):
-            print(f"    !! Reference TXT missing for '{voice_name}'")
-            return None
-        with open(ref_txt_path, "r", encoding="utf-8") as f:
-            ref_text = f.read().strip()
-
-    print(f"    Creating prompt for '{voice_name}' (x_vector_only={xv})...")
+    print(f"    Creating prompt for '{voice_name}' (x_vector_only)...")
     try:
         prompt_items = model.create_voice_clone_prompt(
             ref_audio=ref_wav,
-            ref_text=ref_text,
-            x_vector_only_mode=xv,
+            ref_text="",
+            x_vector_only_mode=True,
         )
         prompt_cache[voice_name] = prompt_items
         return prompt_items
@@ -179,8 +165,6 @@ def main():
     top_p = cfg.get("qwen3_base_top_p", 0.9)
     rep_penalty = cfg.get("qwen3_base_repetition_penalty", 1.05)
     max_new_tokens = cfg.get("qwen3_base_max_new_tokens", 2048)
-    x_vector_only = cfg.get("qwen3_base_x_vector_only", False)
-
     model_path = "Qwen/Qwen3-TTS-12Hz-1.7B-Base"
     if not os.path.exists(model_path):
         model_path = os.path.join(
@@ -201,30 +185,15 @@ def main():
     skipped = 0
 
     for char_name, char_data in catalog.items():
-        voice_name = char_data.get("qwen3_voice")
-        if not voice_name:
-            continue
-        if filter_voice and voice_name != filter_voice:
-            continue
-
         for phrase in char_data.get("phrases", []):
             parts = phrase.get("parts")
             if not parts:
                 continue
 
             guid = phrase.get("guid", "")
-            parts_out_dir = os.path.join(PARTS_DIR, voice_name)
-            os.makedirs(parts_out_dir, exist_ok=True)
-            os.makedirs(GAME_DIR, exist_ok=True)
-
-            # Check if final merged file already exists
-            merged_path = os.path.join(GAME_DIR, f"{guid}.wav")
-            if os.path.exists(merged_path):
-                skipped += 1
-                continue
-
             part_paths = []
             success = True
+            first_voice = None
 
             for idx, part in enumerate(parts):
                 speaker = part.get("speaker", "")
@@ -232,13 +201,22 @@ def main():
                 if not text_clean:
                     continue
 
-                resolved = resolve_speaker_to_voice(speaker, catalog, voices_config)
+                resolved = resolve_speaker_to_voice(speaker, voices_config)
                 if not resolved:
                     print(f"  !! {guid}: cannot resolve speaker '{speaker}'")
                     success = False
                     break
 
-                prompt = get_voice_prompt(model, resolved, voices_config, prompt_cache, cfg.get("qwen3_base_x_vector_only", False))
+                if filter_voice and resolved != filter_voice:
+                    continue
+
+                if first_voice is None:
+                    first_voice = resolved
+                parts_out_dir = os.path.join(PARTS_DIR, resolved)
+                os.makedirs(parts_out_dir, exist_ok=True)
+                os.makedirs(GAME_DIR, exist_ok=True)
+
+                prompt = get_voice_prompt(model, resolved, voices_config, prompt_cache)
                 if not prompt:
                     success = False
                     break
@@ -268,8 +246,12 @@ def main():
                     break
 
             if success and part_paths:
-                concat_wavs(part_paths, merged_path)
-                total += 1
+                merged_path = os.path.join(GAME_DIR, f"{guid}.wav")
+                if os.path.exists(merged_path):
+                    skipped += 1
+                else:
+                    concat_wavs(part_paths, merged_path)
+                    total += 1
             elif not success:
                 print(f"  !! {guid}: generation failed")
 

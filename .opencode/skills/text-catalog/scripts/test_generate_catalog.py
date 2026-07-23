@@ -17,8 +17,6 @@ def chars():
             "gender": "M",
             "role": "Мастер шепотов",
             "personality": "коварный, манипулятивный",
-            "voice": "aidar",
-            "gemini_voice": "Sadaltager",
             "sound_keys": ["Kunrad", "KunradVoiceover"],
         },
         {
@@ -26,8 +24,6 @@ def chars():
             "gender": "F",
             "role": "Лорд-капитан",
             "personality": "властная, решительная",
-            "voice": "xenia",
-            "gemini_voice": "Kore",
             "sound_keys": ["Theodora", "TheodoraVoiceover"],
         },
         {
@@ -35,8 +31,6 @@ def chars():
             "gender": "M",
             "role": "Сенешаль",
             "personality": "суровый, верный",
-            "voice": "eugene",
-            "gemini_voice": "Algenib",
             "sound_keys": ["Abelard", "AbelardVoiceover"],
         },
     ]
@@ -169,52 +163,4 @@ class TestResolveCharacter:
         assert name is None
 
 
-# ── gemini_voice field in generated catalog ─────────────────────────────
 
-@pytest.fixture(scope="session")
-def kunrad_catalog():
-    import yaml
-    from pathlib import Path
-    # __file__ is in .opencode/skills/text-catalog/scripts/ → go up 5 to mod root
-    path = Path(__file__).parent.parent.parent.parent.parent / "catalog" / "people" / "Кунрад_Войгтвир.yaml"
-    with open(path, encoding="utf-8") as f:
-        return yaml.safe_load(f)
-
-
-class TestGeminiVoiceField:
-    def test_every_phrase_has_gemini_voice_field(self, kunrad_catalog):
-        for p in kunrad_catalog["phrases"]:
-            assert "gemini_voice" in p, f'{p["event"]} missing gemini_voice'
-
-    def test_npc_phrases_have_null_voice(self, kunrad_catalog):
-        """Phrases with Архмилитант/Морт in {n} should have null voice."""
-        npc_events = {"PRL_KunradUnpleasantNews_03", "PRL_KunradUnpleasantNews_06"}
-        for p in kunrad_catalog["phrases"]:
-            if p["event"] in npc_events:
-                assert p["gemini_voice"] is None, f'{p["event"]} should have null voice'
-
-    def test_kunrad_own_phrases_use_sadaltager(self, kunrad_catalog):
-        """Phrases where speaker explicitly equals file owner."""
-        for p in kunrad_catalog["phrases"]:
-            if p["speaker"] == kunrad_catalog["name"]:
-                assert p["gemini_voice"] == "Sadaltager", f'{p["event"]} expected Sadaltager'
-
-    def test_theodora_phrases_use_kore(self, kunrad_catalog):
-        """Theodora's 6 phrases should use Kore voice."""
-        theodora_events = {
-            "PRL_KunradUnpleasantNews_07",
-            "PRL_KunradUnpleasantNews_09",
-            "PRL_KunradUnpleasantNews_11",
-            "PRL_KunradUnpleasantNews_12",
-            "PRL_KunradUnpleasantNews_13",
-            "PRL_KunradUnpleasantNews_14",
-        }
-        for p in kunrad_catalog["phrases"]:
-            if p["event"] in theodora_events:
-                assert p["gemini_voice"] == "Kore", \
-                    f'{p["event"]}: expected Kore, got {p["gemini_voice"]}'
-
-    def test_every_phrase_has_gemini_text_null(self, kunrad_catalog):
-        for p in kunrad_catalog["phrases"]:
-            assert "gemini_text" in p
-            assert p["gemini_text"] is None

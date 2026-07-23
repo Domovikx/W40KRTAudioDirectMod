@@ -1,4 +1,4 @@
-generated: '2026-07-14'
+generated: '2026-07-23'
 total_characters: 25
 total_phrases: 5089
 unassigned: 0
@@ -6,150 +6,100 @@ characters:
 - name: NPC (по умолчанию)
   gender: M
   role: generic
-  voice: aidar
-  gemini_voice: Charon
   total_phrases: 227
 - name: Абеляр Версериан
   gender: M
   role: Сенешаль
-  voice: eugene
-  gemini_voice: Algenib
   total_phrases: 255
 - name: Арбитрес (NPC)
   gender: M
   role: Арбитрес
-  voice: eugene
-  gemini_voice: Alnilam
   total_phrases: 1
 - name: Джаэ Хейдари
   gender: F
   role: Агент Касабаллики
-  voice: kseniya
-  gemini_voice: Aoede
   total_phrases: 248
 - name: Идира Тласс
   gender: F
   role: Псайкер
-  voice: xenia
-  gemini_voice: Gacrux
   total_phrases: 247
 - name: Интеррогатор (NPC)
   gender: M
   role: Интеррогатор
-  voice: aidar
-  gemini_voice: Charon
   total_phrases: 0
 - name: Йрлиет Ланаэвисс
   gender: F
   role: Аэльдари-рейнджер
-  voice: baya
-  gemini_voice: Vindemiatrix
   total_phrases: 329
 - name: Кассия Орселлио
   gender: F
   role: Навигатор
-  voice: baya
-  gemini_voice: Sulafat
   total_phrases: 440
 - name: Кибелла
   gender: F
   role: Ассасин Культа Смерти
-  voice: kseniya
-  gemini_voice: Despina
   total_phrases: 400
 - name: Контрабандист
   gender: M
   role: Footfall-контрабандист
-  voice: aidar
-  gemini_voice: Zubenelgenubi
   total_phrases: 175
 - name: Кунрад Войгтвир
   gender: M
   role: Мастер шепотов
-  voice: aidar
-  gemini_voice: Sadaltager
   total_phrases: 66
 - name: Манипулус
   gender: M
   role: Магос-манипулус
-  voice: aidar
-  gemini_voice: Schedar
   total_phrases: 175
 - name: Маражай Аэзирраэш
   gender: M
   role: Друкари-архонт
-  voice: eugene
-  gemini_voice: Fenrir
   total_phrases: 325
 - name: Паскаль Ханеуманн
   gender: M
   role: Магос Адептус Механикус
-  voice: aidar
-  gemini_voice: Schedar
   total_phrases: 319
 - name: Псайкер (NPC)
   gender: F
   role: Псайкер
-  voice: xenia
-  gemini_voice: Gacrux
   total_phrases: 91
 - name: Рассказчик
   gender: M
   role: Narrator
-  voice: eugene
-  gemini_voice: Charon
   total_phrases: 16
 - name: Сенешаль (NPC)
   gender: M
   role: Сенешаль
-  voice: eugene
-  gemini_voice: Algenib
   total_phrases: 63
 - name: Сестра Арджента
   gender: F
   role: Сестра Битвы
-  voice: xenia
-  gemini_voice: Laomedeia
   total_phrases: 264
 - name: Соломон Антар
   gender: M
   role: Арбитр
-  voice: eugene
-  gemini_voice: Orus
   total_phrases: 486
 - name: Теодора фон Валанциус
   gender: F
   role: Вольный Торговец
-  voice: xenia
-  gemini_voice: Kore
   total_phrases: 99
 - name: Тразин
   gender: M
   role: Некрон
-  voice: aidar
-  gemini_voice: Sadaltager
   total_phrases: 63
 - name: Ульфар Громолёт
   gender: M
   role: Космический Волк
-  voice: eugene
-  gemini_voice: Orus
   total_phrases: 286
 - name: Хайнрикс ван Калокс
   gender: M
   role: Интеррогатор Инквизиции
-  voice: aidar
-  gemini_voice: Charon
   total_phrases: 410
 - name: Эдельтрад
   gender: M
   role: Наследник-псайкер
-  voice: aidar
-  gemini_voice: Umbriel
   total_phrases: 0
 - name: Эоганн
   gender: M
   role: Навигатор
-  voice: aidar
-  gemini_voice: Umbriel
   total_phrases: 104

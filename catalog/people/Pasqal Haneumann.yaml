@@ -3,8 +3,6 @@ gender: M
 role: Магос Адептус Механикус
 age: ''
 personality: логичный, отстранённый, монотонный
-voice: aidar
-gemini_voice: Schedar
 sound_keys:
 - Pascal
 - Pasqal
@@ -16,1027 +14,725 @@ phrases:
   event: BNTRS_AreaPeaceful_Pascal_6
   text: '"Проведен визуальный осмотр окружения. Металлическая обшивка бункера в полной сохранности и не имеет повреждений".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 7194355d-27a2-4e86-ae40-3ed872eda2df
   event: BNTRS_AreaStressful_Pasqal_10
   text: '"Не ведомый очевидной наживой, твой разум предсказуемо слаб и ленив. Пытливому разведчику очевидно, что мы приблизились
     к кладезю данных".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 1f2b0ca6-72d7-4f37-bfac-419588019435
   event: BNTRS_AreaStressful_Pasqal_104
   text: '"Благодарю тебя, Омниссия, что даруешь мне возможность воплотиться инфохищником, что следует за Знанием!"'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 2384d917-16b7-4392-9d06-61df85352101
   event: BNTRS_AreaStressful_Pasqal_110
   text: '"Зачем простолюдинам столько места? Это нерационально, они могут быть размещены значительно компактнее".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: b66aafbb-7960-4f20-b29c-12beaef34844
   event: BNTRS_AreaStressful_Pasqal_120
   text: '"Пустотная станция — святыня Омниссии, что преграждает дорогу смерти и тьме к владыкам сей крепости. Так почему же
     вокс-каналы мертвы, а воздух не полнится священными бинарными ритмами?"'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: e5927a3c-dae4-4dd5-8430-6ebff474c6be
   event: BNTRS_AreaStressful_Pasqal_135
   text: '"Первичный осмотр судна указывает, что мои собратья-Эксплораторы уже провели здесь процедуру упокоения. Дальнейшее
     изучение нецелесообразно".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: ba121b88-e8f0-4b96-8542-559d5b047161
   event: BNTRS_AreaStressful_Pasqal_145
   text: '"Анархия в звездной гавани приведет к тому, что почтенные машинные духи летательных аппаратов взволнуются и оглохнут
     к литаниям успокоения. Следует быть осторожным с шаттлом, который мы используем для эвакуации".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: faec7159-3b76-472e-a1a3-791bbb7d1266
   event: BNTRS_AreaStressful_Pasqal_149
   text: '"Фиксирую многочисленные потери среди боевых и гражданских единиц. С высокой вероятностью показатели могли быть ниже
     при более грамотном командовании".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 0e635cc4-9cf0-4031-9cdc-31d8d4db9ddf
   event: BNTRS_AreaStressful_Pasqal_162
   text: '"Фиксирую множественные структурные разрушения гробницы и гибель состава экспедиции. Инициирую расследование, чтобы
     выяснить была ли тому причиной вопиющая некомпетентность или чрезвычайная ситуация".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 66b6b895-f969-4a77-b279-bf37d54db7d8
   event: BNTRS_AreaStressful_Pasqal_170
   text: '"Превышена предельно допустимая концентрация в воздухе токсичных веществ. Членам экипажа рекомендовано активировать
     респираторную защиту".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: fe5a11a6-d7db-4e63-9dfb-add655cb6e99
   event: BNTRS_AreaStressful_Pasqal_34
   text: '"Ты видела лишь один агромир, притом довольно запущенный, и решила, что весь Империум подобен ему? Комичное суждение".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 7c18db35-405d-4739-acdb-dbac1483bcd6
   event: BNTRS_AreaStressful_Pasqal_37
   text: '"Верфь Футфола — благословенное чудо многомощного Омниссии. Остальная станция — лишь избыточный довесок к ней".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: abb84bad-697c-4aa2-bc86-7bdbde7ab08d
   event: BNTRS_AreaStressful_Pasqal_40
   text: '"Целое заведение, посвященное непродуктивным и паразитическим способам времяпрепровождения. Напрасная трата площади
     станции".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 33974ee9-814d-4378-9d1f-b59ab688673c
   event: BNTRS_AreaStressful_Pasqal_46
   text: '"Разумное решение. Храмы Экклезиархии лишены критически важного для станции функционала. В отличие от капелл Механикус".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 305d27b5-952f-464d-89b9-f882e8afc393
   event: BNTRS_AreaStressful_Pasqal_5
   text: '"Восславьте ток Движущей силы, воссияйте в ноосферных нимбах сладостным светом ея, напитайте аугментику свою живостью
     ея, омойте императивы и энграммы свои чистотой ея".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 15765189-0100-4a83-9b78-44aefdcd97f6
   event: BNTRS_AreaStressful_Pasqal_66
   text: '"Возглашаю псалом инфослужения, прославляя священный цех сей. Возглашаю вспомогательную литанию инициации благовещения.
     Омниссия знает все, постигает все".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 33addce5-9a89-4eec-9102-330789d8457a
   event: BNTRS_AreaStressful_Pasqal_70
   text: '"Протоколы служения машинным духам кощунственно нарушены. Ноосфера корабля переполнена инфонечистотами!"'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 782747d9-e264-4de4-9647-112e307b1b60
   event: BNTRS_AreaStressful_Pasqal_84
   text: '"Империум — великий механизм, а мы — шестерни в нем. И здесь расположен склад для самых скверных и проржавелых шестерней".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 52d882eb-fbf7-49dc-a7f6-5c67a03fe420
   event: BNTRS_AreaStressful_Pasqal_91
   text: '"Столь нетипичная для мирянки осведомленность заслуживала бы одобрения, если бы не тот факт, что генетор Канассиан
     был отлучен около трех столетий назад".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 70626657-87c8-4d0e-9d6e-ea0c1d718fce
   event: BNTRS_Chapter1_Pascal_01
   text: '"Святость монастыря Движущей Силы была нарушена, но обеты Омниссии восторжествовали. В дарах Его да обретется истинная
     сила".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 0ec02b46-9fea-4a54-b0f7-1584ff220316
   event: BNTRS_Chapter1_Pascal_14
   text: '"Единица совершает умозаключения из доступной информации, содержащей погрешности. Результат... загрязнен".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: fed0508c-d9bc-4224-8bda-a835aaefc633
   event: BNTRS_Chapter1_Pascal_33
   text: '"Первичный приоритет — эвакуация Вольного Торговца с планеты. Вторичный приоритет — выживание свиты. Активирую протокол
     вычисленного самопожертвования".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: c3510fb1-1239-43e4-a995-2c742b4dc324
   event: BNTRS_Chapter1_Pasqal_49
   text: '"Постигнув Истину, да укрой ее от профанного ума и реки чисто и бинарно".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 9aaf0790-9138-4b14-885c-6b81a3d12659
   event: BNTRS_Chapter1_Pasqal_51
   text: '"Флот Осознание и династию фон Валанциус связывает череда плодотворных соглашений. Данная единица рада способствовать
     укреплению продуктивной связи на основании совместного уничтожения еретиков".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: fa9b2f18-488d-4ad0-b9e0-831c81475739
   event: BNTRS_Chapter1_Pasqal_54
   text: '"Восстания мирян есть бунт неоптимальных инстинктов и желаний над предопределенной структурой. Случившееся есть результат
     недостаточной сервиторизации экипажа".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: e28df665-03a9-4727-8f14-fb0a58c4438a
   event: BNTRS_Chapter2_Pascal_113
   text: '"Прекращение жизненных функций единицы Идира Тласс значительно снизило риск возникновения аномалий на борту. Утилизация
     была оправдана".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 8daec027-056a-4cfe-9be0-95ba68f52864
   event: BNTRS_Chapter2_Pascal_119
   text: '"Извещаю: все акты кощунственного воровства, попрания привилегий Адептус Механикус и мародерства будут каталогизированы
     для исполнения правосудия".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 8133efbf-de76-4a9a-ab6e-7444538631a2
   event: BNTRS_Chapter2_Pascal_12
   text: '"Анализ рекомендует приготовить системы Простора к грядущим столкновениям с силами, доминирующими теперь на мире
     Райкад Минорис. Сценарий экспансивной конфронтации вероятен на 86%".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: bf396217-dfdb-4ce5-b4f9-90d6831de0f7
   event: BNTRS_Chapter2_Pascal_130
   text: '"Единицу не покидает ощущение, что принципы работы Администратума есть пародийное восприятие священного догмата "уподобься
     в служении механизму". Предтечи имели в виду не это!"'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: fbe90383-3b7a-4c8f-9e94-fbf47da60ed8
   event: BNTRS_Chapter2_Pascal_137
   text: '"Единица Хейнрикс ван Калокс не обладает допуском к данной информации".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 04e88afc-a54e-4336-ac33-6878bd666caa
   event: BNTRS_Chapter2_Pascal_139
   text: '"Данное развитие событий маловероятно... но не исключено. Единица выражает сожаление о пострадавшем убранстве священной
     машины".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 9d0eb7a6-2186-4c60-85ed-62cbb2e37647
   event: BNTRS_Chapter2_Pascal_142
   text: '"Прорицателей, зрящих грядущее в Имматериуме, отвергни. Лишь статистический анализ воистину чист".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 265614fc-8728-4d2c-81b5-6a60a17a58d3
   event: BNTRS_Chapter2_Pascal_151
   text: '"Где человеком движет стремление к Знанию, угодное Омниссии, ксеносом движет болезненное любопытство к изобретению
     новых зловредств".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 7ed19915-fe28-4ad9-afdc-b3ddc9885286
   event: BNTRS_Chapter2_Pascal_20
   text: '"Готовность мира Даргонус к сценарию конфронтации признана удовлетворительной. Подавляющий процент потерь приходится
     на легко заменяемую чернь, важные объекты производства понесли минимальный ущерб".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: b60df201-3610-42d2-b4a0-bb64c5835388
   event: BNTRS_Chapter2_Pascal_26
   text: '"Стойкость исполнения данной единицей ее обязанностей частично примиряет с нехваткой у нее чувства долга, достаточного,
     чтобы самостоятельно прервать свои жизненные функции".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 5ec7b887-4de2-48a1-9204-d678fad4a199
   event: BNTRS_Chapter2_Pascal_34
   text: '"Утверждение ложно. Данная единица имеет долгий срок службы и наблюдала планетарные катастрофы . Их статистическая
     значимость невелика в масштабах сектора. Утверждение загрязнено эмоциональным грузом скорби".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 21e1d0a2-fd67-4682-a472-612645a5ef8f
   event: BNTRS_Chapter2_Pascal_37
   text: '"Профилактической сокращение излишков населения могло положительно сказаться на работоспособности станции. Анализ
     указывает, что под угрозой смерти находились наименее полезные единицы".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 101f5873-99c3-4887-950d-48dd458ec040
   event: BNTRS_Chapter2_Pascal_53
   text: '"В случае благоприятного развития сценария принесения жертвы твое тело не сгинет без цели, но будет подвергнуто священному
     анатомированию. Возрадуйся".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 1dbd76e6-2058-40aa-b5a4-be5cb84abf83
   event: BNTRS_Chapter2_Pascal_54
   text: '"Наблюдение осквернения, свершенного над мануфакторумами Кьявы Гамма порождает в моей когнитивной цепи... непродуктивные
     сигналы. Инициирую запуск мантры умиротворения и митигации духовного износа".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 6ff50c01-034e-4043-9037-d62b1e6d256a
   event: BNTRS_Chapter2_Pascal_61
   text: '"Да утихнет дискордиальный ритм, звучащий в храме сем, да возвратятся параметры к оптимуму своему, да восстановлен
     будет священный алгоритм и продолжится в итерациях своих".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 8c13a45b-9d4f-4d22-9392-10b5abbbb0ee
   event: BNTRS_Chapter2_Pascal_67
   text: '"Утрата значительная, но восполнимая. Гибель самого пустотного корабля — вот истинное горе для Империума. Священный
     храм Омниссии отныне стал пустой скорлупой, и машинные духи покинули его".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 474f999a-5365-4e2c-9947-695b281f34a4
   event: BNTRS_Chapter2_Pascal_69
   text: '"Имена техноэкипажа, несшего службу на пораженном порчей судне, вычеркнуты из поминальной свод-молитвы. Ввиду постыдного
     непротивления скверне им отказано в статусе страстотерпцев".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 1abcb175-4496-405d-9bf8-5cffebed6a01
   event: BNTRS_Chapter2_Pascal_99
   text: '"Священная машина, одержимая ирреальным бесом варпа, предсказывающим будущее... Хитроумное кощунство. Мерзкое, но...
     изощренное и талантливое".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: da076f2d-2e78-40b4-b21c-fcbe2730d35f
   event: BNTRS_Chapter3_Pascal_09
   text: '"Статус мученика дает единице Абеляр Версериан право испросить аугментации эмоциональной ингибиции. Единица будет
     испрашивать?"'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 8f52bcd8-87bc-427c-b598-6c267a83637b
   event: BNTRS_Chapter3_Pascal_101
   text: '"Местные механизмы — уродливая скверноточивая аберрация священной Технологии. Но... возможно ли узреть в искривленном
     зеркале истинный облик того, что отражается в нем?"'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 23234a79-8098-4a72-bd05-6368724e1d3a
   event: BNTRS_Chapter3_Pascal_104
   text: '"Мощь души данной единицы исходит не из плоти, что слаба и ущербна, но из металла, не знающего износа. Она может
     быть сломана, но не сломлена".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 4609ddff-eb81-407c-981e-ffc227c8dc37
   event: BNTRS_Chapter3_Pascal_24
   text: '"Надежда напрасна, мечтания преждевременны. Шансы на выживание возросли незначительно... пока что".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: ff1207f2-4193-45cc-b261-23261e144611
   event: BNTRS_Chapter3_Pascal_28
   text: '"Метрические исчисления бесполезны — пространства ирреального постижимы лишь эмпирическим опытом, но не системным
     анализом".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: f05b2197-3289-438b-8356-646adc5be60b
   event: BNTRS_Chapter3_Pascal_41
   text: '"Причащенным Истинной плотью не страшны увечья, обрывающие существование простых слуг. Благость Омниссии дала мне
     шанс пережить страсти и воспрять к новому служению".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 29e6a0a4-d553-47be-98f1-b1ed7b704f8a
   event: BNTRS_Chapter3_Pascal_58
   text: '"Запись о сотрудничестве единицы Идира Тласс с ксеносами-пленителями занесена в каталог. Активирован протокол бдения".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 3d9506cb-ec51-4b20-bf93-8098644238d8
   event: BNTRS_Chapter3_Pascal_72
   text: '"Единица была свидетелем манипуляций, проводившихся над презренной воровкой в заточении, и выражает радость, что
     не весь объем Истинной плоти был утрачен ею".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: d26ef2f7-4d36-405d-bcdc-db536c6abd03
   event: BNTRS_Chapter3_Pascal_81
   text: '"Традиция ритуального пребывания в праздности, свойственная мирянам, признана фрустрирующей. Коэффициент полезности
     данной единицы падает. Фиксирую страдание".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 07d26c5e-5160-4cf8-9f51-483c901a3c4f
   event: BNTRS_Chapter3_Pascal_83
   text: '"Единица испытывает иррациональное чувство удовлетворения от смерти ксеноединицы Маражай. Природа феномена аномальна".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: ea953831-9a83-4524-a67c-f87996958c27
   event: BNTRS_Chapter3_Pascal_95
   text: '"Новая единица чрезвычайно непредсказуема и опасна. Рекомендуется устранение во избежание предательства".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 7c5538f6-1e96-4559-8b44-ee19efa22852
   event: BNTRS_Chapter3_Pascal_98
   text: '"Функционирование данной единицы происходит на удовлетворительном уровне. Уровень сочувствия в коммуникационном посыле
     воровки... зафиксирован".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: bc188a79-4f94-434e-a45e-f9b586a1988f
   event: BNTRS_Chapter3_Pascal_99
   text: '"Ксеновмешательство нарушило чистоту Истинной плоти, дарованной данной единице Омниссией. Ей предстоит долгая епитимья".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: b42abcfc-bbbe-4401-918a-481f53667e62
   event: BNTRS_Chapter4_Pascal_02
   text: '"Данная единица рассчитывает, что падение ксеносского судна не имело катастрофического характера. В этом случае на
     месте крушения могли остаться остатки, представляющие исследовательский интерес".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 3c34058b-24d0-4b29-aeca-0ddb0471019a
   event: BNTRS_Chapter4_Pascal_11
   text: '"Замечание представителя убогого ксеновида, предпочитающего тактику беспорядочных атак куда попало и резни собственных
     союзников, не занесена в каталог ввиду низкой значимости".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 20401a15-b4b2-477a-9b11-226f58e7c2a2
   event: BNTRS_Chapter4_Pascal_138
   text: '"Номос следует... изучить. Если единице ван Калоксу станет спокойнее, могу добавить, что изучение включает в себя
     и исследование методов умерщвления единицы Номос".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 5ac694ae-6302-4378-a2f8-dcb430deb449
   event: BNTRS_Chapter4_Pascal_146
   text: '"Я призываю к спасению. Не совершайте ошибки своего наставника — не пытайтесь мне препятствовать. Лорд-инквизитор
     действовал издалека, у вас нет такой защиты".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 5922ac35-1415-4b85-8acc-d95b1c3488c6
   event: BNTRS_Chapter4_Pascal_148
   text: '"Вопросы и сомнения более не мучат данную единицы. Фиксирую чистоту и цельность, хоть в местах, где отсечен был бунтующий
     дух, и остались шрамы".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: a8f622b3-b990-4623-8d3e-f83473de7df7
   event: BNTRS_Chapter4_Pascal_151
   text: '"Полагаться на суждения других было ошибкой. Они лишь сдерживали мой потенциал. В одиночку я добьюсь большего! Прерывание
     не терпит сомнений!"'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 7138dd7e-2ef6-4094-b4cb-61d35e8860f4
   event: BNTRS_Chapter4_Pascal_16
   text: '"Сколь чудовищен кощунственный износ, сколь высокий потенциал был утрачен. Фиксирую сигнал наивысшей скорби и обновляю
     ежедневные протоколы, занося в них рапсодильное моление на судьбу мира Ефрат-II".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 82b0141b-d647-49ef-9ae7-2381d7e465b4
   event: BNTRS_Chapter4_Pascal_161
   text: '"Сия печать чистоты, несущая бинарные шифры Деус Механикус, да послужит отметиной в честь победы над презренным Криком
     скверны. Да пребудет дух твоей брони в здравии и превозмогании".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: de9b2f9d-39ed-427c-b50e-9acd9ede0555
   event: BNTRS_Chapter4_Pascal_27
   text: '"Прогноз — значительное снижение человеческой массы приведет к падению эффективности верфи и товарообмена. Или...
     единица имела в виду что-то другое?"'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 14e9f1ed-3b42-47ab-b4ed-48df82ee5570
   event: BNTRS_Chapter4_Pascal_42
   text: '"При всех достоинствах единицы трудно предположить, что его преемник будет менее эффективен на посту Вольного Торговца.
     Усопший демонстрировал высшее равнодушие к своим обязанностям".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 1c2a6ea0-5ab1-419e-b004-32a1caad8edc
   event: BNTRS_Chapter4_Pascal_52
   text: '"Я объявляю священные залы изысканий, оскверненные ксеносом Тервантьясом, подлежащими очистительной эрадикации. Кощунству,
     совершавшемуся в них, не должно быть постигнутым".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: a74b71a9-c8b1-41a5-961f-7a3485dc30ba
   event: BNTRS_Chapter4_Pascal_76
   text: '"Способность мирян делать далекоидущие выводы подвергнута сомнению. Футфол останется прежним".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 9eb4f6c2-3859-407e-85c8-38fac8c8692f
   event: BNTRS_Chapter5_Pascal_01
   text: '"Данный сектор полон древней ксеноскверны. Он не значится как исcледованный. Прогнозирую высокий потенциал разведки!"'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: d8b0b3fb-f0d3-46ce-ba55-efaaa485c8c9
   event: BNTRS_Chapter5_Pascal_21
   text: '"Фиксирую статистическую иронию в факте того, что единицы, призванные для исполнения палаческих функций над адептами
     Прерывания Цикла были подвергнуты палаческому умерщвлению".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 1e939636-7039-4531-95bd-fd39e21baba6
   event: BNTRS_Companion_DLC3_Pascal_05
   text: '"Как главный технопровидец флагмана, я накладываю вето на любые процедуры священной аугментации, в которых задействованы
     субстанции ксенотического происхождения".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 48ec9bcf-7fc5-4ec9-a9ed-54850d1a17a1
   event: BNTRS_Companion_DLC3_Pascal_10
   text: '"Удивлен отсутствию использования присущих тебе примитивных эвристических методов. Уровень потенциальной опасности
     феномена пересмотрен в сторону повышения".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 0a5951a7-0d70-41b4-ab41-1cfe59333e1b
   event: BNTRS_Companion_DLC3_Pascal_106
   text: '"Открытое изучение артефактов ксенотического происхождения признается злонамеренным попранием границ инфогигиены.
     Настаиваю на немедленном изъятии всех образцов с последующей изоляцией в стазис-контейнерах".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 7eb8743b-c362-4eb1-a764-fd243ec3f028
   event: BNTRS_Companion_DLC3_Pascal_117
   text: '"Я отвергаю праздные запросы и профанные инсинуации, изрекаемые генетором Фебрусом. Я чист перед Омниссией деяниями
     и помыслами. Можешь ли ты сказать то же про себя, манипулус?"'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: dcbc1670-a261-4be1-b6ce-acd2da5849dc
   event: BNTRS_Companion_DLC3_Pascal_120
   text: '"Гипотетический акт заботы со стороны сервочерепа "Нунциус" засвидетельствован. Запрос на оперативное вмешательство
     категорически отвергается, поскольку оперируемый не готов претерпевать второй акт технокощунственных надругательств".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 6c2e15be-65ac-4aca-bc91-096a03226132
   event: BNTRS_Companion_DLC3_Pascal_135
   text: '"Выражаю согласие, прискорбный паттерн нерациональной растраты потенциала и ресурсов действительно присущ Инквизиции.
     Также вношу ремарку — ценность некоторых знаний не оправдывает сопряженный с ними риск. Генетор Фебрус, ты знаешь это
     из первых рук".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 8ebee719-2fd8-4988-a2f5-390e0ca779a6
   event: BNTRS_Companion_DLC3_Pascal_27
   text: '"Генетор Фебрус, техноматы нескольких палуб рапортуют о спонтанных обесточиваниях малых систем корабля. Одновременно
     зарегистрирован приток Движущей Силы к твоей лаборатории. Как главный технопровидец судна, я запрашиваю разъяснений".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 7e90f667-fe6e-446a-a35d-759fbde03e14
   event: BNTRS_Companion_DLC3_Pascal_50
   text: '"Анализ ситуации произведен не корректно. Генетор Фебрус, ты не смог безоговорочно доказать свою позицию, пусть твои
     аргументы и создали мнимую видимость правоты. Я приостановил спор с целью агрегации информации, необходимой для искоренения
     твоих заблуждений".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: d869f8f9-3e9b-48b8-90a6-c87adfa55da4
   event: BNTRS_DLC2_Pascal_123
   text: '"Поздравляю единицу Соломон с возвращением из дисфункции. Да будут обновлены протоколы служения, да не произойдет
     смены авторизованного владельца для тех-единицы Глейто".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 38ea43fe-d36a-4cde-9349-4eb5317e9879
   event: BNTRS_DLC2_Pascal_158
   text: '"Связь между функционированием систем судна и контактом с органическими жидкостями существует только в воспаленном
     сознании мирянки".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 3e694c85-a7a2-4ab1-acc5-ac26bfcd13b7
   event: BNTRS_DLC2_Pascal_167
   text: '"Запрашиваю разрешение на спасение ценных технологий из этого чрева энтропии и рассадника нарушений норм хранения".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 12285796-a3d2-4676-b6d9-695d698affc3
   event: BNTRS_DLC2_Pascal_17
   text: '"Благословенные технологии, выкованные слугами Омниссии, есть величайший дар Адептус Арбитес и знак функционального
     союза между нами".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 6d936545-8dfb-4300-9af1-d9790a091327
   event: BNTRS_DLC2_Pascal_172
   text: '"Фиксирую нарушение нормативов взаимодействия с объектами, категоризированными как "имперская десятина, взысканное"".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 092c95d0-a9c7-4e24-af6e-9a3589c5937d
   event: BNTRS_DLC2_Pascal_183
   text: '"Регистрирую неизвестные модификации мельта-орудия. Настаиваю на реквизировании объекта для установления допустимости
     спецификаций".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: c91109b8-8fa1-4cdb-88ef-8a8729e17375
   event: BNTRS_DLC2_Pascal_200
   text: '"Прогноз лояльности единицы Соломон подтвержден, повышаю ее приоритет. Инициирую обмен рукопожатием для завершения
     авторизации в более высоком статусе".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 32912b59-cae1-4ce2-ac5b-b901e07c9243
   event: BNTRS_DLC2_Pascal_209
   text: '"Единица Кубис Дельфим признана ответственной за осквернение Кьявы Гамма. Скверна богохульной модификации низвергнула
     в мерзость еретеха множество невинных механизмов. Произошедшее признаю трагедией".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 7e9b7df3-0860-4f05-a7b6-48c1ae99c128
   event: BNTRS_DLC2_Pascal_239
   text: '"Фиксирую хирургические вмешательства в тех-единицу Глейто с целью модификации. Выражаю максимальный уровень негодования
     и скорблю о машинной чистоте тех-единицы".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: f3e865aa-491a-4be2-9f79-74f26e48e8bc
   event: BNTRS_DLC2_Pascal_260
   text: '"Я стал чем-то слишком большим и страшным, чтобы ты мог это представить. Но это не значит, что ты был обманут. Моя
     личность жива, как и мои симпатии к Глейто. И не только к нему".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 7a820a0d-2274-44ea-b878-34ba8584ca07
   event: BNTRS_DLC2_Pascal_36
   text: '"Запрос о свершении подношения принят. Запрашиваю вербальный обмен информацией — тема: достоинства тех-единицы Глейто
     относительно менее благословенных единиц".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: b8ebcdef-fc68-47c6-a825-0289412bee58
   event: BNTRS_DLC2_Pascal_72
   text: '"Богохульные попытки капитана Саргоны скрестить творения Механикус с ксенотехнологиями определены как имевшие эффективность.
     Что утяжеляет его грех".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: d4ead611-393e-451a-8c91-ea3ad41580ba
   event: BNTRS_DLC2_Pascal_81
   text: '"Миры мю-класса малозначимы ввиду недостойного внимания уровня священных технологий. Запрашиваю разрешение не покидать
     корабль при приземлении на столь убогие планеты".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: b7605e7c-a414-4553-98c6-6cb07a30c6f3
   event: BNTRS_DLC2_Pascal_90
   text: '"Вместе с Летусом были уничтожены следующие ценные механизмы: грузовые платформы, манипуляторы, автоматические рельс-направляющие,
     транспортеры класса C/1-0-5..."'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: e883bb7a-4ffe-4fed-932e-db9ffcfa154a
   event: BNTRS_DLC2_Pasqal_341
   text: '"Утверждение ложно. Единица "Проктор" не несет следов модификаций. Во имя оптимизации мышления рекомендовано удвоение
     объема ежедневных молитв".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 6f7a7449-e02f-4d8b-94b7-ece291f2116b
   event: BNTRS_DLC2_Pasqal_345
   text: '"Очищение внутренних визоров данной единицы признано полным. Моя функция понятна. Мой путь предопределен".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 2b854268-c11e-4e9e-9649-b2a89dc0ba86
   event: BNTRS_DLC2_Pasqal_347
   text: '"Чужие запреты больше не смогут сдерживать меня. Я сам стану своим священным протоколом".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: b98d2df5-efe0-44be-9b91-cec585b23211
   event: BNTRS_DLC2_Pasqal_360
   text: '"Познание статистического анализа подвело мирянку — очевидно, ты не можешь располагать средствами для покупки четок,
     поскольку растрачиваешь свое обеспечение на пустое времяпрепровождение".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 655c7f86-f380-4ca2-af5e-f51ec85426ae
   event: BNTRS_DLC2_Pasqal_361
   text: '"Выявлено глубокое эмоциональное переживание, снижающее эффективность единицы Соломон. Предлагаю комплекс неинвазивных
     мер, призванных стабилизировать соратника".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 57160ac9-9653-46c2-ba11-43a51fd6becc
   event: BNTRS_DLC3_Pascal_101
   text: '"Фиксирую: какие именно причины гибели пророчит ксенос? Геотермальные? Экономические? Какова вероятность предотвращения
     или использования энергии катастрофы во благо Омниссии?"'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 91cfbf31-385b-421e-93af-c31fe5d1b49f
   event: BNTRS_DLC3_Pascal_132
   text: '"Обилие растительной жизни оценивается как отрицательный фактор полезности поверхности планеты для Адептус Механикус.
     Рекомендуется литания очищения номер 145 и последующее четырехкратное благословение огнем".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: bca33581-3811-4904-acaa-0b435e552b77
   event: BNTRS_DLC3_Pascal_14
   text: '"Подтверждаю попытку нарушения ретропричинности, классифицируемую как малую хроноаномалию. Исследование невозможно
     в силу техноеретической природы нарушителя. Эрадикация источника аномалии невозможна в силу его отсутствия в поле видимости".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 1dfcd79a-a334-4522-a03f-a4560f2eccb4
   event: BNTRS_DLC3_Pascal_20
   text: '"Попытка несанкционированного проникновения за периметр охранных систем, созданных ксеноразумом, может привести к
     критическому повышению риска обнаружения нашей группы Врагами Человечества. Призываю единицу "Джай Хейдари" к соблюдению
     стандартных предписаний при столкновении с подозрительными объектами".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 22ce230f-965f-421d-9b3b-b37719d4413e
   event: BNTRS_DLC3_Pascal_45
   text: '"Свидетельствую парадоксальные флуктуации Движущей Силы внутри машинного контура. Данная единица не способна достоверно
     определить, является ли это техноересью или чудом Омниссии третьей категории. Для размыкания цепи необходима модификация
     стандартных гальванических ритуалов".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 35a28acb-7046-4074-a3c4-e21d8479bc9d
   event: BNTRS_DLC3_Pascal_61
   text: '"Страдания священных машин Сектора Бионика граничат с ересью уничтожения. Немедленно инициирую поиск технослужителя,
     способного на ритуалы благостной очистки третьей степени".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 4a849ab3-9ef2-41fe-9fff-3b4bae3f346a
   event: BNTRS_DLC3_Pascal_82
   text: '"Плоть допущенных сюда мирян слаба, но уровень аугментирования экипажа растет. Оптимизация команды во славу Омниссии
     продвигается удовлетворительно".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: ea31ba41-8065-4714-b691-b4b3eb366fc0
   event: BNTRS_DLC3_Pascal_90
   text: '"Сотрудничество с Алтарем-Темплумом-Каликсис-Экс-17 принесло когитаторам этого места большое облегчение. Да восславится
     надежность ритуала!"'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 0537edcc-0b53-48c9-b552-6f5346fece5a
   event: BNTRS_DLC3_Pascal_98
   text: '"Свидетельствую неоспоримый факт распространения ксеноереси на платформе Тиркуаз-4. Священные конструкции платформы
     скомпрометированы и должны быть подвергнуты ритуалам плазменного очищения".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 8a60d531-81e3-4597-b735-9855cf975004
   event: BNTRS_PickUps_Pascal_123
   text: '"Утверждение истинно. Останки могли бы быть переработаны в трупный крахмал, а помещения переоборудованы для служб
     судна".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: f718a7be-5b92-4e5c-8577-9c565646a416
   event: BNTRS_PickUps_Pascal_132
   text: '"Фиксирую перечень из ста тридцати семи нарушений катехизиса эксплуатации и обслуживания. Инициирую перечисление:
     пункт первый, "береги резьбу винта аки зеницу оптического аугмента своего"..."'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 0eae191e-b9b7-4b4d-9711-50786fb77e40
   event: BNTRS_PickUps_Pascal_139
   text: '"Вины священного механизма в инциденте нет — все необходимые литании запуска и обслуживания соблюдены. Гипотеза:
     причиной аварии послужила чрезмерная масса единицы Ульфар".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: cc4e09b4-f24b-46ff-9712-f9d9a0bff30a
   event: BNTRS_PickUps_Pascal_175
   text: '"Категорически отказано. Без права дальнейшего оспаривания".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 9fb00651-65d8-4d52-95c5-2a047e5f1714
   event: BNTRS_PickUps_Pascal_187
   text: '"Зафиксированы манипуляции с телом павшей изменницы. Гипотеза — красные волосы на рукояти оружия принадлежали единице
     Ирлиэт".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 0f4dc7c9-7e9f-499f-a3af-725eacfa5601
   event: BNTRS_PickUps_Pascal_198
   text: '"Фиксирую: единица Кибелла подобно большинству пустотнорожденных испытывает дискомфорт при естественных гравитации
     и атмосфере".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: af62e15a-4685-4e59-9192-b588fbd58bd5
   event: BNTRS_PickUps_Pascal_280
   text: '"Положительная оценка принята к сведению. Выражаю одобрительное удивление, что единица Кибелла, состоящая из ущербной
     плоти, также вернулась к функционированию".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: be02fc90-a2f6-4161-81f5-a5d5dd36dde0
   event: BNTRS_PickUps_Pascal_32
   text: '"Не энтропический распад определяет срок службы данной единицы. Омниссия определяет, а Он — масштабнее энтропии".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 1897749c-08fc-47a1-8f1c-360e4cd8f219
   event: BNTRS_PickUps_Pascal_39
   text: '"Фиксирую значительный объем необязательных телесных самоистязаний, осуществляемых данной единицей. Запрашиваю разъяснение".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: c8a5ebba-99fe-4c11-8ab6-642ce51e4676
   event: BNTRS_PickUps_Pascal_68
   text: '"Значимость статусных проявлений переоценена мирянами. Статус проявляется в функциональном превосходстве, а не ценности
     имущества".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 13c066f7-3545-49d1-a4a3-31bc511d92ef
   event: BNTRS_PickUps_Pascal_70
   text: '"Утверждение истинно. Эмоциональное влияние на рациональные суждения делает их ущербными".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: e5c46516-0c1a-42b4-98e1-4deb00dd65ea
   event: BNTRS_PickUps_Pascal_74
   text: '"Фиксирую радость от смерти союзника. Предсказуемая для данной единицы нелояльность".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: fa61befc-fd61-4f93-944e-bbfde68f297c
   event: BNTRS_PickUps_Pascal_81
   text: '"Общность единиц, именуемая Кровавой паутиной, свершила обновление. Обновление приветствуется, оно препятствует энтропии".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 8e9a5a9c-e02a-4659-8202-347829485c17
   event: BNTRS_Reactivity_DLC3_Pascal_02
   text: '"Анализирую необходиость огласить ответную похвалу... результат неконситентный".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 4263304e-f464-430e-83e9-f99ae1ed1819
   event: BNTRS_Reactivity_DLC3_Pascal_10
   text: '"Зафиксировано вмешательство в системы корабля неизвестным лицом статуса "генетор экстремис". Зафиксирована принадлежность
     к технодуховенству мира-кузницы Стигия VIII. Отмечен потенциальный интерес к богословским дебатам с новой единицей".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: a115e27b-81fb-4986-8158-52aef9c4c329
   event: BNTRS_Reactivity_DLC3_Pascal_19
   text: '"Использование ксеногенного механизма есть техноересь что погубила Тиркуаз-4. Да упокоит Омниссия машинные духи погибшей
     станции".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: fa3874c9-47da-4191-956f-705ff06f68d3
   event: BNTRS_Reactivity_DLC3_Pascal_22
   text: '"На станции Тиркуаз-4 были зафиксированы признаки ксеноереси. По какой причине было принято решение оставить ее в
     неприкосновенности?"'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 76a8203b-75aa-4fc1-b1d9-7d572e152549
   event: BNTRS_Reactivity_DLC3_Pascal_37
   text: '"Фиксирую множественное святотатство пятой и третьей категорий. Требую пересмотра статуса генетора Фебруса и проведения
     епитимальной диагностики с целью искоренения еретических помыслов".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: ba7ce62a-6e03-40a8-9bc2-f899d5ad23f8
   event: BNTRS_Reactivity_DLC3_Pascal_58
   text: '"Машинные духи священных аппаратов Сектора Бионика выбиваются из сил. Выдвигаю срочный запрос на увеличение количества
     членов Адептус Механикус на корабле".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 615b17a1-3d6f-4504-895c-4d95ed06ac03
   event: BNTRS_Reactivity_Pascal_100
   text: '"Возражение: поведение Лорд-капитана отличается от стандартного выражения чувств. Гипотезы: ксенос лжет, Лорд-капитан
     лжет, присутствует неизвестная переменная. Для установления истинной природы данного явления требуются дополнительные
     наблюдения".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 6efbd85e-7bcc-447b-a626-8692907cbb68
   event: BNTRS_Reactivity_Pascal_28
   text: '"Запротоколирован союз двух политических единиц. Обнаружена аномалия: прогнозируемая гармония заменена беспокойством".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 42d23d19-6993-44a9-b0ff-364e205611e5
   event: BNTRS_Reactivity_Pascal_60
   text: '"Гипотеза — причина эмоциональных страданий единицы заключается в факте пресечения романтическо коммуникационной
     связи между..."'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 0c9c1047-3ff1-4e4a-9743-2484769ef159
   event: BNTRS_Stressful_Pascal_104
   text: '"Я осуждаю и игнорирую высказывание недостойной воровки, презревшей привилегии Адептус Механикус".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: b0580d0d-5ee1-4230-8221-08e49018798c
   event: BNTRS_Stressful_Pascal_122
   text: '"Активирую протокол "Покушение на вычислительный дух". Рекомендация — соблюдать дистанцию не менее десяти шагов,
     иначе будут применены меры эрадикации".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: f101ff6d-508b-4099-9e89-a7951f61c0ba
   event: BNTRS_Stressful_Pascal_127
   text: '"Ты устарел и неоптимален. Твое тело подверглось износу и нуждается в модификациях".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 5544aa08-2310-4df0-b95d-a2755735cd8f
   event: BNTRS_Stressful_Pascal_129
   text: '"Я удовлетворен тем, как ты исполняешь таинства ухода за своей экипировкой. Однако среди твоих молитв есть те, что
     неизвестны мне".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 5ebf5417-3959-4e3d-86d9-6f7096f36dfd
   event: BNTRS_Stressful_Pascal_131
   text: '"Наши молитвы разнятся, но я отмечаю тождественность нашего отношения к служению. Тождественность — объединяет".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 168f8c7e-8c5a-47dd-9f7e-d806be1faa0b
   event: BNTRS_Stressful_Pascal_133
   text: '"Фиксирую нестандартно высокую эффективность единицы Кассия Орселлио, принимая во внимание ее незначительный опыт.
     Статус единицы повышен".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 368d29ab-3eaf-4010-9327-77c719ae4925
   event: BNTRS_Stressful_Pascal_135
   text: '"Результат наблюдений за единицей Хейнрикс ван Калокс: профессиональные навыки делают единицу подходящим кандидатом
     для преобразования в сервочереп-инфодознаватель. Запрашиваю..."'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: f596222d-93b0-447f-97f8-c08a7e2d56cb
   event: BNTRS_Stressful_Pascal_137
   text: '"Проблема слуховых галлюцинаций, тревожащих данную единицу, может быть устранена..."'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 70abe5c5-437d-4977-bc0e-8f09c1164a98
   event: BNTRS_Stressful_Pascal_139
   text: '"Аугментации данной единицы несут декоративные элементы, не предусмотренные катехизисом эксплуатации и обслуживания.
     Фиксирую богохульство четырнадцатой категории".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: e7e1b105-f8d1-4599-ad58-a9272f98f9c3
   event: BNTRS_Stressful_Pascal_14
   text: '"Я согласился помочь из уважения к бесценному консорциуму Истинной плоти, помещенному в твое тело. Эти аугменты заслуживают
     наилучшего ухода".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: c7f10d16-5bc9-4004-81bf-dc0d1f34db05
   event: BNTRS_Stressful_Pascal_141
   text: '"Чем вызван интерес данной единицы? Задумано богохульство?"'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: c1d4d584-f1fd-46fe-929b-b5001368900e
   event: BNTRS_Stressful_Pascal_143
   text: '"Изрекаю гимн почтения Ангелу Императора и древнему свирепому духу машины, владеющему его броней".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 2dde38c4-0827-4d21-b72c-6d727a379fef
   event: BNTRS_Stressful_Pascal_145
   text: '"Твоему виду ведомы обезображенные формы мудрости Омниссии. Присутствует ли в вашей культуре какой-либо анаморфический
     эрзац почитания Деус Механикус?"'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: f8c54724-5b12-4541-923d-f9d92c8c3769
   event: BNTRS_Stressful_Pascal_162
   text: '"Оба они дарованы Омниссией. Я — Эксплоратор, и в моих алгоритмах неукротимость воина сцеплена со смирением священнослужителя,
     как зубцы двух шестерней".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: b65c685c-a126-427e-886b-cf43abe1b777
   event: BNTRS_Stressful_Pascal_180
   text: '"Я не имею интенции отобрать его. Лишь изучить противоестественные извращения, которым вы подвергли дар Технологии".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 83065d86-69fa-414d-99b2-50e515d2d6fa
   event: BNTRS_Stressful_Pascal_32
   text: '"Истинная плоть позволяет мне эффективно функционировать даже в условиях экстенсивной кровопотери. Вот что должно
     заботить тех, кто рискнул встать против слуги Омниссии в бою".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: ef838a9c-7df1-4556-82c0-9ac8a0df17bb
   event: BNTRS_Stressful_Pascal_50
   text: '"Лишь миряне мнят чувства прерогативой ущербной плоти. Нам ведомы высшие страсти, дарованные Омниссией — отвращение
     к техноскверне, благодать соответствия канону обслуживания, удовлетворенность эффективностью служения".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: da1f9d4f-8992-4d48-b50e-e04969aa8e73
   event: BNTRS_Stressful_Pascal_68
   text: '"Знание, переданное мирянам без должного посвящения — прискорбная необходимость, а не знак доверия. Я не вправе разглашать
     таинства, дарованные мне с получением сана".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 8b4f3270-40c0-4551-b714-03afd8834cd2
   event: BNTRS_Stressful_Pascal_86
   text: '"Концепция юмора обнаружена в каталоге. Демонстрация — заходят как-то в лишенный благословения Омниссии бар несведущий
     мирянин, низкостатусный кандидат в сервиторы и богохульный вор аугментов..."'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 916937eb-4af5-49e5-a0e1-3aa6bdc8d192
   event: BS_KTCStolenTithe_Pascal_02
   text: '{n}Вокс-синтезатор Паскаля оживает трескучим шипением.{/n} "Очищение и изъятие корабля, содержащего богохульные модификации,
     из рук нечестивцев — священный долг слуги Омниссии... и Императора".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 4396064f-58b1-4cb2-9df5-bc6b82a241b8
   event: CH1_Haneumann_FirstMeeting_02
   text: '{n}Вокс презрительно шипит:{/n} "Страдания плоти есть пренебрежимый фактор. Металл покоряет, мясо — покоряется. Рекомендую
     скорейшее выдвижение". {n}Тощий техножрец, чья роба пробита осколками во многих местах, упрямо вцепляется в силовой топор,
     опираясь на него как на посох.{/n}'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 99ad3e94-f446-4b89-8654-841bc5057ec2
   event: CH1_Haneumann_FirstMeeting_03
   text: '"Я опознаюсь как магос духовенства Марса Паскаль Ханейманн, милостью {g|Encyclopedia:Omnissiah}Омниссии{/g} в настоящий
     момент приписан к техническому персоналу станции Алтарь-Темплум-Каликсис-Экс-17".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: f4aa78b4-d727-4bef-9576-c9a93546264a
   event: CH1_Haneumann_FirstMeeting_04
   text: '{n}Техножрец оборачивается и удивленно, словно не он это сотворил, взирает на пылающие останки. Из его вокса вылетает
     реквиемальная молитва.{/n} "Я... Это сотворил я?"'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 77e12f93-4e1a-4acf-a8c8-6f881341e49b
   event: CH1_Haneumann_FirstMeeting_05
   text: '{n}Техножрец медлит с ответом, бросив взгляд на свои мехадендриты — будто советуясь с ними. Наконец его вокс-система
@@ -1044,53 +740,39 @@ phrases:
     откликнуться. Но волнения черни помешали нашей встрече, и я направлялся к губернатору Медине, чтобы выяснить текущее местоположение
     моего владыки".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 3569c4f1-e323-4346-8f4f-475a7cb54346
   event: CH1_Haneumann_FirstMeeting_06
   text: '{n}Идира пристально смотрит на техножреца, жуя губу. Затем наклоняется к вам.{/n} "Странно голоса про него толкуют...
     разное... спутанное... словно и про разных людей совершенно... но угрозы от него вам нет. Даже если после этих фейерверков
     и не особо верится".'
   speaker: Idira Tlass
-  gemini_voice: Gacrux
-  gemini_text: null
 - guid: 237280c2-48b2-4a4c-8d68-6fcd7543253d
   event: CH1_Haneumann_FirstMeeting_07
   text: '"Мои сопровождающие получили приказ от своего командира остановить движение и дождаться соединения с вашей группой.
     А затем, ввиду своей некомпетентности, дали себя убить. Это прискорбно осложнило мою задачу". {n}Если в голосе техножреца
     и было сочувствие погибшим, ни одна ее нотка не прозвучала в сухих словах из вокс-системы.{/n}'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: f048eea5-ef98-4983-9338-06caee304edb
   event: CH1_Haneumann_FirstMeeting_08
   text: '"Омниссия даровал мне откровение. Дух сей машины умирал, но желал свершить пользу, ибо таков его замысел. Я почувствовал
     это и... обратился к нему. Мне неведомо, как я это сделал — лишь последовал наитию. Понимание, дарованное Омниссией, не
     было перманентным, оно оставило меня". {n}Техножрец выглядит потрясенным.{/n}'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: c0dac73c-b94d-47da-8916-3790ff648882
   event: CH1_Haneumann_FirstMeeting_09
   text: '{n}Вокруг открытого глаза техножреца появляются слабые морщинки, словно под маской-респиратором он улыбается.{/n}
     "Прерывание жизненных функций — феномен неизбежный, а потому незначимый. Доктрина служения отвергает страх смерти".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 78cdf865-cf28-40c2-ae6e-43467f6eeb7c
   event: CH1_Haneumann_FirstMeeting_10
   text: '"Принято. Прогнозирую успешное взаимовыгодное сотрудничество".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: a0bd63e9-60a6-481f-aca9-8fd30c65168e
   event: CH1_Haneumann_FirstMeeting_11
   text: '{n}Из-под местами тлеющего алого облачения доносится трель — это бинарная речь, священный язык {g|Encyclopedia:AdeptusMechanicus}Адептус
     Механикус{/g}. Двоичный гимн перерастает в синтезированный {g|Encyclopedia:Vox}вокс-системой{/g} голос, подобный степному
     грому:{/n} "Ни шагу вперед".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: b355b5be-1515-4c38-8e25-73a6bac4c090
   event: CH1_Haneumann_FirstMeeting_12
   text: '{n}Дикое сине-зеленое сияние угасает во взгляде техножреца. Он опускает руку, и механика на вас перестает погибать
@@ -1098,249 +780,179 @@ phrases:
     к точке рандеву с солдатами губернатора совместно". {n}Техножрец решительно устремляет взор вперед, {g|Encyclopedia:Mechadendrite}щупальца-мехадендриты{/g}
     грациозно вздымаются вокруг его сгорбленной фигуры, подсвеченной костром из догорающих останков машины.{/n}'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 1e9bf1ae-0f54-4ee2-80b9-a0ef82034ca9
   event: CH1_Haneumann_FirstMeeting_13
   text: '{n}Скрипя зубами, сенешаль выдавливает:{/n} "Вольный Торговец {name} фон Валанциус приветствует тебя, почтенный техножрец,
     и милостиво дозволяет пребывать в е{mf|го|е} обществе".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 5f96de84-09c1-4a6e-9014-8b2b8cc10d2a
   event: CH1_Haneumann_FirstMeeting_15
   text: '{n}Визор техножреца фокусируется на вашем облачении, внимательно изучает символы на нем.{/n} "Я идентифицирую вас
     как представител{mf|я|ьницу} высшего сословия, принадлежащ{mf|его|ую} к династии Вольных Торговцев фон Валанциус. Необходимость
     конфронтации не зафиксирована".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 8061f761-d6d7-470c-8f1d-b98ae0b3dfd1
   event: CH1_Haneumann_FirstMeeting_16
   text: '"Алтарь-Темплум-Каликсис... мне знакомо это название. Станция отмечена на звездных картах Дома Орселлио в системе
     Фурибундус, недалеко от пустотной колонии Футфол. Дабы оказаться здесь, вы проделали долгий путь, почтенный магос".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 03145e7c-8f74-4446-b1fc-c571a14eff49
   event: CH1_Haneumann_FirstMeeting_17
   text: '{n}Лицо техножреца суровеет, и он загадочно добавляет:{/n} "Устами владыки Омниссия вручает мне алгоритм исправления
     ошибок и торжествования в служении. И я исправлю, и я восторжествую".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 9821af3f-587d-443f-8538-044cc8b447ad
   event: CH1_Haneumann_FirstMeeting_18
   text: '"Трон Святый... из чего сделан этот служитель Омниссии? Из адамантиума?... Проклятье!" {n}Абеляр хватается за голову,
     его глазной имплант захлебывается волной помех.{/n}'
   speaker: Abelard Werserian
-  gemini_voice: Algenib
-  gemini_text: null
 - guid: 76a56d02-7ad1-4186-8a92-4166af0a5fd4
   event: CH1_Haneumann_FirstMeeting_19
   text: '{n}Худая рука поднимается, преграждая вам путь, и ваш вокс-приемник заходится в болезненном вое, а машинная экипировка
     начинает искрить. Сверкающий силовой топор техножреца изрыгает облако благословенных искр, а визор яростно сияет голубым
     и зеленым.{/n} "Бегите, ибо я — смерть".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 96f61ff9-5ea2-4811-9e3a-0f42a94693fd
   event: CH1_Haneumann_FirstMeeting_Kibellah_01
   text: '{n}Кибелла удивленно смотрит на жреца в алом.{/n} "Странно слышать слова эти из уст того, кто не принадлежит к Кровавой
     паутине... Мы так схожи".'
   speaker: Kibellah
-  gemini_voice: Despina
-  gemini_text: null
 - guid: 42e23d29-3116-4518-8032-f17f404843ad
   event: Companions_Techpriest_01
   text: '{n}Закутанный в алую рясу {g|Encyclopedia:TechPriest}техножрец{/g} приветствует вас негромким голосом, синтезированным
     вокс-системой:{/n} "Омниссия знает все, постигает все, {name}". {n}{g|Encyclopedia:Mechadendrite}Мехадендриты{/g}, растущие
     из спины техножреца, нацеливаются на вас, будто с любопытством рассматривая.{/n}'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: c2485e9d-4dd3-491a-84fe-bcd9bf16cffa
   event: Companions_Techpriest_02
   text: '"Омниссия знает все, постигает все, {name}".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 75a53679-7705-4d0b-af45-3fd4b0fb1c64
   event: Companions_Techpriest_03
   text: '"Принято".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 2f16515d-bf66-4160-aa26-95a79a7c7fc2
   event: Companions_Techpriest_04
   text: '"Отчасти. Голосовой модулятор был имплантирован мне вместе с респираторной очистительной системой. Но есть и иная
     причина — готик не является родным для меня языком. Я привык мыслить и излагать суждения на {g|Encyclopedia:LinguaTechnis}лингва-технис{/g}.
     Бинарный язык информативнее, эргономичнее и менее подвержен ошибочному восприятию".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: c85a0a04-d312-4097-b7d1-88f2c7e0e33e
   event: Companions_Techpriest_05
   text: '"Я ошибался, предполагая, что под именем Авель Ханейманн скрывается благословенный архимагос Амарнат. Однако, он
     явно как-то связан с почтенным Авелем, и я намерен выяснить суть этой связи".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 03a4485b-4910-49ac-8f3a-1e1818431ccc
   event: Companions_Techpriest_06
   text: '"Я удивлен. Твое суждение ошибочно, я запрашиваю подтверждения приказа".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 11d4d6dd-b7d0-4db2-9b1d-a31610addd1a
   event: Companions_Techpriest_07
   text: '"Предполагаю, что под этим именем скрывается благословенный Амарнат. Это имя — знак для меня. Его нахождение в руках
     еретиков категорически неприемлемо. Канон безопасности технологии велит приложить все усилия, чтобы освободить высокопоставленного
     носителя знания".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 38aa7940-3855-4d52-b010-2f5d6947ad44
   event: Companions_Techpriest_08
   text: '"Принято. Я продолжу свою деятельность в автономном статусе. Пусть Омниссия дарует тебе ясность пути". {n}В голосе
     Паскаля не звучит даже намека на какую-либо эмоцию.{/n}'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 3dafd414-9552-46f7-a334-17f13b9e1eb9
   event: Companions_Techpriest_09
   text: '"Принято. Шутка будет занесена в коммуникативный каталог".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 17fc48a5-a8ae-4ddf-bfc7-1102f12d2cd4
   event: Companions_Techpriest_10
   text: '{n}Мехадендриты распластываются, словно крылья, за плечами техножреца.{/n} "Запрос одобрен, я не имею категорических
     запретов на разглашение данной информации".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: e639845a-5b78-479d-af18-9497d5be2781
   event: Companions_Techpriest_100
   text: '"Испытываю обеспокоенность касательно судьбы архимагоса Амарната. По данным Оптикона-22, он пропал после инцидента
     на механическом ковчеге "Герметико". Информация о данном корабле и его гибели удалена из архивов. Допускаю, что инцидент
     на корабле, сокрытие данных и покушение являются частями единого заговора".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 39e77968-dbb1-4171-92d2-373064bf69b3
   event: Companions_Techpriest_101
   text: '"Я продолжу изучение памяти блаженного мученика с приличествующим почтением".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: af90b7e0-7524-47bc-8454-b156e3b8d394
   event: Companions_Techpriest_102
   text: '"Информация об инцидентах обнаружена в каталоге. Инциденты признаны незначимыми. Техническое дознание постановило,
     что наиболее вероятной причиной сбоев были грех кощунственной халатности, допущенный в процессе обряда лоботомирования.
     Сие постыдное небрежение дает теням мыслей и воспоминаний сервитора затаиться в уголках его разума, посвященного служению".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 86bc5a27-0823-4d7c-88e5-83102d3a1eea
   event: Companions_Techpriest_103
   text: '{n}Паскаль искоса смотрит на вас, и в голосе его вокс-синтезатора возникает потусторонняя глубина.{/n} "Конечно,
     вера опасна. Вера — прерогатива духа, а разум без духа есть враг всего сущего. Без веры ничто не имеет смысла — ни устремления,
     ни ограничения. Но вера может принимать разные формы".'
   speaker: Pasqal Haneumann
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 3418b589-4a62-42aa-97fa-eb1303cac07e
   event: Companions_Techpriest_104
   text: '{n}Паскаль взирает на вас с уважением. Похоже, он удивлен, что вы распознали назначение вживленных в его тело аугментаций.{/n}
     "К тебе Омниссия тоже был щедр. Он даровал тебе понимание".'
   speaker: Pasqal Haneumann
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 271bb1c8-f571-4a48-87e5-1df5bf831110
   event: Companions_Techpriest_105
   text: '"Это утверждение ложно, но предсказуемо. Откровения Омниссии шокируют темный разум, не способный принять и понять
     их праведную суть".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 057dd908-7158-41cd-98cd-13a9e3f8972f
   event: Companions_Techpriest_106
   text: '"Плоть непостоянна, но металл крепок, как моя преданность".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 677a1b97-b0c8-440a-839c-6071078a4ed5
   event: Companions_Techpriest_107
   text: '{n}Вокс-система издает болезненный треск, словно от ломающихся и перемалываемых костей.{/n} "Я молюсь, чтобы {g|Encyclopedia:Omnissiah}Омниссия{/g}
     дал нам мудрость искоренить разделившие нас диалектические заблуждения".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: b2497b1f-31e8-422f-bfd3-31d367b7bbc9
   event: Companions_Techpriest_108
   text: '"Он не отступался от веры в Омниссию. Он отступился от императивов древних. Но мудрость благословенного Амарната
     была столь очевидна, что заставляла многих усомниться в догматах вслед за ним". {n}Голос {g|Encyclopedia:Vox}вокс{/g}-системы
     наполняется разрозненными статическими шумами, перекрывающими речь техножреца.{/n}'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: ae37947a-75c1-45e1-9006-d05388309635
   event: Companions_Techpriest_109
   text: '{n}Паскаль обнажает запястье. Под бледной, забывшей вкус солнца кожей переливаются зеленоватые светящиеся нити электрической
     татуировки.{/n} "Эта электу свидетельствует, что я являюсь {g|Encyclopedia:Magos}магосом{/g}, допущенным к таинствам многих
     сфер знания и имеющим право проводить служение в соборе-кузне".'
   speaker: Pasqal Haneumann
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: b3b5f95f-7b44-4440-976e-4504f0285013
   event: Companions_Techpriest_11
   text: '"Лишь в Омниссию, что знает все и постигает все. В попытке приблизиться к нему я также готов постигать все, дабы
     познать все. Деус Механикус даровал нам один священный завет — Познание, все же прочие — рукотворные творения смертных".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: ea9bbfc3-6fe4-49bd-8a8c-855ca5ddd3d2
   event: Companions_Techpriest_110
   text: '"Даже те, кто взошел к мудрости Омниссии, продолжают нести в себе зерно несовершенства, рождаемое плотью. Но амбиции
     отдельно взятых индивидов малозначимы, когда дискуссия идет о вере и ритуале. Знание божественно, и всякий спор о том,
     как надлежит прикасаться к нему — это спор духа и веры".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 2c833965-186f-4354-aea5-e374030976e3
   event: Companions_Techpriest_111
   text: '"Запрос одобрен. Тебе, посвященн{mf|ый брат|ая сестра}, я могу продемонстрировать свои священные стигматы".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: ae55706a-0ab4-4620-a664-73cb9f84a10c
   event: Companions_Techpriest_112
   text: '"Более пессимистичный прогноз гласит, что флот Осознание погряз в мраке схизмы и в данный момент пребывает в агонии
     праведного самоочищения от греха".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 7c75cadb-7701-4a22-af31-ae0d4bcd8932
   event: Companions_Techpriest_113
   text: '"Мой наставник выдвинул тезис, что мы впали в стагнацию. Что Ритуал стал клеткой душ, ложным почитанием {g|Encyclopedia:Omnissiah}Омниссии{/g}.
     Он желал прервать цикл бездумного повторения, так как видел в конце его неизменную гибель нашей веры и всего Человечества".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: b81018e0-1eab-40e6-8416-dee4abc807b5
   event: Companions_Techpriest_114
   text: '"В коммуникативном каталоге данное утверждение значится, как шутка, однако мне не до конца ясен ее смысл. Я нуждаюсь
     в уточняющей информации".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 995b04b7-b1dd-4b05-9e13-47f4038d6b71
   event: Companions_Techpriest_116
   text: '"Это утверждение истинно".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: f0e83798-496c-4309-814e-a63bee7792a0
   event: Companions_Techpriest_117
   text: '"Утверждение истинно. Алгоритмические нарушения были зафиксированы, вследствие чего я дважды совершил причащение
@@ -1348,215 +960,157 @@ phrases:
     недовольства духов машин сего судна. Рекомендую провести процедуру ублажения почтенных духов во славу Омниссии и посланных
     Им ангелов стальных".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 7a297f82-f6dc-415e-ab8d-96b566edb16c
   event: Companions_Techpriest_118
   text: '"Я покаялся и передал в руки конклава информацию о разработках моего учителя. Смелых и анафематических исследованиях
     в запретных областях знания. С этими данными конклав мог призвать {g|Encyclopedia:Archmagos}архимагоса{/g} Амарната на
     суд и под страхом экскоммьюникато трайторис принудить к покаянию. Дальнейшая его судьба мне неизвестна".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: cd38040c-eb4d-4173-9482-9c3a1bba089e
   event: Companions_Techpriest_119
   text: '"Это суждение истинно. Однако я пошел на данный шаг из преданности к своему наставнику. Отринув осторожность, он
     вел нас к богохульной войне, в которой сам стал бы первой и главной жертвой. Я не желал становиться свидетелем его гибели
     и попытался принудить его к покорности".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: a1989076-1bde-44cc-8c70-0650e11d4328
   event: Companions_Techpriest_12
   text: '"Я не знал его, но мне кажется, он был достойным человеком. Девиз, звучавший из его уст, указывает, что он контактировал
     с моим наставником. Я сохранил его кортикальный имплант и поглотил информацию, хранившуюся в нем. Однако большие массивы
     памяти зашифрованы неизвестным мне кодом".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: da4e118d-ec41-4d76-8591-debf450e0da2
   event: Companions_Techpriest_120
   text: '"Пока что я не смог добиться ответа, зачем Авель вызвал меня на Райкад Минорис, а также в каких отношениях он находится
     с благословенным Амарнатом и почему носит то же имя, что и я. Возможно, не все известные ему сведения почтенный Авель
     может в полной мере осознать и интерпретировать".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: d92736fe-293e-4d14-90f0-8dabbe22c2e3
   event: Companions_Techpriest_121
   text: '"Я желал вернуться к наставнику и разделить с ним его судьбу, но конклав признал меня раскаявшимся, после чего направил
     на станцию Алтарь-Темплум-Каликсис-Экс-17, где я должен был искупать прежние заблуждения".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 9af81c71-5494-4d59-87d1-fd876b35e996
   event: Companions_Techpriest_122
   text: '"Однако, как и все сакральное, наши {g|Encyclopedia:Augmentation}аугментации{/g} не должны быть опорочены взглядами
     профанов. Потому мы оставляем лишь самые грубые образцы на обозрении, в то время как более священные механизмы скрываются
     под нашими алыми робами".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 8a954c86-6f0d-4e36-9da0-2a549988502b
   event: Companions_Techpriest_123
   text: '"Все, на чем лежит благословенная печать технологии, происходит из-под наших рук, и мы же следим, чтобы ритуалы эксплуатации
     соблюдались безукоризненно. Мы повсюду, мы — арматура Империума, скованная Марсом".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: bd846a3b-0469-44e9-91b0-5b11a08923da
   event: Companions_Techpriest_124
   text: '"Это утверждение ложно. Нашим братством движут предписания священного катехизиса. Личные амбиции иерархов не влияют
     на чистоту и безупречность их служения... Но перемены действительно страшат их. Им неведомо, как поступить, если Омниссия
     откроет им новые истины, и оттого они боятся утратить контроль".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: b0682038-e333-4d39-995b-aee6fcc077b7
   event: Companions_Techpriest_125
   text: '"Это утверждение истинно. То, что многие считают оковами на пути нашего постижения, является нашей броней, унаследованной
     от благословленных мудростью предтеч".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 2990b9d4-434b-4ad6-9495-eb07c89495f1
   event: Companions_Techpriest_126
   text: '{n}Вокс Паскаля сварливо каркает:{/n} "Как технопровидец корабля я принимаю заключение технического дознания. Как
     просвещенный служитель Омниссии — усомняюсь в нем. Паттерны сбоев складываются в более сложную картину, чем видится служителям
     более низкого звена. Посему было отдано распоряжение сообщать о новых инцидентах персонально данной единице".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: d08f1f09-2d9b-45a9-a5aa-a7b38ad2feb3
   event: Companions_Techpriest_127
   text: '"Этот почтенный храм-станция был основан в начале экспансии в Простор Коронус. Сейчас он является тыловым наблюдательным
     форпостом флота Осознание на орбите звезды Фурибундус".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: eb2ba9d6-4890-413e-8279-c6c12448daf2
   event: Companions_Techpriest_128
   text: '"Эксплораторам дарована привилегия быть более независимыми, чем иные наши техносоратники. Однако это создало нам
     славу нестабильных и плохо контролируемых смутьянов, опасно приблизившихся к вероотступничеству".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 8f332308-08e3-4a79-a0b0-1e37aa14f089
   event: Companions_Techpriest_129
   text: '"Это — стабильный путь развития. Разумы различных индивидов не равны, дарованные им откровения не равны. Кто-то должен
     вести, кто-то — доверять ведущему. Всех нас ведет Омниссия, и, возможно, лишь благодаря его первым пророкам и дарованным
     ими запретам мы еще существуем".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 16df21f0-7d2c-4cf6-9f31-13750c2b58af
   event: Companions_Techpriest_13
   text: '"Информация о моем происхождении не имеет ценности. Я состою в рядах братства Эксплораторов и прибыл в {g|Encyclopedia:KoronusExpanse}Простор
     Коронус{/g} более двух столетий назад. Предшествовавшие этому события малозначительны".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 94b60587-53a5-4bbd-b13f-832497297d2d
   event: Companions_Techpriest_130
   text: '"Омниссия даровал нам высшую миссию — Поиск знания. Факт ее существования подтверждает, что не вся вселенная постигнута
     и квантифицирована разумом. Значит, никакой запрет не может считаться универсально актуальным. Все ограничения нуждаются
     в исключениях, но исключения отрицают нерушимость запретов".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 3d34284a-ce9c-4fc2-b8b4-759c4edde597
   event: Companions_Techpriest_131
   text: '"Понимание есть Истинный путь к Познанию. Понимание же может быть достигнуто лишь самостоятельно, но не принято как
     данность. Твой путь вызывает уважение".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 7e317951-a2bd-4fd8-b256-da43cb4eeefd
   event: Companions_Techpriest_132
   text: '"Не поверие. Благодатная истина".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: bdaca253-29e5-48ee-b57b-daceae99cb5c
   event: Companions_Techpriest_133
   text: '"Но я видел иное. Знания, которые разъедали разум тех, кто пустил их в себя. И все равно я ищу их... почему? Может
     потому, что на самом деле на знании нет греха? Они опасны, да, но... не запретны, ибо созданы Омниссией".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: c44029fd-f4e5-4ef6-8a7b-e427be5f7f2e
   event: Companions_Techpriest_135
   text: '"Так велели поступить обеты безопасности".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: a422389b-67ec-46c6-9a33-fe8b5c5c2ee0
   event: Companions_Techpriest_136
   text: '{n}Вокс-синтезатор издает звук, похожий на вздох.{/n} "Данное утверждение истинно. Мои... дальнейшие действия не
     определены. Я провожу точечную диагностику памяти херетека Деменца, хотя протоколы чистоты велят искоренить его богохульное
     знание. Меня не влекут запретные сведения, лишь данные, касающиеся благословенного Амарната".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 6528db6a-d4e0-4af3-83a4-ae01e5181382
   event: Companions_Techpriest_137
   text: '"Успех частичен. Личность Деменца Ханейманна подтверждена. В когнитивных процессах наблюдается обширное влияние параноидальных
     мотиваций, которые, видимо, и привели к нарушению обетов. Но обширные блоки памяти повреждены запретными технологиями
     и пока не поддаются расшифровке".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 62c62b33-7bbc-48b2-a81c-8fb6fdd8935f
   event: Companions_Techpriest_138
   text: '"Эхо варпа. Энергии Имматериума, просочившиеся в реальность и принявшие форму вокс-сигнала. Я обнаружил в архиве
     задокументированные случаи порчи, протекавшей сходным образом. Слушать пустоту — опасное ремесло".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: ccf04ca6-4a8d-4a39-9087-aba0cfd1e554
   event: Companions_Techpriest_139
   text: '"Обнаруженные данные не поддаются прочтению. Они зашифрованы, но лишь частично, и я выдвигаю гипотезу, что херетек
     Деменц занимался их дешифровкой. Я приложу все усилия, чтобы извлечь больший объем данных. Информация, указывающая на
     единицу, определяемую как "увечный охотник", предположительно обладает критической значимостью".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 34d1ef2f-7533-438b-b567-3caf26003dd5
   event: Companions_Techpriest_14
   text: '{n}Паскаль берет долгую паузу, нарушаемую лишь нервным треском {g|Encyclopedia:Vox}вокса{/g}.{/n} "Данное утверждение
     ложно. Я, Паскаль Ханейманн, в полной мере принимаю ответственность за свои греховные деяния и предательство доверия моего
     почтенного наставника".'
   speaker: Pasqal Haneumann
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: b4c795c0-2b10-405b-ae64-46b3613a3723
   event: Companions_Techpriest_140
   text: '{n}Вокс техножреца хрипит сильнее обычного.{/n} "Данная гипотеза имеет право на существование, но маловероятна. Ее
     истинность не является значимой, так как она не отрицает необходимость установления судьбы архимагоса Амарната".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 6d2e7b35-10d1-4cea-9ed6-326adaea81e0
   event: Companions_Techpriest_141
   text: '"Ответ положительный. Дешифровка будет продолжена с тщанием и осторожностью".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: b3cf0f92-e8f6-42fc-ad99-841c786053af
   event: Companions_Techpriest_142
   text: '"Утверждение ложно. Истинная плоть дарована Омниссией и есть возвышение тела к идеальному образцу, а не деградация
     его".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: b1aaf907-71cc-4a5f-b92f-3dab3097f576
   event: Companions_Techpriest_143
   text: '"Великий вопрос — может ли знание быть грешно?" {n}Голос Паскаля металлизируется. Мехадендриты начинают плавно танцевать
     вокруг его худой фигуры, загадочно извиваясь.{/n} "Миряне успокаивают себя заблуждением, что знание — это просто информация.
     Что знание не опасно само по себе, опасны лишь дурные его носители".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: faab890d-ab16-435a-a666-dea132c37d35
   event: Companions_Techpriest_144
   text: '"Это — истина. Мы, Эксплораторы, — саперы Познания. Мы идем по неизведанной территории, превращая ее в жизненное
@@ -1564,259 +1118,187 @@ phrases:
     дальше пути нет. Теперь их долг — развиваться в отвоеванном нами пространстве и искать способы прорваться дальше. Неудача
     не должна останавливать нас, ибо неудача — приемлемый результат".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 1f44f7b0-d9a5-49cc-8790-c96121e648ff
   event: Companions_Techpriest_145
   text: '{n}Паскаль указывает на переборку корабля.{/n} "Вот мой бог. Я вижу его каждый день. В каждом механизме, в каждом
     духе машины. Омниссия всегда со мной, он внутри меня. Но... в его сигналах нам действительно есть противоречия. Или же
     их трактовка, принятая нами, несла в себе дефект".'
   speaker: Pasqal Haneumann
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 913071b4-1eb0-44ac-a0c0-7bd086781995
   event: Companions_Techpriest_146
   text: '"Значит, я вынесу суждение автономно". {n}Мехадендриты плавно замедляются, и стальные нотки исчезают из голоса Паскаля.{/n}'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: fe85a8c8-d4c4-48ef-953b-3b413be63d46
   event: Companions_Techpriest_147
   text: '{n}Голос Паскаля становится тяжелее и мрачнее.{/n} "Поиск знания — наша высшая по приоритету миссия. Но то, что обещал
     Деменц — не знание, а его искаженная копия. Деус Механикус велел нам искать не это".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 8eeefab9-118f-4ca9-adf5-f05223c1c7c5
   event: Companions_Techpriest_148
   text: '"Утверждение истинно. Также в Благословенной Электродинамической обители мы обнаружили тела неизвестных, проникших
     в монастырь под видом членов культа Последнего восхода. Гипотеза, что все носители идентификационного кода магоса Ханейманна
     являются объектами преследования, имеет основания".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 013bbe17-cc30-4c1f-a2b7-283ff2542662
   event: Companions_Techpriest_149
   text: '"В свете странного совпадения наших идентификационных кодов я нахожу оправданной его гипотезу о существовании...
     тайного злоумышленника или заговора, действующего в рядах нашего братства".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 9c5ceeb4-94a8-47e9-ad4d-dd6aefc9e814
   event: Companions_Techpriest_15
   text: '"Мне была оказана честь стать членом {g|Encyclopedia:Explorators}Эксплораторского{/g} флота Осознание. Когда Адептус
     Механикус призвали верующих для исследовательского похода в недра Простора Коронус, я примкнул ко флоту во исполнение
     священных обетов постижения".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 8585f317-bd38-41dc-869d-1b475d5c3cbb
   event: Companions_Techpriest_150
   text: '{n}Вокс-синтезатор выдает дробную бинарную мантру.{/n} "Пусть твои труды будут успешны и эффективны".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: e631d240-e32e-47ca-9803-7cb3e71e6584
   event: Companions_Techpriest_151
   text: '"Тогда я вернусь к своей медитации".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 1c848908-4c25-40b5-854a-4451b9ae5d51
   event: Companions_Techpriest_152
   text: '"Мы не незнакомцы друг другу, {name}. Мы — соратники, прошедшие многое. Ничто из свершенного не было забыто".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 655589a4-c5cd-4f22-9cf8-01cf082aa318
   event: Companions_Techpriest_153
   text: '"Не стоит. Он никуда не делся, лишь... эволюционировал. Мои слова — и его слова тоже".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: e27004b3-fbeb-4a88-a1f1-fee6e669ac52
   event: Companions_Techpriest_154
   text: '"Благодарю за интерес, {name}".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 38830f79-75c3-4d8a-9630-0a8bd1fff5d8
   event: Companions_Techpriest_155
   text: '{n}Надолго погрузившись в молчание, Паскаль наконец изрекает:{/n} "Ввиду высокого статуса единицы {name} фон Валанциус
     и {mf|его|ее} заслуг перед Адептус Механикус возможно ходатайство об... особом снисхождении к единице Джай Хейдари. Забвение
     без права на сервиторизацию, положенное за ее преступления, может быть смягчено до немедленной искупительной сервиторизации".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 6639f26f-d510-4206-ad41-f88949140b38
   event: Companions_Techpriest_156
   text: '"Тогда, гипотетически, со временем ей удалось бы компенсировать малую часть свершенных кощунств против Омниссии.
     Это было бы очень щедрым даром. Однако данный акт милосердия не рекомендован, ибо не заслужен".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: a8f378e7-f3ba-44b9-a40f-b6f5a79a9c6d
   event: Companions_Techpriest_157
   text: '{n}Вокс Паскаля гневно шипит.{/n} "Запись о преступлении единицы {name} фон Валанциус против священных законов Омниссии
     и приобщении оскверненного механизма к экипажу корабля занесена в каталог. Запрашиваю санкцию на немедленную эрадикацию
     богохульного механизма!"'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 9201431e-19da-4684-a13e-a14cf4bd80fe
   event: Companions_Techpriest_158
   text: '{n}Паскаль поднимает взгляд от инфопластины, подключенной к аугменту. Раньше он был установлен в череп Тарзуса —
     павшего на вашем корабле техножреца.{/n} "Приношу извинения. Девятнадцать процентов моих вычислительных мощностей задействованы
     в анализе памяти моего технобрата. Отклик может быть замедлен".'
   speaker: Pasqal Haneumann
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 8968e28f-19a2-4de6-b920-5d4e5cde4c55
   event: Companions_Techpriest_16
   text: '"После того, как я предал архимагоса Амарната, конклав флота направил меня на орбитальную станцию Алтарь-Темплум-Каликсис-Экс-17
     для покаяния".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 4ae45a04-e845-499c-a433-d411f8ec117c
   event: Companions_Techpriest_17
   text: '"Вера — это инструмент управления, но управления благотворного. Это контур безопасности, удерживающий разум от падения
     в скверну. Однако это не значит, что опека не может быть гнетущей, а забота — ведущей к деградации".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: b4da8af0-d113-4eea-aed7-da8bb70cffb0
   event: Companions_Techpriest_19
   text: '"Архимагос Амарнат, мой благословенный наставник, повелел мне нести службу на орбитальной станции Алтарь-Темплум-Каликсис-Экс-17".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: c20247c2-e964-408b-8faa-4aa02ef044d1
   event: Companions_Techpriest_20
   text: '"Это утверждение ложно, слова моего наставника звучат как ересь. Пределы дозволенного были установлены потому, что
     за ними таится опасность. Каждый шаг за них может обернуться кровавыми жертвами — но благословенного Амарната они не пугали".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: e92e4528-7e1c-4cb9-b381-287f5c06f9a0
   event: Companions_Techpriest_21
   text: '"Себя прошлого. Паскаль Ханейманн — эволюционное продолжение Амарната. Более совершенное, менее подверженное ошибкам.
     Модернизация не может быть предметом сожалений". {n}Упавший хрип вокса, вопреки словам техножреца, удивительно похож на
     печальный шепот.{/n}'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 1c993303-8a20-44eb-86d9-b2748ab2957b
   event: Companions_Techpriest_22
   text: '"Для меня честь принадлежать к {g|Encyclopedia:AdeptusMechanicus}духовенству{/g} Марса. Направляемые его догматами,
     мы храним технологию от нечистых и непросвещенных".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 13005a32-a9e1-4162-ae5d-3a1effda03af
   event: Companions_Techpriest_23
   text: '{n}Что-то изменилось в Паскале. Едва уловимая смущенная пауза предваряет каждое его движение, будто он совершает
     его впервые.{/n} "Лорд-капитан, выражаю свою благодарность за содействие, оказанное в... прекращении схизмы Прерывания
     Цикла. {d|Encyclopedia:CompPasqal_Loyal}Ваше участие{/d} не будет забыто".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 98d6c907-2863-4feb-bf3c-a1b355d6f8c4
   event: Companions_Techpriest_24
   text: '"Это дерзкая гипотеза. Но Омниссия учит, что бестрепетный разум может покорить анализом всякое Знание. Там, где несведущий
     увидит ересь, просвещенный может узреть истину".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 5116c205-764a-4737-8ff2-f7327c106ee0
   event: Companions_Techpriest_26
   text: '"И это... истина. Я жажду знания, а Омниссия поощрил меня, даровав мне миссию искать его. Возможно, Его не интересует,
     принесет добытое мной знание пользу или вред. Он просто хочет, чтобы оно было добыто".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 9eb63b4a-c9ba-4a45-984c-ae4e845092d2
   event: Companions_Techpriest_27
   text: '"Все несет угрозу. Когда-то впервые лазружье взорвалось в руках хозяина. Когда-то впервые циклонная торпеда обрушилась
     на праведный мир. Когда-то праведным бинарным языком была изречена ересь. Ничто могущественное не безопасно".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 76033074-6e36-44f6-8e66-d079e96f4d15
   event: Companions_Techpriest_28
   text: '"Там зародился культ Омниссии, там мы обрели первые откровения. Много тысячелетий назад мы заключили союз с Императором
     {g|Encyclopedia:HolyTerra}Терры{/g}, и с тех пор верно служим Империуму, выплачивая дань техникой, оружием, производственными
     станками и пустотными кораблями".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: c846d020-1186-464c-8119-bda4831b9601
   event: Companions_Techpriest_29
   text: '"Утверждение истинно. Сканирование показало полное отсутствие аномальных процессов. Остались лишь шрамы..." {n}Паскаль
     касается расколотой пластины респиратора. Голос его становится жестче:{/n} "Пустота будет заменена более чистым и благочестивым
     алгоритмом служения".'
   speaker: Pasqal Haneumann
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 25d4ffcb-36db-447d-967d-4a8d4f02ea81
   event: Companions_Techpriest_30
   text: '"Адептус Механикус почитают {g|Encyclopedia:Emperor}Императора{/g}. Он — земное воплощение Омниссии, вернувшее Человечество
     в свет божественной милости".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: ece6e2bc-db7f-47c8-a05b-a448872022c5
   event: Companions_Techpriest_31
   text: '"Обнуленным. Миссия данной единицы завершена, функция — не ясна". {n}На мгновение во взгляде Паскаля мелькает тень
     смятения, но техножрец быстро подавляет вспышку несанкционированных эмоций, и вокс его с некоторым вызовом изрекает:{/n}
     "Единица намеревается определить себе новую функцию и новую миссию. Стагнация неприемлема для воина Кода".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 09f2af5c-36f9-4006-b0b3-11b2b795e45a
   event: Companions_Techpriest_32
   text: '{n}Техножрец чуть прищуривается, будто невесело улыбается под респиратором.{/n} "Скорее принимали участие в акте
     моего отложенного суицида".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 08934ab2-922a-4d2c-90d9-e39e5cc2abbd
   event: Companions_Techpriest_34
   text: '{n}Паскаль чеканит:{/n} "Если данная единица преступит канон, да будут прерваны ее жизненные функции во имя Омниссии,
     который знает все, постигает все".'
   speaker: Pasqal Haneumann
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: feca9173-7d46-4a88-90f9-4f06c2b485c9
   event: Companions_Techpriest_35
   text: '"Эксплоратор — универсальный инструмент познания. Пока триумф Омниссии не достигнут, ему всегда найдется применение".
     {n}Паскаль с гордостью прикасается к знаку Эксплоратора мехадендритом.{/n}'
   speaker: Pasqal Haneumann
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 97540178-4ca4-4a74-adf3-d9744c6a7ffa
   event: Companions_Techpriest_36
   text: '{n}Задумчивость, прежде посещавшая лица Паскаля, уступила место целеустремленной решимости.{/n} "{name}, благодарю
     тебя за помощь в {d|Encyclopedia:CompPasqal_Ego}разрешении вопроса{/d} о существовании Коллектива Амарнат. Я этого не
     забуду".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 6eaef74f-17f9-405d-b33e-29fe337f0074
   event: Companions_Techpriest_37
   text: '"Он — божественный механизм, творец технологии. Вселенная сотворена механистичной, потому Омниссия властвует над
     ней. Знание — высшая форма, в которой он проявляется в мире... пока что. Однажды он воплотится в мире в абсолютной полноте
     своего величия".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 434ba2de-8b8b-4491-93db-17cd1469d9b3
   event: Companions_Techpriest_38
   text: '"От кредо, но не от Омниссии. Древние нормы устарели, броня стала тюрьмой. Катехизисы были написаны рукой смертных,
     а значит, во имя Деус Механикус, они могут быть отредактированы рукой смертного".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 90516811-f692-4e5a-82c9-9c2c04c02706
   event: Companions_Techpriest_39
   text: '"Форму запретов, установленных неведомыми старцами. Форму дерзновения, с которым эти запреты нарушаются. Форму следования
@@ -1824,23 +1306,17 @@ phrases:
     И лишь один из путей окажется верен, потому что истина дискретно отделена от не-истины". {n}Визор Паскаля будто проницает
     вас своим свечением.{/n}'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 1a94f6cd-d265-4705-bb34-393a0e674162
   event: Companions_Techpriest_40
   text: '"Амарнат не отрицал ни один конкретный запрет, но их кумулятивный эффект находил гнетущим. Комплекс жестких ограничений
     сузил пространство познания до закольцованной колеи, в которой разум обречен. И этот цикл повторений должен был быть разрушен.
     Потому его назвали Мессией Прерывания".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: d9a054a0-1c7e-4221-8f57-1cf3e7c84cc0
   event: Companions_Techpriest_41
   text: '"Действовать. Амарнат определил проблему стагнации, но не решился на свершение перемен. Их свершу я. Один". {n}Дерзкая
     бодрость Паскаля отразилась и в движении мехадендритов, обретших грацию хищных змей.{/n}'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 0737c501-369e-4c0e-876f-60fab4651335
   event: Companions_Techpriest_42
   text: '"При изучении разумов технобратьев Авеля, Тарзуса и Деменца я обнаружил аномальное сходство в том, согласно каким
@@ -1848,8 +1324,6 @@ phrases:
     мусорным кодом, может быть результатом иного влияния. Фрагменты не поддающихся дешифровке данных в их массивах памяти
     загадочно... симметричны".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 25d37c99-2f39-4b5d-a1ba-c77c15628148
   event: Companions_Techpriest_43
   text: '"Но не все, что опасно, есть зло. Немногие осмелятся открыто заявить это, но часть наших знаний была обретена из
@@ -1857,83 +1331,61 @@ phrases:
     Созерцая ересь, мы изобретали технологические решения по истреблению ее. Черпая из отравленного источника, мы проводили
     знание через фильтры и обретали Понимание".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: f0c3eaa0-2082-47f2-a2fd-9bd28db05889
   event: Companions_Techpriest_44
   text: '{n}Паскаль сосредоточенно погружен в начертание священным маслом на металле мехадендритов защитных рун.{/n} "Да охранят
     предписания сии духов машин, служащих мне, от хулы сквернотехнологий".'
   speaker: Pasqal Haneumann
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: f201f32f-c362-401a-9a21-2e5f044f7d2e
   event: Companions_Techpriest_45
   text: '"Параметры функционирования восстановлены до субоптимального уровня. В знак скорби об утратах Истинной плоти системы
     блокировки болевых рецепторов отключены, болевая стимуляция активирована в режиме "Интегральный катарсис".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 16674e32-a6dc-4a0b-83f1-2b74f7cd9640
   event: Companions_Techpriest_46
   text: '{n}Шипение вокса похоже на мученический хрип.{/n} "Осуществляю постижение. Принципы работы ксеноаугментов чужды освященному
     Деус Механикус канону, но... квантифицируемы. Они кормятся моими кровью и зарядом моей силовой катушки, словно паразиты,
     я же кормлюсь их тайной и вынашиваю в себе новое понимание. Это болезненно. Это необходимо".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: a8788134-f97a-4248-a8ce-1eb58d7628b6
   event: Companions_Techpriest_47
   text: '"Утверждение ложно. Соседство и взаимодействие ксеноаугментов со священным металлом Бога-Машины вело к алгоритмическим
     парадоксам и проистекающему из них богохульству. Омниссия очищает и защищает". {n}Мехадендрит решительно клацает клешнями.{/n}'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 12a0b491-cb30-4a3b-8469-a03612912288
   event: Companions_Techpriest_48
   text: '"Утверждение частично истинно. Я внес в алгоритмическую цепь уравнения-обереги, что охранят цифровой дух от скверны
     ереси. Ксеноаугменты, внедренные в мою Плоть, не постигнуты, незнание причиняет боль. Но, милостью Омниссии, мой анализ
     покорит их тайны. Мученичество есть путь к Познанию".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: fbf216dc-4b9e-4162-8441-4129779b37d4
   event: Companions_Techpriest_49
   text: '"Стратегическая рекомендация: анализ показал, что сообщество нелюдей разобщено конфликтами. Манипуляция разногласиями
     ксеносов может привести к обретению временных союзников, обладающих техническими средствами для возвращения единицы {name}
     фон Валанциус в пространство реальности".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 124b3757-0962-4633-bfdf-f2aab1d20534
   event: Companions_Techpriest_50
   text: '"Данное место взывает к Омниссии об акте очистительного и благостного ксеноцида. Пространственная дисгармония, наблюдаемая
     здесь, указывает на его анафематическую природу. Впрочем..." {n}Вокс некоторое время тихо шипит.{/n} "Полное истребление
     не рекомендовано. Носители технических знаний должны быть отловлены и подвергнуты допросу и вивисекции перед утилизацией".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 77dea5a5-be32-42d8-8046-7086dc3aa048
   event: Companions_Techpriest_51
   text: '"Да охранят нас фильтры знания, дарованные Богом-Машиной, от искусов и ужасов нечестивых откровений".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: bea61d0b-f043-4110-8754-90e9e5d8d839
   event: Companions_Techpriest_52
   text: '"Реверсивный анализ указывает, что диверсия была предсказуема. Директивы взаимодействия с ксенорасами предупреждают
     о склонности нелюдей к нарушению контрактов. Данные о ненадежности единицы Ирлиэт внесены в архив". {n}Голос Паскаля сух
     и равнодушен, но буровой мехадендрит разражается грозным рычанием.{/n}'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: cbcb7a2b-c599-431b-a1a6-d4e66821d998
   event: Companions_Techpriest_53
   text: '{n}Голос Паскаля холоден.{/n} "Некоторые директивы взаимодействия с ксенорасами рекомендуют утилизировать любой персонал
     категорией ниже магоса, побывавший в плену нелюдей. Предательство единицы Ахиллеас указывает на обоснованность данных
     рекомендаций. Фиксирую свершенную ошибку".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: e2215a39-62c7-4f67-9f35-8d76b70f3896
   event: Companions_Techpriest_54
   text: '{n}Что-то древнее и бесконечно осведомленное взирает на вас из-под маски, которая прежде была лицом Паскаля Ханейманна.
@@ -1941,8 +1393,6 @@ phrases:
     тебя за сотрудничество, {name} фон Валанциус. Твоя {d|Encyclopedia:CompPasqal_Amarnath}заслуга в свершении Реставрации{/d}
     не будет забыта".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: b006ceca-db04-417f-a619-79099721d257
   event: Companions_Techpriest_55
   text: '"Я — Мессия Прерывания". {n}Амарнат задумчиво склоняет голову.{/n} "Я — вычислительная мощь шести праведников, но
@@ -1950,35 +1400,25 @@ phrases:
     плоть ответ на вопрос, который мы задали Омниссии". {n}Глаз техножреца слегка прищуривается, будто он улыбается под респиратором.{/n}
     "Но человек, которого ты знал{mf||а}, навсегда останется в ядре моей системы".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: d917c0cc-c1de-48d5-918e-6062bb5d9866
   event: Companions_Techpriest_56
   text: '"Благодарю, информация принята. Я подвергну ее анализу и предприму дополнительные меры обеспечения безопасности".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: b344e284-dcf2-4778-bba5-b03aaf7ae15b
   event: Companions_Techpriest_57
   text: '"Служить Омниссии. Наш жизненный Цикл слишком долго подвергался износу, и я инициирую его обновление. Это будет временем
     великого страдания и великих жертв, но так велит анализ. Флот Осознание готов нести благую весть в Империум".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 9fb1acbb-b479-4392-bf92-ed15c7a8ac3a
   event: Companions_Techpriest_58
   text: '"Это стоило всего". {n}Мессия Прерывания смотрит на свои ладони, на которых пляшут искры разрушительной зеленой энергии.{/n}
     "Величайшая честь — быть тем, кому Омниссия послал свой дар. Величайшая ересь — отвергнуть его и дать ему кануть в забвение".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: e4ba3d1a-290c-475a-9944-da5f3e938128
   event: Companions_Techpriest_59
   text: '"Думаю, ты и сам{mf||а} видишь, что ничто не было случайностью. И особенно — наша встреча. Поступи я иначе, упрости
     свое мышление — кто знает, в какой момент нить возможного свернула бы в темные пространства нежеланного?"'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: c56b051b-2c1c-407c-b706-8bb1b4c4096e
   event: Companions_Techpriest_60
   text: '"Если бы я мог показать тебе паутину причин и следствий, пронизывающую мир, ты бы понял{mf||а}. Эти нити столь многочисленны
@@ -1986,89 +1426,63 @@ phrases:
     В великой медитации мне открылась статистическая вероятность, ведшая к этому моменту, и я последовал за ней. Как видишь,
     она сработала".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 6b158702-4654-4435-8bf9-eb6ecc240646
   event: Companions_Techpriest_61
   text: '"Суждение о них было верным. Незнание было исправлено, чистота и верность стали абсолютными. Недоверчивый Кастэс
     даровал нам свой Скепсис, говорящий с духами Ликут — не знающую сомнений Веру. Логика и Паранойя не имели имен в прошлой
     жизни, но разумы их остры и уникальны".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 89e557ea-189e-4c2e-b514-523a79e62f22
   event: Companions_Techpriest_62
   text: '"Авель же... Для него было великой радостью окончание нашего плена в изоляции. Теперь речь Фантазии вновь открыта
     нам и льется свободно".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: f18a57ef-f358-4e80-a432-1598f0ce2e0f
   event: Companions_Techpriest_63
   text: '"Я прибыл по зову моего наставника, благословенного {g|Encyclopedia:Archmagos}архимагоса{/g} Амарната. На Райкаде
     Минорис мы должны были встретиться и обсудить мою миссию".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 5ed1e546-1afb-4e2d-be9e-243c8373c25c
   event: Companions_Techpriest_64
   text: '"Утверждение... честно. Коллектив Амарнат был ошибкой. Моей ошибкой. Я исправил ее, похоронив пять шестых себя во
     тьме небытия. Хвала Омниссии".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: af3b039e-4a0c-47e2-a26c-585f466b60fa
   event: Companions_Techpriest_65
   text: '"Он смирился и погрузился в глубины своего разума. Алгоритм Реставрации более не властен над ним, и Авелю не интересно
     общение с кем-либо. Я исключил его из процедур священного обслуживания, кроме тех, в которых он сам пожелает принять участие".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 86de0144-bdf4-439f-9e94-ef3dd48be5e9
   event: Companions_Techpriest_66
   text: '"Закончили". {n}Эхо из вокса звучит задумчиво и печально, словно мыслями Паскаль где-то далеко.{/n}'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 64f2dc09-dc35-4e33-9fc7-ff8068a6f91d
   event: Companions_Techpriest_67
   text: '"Он смирился и ушел в глубины разума. Ему всегда было неуютно коммуницировать с другими, и теперь, свободный от ярма
     алгоритма Реставрации, он полностью прекратил контакты с живущими. Мы ему не интересны".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 4c35f8aa-557b-4d79-9f01-2f72c33963e1
   event: Companions_Techpriest_68
   text: '"Я отвергаю установки предшественников. Я буду самостоятельно определять, что угодно Омниссии, а что является ересью
     против него".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: bda0955e-7196-482f-922a-0dcf195be74c
   event: Companions_Techpriest_69
   text: '"Клетка цифровых обетов сломана, а разуму, свободному в суждении, не может быть ведом страх".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 749fd36d-281b-4e74-bb93-5734e17063af
   event: Companions_Techpriest_70
   text: '"Всякое деяние мое прославляет Бога-Машину".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 04512315-944d-4d91-b4a0-b41d456338eb
   event: Companions_Techpriest_71
   text: '"Утверждение ложно. Все только начинается, {name}".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: d7d51be5-6a2a-433d-8e80-973c3b293230
   event: Companions_Techpriest_72
   text: '"Но сначала я завершу свои обязательства перед тобой. Когда твои враги будут повержены, я оставлю тебя, но не раньше.
     Так рассудил мой компонент, носивший прежде имя Паскаль".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: f41dbdd1-f9e7-4e27-af26-66b31e0900ec
   event: Companions_Techpriest_73
   text: '"Органика — несовершенное подобие машины, изменчивое и уязвимое. Металл стабильнее, эффективнее и долговечнее. Плотьяз
@@ -2076,88 +1490,62 @@ phrases:
     же металл просто заменяется. К тому же, машина — более высокая форма Знания, и, придавая себе механическую форму, мы становимся
     ближе к Омниссии".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 027429cb-480f-4914-9c0e-ae0ddbbcc91c
   event: Companions_Techpriest_74
   text: '"Страшился ли я? Да. Тоскую ли я о прошлом и смертных мыслях? Да. Самозаклание во славу божества и должно быть мучительно,
     ведь без боли невозможен катарсис, без жертвы не истинен апофеоз. Прости, я хотел бы ответить проще, но это можно лишь
     постичь самому".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: d17713be-3e03-416a-8f30-493316a2d595
   event: Companions_Techpriest_75
   text: '"Найти разум, способный заменить Авеля, было сложнее всего. Но на нижних палубах "Герметико" отыскалась девушка,
     чья Фантазия завершила Коллектив. Ее звали... Ты оценишь прихотливость судьбы. Ее звали Нихель".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 640d16e5-90d2-40b6-8d7e-19998eced04e
   event: Companions_Techpriest_76
   text: '"Амарнат не стоит жалости. Данный проект был ущербен на уровне базовых установок. Зараза сомнений и демагогии развратила
     его".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 83ac2428-eac0-4a25-b80e-9126b9a0cf06
   event: Companions_Techpriest_77
   text: '"Свобода моих новых взглядов тревожит тебя? Или ты опасаешься мести моих бывших техносоратников?"'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 0fd19412-2cfc-42c4-b899-eb1670c82b83
   event: Companions_Techpriest_78
   text: '"Да будет так. Я изменю вселенную в одиночку. Прощай".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 88d6dfff-d36a-41e6-a81a-0e9533b6c2d3
   event: Companions_Techpriest_79
   text: '"Решение предсказуемо. Моя лояльность была скомпрометирована".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 2d989b09-5dce-4b51-8305-8d5a15cdd8f8
   event: Companions_Techpriest_80
   text: '"Утверждение истинно. Единица Паскаль Ханейманн завершает служение. Прощайте".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 2e1873fa-0d8c-450b-b1af-13774c2db170
   event: Companions_Techpriest_81
   text: '"Прежде тебя не пугали чудовища, {name}".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: ceb223b8-95ad-40de-af81-21710b6e329e
   event: Companions_Techpriest_82
   text: '"Как пожелаешь. Возможно, векторы нашего движения однажды совпадут вновь. Прощай".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: eec74eb1-12e3-46aa-b632-04b8d4b0e1f8
   event: Companions_Techpriest_83
   text: '"Право лицезреть чудо пресуществления плоти в священный металл доступно лишь взошедшим на ступень инициата. Однако
     твой высокий статус {g|Encyclopedia:RogueTrader}Вольного Торговца{/g} позволяет мне сделать частичное исключение и продемонстрировать
     свои священные стигматы".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 58d3bc5f-2886-4387-98aa-8833cca596c2
   event: Companions_Techpriest_84
   text: '{n}Мехадендриты кольцами обвивают плечи и грудь техножреца, словно стремятся защитить.{/n} "Запрос одобрен. Я действительно
     скрыл некоторую информацию. Я был учеником {g|Encyclopedia:Archmagos}архимагоса{/g} Амарната, однако совершил акт его
     предательства после того, как он отступился от священных догматов".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 64b44378-99f4-4add-8e59-c69b61c3cb1a
   event: Companions_Techpriest_85
   text: '{n}Уставившись на вас непроницаемым взглядом, Паскаль тихо произносит:{/n} "Я его уничтожил".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 5d798e3e-ae56-47c5-ac3b-bc0123c90790
   event: Companions_Techpriest_86
   text: '{n}Голос из вокс-синтезатора странно меняется, обретает мягкость и расцветает низкими теплыми нотами.{/n} "Они —
@@ -2165,98 +1553,70 @@ phrases:
     духи{/g} сопряжены напрямую с моим неокортексом, они улавливают импульсы из моего подсознания. Но порой они действуют,
     опережая мою мысль — так Омниссия направляет меня к познанию".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 8b171a16-da5f-4ea8-9a30-8b40a973b09e
   event: Companions_Techpriest_87
   text: '"Священное братство разведчиков. Культ Механикус отправляет нас к границам известных секторов как исследователей
     и завоевателей. Мы — воины Кода, возвращающиеся на потерянные миры и посвятившие себя поиску утраченных знаний древних".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: a53dc052-7ff8-4dc1-881c-22c6374f3cfc
   event: Companions_Techpriest_88
   text: '"Клад и секрет. Технология — это проявление божественности Омниссии в мире. Потому непосвященные имеют право прикасаться
     лишь к самым тривиальным и вульгарным ее проявлениям. Мы же допущены к священному катехизису эксплуатации и обслуживания".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 158190b8-bef3-44f8-a974-a3fd4427802d
   event: Companions_Techpriest_89
   text: '"Информация скудна. Его идентификационный код совпадает с моим, в его памяти хранятся данные, подтверждающие факт
     покушения. К несчастью, часть памяти повреждена импульсами, транслируемыми его боевой упряжью. Я готов утверждать, что
     он действительно был тем, кем назвался... и служил Деус Механикус с искренностью и рвением".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: de59ae52-8f60-4946-aafa-f010ed09ee84
   event: Companions_Techpriest_90
   text: '"Он впал в схизму, оспорил священные границы, проложенные для Знания. Благословенный Амарнат утверждал, что пределы
     дозволенного должны быть расширены, потому что, отказываясь от постижения в определенных областях, мы презреваем Седьмой
     {g|Encyclopedia:UniversalLaws}Универсальный Закон{/g} — Познание есть Ключ ко всему".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 2ca3b6d6-9229-448d-9b78-51659dd1e99a
   event: Companions_Techpriest_91
   text: '"Учение благословенного Амарната расширилось, и информация о нем достигла конклава флота Осознание. Многие из нас
     внезапно пропали или получили серво-епитимью за незначительные проступки. Начался конфликт. Мой прогноз показал, что наше
     наиболее вероятное будущее — раскол и схизма, которая уничтожит флот Осознание. И тогда я отправился к конклаву".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 887f74db-0cb5-44fb-a8ef-e0ef83517859
   event: Companions_Techpriest_92
   text: '"Меня призвало туда послание, шифрованное кодом благословенного Амарната. Оно было туманным и могло быть трактовано
     по разному. Но тот факт, что мы пребываем в опасности, и я должен прибыть на Райкад Минорис, был очевиден".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 45cbb4cf-3185-41af-af0b-78452d6310e2
   event: Companions_Techpriest_93
   text: '"Запрос одобрен. Я готов предоставить необходимую информацию".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 1fffd377-4853-4ba2-a069-427585cb0774
   event: Companions_Techpriest_94
   text: '"Принято. Я вернусь к размышлениям над поисками благословенного Амарната".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 22e4d450-cb3d-48cf-876c-96c714ff7aad
   event: Companions_Techpriest_95
   text: '"Оценка его личности затруднена. Дух брата Авеля не таков, как у большинства людей. Техносоратники Шестерни зовут
     таких людей "тихими". Он обладает высоким интеллектом, однако не склонен к коммуникации".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 8b1da595-267b-4afe-a736-0566368828cc
   event: Companions_Techpriest_96
   text: '"Впрочем, есть и иная причина оберегать таинство Знания от простолюдинов — оно бывает опасно. Исковерканная отступниками
     мудрость Омниссии зовется "{g|Encyclopedia:Heretech}еретех{/g}", и одно соприкосновение с ней может исказить разум непосвященного.
     Другая опасность — Знание, непостижимо истолкованное и преобразованное ксеноразумом. Этот бич зовется "ксенотех".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: d5d65216-1398-4a86-98f7-d445768bcf35
   event: Companions_Techpriest_97
   text: '"Он пребывал в перманентной агонии, но не был когнитивно дисфункционален. Желание немедленно ликвидировать объект,
     распознанный как греховный, отчасти продиктовано энграмматическими аугментами, получавшими императивы от боевой упряжи".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 53904c2d-8cc8-4e85-b57e-353bab2dfca5
   event: Companions_Techpriest_98
   text: '"Информация отсутствует. Выдвигаю гипотезу, что покушение было инициировано врагом доктрины благословенного Амарната.
     Допускаю, что целью покушения был я, но убийцы были введены в заблуждение нашими с Тарзусом идентичными идентификаторами".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null
 - guid: 5fc82a7f-b872-4307-8049-0a27237a9f23
   event: Companions_Techpriest_99
   text: '"Я не был осведомлен, насколько популярно учение благословенного Амарната в кругах Эксплораторов. Флот Осознание
     масштабен, на его периферии его идеи могли обладать большим числом сторонников, чем в материнской эскадре".'
   speaker: null
-  gemini_voice: Schedar
-  gemini_text: null

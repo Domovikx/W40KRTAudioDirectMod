@@ -1,41 +1,183 @@
 # ──────────────────────────────────────────────
 # Voice References for Full ICL (Base model)
-# Справочник: .opencode/skills/qwen3-full-icl/SKILL.md
+# Маппинг speaker_name → reference WAV
+# characters: — имена спикеров как в parts[].speaker в catalog/people/*.yaml
 # ──────────────────────────────────────────────
-# Каждая запись — результат прогона tools/qwen3_voice_design.py
-# Формат:
-#   voice_name:
-#     wav: path/to/reference.wav       # эталонное аудио (голос)
-#     txt: path/to/reference.txt       # транскрипт референса (обязательно для Full ICL)
-#     instruct: "..."                  # текстовое описание голоса (для VoiceDesign)
-#     description: "..."               # понятное описание
-#     characters: []                   # список персонажей, использующих этот голос
 
 references:
   wh40k_narrator:
-    wav: refs/characters/narrator/15s_m.wav
-    txt: refs/characters/narrator/reference.txt
+    wav: refs/samples/Всеволод Кузнецов.wav
     x_vector_only: true
-    description: "Нарратор — мужской (клон из sampleb)"
+    description: "Нарратор — Всеволод Кузнецов"
     characters:
       - narrator
       - system
       - loading_screen
 
-  teodora:
-    wav: refs/characters/teodora/15s.wav
-    txt: refs/characters/teodora/reference.txt
-    x_vector_only: true
-    description: "Теодора — клон из sampleb (2)"
-    characters:
-      - Теодора
-
   kunrad:
-    wav: refs/characters/kunrad/15s.wav
-    txt: refs/characters/kunrad/reference.txt
-    x_vector_only: true
-    description: "Кунрад — клон из sampleb"
-    characters:
-      - Кунрад_Войгтвир
-      - Кунрад
+    wav: refs/samples/Сергей Чонишвили.wav
 
+    x_vector_only: true
+    description: "Кунрад — Сергей Чонишвили"
+    characters:
+      - Kunrad Voigtvir
+      - Kunrad
+
+  teodora:
+    wav: refs/samples/Наталья Казначеева.wav
+
+    x_vector_only: true
+    description: "Теодора — Наталья Казначеева"
+    characters:
+      - Theodora
+
+  abelard:
+    wav: refs/samples/Михаил Пшеничный.wav
+
+    x_vector_only: true
+    description: "Абеляр — Михаил Пшеничный"
+    characters:
+      - Abelard Werserian
+      - Abelard
+
+  heinrix:
+    wav: refs/samples/Никита Прозоровский.wav
+
+    x_vector_only: true
+    description: "Хайнрикс — Никита Прозоровский"
+    characters:
+      - Heinrix van Calox
+      - Heinrix
+
+  pasqal:
+    wav: refs/samples/Александр Клюквин.wav
+
+    x_vector_only: true
+    description: "Паскаль — Александр Клюквин"
+    characters:
+      - Pasqal Haneumann
+      - Pasqal
+
+  solomon:
+    wav: refs/samples/Олег Куценко.wav
+
+    x_vector_only: true
+    description: "Соломон — Олег Куценко"
+    characters:
+      - Solomon Antar
+      - Solomon
+
+  ulfar:
+    wav: refs/samples/Алексей Мясников.wav
+
+    x_vector_only: true
+    description: "Ульфар — Алексей Мясников"
+    characters:
+      - Ulfar
+
+  marazhai:
+    wav: refs/samples/Сергей Чихачёв.wav
+
+    x_vector_only: true
+    description: "Маражай — Сергей Чихачёв"
+    characters:
+      - Marazhai Aezyrraesh
+      - Marazhai
+
+  edelthrad:
+    wav: refs/samples/Иван Литвинов.wav
+
+    x_vector_only: true
+    description: "Эдельтрад — Иван Литвинов"
+    characters:
+      - Edelthrad
+
+  eogann:
+    wav: refs/samples/Андрей Кравец.wav
+
+    x_vector_only: true
+    description: "Эоганн — Андрей Кравец"
+    characters:
+      - Eohann
+
+  manipulus:
+    wav: refs/samples/Владимир Антоник.wav
+
+    x_vector_only: true
+    description: "Манипулус — Владимир Антоник"
+    characters:
+      - Manipulus
+
+  argenta:
+    wav: refs/samples/Елена Соловьёва.wav
+
+    x_vector_only: true
+    description: "Арджента — Елена Соловьёва"
+    characters:
+      - Sister Argenta
+      - Argenta
+
+  idira:
+    wav: refs/samples/Аглая Шиловская.wav
+
+    x_vector_only: true
+    description: "Идира — Аглая Шиловская"
+    characters:
+      - Idira Tlass
+      - Idira
+
+  cassia:
+    wav: refs/samples/Анастасия Лапина.wav
+
+    x_vector_only: true
+    description: "Кассия — Анастасия Лапина"
+    characters:
+      - Cassia Orsellio
+      - Cassia
+
+  jae:
+    wav: refs/samples/Ирина Киреева.wav
+
+    x_vector_only: true
+    description: "Джаэ — Ирина Киреева"
+    characters:
+      - Jae Heydari
+      - Jae
+
+  kibellah:
+    wav: refs/samples/Ольга Голованова.wav
+
+    x_vector_only: true
+    description: "Кибелла — Ольга Голованова"
+    characters:
+      - Kibellah
+
+  yrliet:
+    wav: refs/samples/Лина Иванова.wav
+
+    x_vector_only: true
+    description: "Йрлиет — Лина Иванова"
+    characters:
+      - Yrliet Lanaeviss
+      - Yrliet
+
+  trazyn:
+    wav: refs/samples/Вадим Медведев.wav
+
+    x_vector_only: true
+    description: "Тразин — Вадим Медведев"
+    characters:
+      - Trazyn
+
+  default_male:
+    wav: refs/samples/Денис Некрасов.wav
+
+    x_vector_only: true
+    description: "NPC (муж.) — Денис Некрасов"
+    characters:
+      - NPC (по умолчанию)
+      - Контрабандист
+      - Псайкер (NPC)
+      - Арбитрес (NPC)
+      - Сенешаль (NPC)
+      - Интеррогатор (NPC)

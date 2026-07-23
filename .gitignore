@@ -1,13 +1,16 @@
 *.dll
 *.dll.*
 *.cache
-__pycache__
+__pycache__/
+.pytest_cache/
 temp
 .temp/
 session*
 tasks
 nul
 .env
+.vscode/
+.pytest_cache
 # tools
 tests
 output
@@ -15,3 +18,4 @@ output
 Python
 *.log
 .temp
+.vscode

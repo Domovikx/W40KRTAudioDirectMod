@@ -4,8 +4,7 @@
 
 ## Статус генерации
 
-- **Сгенерировано WAV:** ~150 (36 Кунрад + 76 Теодора + 40 Эдельтрад)
-- **Движок:** Silero v5_5_ru (48kHz) | **Активный бэкенд:** silero
+- **Сгенерировано WAV:** ~150 (36 Кунрад + 76 Теодора + 40 Эдельтрад) — Qwen3-TTS (24000 Гц)
 
 ## Путь к игре
 
@@ -17,25 +16,6 @@ C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader
 
 ```
 %userprofile%\AppData\LocalLow\Owlcat Games\Warhammer 40000 Rogue Trader\UnityModManager\W40KRTAudioDirectMod
-```
-
-## Структура мода
-
-```
-W40KRTAudioDirectMod/
-  Main.cs           — Исходник мода (C#)
-  AGENTS.md         — Память проекта
-  Info.json         — Манифест UnityModManager
-  W40KRTAudioDirectMod.dll — Скомпилированный мод
-  Settings.xml      — Настройки (Volume, Language)
-  Localization/
-    ruRU/           — WAV аудиофайлы для русского языка (названы по GUID)
-    (другие языки — enGB/, deDE/, frFR/ и т.д.)
-  .opencode/
-    skills/
-      russian-tts/  — Скил для генерации аудио
-        SKILL.md
-        scripts/tts_wav.ps1
 ```
 
 ## Как это работает
@@ -58,57 +38,46 @@ W40KRTAudioDirectMod/
 2. **`TMP_Text.set_text`** (патч ставится на 1-м кадре в OnUpdate) — ловит ЛЮБОЙ текст на экране через TextMeshPro
 3. **GUID → WAV сопоставление** — если GUID текста есть в словаре, играет соответствующую WAV
 
-## TTS Engine Architecture
+## Full ICL Pipeline (Qwen3-TTS Base + VoiceClone)
 
-Справочник движков: `.opencode/skills/russian-tts/SKILL.md`
+Генерация реплик через Voice Clone (Base модель + референс).
+Маппинг speaker → voice reference — через `config/voices.yaml` (поле `characters:`).
 
-| Движок           | Тип    | Голоса       | Дока                  | Конфиг                             |
-| ---------------- | ------ | ------------ | --------------------- | ---------------------------------- |
-| **Qwen3-TTS** 🏆 | Офлайн | 9 (5М+4Ж)    | `tools/qwen3_tts.py`  | `config/default.yaml` → `qwen3_*`  |
-| **Silero**       | Офлайн | 5 (2М+3Ж)    | `tools/silero_tts.py` | `config/default.yaml` → `silero_*` |
-| **Gemini TTS**   | Онлайн | 30 (15М+15Ж) | `tools/gemini_tts.py` | `config/default.yaml` → `gemini_*` |
-| **Edge-TTS**     | Онлайн | 2 (1М+1Ж)    | `tools/edge_tts.py`   | `config/default.yaml` → `edge_*`   |
-| SAPI             | Офлайн | 2 (1М+1Ж)    | —                     | `config/default.yaml` → `sapi_*`   |
+```
+Base model → create_voice_clone_prompt(ref_audio, x_vector_only_mode=True) → VoiceClonePromptItem
+Base model → generate_voice_clone(text, prompt) → output/full_icl/{voice}/*.wav
+```
 
-Активный бэкенд: `config/default.yaml` → `backend` (silero | gemini | edge | sapi | qwen3).
+Скрипт: `tools/qwen3_full_icl.py` — читает `config/voices.yaml` + `catalog/people/*.yaml` (формат с `parts: [{speaker, text_clean}]`).
+Склейка частей: `.opencode/skills/qwen3-full-icl/concat_parts.py`.
+Скилл: `.opencode/skills/qwen3-full-icl/SKILL.md`.
 
-### Gemini voices распределение
+Формат `catalog/people/*.yaml`:
 
-См. `config/characters.yaml` → поле `gemini_voice`. Ключевые пары: Ключевые пары:
+```yaml
+name: Кунрад Войгтвир
+phrases:
+  - guid: ...
+    parts:
+      - speaker: Kunrad Voigtvir # маппится через voices.yaml.characters
+        text_clean: ...
+      - speaker: narrator # специальное имя → wh40k_narrator
+        text_clean: ...
+```
 
-- `Kore` (F, Firm) → Теодора
-- `Sadaltager` (M, Knowledgeable) → Кунрад
-- `Algenib` (M, Gravelly) → Абеляр
-- `Charon` (M, Informative) → Хайнрикс
-- `Orus` (M, Firm) → Ульфар, Соломон
-- `Schedar` (M, Even) → Паскаль
-- `Gacrux` (F, Mature) → Идира
-- `Laomedeia` (F, Upbeat) → Арджента
-- `Aoede` (F, Breezy) → Джаэ
-- `Sulafat` (F, Warm) → Кассия
+Голоса: `config/voices.yaml` — каждый entry содержит `characters: [список спикеров]`.
+Маппинг speaker → voice работает автоматически по совпадению имени спикера.
 
-### Qwen3 voices распределение
+Выход: `output/full_icl/{voice_name}/{guid}__{N}.wav` + `{guid}.wav` (склейка).
 
-См. `.opencode/skills/qwen3-tts/SKILL.md`. Ключевые пары:
+## Референсы
 
-- `Ryan` (M, Dynamic) → **Кунрад**, Паскаль, Хайнрикс
-- `Dylan` (M, Youthful) → Эдельтрад
-- `Vivian` (F, Bright) → **Теодора**, Арджента
-- `Serena` (F, Warm) → Кассия
-- `Sohee` (F, Rich) → Джаэ
-- `Uncle_Fu` (M, Mellow) → Абеляр, Ульфар
-
-### Распределение голосов (Silero)
-
-См. `config/characters.yaml`.
-
-| Голос     | Пол | Характер   | Кому                                 |
-| --------- | --- | ---------- | ------------------------------------ |
-| `eugene`  | М   | Командный  | Абеляр, Маражай, Ульфар, Соломон     |
-| `aidar`   | М   | Спокойный  | Кунрад, Хайнрикс, Паскаль, Эдельтрад |
-| `xenia`   | Ж   | Энергичный | Теодора, Идира, Арджента, Кибелла    |
-| `baya`    | Ж   | Тёплый     | Кассия, Йрлиет                       |
-| `kseniya` | Ж   | Звонкий    | Джаэ                                 |
+- SpeechMod: `https://github.com/Osmodium/W40KRogueTraderSpeechMod`
+- Full ICL: `.opencode/skills/qwen3-full-icl/SKILL.md`, `tools/qwen3_full_icl.py`
+- Каталог фраз: `.opencode/skills/text-catalog/SKILL.md`, файлы в `catalog/people/`
+- Голоса: `config/voices.yaml`, `catalog/people/*.yaml`
+- Референсы голосов: `.opencode/skills/voice-ref-collect/SKILL.md`, `refs/samples/`
+- Конфиги: `config/default.yaml`
 
 ## Компиляция
 
@@ -126,58 +95,3 @@ csc -target:library -out:W40KRTAudioDirectMod.dll \
   -reference:"$UMM/UnityModManager.dll" \
   Main.cs
 ```
-
-## Full ICL Pipeline (Qwen3-TTS Base + VoiceClone)
-
-Генерация реплик через Voice Clone (Base модель + референс от VoiceDesign).
-
-```
-VoiceDesign → refs/{voice}_reference.wav + .txt  (tools/qwen3_voice_design.py)
-Base model → create_voice_clone_prompt() → VoiceClonePromptItem
-Base model → generate_voice_clone(text, prompt) → output/full_icl/{voice}/*.wav
-```
-
-Скрипт: `tools/qwen3_full_icl.py` — читает `config/voices.yaml` + `catalog/people/*.yaml` (формат с `parts: [{speaker, text_clean}]`).
-Склейка частей: `.opencode/skills/qwen3-full-icl/concat_parts.py`.
-Скилл: `.opencode/skills/qwen3-full-icl/SKILL.md`.
-Дока: `docs/qwen3-tts.md` → раздел Full ICL Pipeline.
-
-## Ударения в Qwen3-TTS (CAPS Stress)
-
-Полный справочник: `.opencode/skills/qwen3-caps-stress/SKILL.md`
-
-Правила:
-
-1. CAPS на ударной гласной — модель читает заглавную букву как ударную: `зАмок`, `ужЕ`, `плАчу`
-2. Только **одна** заглавная гласная на слово
-3. `ё` всегда ударная, капс не нужен
-4. Односложные, числительные, предлоги — капс не нужен
-5. В файле персонажа его собственное имя stress не требует (модель знает свой голос)
-
-Формат `catalog/people/*.yaml`:
-
-```yaml
-qwen3_voice: kunrad # voice_name из voices.yaml
-phrases:
-  - guid: ...
-    parts:
-      - speaker: Кунрад_Войгтвир # персонаж
-        text_clean: ...
-      - speaker: narrator # специальное имя → wh40k_narrator
-        text_clean: ...
-```
-
-Выход: `output/full_icl/{voice_name}/{guid}__{N}.wav` + `{guid}.wav` (склейка).
-
-## Референсы
-
-- SpeechMod: `https://github.com/Osmodium/W40KRogueTraderSpeechMod`
-- Движки: см. `.opencode/skills/russian-tts/SKILL.md`, `.opencode/skills/gemini-tts/SKILL.md`
-- SSML: см. `.opencode/skills/ssml-builder/SKILL.md`
-- VoiceDesign: см. `.opencode/skills/qwen3-voice-design/SKILL.md`
-- Full ICL: см. `.opencode/skills/qwen3-full-icl/SKILL.md`
-- Голоса: см. `catalog/people/*.yaml`
-- Конфиги: см. `config/default.yaml`, `config/voices.yaml`
-- Референсы голосов: см. `.opencode/skills/voice-ref-collect/SKILL.md`, скрипт `dl_ref.py`
-- Референсы актёров: `refs/samples/README.md` (нормализация, формат)
-- Каталог фраз: см. `.opencode/skills/text-catalog/SKILL.md`, файлы в `catalog/people/`

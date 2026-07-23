@@ -5,7 +5,6 @@ age: средний
 personality: коварный, манипулятивный, вкрадчивый
 sound_keys:
 - Kunrad
-qwen3_voice: kunrad
 phrases:
 - guid: ca2ef6c0-f159-447d-96d3-164e4ab8bb84
   event: PRL_KunradIntroduction_01

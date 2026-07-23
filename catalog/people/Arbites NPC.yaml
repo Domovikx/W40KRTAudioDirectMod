@@ -3,8 +3,6 @@ gender: M
 role: Арбитрес
 age: ''
 personality: суровый, официальный
-voice: eugene
-gemini_voice: Alnilam
 sound_keys:
 - Arbites
 total_phrases: 1
@@ -15,5 +13,3 @@ phrases:
     Надо признать, это бесценный навык для человека, которому уготована столь особая судьба". {n}Кунрад тонко улыбается —
     то ли вам, то ли своим мыслям.{/n}'
   speaker: Kunrad Voigtvir
-  gemini_voice: Sadaltager
-  gemini_text: null

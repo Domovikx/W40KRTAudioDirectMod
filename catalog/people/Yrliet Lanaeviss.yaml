@@ -3,8 +3,6 @@ gender: F
 role: Аэльдари-рейнджер
 age: ''
 personality: меланхоличная, гордая, спокойная
-voice: baya
-gemini_voice: Vindemiatrix
 sound_keys:
 - Yrliet
 - Ranger
@@ -14,872 +12,608 @@ phrases:
   event: BNTRS_AreaPeaceful_Yrliet_11
   text: '"Мертвый камень в обрамлении уродливого металла. Я бы никогда не смогла жить в подобном доме, как это делают мон-кай".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 6d544106-7e64-4ccc-a070-ee00aabcfb18
   event: BNTRS_AreaStressful_Yrliet_123
   text: '"Твои предсказания и есть цепь, что душит волю свободного создания. Умолкни, мон-кай".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: e4c4c0b7-ef28-484c-98ae-5618268af11d
   event: BNTRS_AreaStressful_Yrliet_131
   text: '"Я не могу разобрать ни слова... но скверна, что пронзает воздух вместе с этими звуками, почти осязаема".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: c0b00027-76f2-4329-87ff-18fab6f79dd6
   event: BNTRS_AreaStressful_Yrliet_132
   text: '"Погибший мир...'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: fbd8c719-c43f-440d-81b3-d07b327d2f4f
   event: BNTRS_AreaStressful_Yrliet_137
   text: '"Эти мон-кай и правда тратят свою короткую жизнь на копошение в мусоре? Почему бы не избрать другой Путь? Обрясть
     иного себя?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 47e10f5e-0f60-4075-b2ce-a864c22ae4e3
   event: BNTRS_AreaStressful_Yrliet_14
   text: '"Полагаю, "до последнего ксеноса" — это лишь мон-кайская фигура речи, не так ли?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 3f7873d6-6c5a-4c57-a474-f8ed343461c6
   event: BNTRS_AreaStressful_Yrliet_169
   text: '"Я тоже чувствую, как за нами наблюдают. Словно хищник, притаившийся в засаде. Сотни хищников".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 24e08fb4-fef0-4bdb-8b8b-42679459615f
   event: BNTRS_AreaStressful_Yrliet_19
   text: '"На этом мире печать усталости и истязаний. Слишком явный почерк моих темных кузенов, чтобы не быть ловушкой".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 61de17da-2aa5-4bbb-80f0-720d6f2bb461
   event: BNTRS_AreaStressful_Yrliet_33
   text: '"Это место отличается от других поселений мон-кай, что я видела".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: b647aaa9-fe6c-4a40-a7f0-d45196cc2120
   event: BNTRS_AreaStressful_Yrliet_49
   text: '"Малое в большом, железное в каменном. Я вижу в этом месте два слоя, две идеи, и одна — мелочная, изворотливая —
     пожрала другую".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 914606fa-a4c5-415e-82c7-5c40d57c046e
   event: BNTRS_AreaStressful_Yrliet_61
   text: '"Какой занятный муравейник. Без нелепой претензии на грандиозность ваши норы смотрятся лучше. Естественнее".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 9a14cfda-40aa-4905-a9e0-145779309af2
   event: BNTRS_AreaStressful_Yrliet_69
   text: '"Иногда твои речи напоминают предсказания наших провидцев, мон-кай. Весьма отдаленно, ибо едва ли ваши прорицатели
     могут сравниться с нашими".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 7a570acf-19c4-4d2b-b5b4-6b185809f904
   event: BNTRS_AreaStressful_Yrliet_94
   text: '"Некоторое время я считала эти леса своим домом... Но все равно чувствую себя здесь чужой".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 38b36a3b-dfc5-46bd-898f-21916226b757
   event: BNTRS_Chapter2_Yrliet_04
   text: '"Скверна, что запятнала погибший корабль, могла отпечататься на душах твоих слуг, элантах. Надеюсь, они позаботились
     об очищающих ритуалах".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 50e4e22a-f76d-4099-b942-8316da5165c0
   event: BNTRS_Chapter2_Yrliet_07
   text: '"Ловушка на замерзшем мире — жестокий силок для ничего не подозревающих жертв. Невинные, привлеченные сигналом, расплачивались
     за свое милосердие гибелью".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: cb1a3c8b-925a-4943-9b99-fa631dda23c1
   event: BNTRS_Chapter2_Yrliet_118
   text: '"Твои глаза видят отблески Ша''эиль, а душа всегда открыта тому, что за вуалью... Отчего же твои способности пугают
     мон-кай меньше, чем способности усмиренной?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 8185ce8f-2a79-4504-834f-932a72b94d09
   event: BNTRS_Chapter2_Yrliet_135
   text: '"Мон-кай так полагаются на обрывки бумаги... Словно каждое слово, написанное вашей рукой, имеет незримую силу".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: eac026b6-00a4-45ce-a1be-32ce1d3d19de
   event: BNTRS_Chapter2_Yrliet_149
   text: '"Разве мон-кай не считают, что тяготы закаляют? Ты можешь использовать меня как точильный камень для своего духа,
     но нечистоты речей впредь оставляй при себе".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 3ee2f1eb-7775-44a3-84fa-e31359bfb239
   event: BNTRS_Chapter2_Yrliet_150
   text: '"Странствие в компании мон-кай весьма... необычно. И познавательно".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 00c49f5a-d579-45b3-ae6c-b7251b9539a4
   event: BNTRS_Chapter2_Yrliet_18
   text: '"Впервые видела я рейд Темных так близко... Удивительно, что твой мир сумел пережить его, элантах".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 7a2b036b-8f79-4993-841c-083b4641d8f7
   event: BNTRS_Chapter2_Yrliet_49
   text: '"Что может знать о красоте мон-кай, чье проклятое око убивает все живое? Беды постигли Лилэтан из-за скверны подобной
     той, что ты несешь в себе".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: eb2b8b05-bcd0-463d-b6c8-efeee0e0fd66
   event: BNTRS_Chapter2_Yrliet_51
   text: '"Покинуть Лилэтан — тяжелое решение. Но Путь ведет меня дальше... на поиски братьев и сестер. Чтобы найти их, я пойду
     на любую жертву".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: da50646c-d7f8-4159-afa6-8cf8fc696e5e
   event: BNTRS_Chapter2_Yrliet_59
   text: '"Уже второй мир во владениях элантах, на который мон-кай допустили проникновение скверны. Меня... пугает ваше небрежение".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 1e0525fe-3a57-40de-83b6-6080fcbe9d3c
   event: BNTRS_Chapter2_Yrliet_65
   text: '"Я слышала рассказы от своих собратьев-изгоев... мрачные истории о Великом пожирателе. Боюсь, то были его посланцы
     — предвестники бури, от которой нет спасения".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: c2a41e27-d7ef-43eb-8886-7a16350fbc1d
   event: BNTRS_Chapter2_Yrliet_72
   text: '"Судно, преисполненное скверной из-за вуали... Печальное и предостерегающее зрелище. Никто не достоин подобной участи
     — ни дети Азуриана, ни твой вид, элантах".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 310d512f-14ee-4247-91c5-4b3531ceac90
   event: BNTRS_Chapter2_Yrliet_88
   text: '"Вы следуете опасной тропой, что ведет за вуаль. Для борьбы с силами, которые невозможно приручить. Какие бы распри
     не одолевали твой род... его судьба незавидна".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 73e9de67-4056-4383-844c-08ba23a6ee38
   event: BNTRS_Chapter3_Yrliet_111
   text: '"Аребенниан в Комморре... В движение пришли великие силы, раз Темный город посетил страшнейший из Арлекинов".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: bfed82fb-ec5e-4109-8765-9c6db49ca7b0
   event: BNTRS_Chapter3_Yrliet_115
   text: '"Аребенниан суть смертоносная тайна, что приходит из глубин Паутины и приносит с собой дурные вести о грядущих катастрофах.
     Я молю богов, чтобы наш путь более не пересекся с ним".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 44adf959-0139-4377-9fb1-be8b1ed6f09a
   event: BNTRS_Chapter3_Yrliet_126
   text: '"Я — не узница, обреченная биться за своего пленителя. В отличие от тебя, кровожадный полузверь".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: e62faf14-01e1-49af-ac52-33328692a6df
   event: BNTRS_Chapter3_Yrliet_129
   text: '"Время не терпит, элантах. Чем быстрее мы отправимся на встречу с выжившими с Крудараха, тем больше у них шансов
     избежать очередной беды..."'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 43848fbe-f67f-439c-b551-cc303779d61d
   event: BNTRS_Chapter3_Yrliet_140
   text: '"Я не буду просить тебя о снисхождении, седовласый — ведь я тоже не доверилась чужаку. Но элантах... оказал{mf|ся|ась}
     лучше нас обоих".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 0cd317af-e16f-40cf-83a2-96634516b10c
   event: BNTRS_Chapter3_Yrliet_141
   text: '"Послушай. Мне... жаль, что твой последователь оказался преда..."'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 429f2e71-3724-4638-ac51-2ce7d17abdcd
   event: BNTRS_Chapter3_Yrliet_144
   text: '"Думаешь, после всего, через что я прошла, твои слова испугают меня, мон-кай?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 16573339-bb7f-4180-8852-e670ce692c76
   event: BNTRS_Chapter3_Yrliet_146
   text: '"Я слышу в твоем голосе... понимание? Ясно. Ты тоже совершила ошибку, достойную гибели — и избежала ее".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: e052aafb-e5f5-4958-945d-6aec0b32e36b
   event: BNTRS_Chapter3_Yrliet_21
   text: '"Наш побег — спектакль, которому дали ход силы много выше нашего помощника. И я бы хотела знать цену, которую мы
     должны за это заплатить".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 4772efd1-dd98-41e7-ab84-fc10bb0c70cd
   event: BNTRS_Chapter3_Yrliet_27
   text: '"Комморра — это лабиринт, найти выход из которого не всегда под силу даже его обитателям. Но нас направлял Аребенниан
     — один из властителей Паутины. Он точно знал, куда подтолкнуть своих актеров".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 6dc75dc5-fe0f-4907-98e9-6071489baa1f
   event: BNTRS_Chapter3_Yrliet_35
   text: '"Значит, ты отправила предшественницу элантах навстречу смерти. Ту самую мон-кай, что, возможно, виновна в гибели
     Крудараха. Я благодарю тебя".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: f8104ce5-056a-43eb-b279-ed575607b93e
   event: BNTRS_Chapter3_Yrliet_76
   text: '"Мон-кай считают достойным весельем держать разумных существ в клетках и глумиться над ними вместо того, чтобы предать
     быстрой смерти? Что ж, я не удивлена".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: bf1cb9f2-2804-44f9-8aa5-3492acdd6cc7
   event: BNTRS_Chapter3_Yrliet_86
   text: '"Мой темный кузен получил то, что заслужил. Предавший... отыщет в пути своем лишь предательство".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 2bfa40d6-7db2-42d6-ade2-ba305f3b61d9
   event: BNTRS_Chapter3_Yrliet_91
   text: '"Твое присутствие наполняет меня неудержимым гневом..."'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 0f64d981-c568-4775-9ce5-a98f04d6a1d1
   event: BNTRS_Chapter4_Yrliet_108
   text: '"Трехокие мон-кай поколениями измывались над душами детей Азуриана ради своих низких амбиций. Что это, как не свидетельство
     духовного убожества?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: bb71fac2-dec7-4d2f-93f9-9ba0fb0f687f
   event: BNTRS_Chapter4_Yrliet_12
   text: '"Мон-кай не ценят жизни собратьев и потому способны жертвовать сотнями и тысячами в одном бою. На этом построено
     их военное искусство... если его можно так назвать".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 2263b817-8559-45b2-9447-c23c6aab44ef
   event: BNTRS_Chapter4_Yrliet_121
   text: '"Вы сами порождаете врата для сил Сай''лантреш... и делаете это под личиной помощи Человечеству. Почему, ища спасения
     от одной беды, вы обращаетесь к иной?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: b468183e-c11f-48d6-96fd-0d2908d465c0
   event: BNTRS_Chapter4_Yrliet_127
   text: '"Вместо гемункульского творения ты вверила свою душу тому, что за вуалью... Так ступай же по своему проклятому Пути
     без страха — твоя судьба была предначертана с самого начала".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 5bef99b0-cb69-4ec2-8c47-193adb6cb15a
   event: BNTRS_Chapter4_Yrliet_135
   text: '"Эти твари будут скрестись в стенки твоего сознания каждый раз, как корабль окажется за вуалью. Если ты вновь дашь
     им повод... помни о цене ошибки".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: a9b6fc7b-bba6-4640-b59c-723e0bbba7a1
   event: BNTRS_Chapter4_Yrliet_144
   text: '"Ты говоришь о Номосе, Темный. Он — гость элантаха, как и мы с тобой. Возможно, более почетный, потому не бери в
     голову даже мысль о том, чтобы изучить его одним из ваших методов, если не хочешь навлечь на себя праведный гнев".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 5a971ed1-5d07-49ce-a7f6-80095184efbf
   event: BNTRS_Chapter4_Yrliet_163
   text: '"Я отыскала провидцев Крудараха... но вместо облегчения и покоя истина об их судьбе наполнила мое сердце горечью".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 3950b616-dba7-494c-a294-d5897e4c88fc
   event: BNTRS_Chapter4_Yrliet_167
   text: '"Мои ошибки вывели меня на дорогу, ведущую в бездну. Если такова плата за истину... я шагну во тьму не страшась".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: aec3474a-b2ee-47bb-b141-febbc6308d46
   event: BNTRS_Chapter4_Yrliet_168
   text: '"Крударах пал, его останки скрыты во мраке Простора. Все, что мне теперь остается — последовать за {mf|тем|той},
     кто позволил мне пройти этот путь до конца".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: e7a86cdd-0097-480a-9319-ebb03342d939
   event: BNTRS_Chapter4_Yrliet_172
   text: '"Пытаешься вновь отравить мой дух, Темный? Напрасно — твои ядовитые стрелы бьют мимо цели".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 604bcd4a-a191-4e9d-961f-e0350d38f360
   event: BNTRS_Chapter4_Yrliet_44
   text: '"Если потомки павшей придут за элантахом, кровавый цикл продолжится. Жизнь за жизнью. Поколение за поколением. Пока
     одна сторона не перестанет существовать".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 1edcbe18-e38e-48d7-ad2c-12d9acd9bfde
   event: BNTRS_Chapter4_Yrliet_53
   text: '"Разве не было там одного из твоих единоверцев? Остерегайся. Твои собратья замешаны в делах мастера плоти".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 87aa5485-612c-4ac8-b84e-ec11817d66fe
   event: BNTRS_Chapter4_Yrliet_84
   text: '"Ваша иерархия запутанна и нелогична. Почему элантах, правящий собственным кораблем и мирами, должен подчиняться
     тому, кто, словно вредитель, занял чужое место?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 4c6e072c-8c48-46b7-a835-774a1913e776
   event: BNTRS_Chapter4_Yrliet_90
   text: '"Знатные семьи с твоего главного мира ищут любой повод, чтобы уничтожить друг друга, элантах. Но лидеры должны стремиться
     к единению народа".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 7a887fc8-68d3-4d7a-a75b-b9945b3d627c
   event: BNTRS_Chapter5_Yrliet_08
   text: '"Я только раз в жизни сходилась в бою с огиром. Древние создания, которым должно было остаться в прошлом. Их пробуждение
     в эти времена... тревожный знак".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: f2ab5155-b921-4b23-9f0d-d8698f4a6909
   event: BNTRS_Companion_DLC3_Yrliet_06
   text: '"Я питала слабую надежду, что тобой не будут вершиться надругательства над телами братьев, но нет, низменную человеческую
     природу не изменить".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 9de62284-55d8-4a65-8fa2-4a67e82e4a98
   event: BNTRS_Companion_DLC3_Yrliet_105
   text: '"Не надейся узреть душу Лилэтан. Ты умен для мон-кай, но твое сердце столь же черство, как у твоих сородичей".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: bce27d96-91dc-47b7-aabd-dbe614a5c915
   event: BNTRS_Companion_DLC3_Yrliet_145
   text: '"Желаешь что-то спросить, железный философ?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: bd372d21-be8c-4884-ba2c-dc7af5a16ed9
   event: BNTRS_Companion_DLC3_Yrliet_37
   text: '"Ты произносишь слова нашей речи почти правильно, но все еще путаешься в интонациях. Немногие из людей могут освоить
     наш язык. Зачем это тебе?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 7e442859-8954-4ce3-b84c-8d053d325638
   event: BNTRS_Companion_DLC3_Yrliet_58
   text: '"Твой разум жаждет познаний, а в словах нет ненависти, присущей собратьям. Это... необычно. Твое неравнодушие однажды
     обернется пожаром, что спалит тебя дотла, железный мудрец".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 9d6dc863-11ed-42d4-a29b-dc3c625e7213
   event: BNTRS_DLC2_Yrliet_105
   text: '"Суды мон-кай так фальшивы... Темные кузены хотя бы честны в своих амбициях и не дают ложного чувства, что обвиняемый
     может спастись".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: a6349abd-e2ed-4e1a-8ee6-efcd56c84d1b
   event: BNTRS_DLC2_Yrliet_116
   text: '"Смогут ли мон-кай почерпнуть из трагедии мудрость и встать на новый путь? Порой потрясения — это не конец, а повод
     к обновлению".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: a6fe0e3e-fa70-4415-a84e-91ddefcc8cb2
   event: BNTRS_DLC2_Yrliet_131
   text: '"Его путь был заблуждением от начала и до конца. Хоть элантах и протянул{mf||а} ему руку, чтобы вывести на новую
     тропу, но любая помощь бесплодна, если ее не желают".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: bbcc76db-0aae-4002-ac67-9e28e1ed610c
   event: BNTRS_DLC2_Yrliet_140
   text: '"Ты напрасно тратишь слова. Он — тень воли вашего бога-на-троне. Слепое орудие. И никогда не поймет, почему мы следуем
     за элантах".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: c7e3332d-453e-4906-9b5f-28fcb53cf075
   event: BNTRS_DLC2_Yrliet_175
   text: '"И здесь правители мон-кай хранят отобранные у своего народа богатства? То, что я представляла себе хранилищем великих
     артефактов, оказалось... свалкой".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 7faacae8-018f-4850-8012-5617caf4f4f6
   event: BNTRS_DLC2_Yrliet_185
   text: '"Неужели только угроза смерти способна заставить вас соблюдать собственные законы? То, что иные разумные существа
     понимают интуитивно, вы насаждаете насилием".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 9d3c04be-1823-4fab-8d53-79657e4cbf29
   event: BNTRS_DLC2_Yrliet_246
   text: '"Мой вид знает то, что тебе недоступно — искупление. И то, что мертвым не исправить своих ошибок".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: ca87fe40-4f61-4f06-b745-07fc9fe4a62d
   event: BNTRS_DLC2_Yrliet_295
   text: '"Знает ли элантах, что ты думаешь о {mf|его|ее} решениях? О, я вижу. Тебе не хватает смелости высказать все {mf|ему|ей}
     в лицо. И ты выбрал иную жертву. Но мне безразлична гниль твоих слов".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: cd409fb5-b2c2-40e5-82e8-d59d62ee5bf6
   event: BNTRS_DLC2_Yrliet_314
   text: '"Даже твой несчастный зверь, которого мон-кай превратили в оружие, может стать добычей. Ступай осторожно и не гневи
     Лилэтан".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 457ffb48-3ca2-47f9-b2dd-54a7895e2cf3
   event: BNTRS_DLC2_Yrliet_363
   text: '"Позволь ему скорбеть об утерянном, железный мон-кай. И не душить свое сердце. Только приняв боль можно двигаться
     дальше".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: cf12843f-fadc-4872-8703-69b338996a1e
   event: BNTRS_DLC2_Yrliet_40
   text: '"И вновь ты пытаешься заковать в свое писание то, что не постичь разуму. Вместо вопросов — ненависть. Вместо познания
     — добровольные оковы. Как же ваш вид страшится свободы..."'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: c54ded54-d015-4e55-889c-b997e72a0596
   event: BNTRS_DLC2_Yrliet_43
   text: '"Твои усилия по установлению порядка приводят лишь к большей разрухе. Если бы ты принял мир таким неидеальным, какой
     он есть... Это бы облегчило твое существование".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 69931164-2414-4fdd-a61f-6c136978d44a
   event: BNTRS_DLC2_Yrliet_47
   text: '"Там, где азуриани радуются сходству, вы находите лишь горечь. Я никогда не пойму вашего стремления быть разобщенными".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: aa7d6637-84f4-410b-bc33-79864d26d698
   event: BNTRS_DLC2_Yrliet_50
   text: '"Ты не радеешь за справедливую участь себе подобным, мон-кай. А желаешь, чтобы право судить и казнить было лишь у
     тебя и таких, как ты. Палачей".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 87b4f094-ab70-4b77-aa4d-c963a78f293c
   event: BNTRS_DLC2_Yrliet_65
   text: '"Что не взять силой, то можно получить хитроумием. Тот мон-кай был скалой снаружи, но оставил бреши внутри".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: f794110b-c9aa-4a98-80f1-abb3444da7b8
   event: BNTRS_DLC2_Yrliet_93
   text: '"Повторят ли мон-кай свою ошибку и продолжат держать ресурсы взаперти, или дадут им течь свободно, наполняя миры
     жизнью?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: ba16eee5-ac01-4ebf-8da9-103d48ea8f25
   event: BNTRS_DLC3_Yrliet_01
   text: '"Элантах, будь осторожен. То, что ждет внутри, голодно. И оно, будто зверь, чует наше приближение".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 870e8d2d-4d9b-4bf2-8331-dbedf59a3752
   event: BNTRS_DLC3_Yrliet_100
   text: '"Море злится. Мон-кай вгрызлись в самое сердце планеты и забирают ее силы. Когда она устанет от их жадности, это
     место будет обречено".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: a2d5bdcb-b082-4854-b722-07b4d9beef9b
   event: BNTRS_DLC3_Yrliet_118
   text: '"Ты о том, как выглядят их попытки жить в гармонии с окружающей их природой? Что ж. Это и вправду забавно. И жалко".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: cff36a60-b1f5-48ec-84cd-c1f66589145e
   event: BNTRS_DLC3_Yrliet_125
   text: '"Эта планета прекрасна в своей первозданности, но она не жалует незванных гостей. Я чувствую, как жадно нечто в ее
     глубинах наблюдает за нами".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: eb2a9a3d-7e49-4c43-856e-80b155b90beb
   event: BNTRS_DLC3_Yrliet_21
   text: '"Мертвая материя, частично превращенная в фантомы, застывшая вне круговорота времени. Сколь странная тяга к накопительству...
     Для чего этот огир окружает себя всеми этими предметами?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: f5806094-6a98-4a29-9551-56739a8af939
   event: BNTRS_DLC3_Yrliet_30
   text: '"Слишком много значения вы придаете раскрашенным тряпкам и кускам металла. Так ли наполнено смыслом стремление положить
     жизнь за безделицу? Радуйся, что на этой платформе не выставлены тела тех, чьи имена ты назвал".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: b76621f6-ec15-4ed3-aba5-516428f2d14a
   event: BNTRS_DLC3_Yrliet_35
   text: '"Моя душа не слышит криков, ведьма. Лишь... тишину. Лишенную надежды и жизни. Холод вечности, предвещающий беду".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 24046457-df13-4c58-b227-aebf82b485a4
   event: BNTRS_DLC3_Yrliet_56
   text: '"Западня, наполненная мерзкими технологиями огиров! Сколь беспеч{mf|н|на} и слеп{mf||а} ты был{mf||а}, элантах, ступив
     в эти чертоги. Впрочем, даже мои глаза не распознали ловушку, расставленную древним врагом, а твой род обмануть стократ
     проще".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 7347bb84-336e-4dc6-bd1e-cf618c5881e1
   event: BNTRS_DLC3_Yrliet_70
   text: '"Здесь стало спокойнее и тише... но в воздухе витает иной дух. Дух жадности. Дух жажды обладания излишеством".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: e0da8ec7-d4fa-4644-8b0b-8dac10fc3f32
   event: BNTRS_DLC3_Yrliet_85
   text: '"Ты, искаженный мон-кай, удивляешь меня больше прочих. Я не верю своим глазам, но... Ты и вправду не отличаешь одних
     своих братьев от других?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 8980184c-2d12-4870-abe1-0d733cde115f
   event: BNTRS_DLC3_Yrliet_94
   text: '"Боль и неутолимая жадность к жизни... Это корабль все больше напоминает мне истинное отражение природы мон-каев".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: ae622fd9-fd12-48bc-b922-95ea3dcf7783
   event: BNTRS_PickUps_Yrliet_101
   text: '"Ты видела неизбежность, зрящая Ша''эиль. Тень Пожирателя. Утешай себя тем, что едва ли доживешь до дня, как она
     тебя настигнет".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: edb9123a-3839-462c-9fa3-a3d5c691a27b
   event: BNTRS_PickUps_Yrliet_103
   text: '"Из-за этого проклятье и пало на нашу расу. Из-за неумения сдержать свое больное любопытство".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: baf44103-4281-4e91-b77e-771c745a85d6
   event: BNTRS_PickUps_Yrliet_126
   text: '"Дитя Азуриана, обреченное провести вечность в одиночестве среди праха мон-кай... Не мне осуждать выбор твоего пути.
     Но душа моя скорбит — слышишь ли ты ее плач?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 7566973d-7ba3-4c5e-97a2-f69cedc2d83b
   event: BNTRS_PickUps_Yrliet_180
   text: '"Каждый на судне почему-то считает элантах неразумным дитя. Если ты и правда ценишь {mf|его|ее}, то признай, что
     {mf|он|она} сам{mf||а} творит свой путь".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: b7b57266-d441-4393-baf2-b11fd23e5660
   event: BNTRS_PickUps_Yrliet_197
   text: '"Лилэтан вздыхает с облегчением каждый раз, когда мон-кай перестает осквернять его своим присутствием".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 4a16c984-c3f5-4712-8c32-b970dd44146c
   event: BNTRS_PickUps_Yrliet_202
   text: '"Их питает не смерть, а страдания. Они цепляются за жизнь, обреченные давным давно".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 26ebe73a-75dc-4170-9d64-2c11512f7199
   event: BNTRS_PickUps_Yrliet_206
   text: '"Вся эта чудовищная мощь и тела, и духа настолько груба, что мне до сих пор не верится в то, что он не сломал себя".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 39e5c0be-9813-4775-b41d-f37bc5570490
   event: BNTRS_PickUps_Yrliet_281
   text: '"Знаю, ты жаждешь меня убить. Нацелишь ли ты клинок в мое сердце, когда я повернусь к тебе спиной?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: d2bb03c6-3dae-43c7-b86e-8ee715c81774
   event: BNTRS_PickUps_Yrliet_36
   text: '"К несчастью, мне не впервой сталкиваться с мон-кай. И по опыту лет больших, чем твоя жизнь, могу сказать — ты не
     отличаешься от прочих".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 2f6f8679-379e-405b-b4f8-a1e6374eb8e7
   event: BNTRS_PickUps_Yrliet_43
   text: '"Твоя жизнь коротка, но ты все равно стремишься к смерти. Словно догорающая комета, падающая на звезду".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 2a094c6a-7e6f-4342-b05b-8c4c3af08bc9
   event: BNTRS_PickUps_Yrliet_53
   text: '"Та, Что Жаждет не любит выпускать жертв из своей хватки. Лучше не думай об их судьбе".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: e8baa839-e06d-4fb4-8168-c52219115c53
   event: BNTRS_PickUps_Yrliet_98
   text: '"Вы, мон-кай, одинаково жутки в своем самоотречении, какой бы путь ни избрали".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 82d93a39-8ee3-4844-8076-888a1d5690e7
   event: BNTRS_Reactivity_DLC3_Yrliet_32
   text: '"Мон-кай придают так много значения вещам, которые сами же наделили значимостью... и теперь исчезновение такого предмета
     холодит ваши сердца смертным ужасом".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: b5d9e5e0-e5a6-48ee-b31c-6c09adbb27dc
   event: BNTRS_Reactivity_DLC3_Yrliet_56
   text: '"Ты думаешь о том, что и твое время близко к исходу, не так ли? И все же твои слова исполнены покоя... удивительно".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: ec301c7b-fe44-403a-b5c2-e148d52010c7
   event: BNTRS_Reactivity_DLC3_Yrliet_66
   text: '"Мон-кай, что пришли благодарить элантах за заботу об их телах, были искренни. Но я не стала бы называть чувство
     раба, что ласкается к руке своего хозяина ради куска еды, красивым".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: a72229bd-47b0-4755-8ae5-cebe0d59cbf2
   event: BNTRS_Reactivity_Yrliet_103
   text: '"Вон она — гордыня мон-кай. Ты считаешь, что без наставлений элантах погрязнет во тьме. Но душа {mf|его|ее} сияет
     столь ярко, что разгонит любой мрак, и потому я не страшусь твоих слов".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: b751483b-053e-452a-976b-d3af31b437ab
   event: BNTRS_Reactivity_Yrliet_19
   text: '"Ритуалы, что проводят элантах и зрящая Ша''эиль... В них нет дикости, присущей мон-кай. Мне почти нравится наблюдать,
     как расцветают их чувства".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: d6aa807d-195b-4d21-b3a0-7f5e28d72aba
   event: BNTRS_Reactivity_Yrliet_26
   text: '"Делаешь вид, что беспокоишься о долге и владениях элантаха, но я... знаю. Тебя волнует и печалит союз без истинных
     чувств".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: edd7d7ae-8bb6-4c83-ada1-659d6e94299a
   event: BNTRS_Reactivity_Yrliet_33
   text: '"Чувства к элантах мешают тебе править корабль сквозь Ша''эиль. Соберись, трехокая! Твоя слабость может стоить нам
     жизней... и не только их".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: df71568a-22f8-4e1d-be66-b29f45d5504b
   event: BNTRS_Reactivity_Yrliet_63
   text: '"Мой народ лишен предубеждений мон-кай, но... Разве можно испытывать страсть к тому, кто с тобой нечестен?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: f2c8f5a6-c0b7-4cb9-b728-d4a66107ac1b
   event: BNTRS_Reactivity_Yrliet_75
   text: '"Тебе стоило бы бояться не злых языков, а того, кем элантах станет, если не сойдет с выбранного пути. Обычаи Темных
     язвят душу... и открывают тайны, которым лучше остаться неузнанными".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 90de6d05-d3ad-4a6a-8fc5-db6ec359f497
   event: BNTRS_Reactivity_Yrliet_81
   text: '"Что тебе нужно от элантах, Темный? Почему пожираешь {mf|его|ее} глазами, словно замышляешь зло?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 0335b39f-a139-473b-92b1-c23de19095f8
   event: BNTRS_Reactivity_Yrliet_90
   text: '"Что за примитивные мысли в роятся в твоей голове, мон-кай? Ты — живое доказательство того, как прост ваш вид. Но,
     кажется, элантах отличается от вас..."'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 8473553d-9a08-4c5b-80c8-aa4d55f0fa6c
   event: BNTRS_Reactivity_Yrliet_91
   text: '"Довольно пристальных взглядов, мон-кай. Твои силы язвят душу, подобно стрелам Курноса".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 50e68405-85d2-463f-abef-15fcad68cedd
   event: BNTRS_Reactivity_Yrliet_95
   text: '"Я жалею только об одной упущенной возможности — возможности избавить от тебя этот мир еще при первой нашей встрече".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 432476dd-02c3-4a20-aca7-f8f1a4950803
   event: BNTRS_Stressful_Yrliet_108
   text: '"Ты необычайно проницательна для мон-кай, еще и со столь вздорным характером. Пожалуй, мне тоже стоит к тебе присмотреться".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: d68318ac-150b-4b42-97a8-ed58b3a41655
   event: BNTRS_Stressful_Yrliet_126
   text: '"Возможно... Если бы элантах не принял{mf||а} меня в свой круг, я бы стала подобной тебе и окончательно потеряла
     себя. Но теперь у меня есть надежда, так что оставь свои праздные речи... кузен".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: a1354023-7524-4e50-875a-9750104c9418
   event: BNTRS_Stressful_Yrliet_146
   text: '"Мы чтили Ваула, кузнеца и искусника. Но он не похож на ваше уродливое божество — он не пытался заменить наши души
     на скульптуры из призрачной кости".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 4f91d1d0-de57-4ba6-838d-633e5335e590
   event: BNTRS_Stressful_Yrliet_164
   text: '"Как ты уродлив внутри, мон-кай... Нет, просто кровожадное чудовище, проклятье, насланное твоим народом на более
     просвещенные расы".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: f50d04c8-3b2b-4217-bd2a-ccd8c5cbda1a
   event: BNTRS_Stressful_Yrliet_165
   text: '"Не тяжело ли тебе нести груз прожитых лет, седой воин? Не выйдет ли так, что рука подведет тебя в бою?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: ca7c0ad5-cb69-44bc-aeb5-1578edada7bf
   event: BNTRS_Stressful_Yrliet_167
   text: '"Значит, ты правда веришь, что твой бог сидит где-то на троне из золота и приглядывает за тобой?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: ace2b565-362d-4b64-b6e2-8048b081fc51
   event: BNTRS_Stressful_Yrliet_169
   text: '"Рядом с тобой моей душе неспокойно, Зрящая Ша''эиль. Дело в твоем третьем оке? Или есть что-то еще?.. В любом случае
     — не стоит подходить ближе".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 4e5e388e-1e56-4b9c-be7b-5e124755624d
   event: BNTRS_Stressful_Yrliet_171
   text: '"Я вижу, как ты украдкой смотришь на меня, мон-кай".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 324a1351-b8a6-41ae-898b-c84dc5bcaa57
   event: BNTRS_Stressful_Yrliet_173
   text: '"Мон-кай совсем не знают страха и благоразумия, раз допускают связанных с великим врагом в свои круги".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 4743a9ed-2598-45b4-b392-532e53fa84b8
   event: BNTRS_Stressful_Yrliet_175
   text: '"Разве сделки с моими собратьями не считаются среди мон-кай предательством? Или алчность настолько тебя ослепила,
     что ты не боишься возмездия?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 0c241e61-5dbd-4f55-ae6a-ac960585a9fb
   event: BNTRS_Stressful_Yrliet_177
   text: '"То, что произошло с тобой, Маражай... справедливо. В моем сердце нет для тебя жалости".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 203dfae0-80bf-43d6-a5ab-9cdc7840aa24
   event: BNTRS_Stressful_Yrliet_179
   text: '"Ты заменил железом свое тело, но жадность не изжить холодом металла. Перестань смотреть на мое снаряжение с такой
     алчностью, мон-кай".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 828c3210-40e9-412f-90d0-9e48e621b04d
   event: BNTRS_Stressful_Yrliet_18
   text: '"Страхи мон-кай — не моя забота. И даже захоти я их успокоить — ваш вид никогда не перестанет бояться тех, кто стоит
     выше".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 3bb30e34-af50-4add-8369-e0dd3bc86eeb
   event: BNTRS_Stressful_Yrliet_181
   text: '"Ты больше похож на дикого зверя, нежели представителя своего вида".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: b7333bf0-3035-40b6-979e-d80ccf3b36c8
   event: BNTRS_Stressful_Yrliet_36
   text: '"Как часто ограниченные, мелочные создания жалеют других, считая их удел хуже своего. Не знаю, трогательно это или
     омерзительно?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: c3beb724-ce21-419d-8f87-07cb95548f61
   event: BNTRS_Stressful_Yrliet_54
   text: '"Наивное дитя, ты для мон-кай такое же чудовище, что и прочие твоего вида. Если бы не третье око, что зрит Ша''эиль,
     нить твоей судьбы оборвалась бы еще при рождении".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: bcc1705a-2167-4ca6-969d-f392f474186a
   event: BNTRS_Stressful_Yrliet_72
   text: '"Азуриани умеют адаптироваться. Вы немного замедляете меня, слегка мешаетесь в бою... но это терпимо".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: ad821da4-57b7-44aa-b3d8-fb876c1e36f3
   event: BNTRS_Stressful_Yrliet_90
   text: '"Что за уничижительное сравнение, мон-кай. Ты — зов Сай''лантреш в телесной оболочке, что в любой момент может разорвать
     вуаль. Мы похожи так же, как снежные вершины и грязь под ногами".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: be8c742a-2c93-4b5a-83a9-488f8f5d2f29
   event: CH2_Yrliet_BaseDialogue_01
   text: '{n}Перед вами причудливое создание, лишь отдаленно напоминающее обычного человека. Вытянутое тело, тонкие конечности,
     острые черты — каждая деталь в облике выглядит противоестественно и чуждо. Создание поворачивает к вам голову.{/n} "Ирлиэт
     Ланэвисс приветствует тебя, элантах".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 48887377-774a-40ba-895d-837182eac56a
   event: CH2_Yrliet_BaseDialogue_02
   text: '"Глядите-ка, ксеносы, что б их ажи сожрали, уже ходят среди людей!" {n}Джай склоняет голову набок.{/n} "Вы разве
     не мните себя выше того? Но только сути это не меняет — в подружки к Вьятт затесалась ксенос, а не мутант".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 2c4341a4-0a13-4982-bf7f-e277d32025ee
   event: CH2_Yrliet_BaseDialogue_03
   text: '{n}Хейнрикс бросает несколько слов на странном языке — вроде и мелодичном, но в исполнении дознавателя звучащем угловато
@@ -887,64 +621,46 @@ phrases:
     Создание перед нами — не мутант, как предполагают местные, а представительница рода {g|Encyclopedia:Aeldari}эльдаров{/g}
     — одна из сонма врагов Человечества. Тебе не следует верить ей. И даже говорить с ней дольше самого необходимого".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 158938cf-81ea-473f-b90c-cc7ad8bcc6d7
   event: CH2_Yrliet_BaseDialogue_04
   text: '"Тебе незачем уродовать мой язык, мон-кай — я владею вашим в достаточной мере, чтобы вести разговор с элантах без
     переводчика. И коль разгадал ты мой путь, то и я буду пряма в своих речах".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: e058fab0-93dd-48bc-9f61-d407379949ec
   event: CH2_Yrliet_BaseDialogue_05
   text: '"{name}, при всем моем уважении... вы уверены в правильности такого поступка? Нам ничего не известно о том, что это
     за ксенос и зачем она втерлась в доверие к губернатору. Насколько я вижу, она не слишком стремится нам помочь — и все
     же, по какой-то явно темной причине, согласилась участвовать в расследовании..."'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 00f27f3d-a4b9-4e35-a67c-4a394691a906
   event: CH2_Yrliet_BaseDialogue_06
   text: '"Ох ты ж... либо ты самая тупая ксеносиха на свете, либо храбрее целого полка Имперской гвардии. Скорее всего — и
     то, и другое одновременно, раз говоришь с {mf|его|ее} благородием Вольным Торговцем в таком тоне!"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 975e9c35-6e1c-482f-aa1f-ed797a4f0660
   event: CH2_Yrliet_BaseDialogue_07
   text: '"Я здесь — по воле правительницы этих людей. Твои приказы ничтожны для меня, элантах".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: fcef50af-2d88-497b-983e-8bcdd508146f
   event: CH2_Yrliet_BaseDialogue_08
   text: '"Почтение среди моего народа завоевывают величием, элантах. Лишь единицы твоего вида достойны нашего уважения. Я
     не буду менять своей дороги в угоду твоей — но ты еще можешь заслужить то отношение, которого просит твоя душа".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: c2cd4e74-a130-4811-a679-c2fbd72909a6
   event: CH2_Yrliet_BaseDialogue_09
   text: '{n}Ирлиэт едва заметно склоняет голову.{/n} "Я изгнала тень сомнения из твоих мыслей касательно моей природы. Теперь
     же ответь на мой вопрос — зачем ты обратил{mf|ся|ась} ко мне?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 89ce3a1a-0862-4a23-9de3-d519cdb32063
   event: CH2_Yrliet_BaseDialogue_10
   text: '"Ты недостаточно долго прожила среди людей, раз считаешь, что угрозы еще больше расположат меня к тебе. Решение за
     вами, Вольный Торговец, но уверяю — я усыплю вашего карманного ксеноса при первом же признаке его неповиновения".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 80046cb9-2902-4b26-8b38-c06626c7bb61
   event: CH2_Yrliet_BaseDialogue_11
   text: '"Воистину так, элантах. Моя рука отвела смерть, что грозила правительнице этих людей, и я же помогла тебе в борьбе
     с безумцами".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 39eab94c-66c7-4af9-8f68-772b1e1ac18e
   event: CH2_Yrliet_BaseDialogue_12
   text: '"А ты и не просишь о помощи, элантах — лишь задаешь вопросы, ответы на которые неважны или скрыты тенями. Изучи место.
@@ -952,153 +668,109 @@ phrases:
     меня, коль один облик мой внушает страх и подозрения. Когда узнаешь что-то — поведай мне. Быть может, тогда мои ответы
     пригодятся в твоих поисках".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 5dad60b8-1cf2-4f48-ad20-dbc2cf0de0a6
   event: CH2_Yrliet_BaseDialogue_13
   text: '"Этот мир в беде. Я хочу избавить его от ненужных страданий".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 5a1217b4-64d9-4235-bad4-182d6cc382cc
   event: CH2_Yrliet_BaseDialogue_14
   text: '"Лишь то, что они грозят сложившемуся порядку вещей. Погибнет правительница — и этот мир окажется в опасности".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 020e663f-dead-43eb-ba18-54b9f2b1a6f4
   event: CH2_Yrliet_BaseDialogue_15
   text: '{n}Ирлиэт молчит несколько секунд, ее взгляд устремлен куда-то мимо вас. Медленно, растягивая слова, она отвечает:{/n}
     "Так и быть. Я пойду с тобой".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 2d8ccd46-6cd0-4a8a-aa9f-a494bb5dcd08
   event: CH2_Yrliet_BaseDialogue_16
   text: '"Мир, что ты зовешь "Янусом", когда-то был сотворен волей моего народа. У меня гораздо больше причин находиться на
     Лилэтан, чем у любого из вас".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: c3c5e9bd-eeb3-4cb3-961d-e5e1faf5f057
   event: CH2_Yrliet_BaseDialogue_17
   text: '"Я готова, элантах. В путь".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 4e0633a0-6d8b-42cf-856c-b69866a2f124
   event: CH2_Yrliet_BaseDialogue_18
   text: '"Гнев Лилэтан, выплеснутый наружу..." {n}Ирлиэт осекается.{/n} "На протяжении столетий этот мир сопротивлялся зверствам,
     что учиняли над ним бездушные машины и беспечные создания. Однако то, о чем поведал тебе машинный человек — нечто иное,
     нечто более страшное. Сама планета противится некому злу, гнездящемуся в ее колыбели".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 8a94e83b-ba5d-40a6-8592-b9c314de1328
   event: CH2_Yrliet_BaseDialogue_19
   text: '"Я была свидетельницей тому, как пленных под покровом тьмы доставляли к задним дверям, но что стало с ними потом
     — то мне неведомо. И не мое то дело, что сотворяют тебе подобные со своими сородичами..." {n}Ирлиэт прикасается к блестящему
     камню на груди, словно проверяет, на месте ли он.{/n}'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 30d96492-ac7b-496f-97fc-1d8cfdc300d2
   event: CH2_Yrliet_BaseDialogue_20
   text: '"Этот мир был чист, пока твои соплеменники не осквернили его своим присутствием. У Лилэтан нет подобных сил — что-то
     другое повлияло на твоих сородичей".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 7e1c3b50-b523-460d-9069-130ac5f82868
   event: CH2_Yrliet_BaseDialogue_21
   text: '{n}Ирлиэт смотрит на останки в ваших руках с нескрываемым изумлением, которое сменяется гневом.{/n} "Ты прав{mf||а},
     элантах! О, Муаран, какая низость! И это цена твоей судьбы? Цена твоего пути?!" {n}Разъяренная женщина бросает на вас
     взгляд и тут же отворачивается.{/n} "Забери это... прошу тебя..."'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 0967bf7c-6e57-4cb0-8ad9-ae6999edb34b
   event: CH2_Yrliet_BaseDialogue_22
   text: '"Потому что такова твоя природа. Элантах, чужестран{mf|ец|ка} из тьмы среди звезд. Ты спустил{mf|ся|ась} сюда на
     огненных крыльях машины в темное время, когда воздух планеты пропитан кровью и болью... будешь ли ты т{mf|ем|ой}, кто
     принесет ей покой?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: ac3202b7-5e88-4038-8cb9-be6f826973b8
   event: CH2_Yrliet_BaseDialogue_23
   text: '{n}Хейнрикс неодобрительно хмыкает.{/n} "Опрометчиво".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 965baad2-e6bb-45fe-9c9f-115896a93851
   event: CH2_Yrliet_BaseDialogue_24
   text: '"Я не могу не напомнить вам, господин ван Калокс, что Патент удостоверяет священное право Вольных Торговцев в случае
     необходимости вести дела с ксеносами. Если вдруг ваша выдающаяся память вас подвела".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 8037792b-84a9-4966-9af5-aa7e19f69747
   event: CH2_Yrliet_BaseDialogue_25
   text: '"Чья-то злая воля, направляющая твоих соплеменников на путь насилия".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: ed9e5b4e-2f83-4cfd-bc60-7245afba715e
   event: CH2_Yrliet_BaseDialogue_26
   text: '"Элантах... все то, что ты рассказал{mf||а} мне, будит сомнения и трепет в моей душе. Прошу, дай мне время подумать
     о том, что скрывается за твоими находками. Не тревожь меня более..." {n}Ирлиэт отворачивается от вас, явно снедаемая тяжелыми
     мыслями.{/n}'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 22c2b4a4-fdda-4254-957f-d9835674f69a
   event: CH2_Yrliet_BaseDialogue_27
   text: '"Мои суждения и решения — лишь для меня одной, мон-кай. Коль наше единение с тво{mf|им|ей} повелител{mf|ем|ьницей}
     приведет к миру на Лилэтан — значит, сей путь верный. Не вставай на нем, если тебе дорого твое дыхание".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: a41b133d-f276-427b-86f5-384ffa405af4
   event: CH2_Yrliet_BaseDialogue_28
   text: '{n}Ирлиэт взирает на вас своими странными глазами с выражением, которое удивительно сложно прочесть. Наконец она
     едва заметно ведет высокой бровью.{/n} "Я встречала подобных тебе. Жизнь вела тебя дорогой, что дает познания, выходящие
     за пределы обыденного существования вашего вида".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 9ccd8475-1ef4-45d4-9883-e55f111c3ab7
   event: CH2_Yrliet_BaseDialogue_29
   text: '"Воистину, кровь в моих жилах и материя моей души чужды вашим — я из тех, кого твои сородичи зовут ксеносами. Я явила
     себя твоим собратьям, чтобы принести мир на Лилэтан и помочь правительнице против ее врагов. Будешь ли ты говорить со
     мной, как с равной, или мы ступим под тень Каэла Менша Кхейна?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: d3665166-f62f-4639-8bb3-d740dee6e53f
   event: CH2_Yrliet_BaseDialogue_30
   text: '"В словах твоих звенит страх. Ты знаешь, кто я, и потому я более не могу ступать затененной тропой — время раскрыться".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 6a62841b-3eec-4409-a1cb-8fecfbbc1a18
   event: CH2_Yrliet_BaseDialogue_31
   text: '"Нужна ли иная причина, чтобы прийти на помощь страждущим?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: e0017839-88af-4b85-9e5f-f6c3ca2fd9f7
   event: CH2_Yrliet_BaseDialogue_32
   text: '{n}Ирлиэт смотрит словно сквозь вас.{/n} "Элантах".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 9af04654-2e9d-4bf0-a01a-0bf7d3aec762
   event: Companions_Ranger_01
   text: '{n}Ирлиэт изящно склоняет голову, подкрепляя приветствие замысловатым жестом тонких пальцев.{/n} "Элантах".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 5db3d5e3-5b5f-492a-8c8f-a9f26299ef5b
   event: Companions_Ranger_02
   text: '"Неужто змеиный яд сочится из твоих уст? Мы, {g|Encyclopedia:Asuryani}Дети Азуриана{/g}, знакомы с искусством ведения
@@ -1106,21 +778,15 @@ phrases:
     бедствие, его обитатели не станут начинать войну против всех {g|Encyclopedia:MonKeigh}мон-кай{/g} сектора. Если ты ищешь
     врагов — ищи в ином месте".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 6bf331e6-e508-4b8b-87cc-6815a6f9775e
   event: Companions_Ranger_03
   text: '"Как пожелаешь, элантах".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: b5e6c019-299a-4551-b72d-ef318ec18747
   event: Companions_Ranger_04
   text: '{n}Ирлиэт качает головой.{/n} "Мысли {g|Encyclopedia:MonKeigh}мон-кай{/g} столь юрки и непостоянны, что смущают и
     путают даже своих хозяев. Поразительно".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 6384812e-8237-4320-b025-3dc9a8f91f28
   event: Companions_Ranger_05
   text: '"Боюсь, твой век слишком скоротечен, а память слаба, чтобы вместить все мои знания. Мой народ правил звездами, когда
@@ -1128,8 +794,6 @@ phrases:
     Что Жаждет{/g}. Я могу сказать тебе, что {g|Encyclopedia:Asuryani}Дети Азуриана{/g} жили, творили, перебирали звезды,
     как жемчужины на нитке — пока Сай''лантреш не погубила нашу великую империю в своих страшных объятьях".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 64ed3673-66c9-49a0-a5e4-2c941b3d2d08
   event: Companions_Ranger_06
   text: '"Разные ветви {g|Encyclopedia:Aeldari}Эльдари{/g} избрали разные пути к спасению. Мои предки выбрали вечную дорогу
@@ -1138,21 +802,15 @@ phrases:
     нашими древними". {n}Немного помолчав, Ирлиэт добавляет:{/n} "Это история Детей Азуриана. Есть ветви, избравшие иной путь,
     темный и страшный. Но о них я не хочу тебе рассказывать. Это наша темная грань, у твоих сородичей их тоже немало".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 10ca113e-ba60-459d-96bd-5fa18cfe626a
   event: Companions_Ranger_07
   text: '"О чем ты желаешь говорить?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: a292a2b7-c6ca-46db-9a06-5e57c3968418
   event: Companions_Ranger_08
   text: '{n}Тень пробегает по лицу Ирлиэт.{/n} "Эта рана все еще кровоточит. Но ты можешь задать свои вопросы. Я отвечу как
     смогу".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: ae46e0a4-94cb-4e0f-be9f-76ddceed989b
   event: Companions_Ranger_09
   text: '"Я шла своим Путем", {n}— Ирлиэт произносит фразу почти нараспев, наполняя каждое слово сакральным смыслом.{/n} —
@@ -1161,8 +819,6 @@ phrases:
     душе и в жизни. Это не только дорога, но и крепость. Он защищает нас от {g|Encyclopedia:Sailanthresh}Той, Что Жаждет{/g}
     — сбейся с Пути, и угодишь в ее темные объятья".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 4547a28e-12d9-415b-bea1-1b6912fdeeb2
   event: Companions_Ranger_10
   text: '"Я словно в брюхе сталекрылой птицы — холодной и мертвой, но упрямо несущейся сквозь мрак. В ней нет жизни — ни ее
@@ -1170,66 +826,48 @@ phrases:
     я чувствую странное удовлетворение. Мы, {g|Encyclopedia:Asuryani}Дети Азуриана{/g}, рождаемся и живем на мирах-кораблях.
     Снова оказаться на движущемся мире, пусть даже таком, как твой, — для меня великая радость".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: cf99383c-ee44-4d9a-9b51-bc3679f10334
   event: Companions_Ranger_100
   text: '{n}Некоторое время эльдарка задумчиво молчит.{/n} "Делиться переживаниями духа и разума, пытаться понять друг друга
     — действительно не тот путь, по котором нам суждено с тобой пройти. Ты все еще видишь во мне опасность и чуждость, элантах.
     И я не могу тебя в этом винить. Я... понимаю. И принимаю твой ответ".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: a0053b70-1e56-41d2-ac5c-36cd3f3adb20
   event: Companions_Ranger_101
   text: '"С удовольствием, {name}. Непознанные глубины чьего мира мы посетим на сей раз?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 0f497d97-ebf7-451c-b203-786b4471eb74
   event: Companions_Ranger_102
   text: '"Вместе делить тишину, исследуя новые глубины твоего мира? Я согласна, {name}. Ибо моя душа также жаждет познаний
     и отдыха".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 9c80c3c4-406d-4c5e-b621-b487fb2b7aa0
   event: Companions_Ranger_103
   text: '{n}Легкая улыбка касается тонких губ.{/n} "Я разгадала тебя, {name}. Знала, что ты это скажешь".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 3970b7cf-bce6-4452-8490-38e78a63e3c4
   event: Companions_Ranger_104
   text: '{n}Ирлиэт издает тихий смешок и смахивает со лба огненную прядь.{/n} "Надо же, я думала, что уже изучила тебя, {name}.
     А ты все так же пол{mf|он|на} сюрпризов".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 6a6167d0-36f3-432d-93e0-9c6b834da59d
   event: Companions_Ranger_105
   text: '"Мы с тобой, элантах, смотрим на этот мир совершенно по-разному. И я вижу много больше его граней, и глубже смыслы,
     и ярче цвета... Но чтобы облечь всю истину этого мира в скупой язык, привычный твоему слуху, мне понадобится время. Позже
     я сама приду к тебе с ответом".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: a6d1e8ef-5b7e-4b43-b732-9f45dc605121
   event: Companions_Ranger_106
   text: '{n}Ирлиэт с некоторым удивлением смотрит на вас, а затем осторожно отвечает:{/n} "{name}... Наши народы слишком разнятся
     между собой. То, что трогает наши души, вряд ли произведет больше впечатление на твоих сородичей. Как и я нахожу неуклюжей
     и примитивной вашу концепцию принесения вещественных даров".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 84721a66-c979-412d-8562-e32cf8993904
   event: Companions_Ranger_107
   text: '{n}Отрешенный взгляд Ирлиэт скользит по вашей шее.{/n} "Сколь велика пропасть между нами. Когда-то я стремилась прочь
     от уз и оков мира-корабля. Ты же добровольно позволил{mf||а} Темному оставить на тебе свою отметину — не только в душе,
     но и на теле".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 26a81716-b0c2-404b-af04-fe1d35ec2aa5
   event: Companions_Ranger_108
   text: '"Я пыталась научиться доверию к тебе, элантах. Какими бы ни были твои мотивы, ты не отвернул{mf|ся|ась} от меня,
@@ -1238,16 +876,12 @@ phrases:
     И даже когда я узрела частицу Крудараха в твоих покоях, я хотела верить, что ты ни при чем. Хотела, но... поддалась эмоциям.
     Страху. Обреченности. Скорби. Я боялась, что Сай''лантреш доберется до меня раньше, чем я доберусь до истины".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 3ed15ddb-e826-436d-b420-755fc4eca15e
   event: Companions_Ranger_109
   text: '{n}Понимающий кивок служит коротким ответом.{/n} "Как и я тебе, элантах. Чтобы склеить хрупкие осколки былого...
     Необходимо окунуться в омут со страхами. Пройти путями сомнений и укротить бушующий жар обиды. Под силу ли это нам? Что
     ж... Ты уже сделал{mf||а} первый шаг мне навстречу, элантах. И я отвечу вторым".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 597ab8fb-b1e4-4901-8919-96c8495dfaa3
   event: Companions_Ranger_11
   text: '"Первым Путем, что я прошла, был Путь пробуждения. С ним я обрела способность не только смотреть, но и видеть, а
@@ -1256,16 +890,12 @@ phrases:
     свободу выбирать, осмыслять, задавать вопросы там, где другие лишь склоняют головы перед словами провидца, диктующего
     волю судьбы. И я буду следовать своему Пути, пока не достигну вершин".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 793b02f3-dbeb-4de5-8584-c5e99a195ef1
   event: Companions_Ranger_110
   text: '"Под бережным присмотром моих сородичей он мог бы вновь обрести свободу. Быть может, даже пробудиться от многовекового
     сна. Мог бы... но мы этого {d|Encyclopedia:Ch2_JanusEldarEliminated} уже не узнаем{/d}". {n}Тонкие брови эльдарки чуть
     вздрагивают, и она отворачивается.{/n}'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 1cbb7c55-44da-4917-be26-80e141e0cd6e
   event: Companions_Ranger_111
   text: '"Элантах". {n}Ирлиэт чуть склоняется над вами и долго — непривычно долго — всматривается в глаза. Медленно кивает.
@@ -1273,8 +903,6 @@ phrases:
     Мне… понятен твой выбор. Он естественен. И я его принимаю". {n}Скрестив руки на груди, она выпрямляется.{/n} "Ты хотел{mf||а}
     обсудить еще что-то?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 8ad9f1ff-69c4-49f4-b768-413a87104b38
   event: Companions_Ranger_12
   text: '"{g|Encyclopedia:Asuryani}Дети Азуриана{/g} искали на Лилэтан спасения после того, как погиб наш {g|Encyclopedia:Craftworld}мир-корабль{/g},
@@ -1282,22 +910,16 @@ phrases:
     губительное невежество твоего племени и начали сплетать собственную паутину интриг, в которой и я играла роль — в качестве
     помощницы Вистенцы Вьятт. А затем — явил{mf|ся|ась} ты".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 8511b9e9-b4f4-43a6-be71-7c2598a298c9
   event: Companions_Ranger_13
   text: '"Слова правды звучат как музыка. Так у нас говорят".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: bbac1d08-c32f-4687-b2da-780944fff922
   event: Companions_Ranger_14
   text: '"Следом за мон-кай по имени Каллигос Винтерскейл. Даже червь может навредить раненному тигру, занеся инфекцию в уже
     зияющую рану. А раны моего народа... кровоточат с гибели Крудараха. Душам моих собратьев необходима припарка, надежда.
     А не занесенный меч палача".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: f3789c45-02b5-4612-8548-5e5286beb384
   event: Companions_Ranger_15
   text: '{n}Ирлиэт хмурится.{/n} "Мои сородичи {d|Encyclopedia:Ch2_JanusEldarGovern}остались править миром из теней{/d}, и
@@ -1305,24 +927,18 @@ phrases:
     — вот что должно волновать их, а не игры во власть. Однако на их судьбу я могу повлиять не более, чем на разразившийся
     шторм. Могу лишь жалеть, что они выбрали такой путь".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 63b38669-daf0-4b74-99c0-18d2ce97551d
   event: Companions_Ranger_16
   text: '"Лилэтан очищается от скверны, что принесли ему {d|Encyclopedia:Ch2_JanusVistenzaDead}служители{/d} {g|Encyclopedia:Sailanthresh}Сай''лантреш{/g}.
     Сады и птицы, звери и люди — многие сгинули безвозвратно, и многие поражены скверной слишком сильно, чтоб исцелиться.
     Но Лилэтан сильнее. Мир будет жить".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 02500eda-6a1a-489c-be81-760c51d495d8
   event: Companions_Ranger_17
   text: '"Крударах нельзя описать на вашем языке. Его можно только спеть — облачить в вязь мелодии, изящной и сложной, как
     его энергетическая сеть, {g|Encyclopedia:InfinityCircuit}Контур бесконечности{/g}. Его можно увидеть в золотых переливах
     солнца, ощутить в дуновении звездных ветров. Хоть он и был миром рукотворным, но столь же живым, как настоящие планеты".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 00fac960-92be-4f06-86b8-f127c57b55ed
   event: Companions_Ranger_18
   text: '"Но я должна смотреть ясно и видеть не только свет, но и тени. Мне хочется помнить лишь прекрасную сторону Крудараха,
@@ -1331,8 +947,6 @@ phrases:
     "...Кто знает, быть может, не будь этой затхлости, будь наши старшие не столь слепы в своих догматах, а молодые — чуть
     смелее, может быть... Тогда Крударах был бы жив и сейчас?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: d341ae22-a4b0-4241-bcfb-aaee7843b52a
   event: Companions_Ranger_19
   text: '"Это тайна, мрачная, как вздох последнего бессмертного, глубокая, как темные океанские воды. И я мало что могу поведать,
@@ -1340,8 +954,6 @@ phrases:
     Прошло уже столько ходов — столько "стандартных лет", как говорят у вас, — но я помню этот миг, словно он случился сегодня.
     Память об утрате всегда сильнее памяти об обретении, особенно когда теряешь нечто столь великое, как дом. Мир".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 1ef91687-14c7-4da5-bb24-b8263f7ceff2
   event: Companions_Ranger_20
   text: '"Мы искали, звали, смотрели — но видели лишь пустоту и эхо эха большой беды. Бессчетные дни миновали, прежде чем
@@ -1351,8 +963,6 @@ phrases:
     бесконечности{/g}, умерщвляя мир целыми сегментами. Те, кто выжил — бежали в страхе и скитались меж звезд, пока теплый
     свет Лилэтан не позвал некоторых из них".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 49e99753-f8c9-4248-81fd-f0a61f45e6c5
   event: Companions_Ranger_21
   text: '"Однако мон-кай Ахиллеас... с ним творилось неладное. Он пропадал ночами, и один раз я проследила за ним. Ахиллеас
@@ -1361,8 +971,6 @@ phrases:
     больше ждать. Я убила Ахиллеаса, забрала артефакт и потребовала у Маражая ответов. Он намекнул мне, где искать правду.
     Ну а дальше тебе и так все известно".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 1b93fa69-9a74-4698-9399-67e0d3abc6b2
   event: Companions_Ranger_22
   text: '"Мне было суждено разделить твою участь, элантах, и сгинуть в гниющем подбрюшье Темного города. Однако мастер плоти
@@ -1370,58 +978,42 @@ phrases:
     от взгляда {g|Encyclopedia:Sailanthresh}Той, Что Жаждет{/g}, методом усердного перевоспитания. Заменить влияние {g|Encyclopedia:SpiritStone}камня
     души{/g} на дурманящий привкус боли, коим питаются последователи темных путей".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: e1e544c0-f231-49d1-9997-b45fc4189998
   event: Companions_Ranger_23
   text: '"Комморра... Этот город перемалывает волю сильнейших и истязает любого, кто попал в его сети. Глупцы здесь гибнут
     первыми, ну а те, кто оказался прозорливей... Все равно сгинут следом. Я здесь впервые, но немногим {g|Encyclopedia:Asuryani}Детям
     Азуриана{/g} удавалось покинуть Темный город, не лишившись части души. Так что же ты хочешь узнать?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: baf8933c-92e0-4aa7-80d3-ba5dc4571297
   event: Companions_Ranger_24
   text: '"Я не нуждаюсь в твоем сочувствии, элантах". {n}Ирлиэт безразлично скользит взглядом по мостику, но уголки ее губ
     предательски тянутся вверх, а взгляд смягчается.{/n} "К тому же ни мон-кай, ни мои темные сородичи так и не нашли тлеющий
     скелет Крудараха. Быть может... еще не все потеряно. Быть может, утраченное еще можно вернуть".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 05ebc96c-e313-49a2-b23c-9f3d31bac484
   event: Companions_Ranger_25
   text: '"Позволь дать тебе совет напоследок: остерегайся внимания Аребенниана, элантах, пока он к тебе добр. А если разгневаешь...
     Беги прочь, скрывайся и молись о спасении. Ибо служитель Смеющегося бога всегда настигает свою жертву".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 14cd73fe-f729-4e9e-a5fc-0ec048cc8c4b
   event: Companions_Ranger_26
   text: '{n}Ирлиэт склоняет голову.{/n} "Мы различны, как сияние звезд и отблеск света в дождевой луже, но враг у нас один.
     В твердости наша сила".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: bf92fed7-76c7-4d6a-b71e-72b2889e57bc
   event: Companions_Ranger_27
   text: '"Это — наживка, которой враг поманит тебя, заставляя приближаться. Шаг за шагом. Будь осторож{mf|ен|на}, элантах
     — может, намерения твои и благи, но дорога, по которой они ведут — опасна".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: ab8c9564-1c72-4afd-966d-e126fd3f84f3
   event: Companions_Ranger_28
   text: '"В таком случае ты получил{mf||а} ответ... {g|Encyclopedia:MonKeigh}мон-кай{/g}".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 014d3635-5156-464a-a22f-014be703ea34
   event: Companions_Ranger_29
   text: '"Значит, Путь ведет меня дальше, прочь от твоего рода. К добру ли или к злу — узнаю, лишь двинувшись в дорогу. Прощай,
     элантах". {n}Лицо эльдарки не выражает ничего, кроме холодной надменности.{/n}'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: b0408d24-907b-43ac-800c-2e06b7072e30
   event: Companions_Ranger_30
   text: '"Темный город выпустил нас из терновых объятий. Раны тела будут залечены, но что насчет ран души?" {n}Ирлиэт касается
@@ -1429,16 +1021,12 @@ phrases:
     {g|Encyclopedia:Asuryani}Детей Азуриана{/g}. Разрозненные по этой части галактики, гонимые {g|Encyclopedia:MonKeigh}мон-кай{/g},
     преследуемые Темными, плененные слугами Той, Что Жаждет..."'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 94256a23-5891-410e-9e3b-dc1ea17b273a
   event: Companions_Ranger_31
   text: '{n}Пускай тонкие черты Ирлиэт и остались прежними, глубокая синева вокруг глаз и потускневший взгляд делают ее похожей
     на живой труп. {g|Encyclopedia:Aeldari}Эльдарка{/g} выглядит иссушенной, загнанной, мрачной... Однако при вашем приближении
     привычная резкость во взгляде сменяется едва заметной надеждой.{/n} "Ты вернул{mf|ся|ась} из тьмы, элантах? Невредим{mf|ый|ая}".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 1174771e-9b89-4499-af49-8ab5537b2a59
   event: Companions_Ranger_32
   text: '"Твоя жалость ранит острее, чем клинки кабалита". {n}Ирлиэт чуть отстраняется, потупив взор, но головы не склоняет.{/n}
@@ -1446,30 +1034,22 @@ phrases:
     затмило мой разум, но ты, элантах, не позволил{mf||а} ему прорасти в моей душе, словно сорному семени. За это... прими
     мою благодарность".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: ca1f5ab7-e7d9-4cbb-9e12-6267910f10d7
   event: Companions_Ranger_33
   text: '"Мои сородичи, должно быть, {d|Encyclopedia:Ch2_JanusEldarAllies}продолжают искать дорогу{/d} в {g|Encyclopedia:Webway}Паутину{/g}.
     Пусть дух Лилэтан поможет им в этом — за вратами лежит спасение, а может, и знания о судьбе Крудараха и иных выживших".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 78e0f5ab-210f-441b-9380-47f419a091ea
   event: Companions_Ranger_34
   text: '"Некоторые, как и Муаран, уверяют — виной всему племя {g|Encyclopedia:MonKeigh}мон-кай{/g}. Однако истина мне до
     сих пор неведома. Но я надеюсь — о, надеюсь и молю богов, — что однажды она мне откроется!"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 4e3a2207-e04a-46e2-ab2f-42bb31b6a356
   event: Companions_Ranger_35
   text: '"Мое тело уже исцелилось". {n}Ирлиэт благодарно кивает.{/n} "Душевные раны... однажды затянутся тоже. Ибо страдания
     есть часть нашей жизни, как и любовь, и страх, и жажда знаний. Пути помогают {g|Encyclopedia:Asuryani}Детям Азуриана{/g}
     вынести любое душевное потрясение, и ты, элантах, не позволил{mf||а} мне сойти с моего. За это... прими мою благодарность".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 2d51d315-391c-446c-8529-7218ee1a05ba
   event: Companions_Ranger_36
   text: '"Ты говоришь о том, что осознать не в силах, элантах. {g|Encyclopedia:SpiritStone}Путеводные камни{/g} не просто
@@ -1478,16 +1058,12 @@ phrases:
     о том, что все мы смертны. Ибо он есть первое пристанище разума и последнее пристанище духа, что так жаждет поглотить
     {g|Encyclopedia:Sailanthresh}Сай''лантреш{/g}".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: c4472362-7f67-4219-85e6-0f529a05b6e4
   event: Companions_Ranger_37
   text: '{n}Ирлиэт встречает вопрос испытующим взглядом.{/n} "Праздное любопытство заложено в природу {g|Encyclopedia:MonKeigh}мон-кай{/g}?
     Или же ты пытаешься выведать слабые места моего народа, дабы уничтожить еще один мир Детей Азуриана? Прости, элантах,
     но сейчас я не готова окунуть тебя в омут глубочайших тайн моих сородичей".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 009d9002-ed20-480a-b496-0448e48d40b1
   event: Companions_Ranger_38
   text: '"Объяснять подобное тебе, элантах, равно что петь птицам о красоте глубинных вод и кораллового леса. Твое ограниченное
@@ -1495,8 +1071,6 @@ phrases:
     сладостный дурман цветущего сада под кристаллическим куполом или хрустальное журчание ручья, пронзающего насквозь мир.
     И все это на одном корабле, что сияет подобно очередной звезде на бархатном полотне космоса".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 1207d154-1602-4b68-abec-b5b77414c81a
   event: Companions_Ranger_39
   text: '"Память {g|Encyclopedia:MonKeigh}мон-кай{/g} столь же скоротечна, как и ваш век". {n}Ирлиэт склоняет голову, горестно
@@ -1504,8 +1078,6 @@ phrases:
     с {g|Encyclopedia:InfinityCircuit}Контуром Бесконечности{/g}. А пока умирающий мир бился в предсмертной агонии, Темные
     пленили бежавших Детей Азуриана, отбирая провидцев для безумных экспериментов гемункула".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 6c8e60e4-93bd-4eb5-aad3-349e7805e47c
   event: Companions_Ranger_40
   text: '"Вечный круговорот жизни и смерти. Место упокоения предков и бесконечный источник их мудрости". {n}Тонкие пальцы
@@ -1513,23 +1085,17 @@ phrases:
     перемещается в путеводный камень, а по возвращении на {g|Encyclopedia:Craftworld}мир-корабль{/g} помещается в {g|Encyclopedia:InfinityCircuit}Контур
     бесконечности{/g}, где становится одним целым с душами тех, кто был до нас".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 46fb5d53-2515-4b17-96eb-c87bec156f83
   event: Companions_Ranger_41
   text: '"Темный город пронизывают миллионы шпилей, и внутри любого из них могут таиться врата в {g|Encyclopedia:Webway}Паутину{/g}.
     Они — единственный выход из этого места. И непреодолимое препятствие для того, кто не знает, как с ними управиться. Я
     — знаю. И помогу тебе, если ты того пожелаешь".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: f2f2368d-5f8b-4e8d-b348-ba9334b75bf5
   event: Companions_Ranger_42
   text: '"И это говорит мне бабочка, что сама трепыхается в сетях Темного города". {n}Печальная полуулыбка касается тонких
     губ эльдарки.{/n} "Я буду рядом, элантах. И поддержу тебя в предстоящих испытаниях, если ты того пожелаешь".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 1aa13b17-87a1-4817-a097-afe4f942eaea
   event: Companions_Ranger_43
   text: '"Я оказалась в Темном городе, ступая по спутанным тропам из правды и лжи. И пусть истина распустилась передо мной
@@ -1537,8 +1103,6 @@ phrases:
     невесомо.{/n} "Кто вернулся из тьмы {g|Encyclopedia:Webway}Паутины{/g} — уже не станет прежним. Но изменились лишь мы,
     а мир вокруг все так же незыблем. Эта мысль придает мне сил".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 01c8e597-3367-4ae5-a4ec-8d50271a3a2e
   event: Companions_Ranger_44
   text: '"Если ты так беспокоишься о моем мире, элантах, почему не отправил{mf|ся|ась} искать ответы со мной? Быть может,
@@ -1546,8 +1110,6 @@ phrases:
     вытягиваются в тонкую линию.{/n} "Я нашла его умирающим в тисках очередного орудия пыток. И Эклендиль раскрыл мне печальную
     судьбу нашего мира".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 0ed32e03-0854-48e1-8219-ff2942a45f3a
   event: Companions_Ranger_45
   text: '{n}Взгляд Ирлиэт темнеет.{/n} "К чему этот вопрос? Праздное любопытство? Или нечто иное? Не обращай свои мысли к
@@ -1555,28 +1117,20 @@ phrases:
     благого, что есть во вселенной. Она враг {g|Encyclopedia:Aeldari}эльдарам{/g}. И тебе — надеюсь — тоже". {n}Последнюю
     фразу Ирлиэт произносит с нажимом, испытующе глядя на вас.{/n}'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: fda3e525-8f12-4383-b6d4-0cb9268de019
   event: Companions_Ranger_46
   text: '{n}Боль сковала сердце эльдарки, отразившись печалью в глазах.{/n} "Неизлечимая. Непостижимая. Болезнь искажала Крударах
     и все, к чему прикасалась, избегая встречи лишь с душами наших предков. Никто так и не сумел опознать природу проклятия,
     и потому, отчаявшись сохранить свой мир, мои собратья решили просто бежать прочь".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: ee55903d-d6b4-4ee1-9ef9-db511216f7d2
   event: Companions_Ranger_47
   text: '"Ты можешь попробовать".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 155a9842-04a0-4847-84ed-eaea96b51b87
   event: Companions_Ranger_48
   text: '"Элантах". {n}Ирлиэт исполняет изящный жест, приглашающий к беседе.{/n} "Надеюсь, твои путешествия оказались плодотворными?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 8df66cad-f0cc-495c-8c71-bcb662b96a5b
   event: Companions_Ranger_49
   text: '{n}Кристалл в нагруднике Ирлиэт наливается алым свечением, и каждый вздох эльдарки становится беспокойнее предыдущего.{/n}
@@ -1584,8 +1138,6 @@ phrases:
     И надеялась лишь сбежать до того, как камень треснет от потока боли и ужаса, обуявшего мою душу. До того, как эксперимент
     завершится".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 1a284743-67dd-4be0-9db1-4de0d60354ae
   event: Companions_Ranger_50
   text: '"Не существует иных городов, элантах. Темный город бескраен — он есть сплетение множества кошмарных царств, подчиненных
@@ -1593,14 +1145,10 @@ phrases:
     величия, ибо даже моей жизни не хватит, чтобы посетить все уголки Темного города и прилегающих к нему царств. Впрочем,
     куда бы ты ни пош{mf|ел|ла}, вокруг тебя ждет лишь смерть".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: d2b47051-7357-4353-beb6-26d825c26756
   event: Companions_Ranger_51
   text: '"Но есть ли у меня ответы, которых ты жаждешь?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 135e71b6-0828-41f5-ac8a-c8225fba5f56
   event: Companions_Ranger_52
   text: '{n}Ирлиэт приподнимает подбородок и сразу становится как будто еще выше.{/n} "Слуги {g|Encyclopedia:Sailanthresh}Той,
@@ -1608,8 +1156,6 @@ phrases:
     бушующей за бортом. {g|Encyclopedia:Asuryani}Дитя Азуриана{/g}, проникшая за пелену... на расстоянии вытянутой лапы...
     за слабым барьером из ненадежной технологии мон-кай... Это слишком соблазнительная добыча для чудовищ, служащих Сай''лантреш".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 66971f1f-5dd0-4700-b9d5-5fc4d6670a42
   event: Companions_Ranger_53
   text: '"Ненависть душит змеей, а страх жгучим ядом разливается по телу, ибо избранный Путь ведет меня лишь тропами неудачи.
@@ -1618,23 +1164,17 @@ phrases:
     Когда ускользает воля, душа трепещет от необузданных эмоций. Но я приму смирение сердца, ибо лишь так клейменный Изгой
     может помочь собратьям, потерявшимся во тьме".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: cc425cc6-6c6b-4cb4-9462-1cf04acbc375
   event: Companions_Ranger_54
   text: '"То, как Крударах наткнулся среди звезд на корабль мон-кай и был заражен неизлечимой скверной, с которой не справилась
     даже воля предков. Как совет принял решение собрать на челноки тех, кто остался, и рассыпаться по галактике в поисках
     спасения. И как сами провидцы направили наш мир навстречу гибели".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 73641b12-38e5-4154-8069-3b95010a755f
   event: Companions_Ranger_55
   text: '"Я {d|Encyclopedia:YrlietQ1_ManagedHerself}убила{/d} его" {n}, — бесстрастно произносит Ирлиэт и больше не добавляет
     ни слова.{/n}'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 428eee3d-99de-4596-a1fd-a4f9725336cf
   event: Companions_Ranger_56
   text: '"Путь сквозь скопление звезд, что вы, мон-кай, зовете {g|Encyclopedia:KoronusExpanse}Простором{/g}, для Крудараха
@@ -1642,22 +1182,16 @@ phrases:
     гораздо чаще.{/n} "Предзнаменования темного будущего сулили провидцам их же видения. Но от них отмахнулись, презрели...
     И моя душа до сих пор в смятении — почему".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 933b8bd9-c5f5-4300-9933-5965c327038d
   event: Companions_Ranger_57
   text: '"Эклендиль пожелал остаться на Лилэтан, вместе с Муараном и нашими собратьями. Быть может, это и к лучшему — звезды
     сей части галактики слишком недружелюбны к Детям Азуриана".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 3506e462-4cb5-4596-9149-66e592b1114c
   event: Companions_Ranger_58
   text: '"Как только Эклендиль наберется сил, то покинет Лилэтан сквозь врата {g|Encyclopedia:Webway}Паутины{/g}. Не спрашивай,
     куда уведет его Путь — он идет собственной дорогой судьбы, и пусть так и будет".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 2c2de453-2ff1-42d7-ab48-47944adcf89e
   event: Companions_Ranger_59
   text: '"Если ты так беспокоишься о моем мире, элантах, почему {d|Encyclopedia:YrlietQ1_ManagedHerself}не отправил{mf|ся|ась}
@@ -1665,24 +1199,18 @@ phrases:
     в тонкую линию.{/n} "Я нашла Эклендиля умирающим в тисках очередного орудия пыток, и он раскрыл мне печальную судьбу нашего
     мира".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: e329b27b-815c-4247-b74c-fa62971cd077
   event: Companions_Ranger_60
   text: '{n}Понимающий кивок служит коротким ответом.{/n} "Чтобы принять того, кто однажды предал доверие... Необходимо окунуться
     в омут со страхами. Пройти путями сомнений и укротить бушующий жар обиды. Под силу ли это нам? Что ж... Ты уже сделал{mf||а}
     первый шаг мне навстречу, элантах. И я отвечу вторым".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: b793f8d6-eb0c-412c-906e-1ab72dc244c0
   event: Companions_Ranger_61
   text: '"И все же ни отдых, ни наше с тобой примирение не в силах заглушить смятение моей души. Крударах утерян, мы в западне,
     а истина по-прежнему сокрыта во тьме. Что стало с моими собратьями? Что стало с моим миром? И почему темный кузен рассказал
     меньше, чем знает". {n}Изумрудный взгляд темнеет, проникая, кажется, в глубины души.{/n}'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 586f5491-e095-4934-a0b0-924a6ba46242
   event: Companions_Ranger_62
   text: '{n}Ирлиэт несколько мгновений взирает на вас молча.{/n} "Как смеешь ты говорить о Лилэтан, который ты обрекаешь на
@@ -1690,8 +1218,6 @@ phrases:
     еще жива... а значит, продолжает отравлять Мировой дух и служить проклятой {g|Encyclopedia:Sailanthresh}Сай''лантреш{/g}.
     Когда ты исполнишь то, что должно? Мы умеем ждать, но даже мое терпение подходит к концу".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: fc511e85-7776-4ace-998b-bfe6f060f511
   event: Companions_Ranger_63
   text: '"После смерти души {g|Encyclopedia:Asuryani}Детей Азуриана{/g} перемещаются в камни, а те в свою очередь становятся
@@ -1699,8 +1225,6 @@ phrases:
     жизни. И нет преступления страшнее, чем навредить путеводному камню и обречь бессмертную душу Дитя Азуриана на вечные
     муки в чреве Той, Что Жаждет".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: c78fa66f-7034-47b4-a1af-28b7b627c237
   event: Companions_Ranger_64
   text: '"Мы нуждаемся в путеводных камнях так же отчаянно, как тьма нуждается в свете звезд, а {g|Encyclopedia:MonKeigh}мон-кай{/g}
@@ -1708,8 +1232,6 @@ phrases:
     надежду на дальнейшее существование. Одно сердце мон-кай — одна ваша жизнь. Один путеводный камень — одна сохраненная
     душа Дитя Азуриана".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 735a507f-1c6b-4941-bb5a-52f98672c1ba
   event: Companions_Ranger_65
   text: '"Контур бесконечности не только защищает ушедших от взора {g|Encyclopedia:Sailanthresh}Той, Что Жаждет{/g}, но и
@@ -1717,8 +1239,6 @@ phrases:
     и возвращаться обратно, чтобы биться бок о бок с теми, кто остался..." {n}Ирлиэт осекается. Изумрудные глаза опасно блестят
     в свете люменов.{/n} "Это все, что тебе дозволено знать, элантах. Будь благодар{mf|ен|на} и не проси о большем".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 3be2bdf4-426b-42c1-b742-eefa21dc6f14
   event: Companions_Ranger_66
   text: '"{g|Encyclopedia:Craftworld}Мир-корабль{/g} — это и крепость, и ковчег, и дом для миллионов эльдаров. На нем умещаются
@@ -1726,8 +1246,6 @@ phrases:
     врагов извне. Все мы можем быть воинами, и гнев наш ужасен, если враг подбирается слишком близко. Но в мирное время каждый
     собрат идет своим Путем, оставаясь под защитой тех, кто ступает Путями Воинов и Провидцев".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 45692d8a-f3b0-40fe-9362-839b4388325e
   event: Companions_Ranger_67
   text: '"Спрашиваешь — почему? Могла ли я верить {g|Encyclopedia:MonKeigh}мон-кай{/g}, элантах? После слов Муарана о том,
@@ -1736,8 +1254,6 @@ phrases:
     безразлич{mf|ен|на} к бедам моего народа ты. Что еще мне оставалось? Из двух горестей я выбрала ту, что ближе мне по родству
     крови".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: d4a0d371-8d65-46bb-b611-d559c7d7f1f1
   event: Companions_Ranger_68
   text: '"И потому в день, когда мой темный кузен атаковал Даргонус, я попыталась его найти. В суматохе ускользнула от чужого
@@ -1745,30 +1261,22 @@ phrases:
     пока свежие раны утихнут, а бдительность окружающих мон-кай растает, словно туман по утру. Но я все еще сомневалась —
     быть может, мне стоило поговорить с тобой открыто?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 0558f809-7721-4da7-87c7-20bc3d58b3d5
   event: Companions_Ranger_69
   text: '"Едва ли мои слова утешат тебя, элантах, но я убила предателя. Боюсь, Темные оставили слишком много шрамов в его
     хрупкой душе. Твой преданный мон-кай сломался... И я даровала ему быструю смерть. Вне позора предательства".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 65cf2069-67e1-41fb-b196-73ce95604a41
   event: Companions_Ranger_70
   text: '{n}Ирлиэт печально качает головой.{/n} "Увы, мой кузен впал в немилость архонта. Но даже так... не думаю, что Маражай
     раскрыл бы мне истину. По крайне мере до того, как его темная душа напитается моими страданиями".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 0e412cea-a223-429a-aacf-1cd3653afe92
   event: Companions_Ranger_71
   text: '{n}Ирлиэт обрывает вас резким жестом.{/n} "Я не желаю говорить о подобном с {g|Encyclopedia:MonKeigh}мон-кай{/g}.
     Мы — лишь попутчики, временно ступающие по одному звездному пути. Не пытайся залезть мне под кожу, все равно ничего не
     выйдет".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 51fadda6-1ab7-4b13-bd73-618077d1b4ea
   event: Companions_Ranger_72
   text: '"Наши корабли никогда не прокладывают курс за вуалью. И я... я никогда не путешествовала так, как это делаете вы,
@@ -1778,14 +1286,10 @@ phrases:
     баланса и укрыть свою душу за нерушимой стеной выдержки. Будущие путешествия за вуалью будут все еще сложны для меня...
     но я скреплю сердце и не дам гончим Сай''лантреш вновь взять мой след".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 7b79e909-b7b3-442e-a8cf-193ce703085b
   event: Companions_Ranger_73
   text: '{n}Ирлиэт взирает на вас сверху вниз.{/n} "Это твое истинное желание, элантах?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 5e711cfd-b89f-460b-bcd8-ca9f2dc96d98
   event: Companions_Ranger_74
   text: '"У Изгоев, с кем меня свел Путь, была поговорка, я попробую перевести ее для тебя. "Летя со скалы, хватайся за побеги
@@ -1794,14 +1298,10 @@ phrases:
     Мой родной мир исчез, сородичи мертвы или скрываются неизвестно где. Объединившись с тобой, мне, быть может, удастся взрастить
     побег желанной истины".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 9efe1be1-a0a6-45cd-8544-83ebb115f8f1
   event: Companions_Ranger_75
   text: '"Что мы здесь делаем, элантах? Мы свернули с нашего Пути — время вернуться назад, на Янус!"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 0c9c605b-72ac-4008-b63f-3693f9070819
   event: Companions_Ranger_76
   text: '"Древний и могущественный {g|Encyclopedia:Drukhari}друкари{/g}, имя которому — Асдрубаэль Вект. Глава кабала Черного
@@ -1809,66 +1309,48 @@ phrases:
     восседающий на Золотом Троне, Вект восседает на троне из тьмы и страданий, удерживая разрозненные кланы Комморры от самоуничтожения.
     На твоем месте, элантах, я бы никогда не возжелала с ним встречи".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: d6463e34-8e12-453e-ae56-118208cadc4d
   event: Companions_Ranger_77
   text: '"Я знаю. Поверь мне, я — знаю".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: e33c0c4d-334d-46ac-9763-e9f853559895
   event: Companions_Ranger_78
   text: '"Разумная мысль, пришедшая, однако, слишком поздно в твою любопытную голову". {n}Ирлиэт расслабляет руки, открывает
     глаза и смотрит на вас с осуждением.{/n} "Своего ты добил{mf|ся|ась} — твое шумное присутствие вырвало меня из погружения.
     Так говори, чего ты хотел{mf||а}?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: b2a7282f-308f-48c8-b23d-fd9c62cc28ec
   event: Companions_Ranger_79
   text: '"Верно". {n}Ирлиэт приподнимает тонкие брови.{/n} "Иногда меня удивляет глубина твоих познаний об обычаях моего народа,
     элантах. Но даже если ты просто умеешь слушать — это уже возвышает тебя над миллиардами прочих мон-кай".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 6985d754-7339-4cc7-b266-6ef446ab7042
   event: Companions_Ranger_80
   text: '"Клянусь светом звезд, мон-кай!" {n}Ирлиэт распахивает глаза — от безмятежности на ее лице не остается и следа.{/n}
     "Ты назойливее стаи мелких кровопийц, что преследуют своих жертв средь лесов Лилэтан. Говори — что тебе нужно?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 776e9876-717e-4eed-97fd-005f728cf8ec
   event: Companions_Ranger_81
   text: '{n}Ирлиэт прикрывает глаза, предаваясь воспоминаниям, но все еще продолжает наблюдать за вами.{/n} "Должна заметить,
     элантах, во время медитации разум не покидает тела — и часть его остается бдеть и следить за происходящим вовне. Так что
     я слышала каждое твое слово. И видела все, что ты делаешь".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: d6b9b783-0801-4486-867a-a9ac916402b7
   event: Companions_Ranger_82
   text: '"Боюсь, ты уже знаешь ответ на свой вопрос, элантах. Просто не можешь принять его". {n}Ирлиэт смотрит на вас со смесью
     горечи и... сочувствия?{/n} "Твоя предшественница, что ранее владела этим судном и всем твоим протекторатом. Мон-кай,
     что хранила в своем кабинете кусок моего родного мира, словно какую-то безделушку, обычный трофей".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 5bede77b-ade9-40ca-964d-c2d90c3397b8
   event: Companions_Ranger_83
   text: '"Очнись, элантах". {n}Мелодичный голос эльдарки вырывает вас из объятий дремы, и ее любопытный взгляд тут же упирается
     в ваше заспанное лицо.{/n}'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: a7205c5c-e05f-410d-bf08-28dc60afb092
   event: Companions_Ranger_84
   text: '"Напрасно, элантах, ведь я могу о себе позаботиться... Впрочем, судя по выражению твоего лица, моя медитация привела
     тебя в замешательство — но только от незнания".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: c0feb5a0-0625-4754-918b-8e30185c6258
   event: Companions_Ranger_85
   text: '"Моя медитация... это и есть погружение — погружение в себя, свой внутренний мир. Чтобы поговорить с самим собой,
@@ -1876,196 +1358,138 @@ phrases:
     даже на языке детей Азуриана — так много смыслов и переливов в одном его звучании. А уж язык мон-кай слишком скуп и неловок.
     Нет... чтобы все осознать, погружение нужно увидеть".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: e903faa3-c487-421f-a625-03f4cb765c9a
   event: Companions_Ranger_86
   text: '"Что? Нет, я так не думаю. Впрочем..." {n}Ирлиэт склоняет голову и с сомнением осматривает вас с головы до ног.{/n}
     "Быть может у тебя, элантах, и хватило бы на это внутренних сил. Однако медитация требует долгих практик, сдержанности
     и самодисциплины. А главное — умелого проводника, что сможет направить твой разум".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 57781ac9-e551-4a5e-b110-03b30a67992e
   event: Companions_Ranger_87
   text: '"Если бы это было возможно, думаешь, я бы стала терпеть твое неразумное поведение?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 6bc8856c-9523-4c72-8b2b-8c3f007347cb
   event: Companions_Ranger_88
   text: '"Могла ли я ожидать от мон-кай слов, не сочащихся ядом?" {n}Ирлиэт одаривает вас долгим колючим взглядом.{/n}'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 82a3f6a8-0402-4c01-9b7b-c25b04ced50a
   event: Companions_Ranger_89
   text: '"На твоем языке это состояние так же описывается словом "медитация". Это то, что позволяет мне поддерживать баланс
     внешнего и внутреннего и оберегает душу от тягот и скверны".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: c627bd54-bbff-40b7-be76-09e0607a6e8f
   event: Companions_Ranger_90
   text: '"Погружение требует концентрации и единства духа, тела и разума. Если войти в это состояние неподготовленным — или
     внезапно из него выйти — можно причинить себе вред".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: b28df9c8-119e-42d7-9271-c3ea7b3ecf5c
   event: Companions_Ranger_91
   text: '"Ты все еще здесь, элантах". {n}Слова Ирлиэт не похожи на вопрос или удивление. Она окидывает вас быстрым взглядом
     и приветственно кивает.{/n}'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 20817893-96fe-4b09-967a-5e3bd338c9d1
   event: Companions_Ranger_92
   text: '{n}Вам кажется, что на строгом лице эльдарки проскальзывает тень улыбки.{/n} "Почти сразу, как принял{mf||а} решение
     составить мне компанию. Не беспокойся, твое громкое дыхание не потревожило моего погружения".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 755c90df-ffe7-4f7c-91ff-6ff8e650c4ac
   event: Companions_Ranger_93
   text: '{n}Не успеваете вы поднять руку, как Ирлиэт молниеносно выгибается и тут же оказывается в недосягаемости от вашей
     ладони.{/n} "Кей-морагх, мон-кай! Что ты себе позволяешь?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: b3630d67-41a9-460b-b614-26eaf9f4f86f
   event: Companions_Ranger_94
   text: '"Я вовсе не!.." {n}Ирлиэт гневно поджимает губы, затем делает глубокий вдох, выдох, снова вдох — и раздражение в
     ее взгляде сменяется холодом.{/n} "Медитировать в присутствии мон-кай было опрометчивым решением — и то подтверждает твоя
     реакция".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: e5daffa3-73a3-44c9-a39b-b750645a1d50
   event: Companions_Ranger_95
   text: ' "Я не стану оправдываться. Тебе достаточно знать, что более в таком состоянии ты меня не увидишь. Теперь говори,
     зачем именно ты приш{mf|ел|ла}'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 40190050-f6db-407d-8784-d914f635def1
   event: Companions_Ranger_96
   text: '"Признаюсь, твоя несдержанность меня разочаровывает. С каждым днем ты становишься все более примитивн{mf|ым|ой},
     похож{mf|им|ой} на прочих мон-кай. Не позволяй своей животной натуре взять верх — я вижу, в тебе есть нечто большее".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 34eee92b-9be2-4e7a-83c1-987d3098a089
   event: Companions_Ranger_97
   text: '"Сдержанность не самая выдающаяся черта твоего вида... И все же ты не прервал{mf||а} моего погружения, элантах. Достойный
     поступок. Я это... запомню". {n}Ирлиэт кивает вам — коротко, но с благодарностью.{/n}'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: d6377408-f986-4eba-9790-1da0ab1029b3
   event: Companions_Ranger_98
   text: '"{name}". {n}Обычно неколебимая эльдарка застывает в нерешительности.{/n} "Я обещала, что более не стану скрывать
     переживания за ледяной стеной гордыни и сомнений. И поэтому хочу объясниться. Но... готов{mf||а} ли ты меня выслушать?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 009a0bd2-481b-4fbb-9b92-530f32d2059c
   event: Companions_Ranger_99
   text: '{n}Ирлиэт коротко кивает.{/n} "Только не здесь. Слова моей правды... предназначены лишь для твоих ушей, элантах".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 6e7c7d63-2aab-40b6-9669-b79c5bfc89a2
   event: RMNC_AfterSex_BarksYrliet_01
   text: '"Не жди меня, {name}, ступай. А я... посижу здесь еще немного".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: a73c1722-88c6-4a8a-9244-6408f9d8b012
   event: RMNC_AfterSex_BarksYrliet_02
   text: '"Уже уходишь?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 26c51d5b-331a-4d62-a165-3d4e6d5d519d
   event: RMNC_AfterSex_BarksYrliet_03
   text: '"Твоя душа сияет ярче звезд, {name}. Мне нравится этот свет... теплый и манящий. Я рада, что не ошиблась в тебе".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 13e514db-ceed-4338-a854-16524530827e
   event: RMNC_AfterSex_BarksYrliet_04
   text: '"Каждый раз погружаясь в глубины твоего мира, я чувствую, как моя собственная душа наполняется спокойствием. Теплом.
     И... облегчением".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 706051c1-8f42-4395-8282-92e0d063cf1b
   event: RMNC_AfterSex_BarksYrliet_05
   text: '"Когда мы вместе медитируем... боль моей души отступает. Чувствуешь ли ты то же самое?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 3061f62c-f9e8-4c2d-a35e-2242f9ff0edd
   event: RMNC_Yrliet_Barks_True_01
   text: '"Мой мир похож на бесконечную дорогу, пронизывающую саму галактику. Мы с тобой посередине пути, но я не вижу ни его
     начала, ни его конца..."'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 5fdad06b-595e-41ae-a7e4-c0bea7b8f322
   event: RMNC_Yrliet_Barks_True_02
   text: '"Но я вижу конец этого пути для тебя, {name}. Он обрывается раньше моего — как мимолетная вспышка, сияние падающей
     звезды. Краткое, прекрасное мгновение..."'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: e472f96d-0b9f-40b0-8f6b-c59308ef9de0
   event: RMNC_Yrliet_Barks_True_03
   text: '"И этот путь, это мгновение я желаю пройти вместе с тобой. Не как человек и дитя Азуриана — на равных".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: bc3f53f7-8a38-42b1-92d7-00c6645b1737
   event: RMNC_Yrliet_Barks_True_04
   text: '"{name} и Ирлиэт. Ирлиэт и {name}".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 5c538916-f8db-4638-8d54-430977b62002
   event: RMNC_Yrliet_Barks_True_05
   text: '"Чувствуешь ли и ты то же самое?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: e184bfab-f936-4fed-b15e-67a2fababfa2
   event: RMNC_Yrliet_OnePathForBoth_01
   text: '"{name}, нам нужно поговорить!" {n}Ирлиэт залетает в кабинет подобно порыву освежающего ветра. Лицо ее полнится не
     то радостью, не то волнением.{/n} "Я осознала кое-то важное, и только ты сможешь меня понять!"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: f5e2550f-9c5a-4fda-b09c-1079fd9ed28d
   event: RMNC_Yrliet_OnePathForBoth_02
   text: '{n}Ирлиэт немного склоняет голову, и, пересиливая неловкость, мелодично произносит:{/n} "Я хотела разделить эту радость
     с тобой, {name}. Что скажешь? Мой внутренний мир, мою душу... Хочешь увидеть их настоящие?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 0cd80327-ae60-406a-a8df-190f1d8f2a6b
   event: RMNC_Yrliet_OnePathForBoth_03
   text: '"Да, о да, {name}. Я боялась, что мой мир зачахнет за это время. Превратиться в пустыню или порастет сорной травой.
     Но то, что я увидела, меня поистине восхитило".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 379ecc1a-730d-435d-9f53-2fad7f2754d3
   event: RMNC_Yrliet_OnePathForBoth_04
   text: '"Камень душ — священная защита детей Азуриана. Оберег от взглядов и власти Той, Что Жаждет. Но он заменим. И точно
     не является моей настоящей душой".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 7dafeaf7-450c-45b2-b661-4080a11d6d3f
   event: RMNC_Yrliet_OnePathForBoth_05
   text: '"Мой мир похож на бесконечную дорогу, пронизывающую саму галактику. Я не вижу ее начала, не вижу конца..." {n}Ирлиэт
@@ -2073,15 +1497,11 @@ phrases:
     мимолетная вспышка, сияние падающей звезды. Краткое, прекрасное мгновение... И этот путь, это мгновение я желаю пройти
     вместе с тобой. Не как человек и дитя Азуриана — на равных. {name} и Ирлиэт. Ирлиэт и {name}. Что скажешь?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: ac04dd81-3a6b-4673-97ed-10f20aa2c543
   event: RMNC_Yrliet_OnePathForBoth_06
   text: '{n}Эльдарка собирается с духом и вытягивается, словно струна хрупкой изысканной лиры. Ее рука все еще по привычке
     тянется к расколотому камню душ.{/n} "Поначалу я думала, что встреча с тобой принесет моей душе лишь боль и проклятие..."'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 8c509ba5-8cb4-4fe3-a18c-86e4ec28a83f
   event: RMNC_Yrliet_OnePathForBoth_07
   text: '"Думаешь — зачем я вообще тебе все это говорю? Наверное, переняла привычку людей болтать без умолку". {n}Ирлиэт негромко
@@ -2089,135 +1509,97 @@ phrases:
     о чем не жалею. Ни о встрече с тобой, ни о том, что случилось с моим камнем душ. О том, насколько богаче и ярче стала
     моя душа рядом с тобой, известно лишь звездам".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 40110c1c-0a28-4fac-9113-b13eb99f0336
   event: RMNC_Yrliet_OnePathForBoth_08
   text: '"Я давно уже научилась различать саркастичные нотки в говоре людей, {name}. Но ты прав{mf||а} — выбора у тебя действительно
     нет".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 5799ef7b-1ad4-4565-b58e-7ef8610ab76b
   event: RMNC_Yrliet_OnePathForBoth_09
   text: '{n}Ирлиэт тихонько смеется.{/n} "Пожалуй. Все потому, что я осознала нечто действительно важное — души моих предков
     с Алайтока случайно разбили мой камень. Они не желали зла — лишь оберегали дитя, что пережило множество тягот на пути
     Изгоя. И они... действительно помогли мне, {name}. Я снова могу погружаться в свой мир и медитировать!"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 443067ce-4b56-488e-8052-8a1d5c7a1891
   event: RMNC_Yrliet_OnePathForBoth_10
   text: '"Ты меня отвергаешь? Сейчас?" {n}Ирлиэт замирает, и странное выражение вырисовывается на ее тонком лице.{/n} "Что
     ж. Похоже, я все еще слишком плохо понимаю людей. Но я уважаю твои желания, как и ты все это время старал{mf|ся|ась} уважать
     мои".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 850f32b0-4325-4839-992f-46526f30245e
   event: RMNC_Yrliet_OnePathForBoth_11
   text: '{n}Ирлиэт тепло улыбается и подзывает вас ближе обычного — но все еще не касается кожи.{/n} "Тогда закрывай глаза,
     {name}. И слушай мой голос..."'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 71fc69f8-0ed1-43e9-97d3-8efe8d56957b
   event: RMNC_Yrliet_OnePathForBoth_12
   text: '{n}Вы закрываете глаза и погружаетесь в бесконечность... А когда снова открываете их — дивная дорога без конца и
     края предстает перед вашим взором.{/n}'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 2ba9fd4a-5c57-454c-b1a3-63b6e593e7f4
   event: RMNC_Yrliet_OnePathForBoth_13
   text: '{n}Ирлиэт понимающе кивает и протягивает вам руку.{/n} "Тогда я бы хотела вновь увидеть сияние твоего мира, {name}.
     Человеческие эмоции... иные. Словно далекие звезды. И столь же завораживающие".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 5628022c-3f27-4f05-9309-82af185cca66
   event: RMNC_Yrliet_OnePathForBoth_14
   text: '{n}Смех Ирлиэт мягок и нежен, словно все тяготы ее судьбы растаяли в лучах местного светила.{/n} "Я боялась, что
     мой мир зачахнет. Превратится в пустыню или порастет сорной травой... Но он изменился. Кажется, в лучшую сторону".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 0017dd2f-987b-4d96-9096-b17111ab8c8a
   event: RMNC_Yrliet_OnePathForBoth_15
   text: '{n}Ирлиэт устремляет свой взор вперед — туда, где не видно ни края пути, ни его предела. А затем обращает его к вам
     — теплый, пронизанный восторгом и благодарностью. Она протягивает вам руку и тихо, едва слышно произносит.{/n} "Нам пора,
     {name}".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 6e8c086a-3bf4-4392-a3bd-869830700dc3
   event: RMNC_Yrliet_OnePathForBoth_16
   text: '"Теперь ты видел{mf||а}, что у меня на душе. И знаешь мои истинные мысли и желания. Что же ты ответишь на них, {name}?
     Позволишь пройти с тобой путь длиною в жизнь?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 690bb767-1f2b-483c-abd3-87aa5c2b562c
   event: RMNC_Yrliet_OnePathForBoth_17
   text: '{n}Ирлиэт улыбается вам.{/n} "Твой ответ греет мою душу подобно лучам восходящей звезды, {name}. Впредь, если ты
     захочешь снова попрактиковаться в медитации — зови меня в любое время".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: b7d1b4fe-4418-445e-8597-bab42e9cda17
   event: RMNC_Yrliet_OnePathForBoth_18
   text: '"Но вскоре, познав тебя лучше, я поменяла свое мнение. Не о мон-к... не о твоем виде. Но о тебе, {name}. Все то,
     что произошло с Крударахом. Все то, что случилось с моими собратьями. И что осталось в Комморре... Все это я смогла пережить
     лишь благодаря тому, что Азуриан свел наши пути".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: a8e84de0-735d-48a7-bb48-e7ffec18b9be
   event: RMNC_Yrliet_OnePathForBoth_19
   text: '"Туда, куда укажет твоя душа, {name}. Это — мой Путь, но он идет бок о бок с твоим — а значит, тебе выбирать, куда
     направить свои стремления и чаяния".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: dbe830f6-7bdd-4667-b5bd-999056171f34
   event: RMNC_Yrliet_StartingEventYrliet_01
   text: '"Удели мне крупицу своего времени, элантах". {n}Ирлиэт возникает у трона беззвучно, на лице — маска усталости и гнева.{/n}'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: fe384829-df20-45cb-b4a8-7bb5587de3a0
   event: RMNC_Yrliet_StartingEventYrliet_02
   text: '"Нет. Таковыми вас делает ограниченность разума и простота души. А все остальное — лишь следствие этих пороков".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 838331de-814b-4b07-9869-167c53daf97b
   event: RMNC_Yrliet_StartingEventYrliet_03
   text: '"Видит Азуриан, мне нет дела до любопытных взглядов мон-кай — я свыклась с ними еще под сенью цветущих садов Лилэтан.
     Они осыпают меня проклятиями издалека, следят за мной, осеняют знамениями... Пускай. Что взять с примитивных существ,
     наделенных некрепким разумом?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 925bbd7c-8fcb-4140-b951-818fd6870a89
   event: RMNC_Yrliet_StartingEventYrliet_04
   text: '{n}Тело Ирлиэт бьет мелкая дрожь — так сильно ее переполняют эмоции.{/n} "Попробуй представить, элантах, что тебя
     возжелал дикий зверь. Это... мерзко. Гадко. Противно настолько, что приводит в дрожь саму душу".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 731c752a-879c-4074-9962-aff4d59b0dec
   event: RMNC_Yrliet_StartingEventYrliet_05
   text: '"Именно так я и поступлю, мон-кай".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: c3173ee9-a61f-4a0b-abc3-dbfa438e30f4
   event: RMNC_Yrliet_StartingEventYrliet_06
   text: '"Она уже мертва, элантах. Я не позволила подобному остаться без воздаяния и сама лишила ее жизни".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 26e7900e-b36a-4b52-83d9-be8accb98fcc
   event: RMNC_Yrliet_StartingEventYrliet_07
   text: '"Я прошла Путем пробуждения, элантах. И научилась видеть то, что сокрыто. И слышать то, что не было сказано. Оказавшись
@@ -2225,147 +1607,105 @@ phrases:
     мне что-то новое". {n}Окинув мимолетным взглядом офицеров мостика, эльдарка устало вздыхает.{/n} "Впрочем, протестовать
     я не стану. На всем корабле лишь разговоры с тобой могут скрасить мое одиночество".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 835b3469-eab2-4e86-a3e9-8b5820726a49
   event: RMNC_Yrliet_StartingEventYrliet_08
   text: '"И так и должно быть. Ты можешь хотя бы отдаленно понять мои чувства, элантах... чего не скажешь о твоих примитивных
     сородичах".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: a3dbee92-60f0-46b0-aa58-8963ef53b4d7
   event: RMNC_Yrliet_StartingEventYrliet_09
   text: '"Я дала шанс нашим совместным странствиям, элантах. Если твои помыслы на мой счет были... иными" {n}, — Ирлиэт морщится,
     -{/n} "Отвергни их".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 538182fa-f0fb-4f32-a2a4-5de5770fc8c8
   event: RMNC_Yrliet_StartingEventYrliet_10
   text: '"Тогда держи своих слуг на поводке покороче, мон-кай".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 0b8ca0d4-804c-4cc7-8921-3ea5fc80b91a
   event: RMNC_Yrliet_StartingEventYrliet_11
   text: '"Я здесь, стою пред тобой, именно для того, чтобы этого не повторилось впредь".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 5650c0ca-20f5-4fae-ac72-83c93facb629
   event: RMNC_Yrliet_StartingEventYrliet_12
   text: '{n}Ирлиэт медленно кивает.{/n} "Обычно мон-кай злятся, когда кто-то портит их собственность. Я рада, что мы пришли
     к пониманию".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 528c342c-d6fe-4e5f-925f-10fe53566070
   event: RMNC_Yrliet_StartingEventYrliet_13
   text: '"Элантах, пойми меня: мон-кай привлекательными я не нахожу. Одна мысль о телесной близости с твоими сородичами..."
     {n}Ирлиэт громко выдыхает, стараясь сохранить внутренее спокойствие.{/n}'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 401b39c9-a75c-4c29-a39c-0c19cdf468f4
   event: RMNC_Yrliet_StartingEventYrliet_14
   text: '{n}После недолгих раздумий она коротко кивает:{/n} "Чтобы облечь всю истину этого мира в скупой язык, привычный твоему
     слуху, мне понадобится время. Позже я сама приду к тебе с ответом".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: df781859-57aa-412f-baa7-8ff2d5700d1a
   event: RMNC_Yrliet_StartingEventYrliet_15
   text: '{n}Тонкие пальцы складываются в странном жесте, словно эльдарка расплетает невидимую нить.{/n} "Наш разговор лишь
     подтверждает мои слова, элантах: мон-кай и дети Азуриана отличны друг от друга как ночь и день. Эльдары не просто видят
     мир иначе — мы видим больше, чем любой мон-кай способен осознать".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 2ef15e92-f1f7-49a3-ac8d-04fbfc31c029
   event: RMNC_Yrliet_StartingEventYrliet_16
   text: '{n}Ирлиэт не выглядит удивленной. Слегка разочарованной — может быть.{/n} "Тогда что насчет моей просьбы, элантах?
     Так и позволишь своим собратьям докучать мне?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: f24b20dc-de87-47ef-98ad-8c62ce6fee20
   event: RMNC_Yrliet_StartingEventYrliet_17
   text: '{n}Ирлиэт хмурится, глядя на вас, но лишь слегка.{/n} "Ожидать твоей помощи было ошибкой. Я сама разберусь со своей
     проблемой, коль мои слова не находят ответа".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: f91d173e-862c-41d3-a056-b05eba5c9916
   event: RMNC_Yrliet_StartingEventYrliet_18
   text: '{n}Словно не веря услышанному, Ирлиэт осторожно склоняет голову набок и вглядывается в ваши глаза.{/n} "Я... принимаю
     твои слова, элантах. И все же..."'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: c72cbd99-1673-421f-a34b-91c69de71d6d
   event: RMNC_Yrliet_StartingEventYrliet_19
   text: '"И все же..." {n}Ирлиэт касается камня душ, и лицо ее кривится в неподдельном отвращении.{/n} "Выходка одной из них
     переполнила чашу моего терпения. Она посмела приблизиться ко мне... заговорить... и, коснувшись руки, предложить уединиться,
     возжелав... возжелав... Кей-морагх! Одно воспоминание об этом вызывает бурю в моей душе!"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: f1c153bc-55a5-4139-aed8-1bc1db98c7a4
   event: RMNC_Yrliet_StartingEventYrliet_20
   text: '"Когда-то эмоции низвергли мой народ с пьедестала правителей галактики, элантах. Потакание своим слабостям — или
     глупостям — не делает твой вид более привлекательным".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: acc7a8b3-bac9-44f0-a5f2-40f4f3fd0ba2
   event: RMNC_Yrliet_StartingEventYrliet_21
   text: '"Твои слова согревают душу". {n}Эльдарка кивает и ненадолго погружается в свои мысли.{/n} "Что ж, я пойду. Не забудь
     о данном обещании".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 05e1353c-7539-41c5-a886-82ccdafe2c51
   event: RMNC_Yrliet_StartingEventYrliet_22
   text: '"Ограниченность разума и простота души... Каждый день я словно в западне, окруженная стаей диких животных". {n}Прикрыв
     глаза, она едва слышно добавляет:{/n} "Я готова заплатить эту цену ради того, чтобы отыскать собратьев. Но всему есть
     предел".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 074d90fe-b6ef-4968-9cf7-d523dad53713
   event: RMNC_Yrliet_StartingEventYrliet_23
   text: '{n}Прикрыв глаза, она едва слышно добавляет:{/n} "За ничтожный шанс спасти собратьев... Я готова заплатить эту цену.
     Но всему есть предел".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 35825ffa-3023-49e0-99c6-bc7f6c277bd8
   event: RMNC_Yrliet_StartingEventYrliet_24
   text: '"Если бы они хоть немного желали познать мою натуру, то давно бежали бы в страхе от того, кто идет по Пути изгоя.
     Но они лишь пытаются меня спровоцировать. Задеть. Нет. Мон-кай движут подсознательные инстинкты — вам важно выживание,
     размножение, сохранение вида, истребление тех, кто представляет для вас опасность... Это не плохо и не хорошо. Так есть".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 531e73a2-3d51-41a9-acde-981c206ad63f
   event: RMNC_Yrliet_StartingEventYrliet_25
   text: '{n}Ирлиэт замирает в невольном изумлении.{/n} "Гниющия сердцевина рождает погибель целого. Теперь я вижу, откуда
     произрастает уродливая сущность твоих слуг. Нам нет смысла и дальше обсуждать случившееся".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: f187dc3b-9f38-4f4b-9917-f79d510d2a86
   event: RMNC_Yrliet_StartingEventYrliet_26
   text: '{n}Ирлиэт задумывается и коротко кивает — скорее себе, чем вам.{/n} "Твой вид чувствителен к истине. Я буду напоминать
     себе об этом".'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null
 - guid: 6c240f5e-6c80-4f4f-a82d-decd9d387e46
   event: RMNC_Yrliet_StartingEventYrliet_27
   text: '"Что я вижу?" {n}Ирлиэт бросает на вас задумчивый взгляд.{/n} "Твои слова полнятся жаждой познания чужой души. Мне
     они... нравятся. Но сможешь ли ты осознать мой ответ?"'
   speaker: null
-  gemini_voice: Vindemiatrix
-  gemini_text: null

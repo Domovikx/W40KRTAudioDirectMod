@@ -110,8 +110,7 @@ def extract_catalog(lang: str = "ruRU", todo: bool = False):
 
         name, char_data = resolve_character(event, char_map, chars)
         gender = char_data.get("gender", "?") if char_data else "?"
-        gv = char_data.get("gemini_voice", "?") if char_data else "?"
-        entry = (guid, text, event, done, gender, gv)
+        entry = (guid, text, event, done, gender)
 
         if name:
             catalog[name].append(entry)
@@ -148,16 +147,15 @@ def print_stats(catalog, unassigned, lang: str = "ruRU"):
 
 
 def list_chars():
-    """Вывести таблицу всех персонажей из characters.yaml."""
+    """Вывести таблицу всех персонажей."""
     chars = load_characters()
-    print(f"{'Персонаж':<30} {'Пол':>4} {'Gemini голос':<20} {'Sound keys':<30}")
-    print("-" * 90)
+    print(f"{'Персонаж':<30} {'Пол':>4} {'Sound keys':<30}")
+    print("-" * 66)
     for c in chars:
         name = c["name"]
         g = c.get("gender", "?")
-        gv = c.get("gemini_voice", "?")
         keys = ", ".join(c.get("sound_keys", []))
-        print(f"{name:<30} {g:>4} {gv:<20} {keys:<30}")
+        print(f"{name:<30} {g:>4} {keys:<30}")
     print(f"\nВсего: {len(chars)} персонажей")
 
 
@@ -169,12 +167,11 @@ def print_char(catalog, char_name: str, todo: bool = False):
         return
 
     gender = entries[0][4]
-    gv = entries[0][5]
     done_count = sum(1 for e in entries if e[3])
-    print(f"Персонаж: {char_name} ({gender}) — Gemini: {gv}")
+    print(f"Персонаж: {char_name} ({gender})")
     print(f"Реплик: {len(entries)}, готово: {done_count}\n")
 
-    for guid, text, event, done, _, _ in entries:
+    for guid, text, event, done, _ in entries:
         if todo and done:
             continue
         status = "✅" if done else "⬜"
@@ -190,7 +187,7 @@ def export_json(catalog, unassigned, path: str, todo_only: bool = False):
     data = {}
     for name, entries in catalog.items():
         char_entries = []
-        for guid, text, event, done, gender, gv in entries:
+        for guid, text, event, done, gender in entries:
             if todo_only and done:
                 continue
             char_entries.append({
@@ -199,7 +196,6 @@ def export_json(catalog, unassigned, path: str, todo_only: bool = False):
                 "event": event,
                 "done": done,
                 "gender": gender,
-                "gemini_voice": gv,
             })
         if char_entries:
             data[name] = char_entries

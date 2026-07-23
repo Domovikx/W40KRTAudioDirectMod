@@ -28,12 +28,10 @@ references:
 
 ```yaml
 name: Кунрад Войгтвир
-qwen3_voice: kunrad                    # voice_name из voices.yaml
 phrases:
   - guid: ca2ef6c0-...
-    text_original: (сырой текст игры)
     parts:
-      - speaker: Кунрад_Войгтвир       # кто говорит — проверяется в voices.yaml
+      - speaker: Кунрад_Войгтвир       # кто говорит — маппится через voices.yaml.characters
         text_clean: Прекрасное место для размышлений.
       - speaker: narrator               # специальное имя — маппится на wh40k_narrator
         text_clean: Взгляд приблизившегося...
@@ -42,9 +40,8 @@ phrases:
 ```
 
 **Правила маппинга speaker → voice_name:**
-- Если `speaker == "narrator"` → используем `wh40k_narrator`
-- Если `speaker == имя_персонажа` → берём `qwen3_voice` из YAML-заголовка этого персонажа
-- Если персонаж не найден в открытых YAML → fallback на `wh40k_narrator`
+- speaker ищется в `voices.yaml.*.characters` (по совпадению имени)
+- Если не найден → fallback на `wh40k_narrator`
 
 ### 3. Параметры генерации — `config/default.yaml`
 

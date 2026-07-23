@@ -144,8 +144,6 @@ def build_output(chars: list[dict]) -> tuple[dict[str, dict], int]:
     char_map = build_char_map(chars)
 
     name_map = build_name_to_char(chars)
-    voice_map = {c["name"]: c.get("gemini_voice", "Charon") for c in chars}
-
     by_char = {}
     for c in chars:
         name = c["name"]
@@ -155,8 +153,7 @@ def build_output(chars: list[dict]) -> tuple[dict[str, dict], int]:
             "role": c.get("role", ""),
             "age": c.get("age", ""),
             "personality": c.get("personality", ""),
-            "voice": c.get("voice", "aidar"),
-            "gemini_voice": c.get("gemini_voice", "Charon"),
+            
             "sound_keys": c.get("sound_keys", []),
             "total_phrases": 0,
             "phrases": [],
@@ -175,19 +172,12 @@ def build_output(chars: list[dict]) -> tuple[dict[str, dict], int]:
         if name:
             speaker = detect_speaker(text, name_map)
             if speaker == "__NPC__":
-                phrase_voice = None
                 speaker = None
-            elif speaker:
-                phrase_voice = voice_map.get(speaker)
-            else:
-                phrase_voice = voice_map.get(name)
             phrase = {
                 "guid": guid,
                 "event": event_name,
                 "text": text,
                 "speaker": speaker,
-                "gemini_voice": phrase_voice,
-                "gemini_text": None,
             }
             by_char[name]["phrases"].append(phrase)
             by_char[name]["total_phrases"] += 1
@@ -218,7 +208,6 @@ def write_index(by_char: dict[str, dict], unassigned: int):
             "gender": data["gender"],
             "role": data["role"],
             "voice": data["voice"],
-            "gemini_voice": data["gemini_voice"],
             "total_phrases": data["total_phrases"],
         })
         total += data["total_phrases"]

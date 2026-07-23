@@ -3,8 +3,6 @@ gender: M
 role: Интеррогатор
 age: ''
 personality: холодный, официальный
-voice: aidar
-gemini_voice: Charon
 sound_keys:
 - Interrogator
 total_phrases: 0

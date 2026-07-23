@@ -14,10 +14,10 @@ catalog/
     Теодора_фон_Валанциус.yaml
     Абеляр_Версериан.yaml
     ...
-  index.yaml           # сводка: имена, роли, голоса, количество фраз
+  index.yaml           # сводка: имена, роли, количество фраз
 ```
 
-Каждый файл в `people/` самодостаточен — содержит мету (пол, роль, голос) и массив phrases. Исходный текст из `ruRU.json` **не меняется** (никаких чисток, SSML, обрезок, кроме `< 3` символов).
+Каждый файл в `people/` самодостаточен — содержит мету (пол, роль) и массив phrases. Исходный текст из `ruRU.json` **не меняется** (никаких чисток, обрезок, кроме `< 3` символов).
 
 ## Источники данных (для генерации)
 
@@ -72,10 +72,6 @@ python .opencode/skills/text-catalog/scripts/generate_catalog.py --verify-only
 name: Кунрад Войгтвир
 gender: M
 role: Мастер шепотов
-age: средний
-personality: коварный, манипулятивный, вкрадчивый
-voice: aidar
-gemini_voice: Sadaltager
 sound_keys:
   - Kunrad
 total_phrases: 67
@@ -99,8 +95,6 @@ characters:
   - name: Кунрад Войгтвир
     gender: M
     role: Мастер шепотов
-    voice: aidar
-    gemini_voice: Sadaltager
     total_phrases: 67
   - name: Теодора фон Валанциус
     ...
@@ -115,17 +109,13 @@ characters:
 
 ## Как добавить нового персонажа
 
-Если есть `config/characters.yaml`:
+Добавить в `catalog/people/` новый YAML с полями `name`, `sound_keys` и запустить `generate_catalog.py`:
 
 ```yaml
-- name: "НовыйПерс"
-  gender: M
-  role: "его роль"
-  voice: aidar
-  gemini_voice: "Charon"
-  sound_keys: ["NewKey"]
+name: "НовыйПерс"
+gender: M
+role: "его роль"
+sound_keys: ["NewKey"]
 ```
 
-Затем: `python generate_catalog.py` → все фразы подхватятся, файл создастся.
-
-Без `characters.yaml`: отредактировать соответствующий `catalog/people/*.yaml` вручную.
+Затем: `python generate_catalog.py` → все фразы подхватятся.
