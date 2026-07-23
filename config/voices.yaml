@@ -30,6 +30,7 @@ references:
     description: "Теодора — Наталья Казначеева"
     characters:
       - Theodora
+      - Теодора фон Валанциус
 
   abelard:
     wav: refs/samples/Михаил Пшеничный.wav
@@ -176,8 +177,14 @@ references:
     description: "NPC (муж.) — Денис Некрасов"
     characters:
       - NPC (по умолчанию)
+      - Default NPC
       - Контрабандист
+      - Smuggler
       - Псайкер (NPC)
+      - Psyker NPC
       - Арбитрес (NPC)
+      - Arbites NPC
       - Сенешаль (NPC)
+      - Seneschal NPC
       - Интеррогатор (NPC)
+      - Interrogator NPC
