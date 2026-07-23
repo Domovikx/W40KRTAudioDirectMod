@@ -10,4 +10,6 @@ nul
 # tools
 tests
 output
-.temp
+*.temp
+Python
+*.log
