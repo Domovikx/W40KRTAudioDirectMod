@@ -62,19 +62,20 @@ W40KRTAudioDirectMod/
 
 Справочник движков: `.opencode/skills/russian-tts/SKILL.md`
 
-| Движок | Тип | Голоса | Дока | Конфиг |
-|--------|-----|--------|------|--------|
-| **Qwen3-TTS** 🏆 | Офлайн | 9 (5М+4Ж) | `tools/qwen3_tts.py` | `config/default.yaml` → `qwen3_*` |
-| **Silero** | Офлайн | 5 (2М+3Ж) | `tools/silero_tts.py` | `config/default.yaml` → `silero_*` |
-| **Gemini TTS** | Онлайн | 30 (15М+15Ж) | `tools/gemini_tts.py` | `config/default.yaml` → `gemini_*` |
-| **Edge-TTS** | Онлайн | 2 (1М+1Ж) | `tools/edge_tts.py` | `config/default.yaml` → `edge_*` |
-| SAPI | Офлайн | 2 (1М+1Ж) | — | `config/default.yaml` → `sapi_*` |
+| Движок           | Тип    | Голоса       | Дока                  | Конфиг                             |
+| ---------------- | ------ | ------------ | --------------------- | ---------------------------------- |
+| **Qwen3-TTS** 🏆 | Офлайн | 9 (5М+4Ж)    | `tools/qwen3_tts.py`  | `config/default.yaml` → `qwen3_*`  |
+| **Silero**       | Офлайн | 5 (2М+3Ж)    | `tools/silero_tts.py` | `config/default.yaml` → `silero_*` |
+| **Gemini TTS**   | Онлайн | 30 (15М+15Ж) | `tools/gemini_tts.py` | `config/default.yaml` → `gemini_*` |
+| **Edge-TTS**     | Онлайн | 2 (1М+1Ж)    | `tools/edge_tts.py`   | `config/default.yaml` → `edge_*`   |
+| SAPI             | Офлайн | 2 (1М+1Ж)    | —                     | `config/default.yaml` → `sapi_*`   |
 
 Активный бэкенд: `config/default.yaml` → `backend` (silero | gemini | edge | sapi | qwen3).
 
 ### Gemini voices распределение
 
 См. `config/characters.yaml` → поле `gemini_voice`. Ключевые пары: Ключевые пары:
+
 - `Kore` (F, Firm) → Теодора
 - `Sadaltager` (M, Knowledgeable) → Кунрад
 - `Algenib` (M, Gravelly) → Абеляр
@@ -89,6 +90,7 @@ W40KRTAudioDirectMod/
 ### Qwen3 voices распределение
 
 См. `.opencode/skills/qwen3-tts/SKILL.md`. Ключевые пары:
+
 - `Ryan` (M, Dynamic) → **Кунрад**, Паскаль, Хайнрикс
 - `Dylan` (M, Youthful) → Эдельтрад
 - `Vivian` (F, Bright) → **Теодора**, Арджента
@@ -100,13 +102,13 @@ W40KRTAudioDirectMod/
 
 См. `config/characters.yaml`.
 
-| Голос | Пол | Характер | Кому |
-|-------|-----|----------|------|
-| `eugene` | М | Командный | Абеляр, Маражай, Ульфар, Соломон |
-| `aidar` | М | Спокойный | Кунрад, Хайнрикс, Паскаль, Эдельтрад |
-| `xenia` | Ж | Энергичный | Теодора, Идира, Арджента, Кибелла |
-| `baya` | Ж | Тёплый | Кассия, Йрлиет |
-| `kseniya` | Ж | Звонкий | Джаэ |
+| Голос     | Пол | Характер   | Кому                                 |
+| --------- | --- | ---------- | ------------------------------------ |
+| `eugene`  | М   | Командный  | Абеляр, Маражай, Ульфар, Соломон     |
+| `aidar`   | М   | Спокойный  | Кунрад, Хайнрикс, Паскаль, Эдельтрад |
+| `xenia`   | Ж   | Энергичный | Теодора, Идира, Арджента, Кибелла    |
+| `baya`    | Ж   | Тёплый     | Кассия, Йрлиет                       |
+| `kseniya` | Ж   | Звонкий    | Джаэ                                 |
 
 ## Компиляция
 
@@ -145,6 +147,7 @@ Base model → generate_voice_clone(text, prompt) → output/full_icl/{voice}/*.
 Полный справочник: `.opencode/skills/qwen3-caps-stress/SKILL.md`
 
 Правила:
+
 1. CAPS на ударной гласной — модель читает заглавную букву как ударную: `зАмок`, `ужЕ`, `плАчу`
 2. Только **одна** заглавная гласная на слово
 3. `ё` всегда ударная, капс не нужен
@@ -152,16 +155,18 @@ Base model → generate_voice_clone(text, prompt) → output/full_icl/{voice}/*.
 5. В файле персонажа его собственное имя stress не требует (модель знает свой голос)
 
 Формат `catalog/people/*.yaml`:
+
 ```yaml
-qwen3_voice: kunrad     # voice_name из voices.yaml
+qwen3_voice: kunrad # voice_name из voices.yaml
 phrases:
   - guid: ...
     parts:
-      - speaker: Кунрад_Войгтвир  # персонаж
+      - speaker: Кунрад_Войгтвир # персонаж
         text_clean: ...
-      - speaker: narrator          # специальное имя → wh40k_narrator
+      - speaker: narrator # специальное имя → wh40k_narrator
         text_clean: ...
 ```
+
 Выход: `output/full_icl/{voice_name}/{guid}__{N}.wav` + `{guid}.wav` (склейка).
 
 ## Референсы
