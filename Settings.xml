@@ -2,4 +2,6 @@
 <Settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Volume>100</Volume>
   <Language>ruRU</Language>
+  <DuckMusic>true</DuckMusic>
+  <DuckLevel>49</DuckLevel>
 </Settings>

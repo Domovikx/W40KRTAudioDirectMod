@@ -1,0 +1,80 @@
+generated: '2026-07-24'
+total_characters: 25
+total_phrases: 5089
+unassigned: 0
+characters:
+- name: NPC (по умолчанию)
+  doc: docs/characters/NPC_по_умолчанию.md
+  total_phrases: 227
+- name: Абеляр Версериан
+  doc: docs/characters/Абеляр_Версериан.md
+  total_phrases: 255
+- name: Арбитрес (NPC)
+  doc: docs/characters/Арбитрес_NPC.md
+  total_phrases: 1
+- name: Джаэ Хейдари
+  doc: docs/characters/Джаэ_Хейдари.md
+  total_phrases: 248
+- name: Идира Тласс
+  doc: docs/characters/Идира_Тласс.md
+  total_phrases: 247
+- name: Интеррогатор (NPC)
+  doc: docs/characters/Интеррогатор_NPC.md
+  total_phrases: 0
+- name: Йрлиет Ланаэвисс
+  doc: docs/characters/Йрлиет_Ланаэвисс.md
+  total_phrases: 329
+- name: Кассия Орселлио
+  doc: docs/characters/Кассия_Орселлио.md
+  total_phrases: 440
+- name: Кибелла
+  doc: docs/characters/Кибелла.md
+  total_phrases: 400
+- name: Контрабандист
+  doc: docs/characters/Контрабандист.md
+  total_phrases: 175
+- name: Кунрад Войгтвир
+  doc: docs/characters/Кунрад_Войгтвир.md
+  total_phrases: 66
+- name: Манипулус
+  doc: docs/characters/Манипулус.md
+  total_phrases: 175
+- name: Маражай Аэзирраэш
+  doc: docs/characters/Маражай_Аэзирраэш.md
+  total_phrases: 325
+- name: Паскаль Ханеуманн
+  doc: docs/characters/Паскаль_Ханеуманн.md
+  total_phrases: 319
+- name: Псайкер (NPC)
+  doc: docs/characters/Псайкер_NPC.md
+  total_phrases: 91
+- name: Рассказчик
+  doc: docs/characters/Рассказчик.md
+  total_phrases: 16
+- name: Сенешаль (NPC)
+  doc: docs/characters/Сенешаль_NPC.md
+  total_phrases: 63
+- name: Сестра Арджента
+  doc: docs/characters/Сестра_Арджента.md
+  total_phrases: 264
+- name: Соломон Антар
+  doc: docs/characters/Соломон_Антар.md
+  total_phrases: 486
+- name: Теодора фон Валанциус
+  doc: docs/characters/Теодора_фон_Валанциус.md
+  total_phrases: 99
+- name: Тразин
+  doc: docs/characters/Тразин.md
+  total_phrases: 63
+- name: Ульфар Громолёт
+  doc: docs/characters/Ульфар_Громолёт.md
+  total_phrases: 286
+- name: Хайнрикс ван Калокс
+  doc: docs/characters/Хайнрикс_ван_Калокс.md
+  total_phrases: 410
+- name: Эдельтрад
+  doc: docs/characters/Эдельтрад.md
+  total_phrases: 0
+- name: Эоганн
+  doc: docs/characters/Эоганн.md
+  total_phrases: 104

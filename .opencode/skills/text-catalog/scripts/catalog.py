@@ -43,8 +43,8 @@ def load_generated(lang: str = "ruRU") -> set[str]:
 
 
 def load_characters() -> list[dict]:
-    """Загрузить персонажей из catalog/people/ или config/characters.yaml."""
-    people_dir = MOD_DIR / "catalog" / "people"
+    """Загрузить персонажей из Localization/ruRU/people/ или config/characters.yaml."""
+    people_dir = MOD_DIR / "Localization" / "ruRU" / "people"
     char_yaml = MOD_DIR / "config" / "characters.yaml"
     if people_dir.exists():
         chars = []

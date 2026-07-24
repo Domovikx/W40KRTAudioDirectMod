@@ -1,4 +1,4 @@
-"""Generate WAVs for Theodora and Kunrad only (imports core from qwen3_full_icl)."""
+"""Generate WAVs for target characters (imports core from qwen3_full_icl)."""
 
 import os, sys
 
@@ -15,8 +15,8 @@ cfg = yaml.safe_load(open(os.path.join(ROOT, "config", "default.yaml"), "r", enc
 voices_cfg = yaml.safe_load(open(os.path.join(ROOT, "config", "voices.yaml"), "r", encoding="utf-8"))
 
 TARGET_FILES = [
-    "Theodora von Valancius.yaml",
-    "Kunrad Voigtvir.yaml",
+    "Cassia Orsellio.yaml",
+    "Heinrix van Calox.yaml",
 ]
 
 

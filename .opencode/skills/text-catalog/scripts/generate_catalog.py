@@ -2,18 +2,20 @@
 """
 Generate per-character YAML phrase catalogs.
 
-Reads Sound.json + ruRU.json + config/characters.yaml (or existing catalog/people/*.yaml
-for metadata if characters.yaml is absent).
+Reads Sound.json + ruRU.json + config/characters.yaml (or existing
+Localization/ruRU/people/*.yaml for metadata if characters.yaml is absent).
 
 Outputs:
-    catalog/people/  -- one YAML per character (metadata + phrases)
-    catalog/index.yaml -- summary table
+    Localization/ruRU/people/  -- one YAML per character (metadata + phrases)
+    Localization/ruRU/people/index.yaml -- summary table
 
-Speaker auto-detection:
-    Parses {n}...{/n} narration blocks in each phrase. If a known character's
-    first name appears at the start of any narration block, that character is
-    identified as the speaker. If no match is found, speaker defaults to the
-    file's character name.
+Speaker auto-detection (two-stage):
+    1. Parse Wwise event name (Sound.json) — extract character segment per
+       prefix pattern (BNTRS, Companions, PRL, CH1-3, etc.). Covers ~95%.
+    2. Fallback: parse {n}...{/n} narration blocks in dialog text — if a known
+       character's name appears at the start of any narration block, that
+       character is identified as the speaker.
+    If neither method finds a speaker, it defaults to the file's character name.
 
 Usage:
     python generate_catalog.py
@@ -29,8 +31,8 @@ from datetime import date
 GAME = "C:/Program Files (x86)/Steam/steamapps/common/Warhammer 40,000 Rogue Trader"
 MOD_DIR = Path(__file__).parent.parent.parent.parent.parent
 CHAR_YAML = MOD_DIR / "config" / "characters.yaml"
-PEOPLE_DIR = MOD_DIR / "catalog" / "people"
-INDEX_PATH = MOD_DIR / "catalog" / "index.yaml"
+PEOPLE_DIR = MOD_DIR / "Localization" / "ruRU" / "people"
+INDEX_PATH = PEOPLE_DIR / "index.yaml"
 
 
 def load_sound_json() -> dict[str, str]:
@@ -46,14 +48,14 @@ def load_texts(lang: str = "ruRU") -> dict[str, str]:
 
 
 def load_char_metadata() -> list[dict]:
-    """Load character metadata: prefer characters.yaml, fallback to catalog/people/."""
+    """Load character metadata: prefer characters.yaml, fallback to Localization/ruRU/people/."""
     if CHAR_YAML.exists():
         with open(CHAR_YAML, encoding="utf-8") as f:
             return yaml.safe_load(f)["characters"]
     if PEOPLE_DIR.exists():
         chars = []
         for path in sorted(PEOPLE_DIR.glob("*.yaml")):
-            if path.stem == "catalog_index":
+            if path.stem in ("index", "catalog_index"):
                 continue
             with open(path, encoding="utf-8") as f:
                 chars.append(yaml.safe_load(f))
@@ -70,9 +72,92 @@ def build_char_map(chars: list[dict]) -> dict[str, str]:
     return m
 
 
-def key_position(key: str, event_name: str) -> int:
-    idx = event_name.find(key)
-    return idx if idx >= 0 else 999999
+def build_speaker_aliases(chars: list[dict]) -> dict[str, str]:
+    aliases = {}
+    for c in chars:
+        for key in c.get("sound_keys", []):
+            if key:
+                aliases[key.lower()] = c["name"]
+    aliases["smugler"] = "Джаэ Хейдари"
+    aliases["psyker"] = "Идира Тласс"
+    aliases["sororitasq1"] = "Сестра Арджента"
+    if "pasqal" in aliases and "pascal" in aliases:
+        aliases["pasqal"] = aliases["pascal"]
+    return aliases
+
+
+def extract_speaker_from_event(event_name: str, aliases: dict[str, str]) -> str | None:
+    parts = event_name.split("_")
+    if not parts:
+        return None
+
+    prefix = parts[0]
+
+    if prefix in ("NARR", "speaker", "DeathCultIntroduction"):
+        return None
+
+    def _try(segment: str) -> str | None:
+        return aliases.get(segment.lower())
+
+    candidates: list[str] = []
+
+    if prefix == "BNTRS":
+        if len(parts) >= 5 and parts[1] in ("Companion", "Reactivity") and parts[2] == "DLC3":
+            candidates.append(parts[3])
+        elif len(parts) >= 4:
+            candidates.append(parts[2])
+
+    elif prefix == "Companions":
+        if len(parts) >= 2:
+            candidates.append(parts[1])
+
+    elif prefix == "CompanionDialogue":
+        if len(parts) >= 2:
+            candidates.append(parts[1])
+
+    elif prefix in ("PRL", "CH1", "CH2", "CH3"):
+        if len(parts) >= 2:
+            for seg in parts[1:]:
+                if _try(seg):
+                    candidates.append(seg)
+                    break
+
+    elif prefix == "RMNC":
+        for seg in parts[1:]:
+            if _try(seg):
+                candidates.append(seg)
+                break
+        else:
+            for seg in parts[1:]:
+                seg_lower = seg.lower()
+                for key in aliases:
+                    if key in seg_lower:
+                        candidates.append(seg)
+                        break
+                if candidates:
+                    break
+
+    elif prefix in ("BS", "RM"):
+        if len(parts) >= 3:
+            candidates.append(parts[2])
+
+    elif prefix in ("OfficialPropos", "ManipulusFirstMeet",
+                     "TrazynOffer", "TrazynFirstMeet", "TrazynInYourRoom",
+                     "TrazynShowdown", "TrazynAfterOffer", "ArbitesAfterSex"):
+        if len(parts) >= 2:
+            candidates.append(parts[1])
+
+    elif prefix == "Solomorn":
+        r = _try("solomorne") or _try("solomorn")
+        if r:
+            return r
+
+    for c in candidates:
+        r = _try(c)
+        if r:
+            return r
+
+    return None
 
 
 def build_name_to_char(chars: list[dict]) -> dict[str, str]:
@@ -87,34 +172,123 @@ def build_name_to_char(chars: list[dict]) -> dict[str, str]:
             m[parts[-1]] = name         # last name
         # Also add full name as-is
         m[name] = name
-    # Hardcoded aliases for roles that appear in narration
-    # but aren't character names in the catalog
+    # Hardcoded aliases for generic NPC roles
     m["Архмилитант"] = "__NPC__"
     m["Морт"] = "__NPC__"
     m["Мастер шепотов"] = "__NPC__"
-    m["Сенешаль"] = "__NPC__"
+    # Role → specific character mappings (specific chars only, not generic NPCs)
+    role_map: dict[str, str] = {}
+    for c in chars:
+        name = c["name"]
+        role = c.get("role", "")
+        if "NPC" in name:
+            continue
+        rl = role.lower()
+        if "сенешаль" in rl:
+            role_map["Сенешаль"] = name
+            role_map["сенешаль"] = name
+            role_map["сенешаля"] = name
+        if "интеррогатор" in rl:
+            role_map["дознаватель"] = name
+            role_map["Дознаватель"] = name
+            role_map["Интеррогатор"] = name
+            role_map["интеррогатор"] = name
+    m.update(role_map)
     return m
 
 
-def detect_speaker(text: str, name_map: dict[str, str]) -> str | None:
+def _split_segments(raw: str) -> list[tuple[str, bool]]:
+    """Split text into (segment, is_narrator) pairs."""
+    results: list[tuple[str, bool]] = []
+    pattern = re.compile(r"\{n\}(.*?)\{/n\}", re.DOTALL)
+    pos = 0
+    for m in pattern.finditer(raw):
+        before = raw[pos : m.start()]
+        if before.strip():
+            results.append((before, False))
+        results.append((m.group(1), True))
+        pos = m.end()
+    after = raw[pos:]
+    if after.strip():
+        results.append((after, False))
+    if not results:
+        results.append((raw, False))
+    return results
+
+
+def detect_speaker(text: str, name_map: dict[str, str], char_name: str = "") -> str | None:
     """Detect speaker from {n}...{/n} narration blocks.
 
-    Scans all narration blocks. If any starts with a known character name,
-    returns that character's full name. If multiple different characters
-    are found, returns the one that appears in the most blocks.
+    1. If a narration block starts with a known name → that's the speaker.
+    2. If non-narrator text addresses the YAML owner (\"Леди {name}\", \"{name}, ...\")
+       → search narrator blocks for any known character name; return first found.
     """
-    blocks = re.findall(r'\{n\}(.*?)\{/n\}', text)
-    if not blocks:
+    segments = _split_segments(text)
+    narrator_blocks = [s for s, is_narr in segments if is_narr]
+    non_narrator_parts = [s for s, is_narr in segments if not is_narr]
+
+    if not narrator_blocks:
         return None
+
+    # Step 1: narrator starts with a character name
     counts: dict[str, int] = {}
-    for block in blocks:
+    for block in narrator_blocks:
         stripped = block.strip()
-        for token, char_name in name_map.items():
+        for token, cn in name_map.items():
             if stripped.startswith(token):
-                counts[char_name] = counts.get(char_name, 0) + 1
+                counts[cn] = counts.get(cn, 0) + 1
                 break
     if counts:
-        return max(counts, key=counts.get)
+        best = max(counts, key=counts.get)
+        return best
+
+    if not char_name:
+        return None
+
+    # Step 2: check if non-narrator text addresses the YAML owner
+    char_first = char_name.split()[0]
+
+    def _text_addresses_owner(seg: str) -> bool:
+        clean = seg.strip().strip("\"").strip("\u201d").strip("\u201c").strip("\u00ab").strip("\u00bb")
+        if f"Леди {char_first}" in clean:
+            return True
+        if clean.startswith(char_first) and len(clean) > len(char_first) and not clean.startswith(char_first + " " + char_first.split()[-1] if len(char_name.split()) > 1 else ""):
+            return True
+        return False
+
+    addressed = any(_text_addresses_owner(np) for np in non_narrator_parts)
+    if not addressed:
+        return None
+
+    # Guard: if narrator mentions YAML owner speaking, it's self-reference (Ulfar case)
+    for block in narrator_blocks:
+        bl = block.lower()
+        for token, cn in name_map.items():
+            if cn == char_name and len(token) > 2 and token.lower() in bl:
+                return None
+
+    # Search all narrator blocks for ANY other character name
+    for block in narrator_blocks:
+        bl = block.lower()
+        for token, cn in name_map.items():
+            if cn == char_name:
+                continue
+            if len(token) > 2 and token.lower() in bl:
+                return cn
+
+    # Keyword fallback: unique character descriptors in narrator blocks
+    keyword_map = {
+        "синт-кож": "Сенешаль",
+        "синт кож": "Сенешаль",
+    }
+    for block in narrator_blocks:
+        bl = block.lower()
+        for kw, role in keyword_map.items():
+            if kw in bl and role in name_map:
+                cn = name_map[role]
+                if cn != char_name:
+                    return cn
+
     return None
 
 
@@ -144,17 +318,15 @@ def build_output(chars: list[dict]) -> tuple[dict[str, dict], int]:
     char_map = build_char_map(chars)
 
     name_map = build_name_to_char(chars)
+    speaker_aliases = build_speaker_aliases(chars)
     by_char = {}
     for c in chars:
         name = c["name"]
+        safe = name.replace(" ", "_").replace("(", "").replace(")", "")
         by_char[name] = {
             "name": name,
-            "gender": c.get("gender", "?"),
-            "role": c.get("role", ""),
-            "age": c.get("age", ""),
-            "personality": c.get("personality", ""),
-            
             "sound_keys": c.get("sound_keys", []),
+            "doc": f"docs/characters/{safe}.md",
             "total_phrases": 0,
             "phrases": [],
         }
@@ -170,7 +342,12 @@ def build_output(chars: list[dict]) -> tuple[dict[str, dict], int]:
 
         name, _ = resolve_character(event_name, char_map, chars)
         if name:
-            speaker = detect_speaker(text, name_map)
+            speaker = extract_speaker_from_event(event_name, speaker_aliases)
+            if not speaker:
+                speaker = detect_speaker(text, name_map, char_name=name)
+            if not speaker or speaker == "__NPC__":
+                speaker = name  # default to file owner
+
             if speaker == "__NPC__":
                 speaker = None
             phrase = {
@@ -205,9 +382,7 @@ def write_index(by_char: dict[str, dict], unassigned: int):
     for name, data in sorted(by_char.items()):
         entries.append({
             "name": name,
-            "gender": data["gender"],
-            "role": data["role"],
-            "voice": data["voice"],
+            "doc": data.get("doc", ""),
             "total_phrases": data["total_phrases"],
         })
         total += data["total_phrases"]
@@ -248,7 +423,7 @@ def main():
 
     chars = load_char_metadata()
     if not chars:
-        print("ERROR: No character metadata found (missing characters.yaml and catalog/people/)")
+        print("ERROR: No character metadata found (missing characters.yaml and Localization/ruRU/people/)")
         sys.exit(1)
 
     by_char, unassigned = build_output(chars)

@@ -1,7 +1,7 @@
 """
 Batch dialog generation via Qwen3-TTS Base model + Full ICL (voice clone).
 
-Reads catalog/people/*.yaml with multi-part phrases (parts: [{speaker, text_clean}]).
+Reads Localization/ruRU/people/*.yaml with multi-part phrases (parts: [{speaker, text_clean}]).
 Resolves speaker → voice reference from config/voices.yaml characters lists.
 Generates per-part WAVs, then concatenates into final per-phrase WAV.
 
@@ -30,7 +30,7 @@ PARTS_DIR = os.path.join(ROOT, "output", "full_icl")
 GAME_DIR = os.path.join(ROOT, "Localization", "ruRU")
 CONFIG_VOICES = os.path.join(ROOT, "config", "voices.yaml")
 CONFIG_DEFAULT = os.path.join(ROOT, "config", "default.yaml")
-CATALOG_DIR = os.path.join(ROOT, "catalog", "people")
+CATALOG_DIR = os.path.join(ROOT, "Localization", "ruRU", "people")
 os.makedirs(GAME_DIR, exist_ok=True)
 os.makedirs(PARTS_DIR, exist_ok=True)
 
@@ -46,7 +46,7 @@ def load_voices_config() -> dict:
 
 
 def load_catalog_phrases() -> Dict[str, dict]:
-    """Load all YAMLs from catalog/people/.
+    """Load all YAMLs from Localization/ruRU/people/.
     Returns dict: character_name -> yaml_data (with phrases list)
     """
     catalog = {}
