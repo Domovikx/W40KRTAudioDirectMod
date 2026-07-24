@@ -163,3 +163,11 @@ references:
     - Seneschal NPC
     - Интеррогатор (NPC)
     - Interrogator NPC
+  default_female:
+    wav: refs/samples/Елена Чебатуркина.wav
+    x_vector_only: true
+    description: NPC (жен.) — Елена Чебатуркина
+    characters:
+    - default_female
+    - NPC Female
+    - female npc
