@@ -1,3 +1,8 @@
+---
+name: qwen3-full-icl
+description: Generate TTS audio for dialog phrases using Qwen3-TTS Base model with voice cloning. Reads catalog YAML, resolves speaker→voice, generates per-part WAVs, concatenates into final per-phrase WAV.
+---
+
 # Qwen3-TTS Full ICL — Voice Clone генерация
 
 Генерация диалоговых реплик через **Base модель** + **Full ICL** (In-Context Learning).
@@ -24,7 +29,7 @@ references:
 
 Каждая запись = результат `tools/qwen3_voice_design.py`.
 
-### 2. Фразы — `catalog/people/{Персонаж}.yaml`
+### 2. Фразы — `Localization/ruRU/people/{Персонаж}.yaml`
 
 ```yaml
 name: Кунрад Войгтвир
@@ -132,4 +137,4 @@ WH40k термины (Варп, Империум, Лекс Империалис)
 - `tools/qwen3_voice_design.py` — скрипт создания референса
 - `tools/qwen3_full_icl.py` — батчевая генерация
 - `config/voices.yaml` — конфиг референсов
-- `catalog/people/*.yaml` — каталог фраз персонажей
+- `Localization/ruRU/people/*.yaml` — каталог фраз персонажей

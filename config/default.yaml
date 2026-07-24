@@ -9,7 +9,7 @@
 qwen3_base_model: Qwen/Qwen3-TTS-12Hz-1.7B-Base
 qwen3_base_device: cpu
 qwen3_base_dtype: float32
-qwen3_base_temperature: 0.2
+qwen3_base_temperature: 1.0
 qwen3_base_top_p: 0.9
 qwen3_base_repetition_penalty: 1.05
 qwen3_base_max_new_tokens: 2048

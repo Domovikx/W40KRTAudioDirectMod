@@ -1,17 +1,17 @@
 references:
   wh40k_narrator:
-    wav: refs/samples/Всеволод Кузнецов.wav
+    wav: refs/samples/Сергей Чонишвили.wav
     x_vector_only: true
-    description: Нарратор — Всеволод Кузнецов
+    description: Нарратор — Сергей Чонишвили
     characters:
     - narrator
     - system
     - loading_screen
     - Рассказчик
   kunrad:
-    wav: refs/samples/Сергей Чонишвили.wav
+    wav: refs/samples/Всеволод Кузнецов.wav
     x_vector_only: true
-    description: Кунрад — Сергей Чонишвили
+    description: Кунрад — Всеволод Кузнецов
     characters:
     - Kunrad Voigtvir
     - Kunrad
@@ -154,9 +154,9 @@ references:
     - Default NPC
     - Контрабандист
     - Smuggler
-      - Псайкер (NPC)
-      - Psyker NPC
-      - Psyker (NPC)
+    - Псайкер (NPC)
+    - Psyker NPC
+    - Псайкер
     - Арбитрес (NPC)
     - Arbites NPC
     - Сенешаль (NPC)
