@@ -1,14 +1,14 @@
 generated: '2026-07-24'
 total_characters: 25
-total_phrases: 5089
+total_phrases: 39408
 unassigned: 0
 characters:
 - name: NPC (по умолчанию)
   doc: docs/characters/NPC_по_умолчанию.md
-  total_phrases: 227
+  total_phrases: 28661
 - name: Абеляр Версериан
   doc: docs/characters/Абеляр_Версериан.md
-  total_phrases: 255
+  total_phrases: 403
 - name: Арбитрес (NPC)
   doc: docs/characters/Арбитрес_NPC.md
   total_phrases: 1
@@ -17,7 +17,7 @@ characters:
   total_phrases: 248
 - name: Идира Тласс
   doc: docs/characters/Идира_Тласс.md
-  total_phrases: 247
+  total_phrases: 412
 - name: Интеррогатор (NPC)
   doc: docs/characters/Интеррогатор_NPC.md
   total_phrases: 0
@@ -26,49 +26,49 @@ characters:
   total_phrases: 329
 - name: Кассия Орселлио
   doc: docs/characters/Кассия_Орселлио.md
-  total_phrases: 440
+  total_phrases: 656
 - name: Кибелла
   doc: docs/characters/Кибелла.md
-  total_phrases: 400
+  total_phrases: 579
 - name: Контрабандист
   doc: docs/characters/Контрабандист.md
-  total_phrases: 175
+  total_phrases: 179
 - name: Кунрад Войгтвир
   doc: docs/characters/Кунрад_Войгтвир.md
-  total_phrases: 66
+  total_phrases: 67
 - name: Манипулус
   doc: docs/characters/Манипулус.md
-  total_phrases: 175
+  total_phrases: 204
 - name: Маражай Аэзирраэш
   doc: docs/characters/Маражай_Аэзирраэш.md
-  total_phrases: 325
+  total_phrases: 553
 - name: Паскаль Ханеуманн
   doc: docs/characters/Паскаль_Ханеуманн.md
-  total_phrases: 319
+  total_phrases: 408
 - name: Псайкер (NPC)
   doc: docs/characters/Псайкер_NPC.md
-  total_phrases: 91
+  total_phrases: 97
 - name: Рассказчик
   doc: docs/characters/Рассказчик.md
-  total_phrases: 16
+  total_phrases: 4374
 - name: Сенешаль (NPC)
   doc: docs/characters/Сенешаль_NPC.md
-  total_phrases: 63
+  total_phrases: 105
 - name: Сестра Арджента
   doc: docs/characters/Сестра_Арджента.md
-  total_phrases: 264
+  total_phrases: 382
 - name: Соломон Антар
   doc: docs/characters/Соломон_Антар.md
-  total_phrases: 486
+  total_phrases: 607
 - name: Теодора фон Валанциус
   doc: docs/characters/Теодора_фон_Валанциус.md
-  total_phrases: 99
+  total_phrases: 102
 - name: Тразин
   doc: docs/characters/Тразин.md
-  total_phrases: 63
+  total_phrases: 66
 - name: Ульфар Громолёт
   doc: docs/characters/Ульфар_Громолёт.md
-  total_phrases: 286
+  total_phrases: 358
 - name: Хайнрикс ван Калокс
   doc: docs/characters/Хайнрикс_ван_Калокс.md
   total_phrases: 410
@@ -77,4 +77,4 @@ characters:
   total_phrases: 0
 - name: Эоганн
   doc: docs/characters/Эоганн.md
-  total_phrases: 104
+  total_phrases: 207

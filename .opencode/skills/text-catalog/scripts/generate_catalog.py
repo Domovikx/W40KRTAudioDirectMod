@@ -230,6 +230,10 @@ def detect_speaker(text: str, name_map: dict[str, str], char_name: str = "") -> 
     if not narrator_blocks:
         return None
 
+    # Pure narration (no dialog outside {n}...{/n}) → narrator speaks
+    if not non_narrator_parts:
+        return "Рассказчик"
+
     # Step 1: narrator starts with a character name
     counts: dict[str, int] = {}
     for block in narrator_blocks:
@@ -332,6 +336,34 @@ def build_output(chars: list[dict]) -> tuple[dict[str, dict], int]:
         }
 
     unassigned = 0
+
+    event_keys = set(events.keys())
+    extra_added = 0
+
+    for guid, text in sorted(texts.items(), key=lambda x: x[0]):
+        if guid in event_keys:
+            continue
+        if len(text) < 50:
+            continue
+        if '"' not in text and '{n}' not in text:
+            continue
+
+        # Determine file owner and speaker from text
+        speaker = detect_speaker(text, name_map)
+        name = speaker if speaker else "NPC (по умолчанию)"
+        if name not in by_char:
+            continue
+
+        by_char[name]["phrases"].append({
+            "guid": guid,
+            "event": "",
+            "text": text,
+            "speaker": speaker if speaker and speaker != "__NPC__" else name,
+        })
+        by_char[name]["total_phrases"] += 1
+        extra_added += 1
+
+    print(f"  Extra dialog entries (ruRU-only): {extra_added}")
 
     for guid, event_name in sorted(events.items(), key=lambda x: x[1]):
         if guid not in texts:
