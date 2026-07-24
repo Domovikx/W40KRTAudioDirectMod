@@ -29,7 +29,7 @@ references:
 
 Каждая запись = результат `tools/qwen3_voice_design.py`.
 
-### 2. Фразы — `Localization/ruRU/people/{Персонаж}.yaml`
+### 2. Фразы — `catalog/people/{Персонаж}.yaml`
 
 ```yaml
 name: Кунрад Войгтвир
@@ -137,4 +137,4 @@ WH40k термины (Варп, Империум, Лекс Империалис)
 - `tools/qwen3_voice_design.py` — скрипт создания референса
 - `tools/qwen3_full_icl.py` — батчевая генерация
 - `config/voices.yaml` — конфиг референсов
-- `Localization/ruRU/people/*.yaml` — каталог фраз персонажей
+- `catalog/people/*.yaml` — каталог фраз персонажей

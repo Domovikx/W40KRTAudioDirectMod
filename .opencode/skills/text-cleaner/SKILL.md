@@ -7,7 +7,7 @@ description: Clean raw game dialog text into TTS-ready text_clean. Handles all W
 
 ## Назначение
 
-Преобразует сырой `text_original` из `Localization/ruRU/people/*.yaml` в чистый `text_clean`, готовый для подачи в TTS-движок.
+Преобразует сырой `text_original` из `catalog/people/*.yaml` в чистый `text_clean`, готовый для подачи в TTS-движок.
 
 ## Что делает
 

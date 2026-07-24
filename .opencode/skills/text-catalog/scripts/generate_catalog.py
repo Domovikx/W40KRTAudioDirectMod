@@ -31,7 +31,7 @@ from datetime import date
 GAME = "C:/Program Files (x86)/Steam/steamapps/common/Warhammer 40,000 Rogue Trader"
 MOD_DIR = Path(__file__).parent.parent.parent.parent.parent
 CHAR_YAML = MOD_DIR / "config" / "characters.yaml"
-PEOPLE_DIR = MOD_DIR / "Localization" / "ruRU" / "people"
+PEOPLE_DIR = MOD_DIR / "catalog" / "people"
 INDEX_PATH = PEOPLE_DIR / "index.yaml"
 
 

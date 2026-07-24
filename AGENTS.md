@@ -50,7 +50,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader
 
 **Маппинг ролей Companions:** Smugler→Джаэ, Navigator→Кассия, Techpriest→Паскаль, Interrogator→Хайнрикс, Ranger→Йрлиет, Psyker→Идира, Sororitas→Арджента, Seneschal→Абеляр.
 
-**Метаданные персонажей** — в каждом `Localization/ruRU/people/*.yaml` (name, gender, role, sound_keys).
+**Метаданные персонажей** — в каждом `catalog/people/*.yaml` (name, gender, role, sound_keys).
 
 ## Full ICL Pipeline (Qwen3-TTS Base + VoiceClone)
 
@@ -62,11 +62,11 @@ Base model → create_voice_clone_prompt(ref_audio, x_vector_only_mode=True) →
 Base model → generate_voice_clone(text, prompt) → output/full_icl/{voice}/*.wav
 ```
 
-Скрипт: `tools/qwen3_full_icl.py` — читает `config/voices.yaml` + `Localization/ruRU/people/*.yaml` (формат с `parts: [{speaker, text_clean}]`).
+Скрипт: `tools/qwen3_full_icl.py` — читает `config/voices.yaml` + `catalog/people/*.yaml` (формат с `parts: [{speaker, text_clean}]`).
 Склейка частей: `.opencode/skills/qwen3-full-icl/concat_parts.py`.
 Скилл: `.opencode/skills/qwen3-full-icl/SKILL.md`.
 
-Формат `Localization/ruRU/people/*.yaml`:
+Формат `catalog/people/*.yaml`:
 
 ```yaml
 name: Кунрад Войгтвир
@@ -89,7 +89,7 @@ phrases:
 - SpeechMod: `https://github.com/Osmodium/W40KRogueTraderSpeechMod`
 - Full ICL: `.opencode/skills/qwen3-full-icl/SKILL.md`, `tools/qwen3_full_icl.py`
 - Каталог фраз: `.opencode/skills/text-catalog/SKILL.md`, файлы в `Localization/ruRU/people/`
-- Голоса: `config/voices.yaml`, `Localization/ruRU/people/*.yaml`
+- Голоса: `config/voices.yaml`, `catalog/people/*.yaml`
 - Референсы голосов: `.opencode/skills/voice-ref-collect/SKILL.md`, `refs/samples/`
 - Конфиги: `config/default.yaml`
 

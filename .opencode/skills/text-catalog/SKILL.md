@@ -26,7 +26,7 @@ catalog/
 | `Sound.json` | `WH40KRT_Data/StreamingAssets/Localization/Sound.json` | GUID → имя_ивента (5089 записей) |
 | `ruRU.json` | `WH40KRT_Data/StreamingAssets/Localization/ruRU.json` | GUID → сырой текст |
 
-Мета для генерации берётся из уже существующих `Localization/ruRU/people/*.yaml`.
+Мета для генерации берётся из уже существующих `catalog/people/*.yaml`.
 
 ## CLI
 
@@ -36,7 +36,7 @@ catalog/
 python .opencode/skills/text-catalog/scripts/generate_catalog.py
 ```
 
-Перегенерирует `Localization/ruRU/people/*.yaml` и `Localization/ruRU/people/index.yaml`. Идемпотентно.
+Перегенерирует `catalog/people/*.yaml` и `catalog/people/index.yaml`. Идемпотентно.
 `--verify-only` — только проверить суммы, не писать файлы.
 
 ### Просмотр и статистика (catalog.py)
@@ -109,7 +109,7 @@ characters:
 
 ## Как добавить нового персонажа
 
-Добавить в `Localization/ruRU/people/` новый YAML с полями `name`, `sound_keys`, `doc:` и запустить `generate_catalog.py`:
+Добавить в `catalog/people/` новый YAML с полями `name`, `sound_keys`, `doc:` и запустить `generate_catalog.py`:
 
 ```yaml
 name: "НовыйПерс"

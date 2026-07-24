@@ -253,7 +253,6 @@ namespace W40KRTAudioDirectMod
                     LogDuck(origStr);
                 }
             }
-            }
             catch (Exception ex) { LogDuck("Error: " + ex.Message + "\n" + ex.StackTrace); duckInitDone = true; }
         }
 
@@ -548,7 +547,7 @@ namespace W40KRTAudioDirectMod
             {
                 settings.Language = lang;
                 settings.Save(modEntry);
-                localizationDir = modPath + "\\Localization\\" + settings.Language + "\\";
+localizationDir = modPath + "\\Localization\\" + settings.Language + "\\";
                 LoadMappings();
             }
             if (GUILayout.Button("Reload", GUILayout.Width(60f)))
@@ -574,7 +573,7 @@ namespace W40KRTAudioDirectMod
             {
                 if (!Directory.Exists(localizationDir)) return;
 
-                string[] files = Directory.GetFiles(localizationDir, "*.wav");
+                string[] files = Directory.GetFiles(localizationDir, "*.wav", SearchOption.AllDirectories);
                 if (files.Length == 0) return;
 
                 string gameLocalizationPath = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Warhammer 40,000 Rogue Trader\\WH40KRT_Data\\StreamingAssets\\Localization\\";
@@ -596,7 +595,7 @@ namespace W40KRTAudioDirectMod
 
                     string text = entry["Text"].ToString();
                     if (text.Length > 3)
-                        textMappings.Add(new KeyValuePair<string, string>(guid, text));
+                        textMappings.Add(new KeyValuePair<string, string>(file, text));
                 }
             }
             catch { }
@@ -622,10 +621,21 @@ namespace W40KRTAudioDirectMod
             }
         }
 
-        public static void PlayClip(string guid)
+        public static void PlayClip(string pathOrGuid)
         {
             if (!Enabled) return;
-            string path = localizationDir + guid + ".wav";
+            string path = pathOrGuid;
+            if (!File.Exists(path))
+            {
+                string full = localizationDir + pathOrGuid + ".wav";
+                if (File.Exists(full)) path = full;
+                else
+                {
+                    var found = Directory.GetFiles(localizationDir, pathOrGuid + ".wav", SearchOption.AllDirectories);
+                    if (found.Length == 0) return;
+                    path = found[0];
+                }
+            }
             if (!File.Exists(path)) return;
 
             mciSendString("close voice", null, 0, IntPtr.Zero);

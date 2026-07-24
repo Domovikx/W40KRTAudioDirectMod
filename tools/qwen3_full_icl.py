@@ -1,7 +1,7 @@
 """
 Batch dialog generation via Qwen3-TTS Base model + Full ICL (voice clone).
 
-Reads Localization/ruRU/people/*.yaml with multi-part phrases (parts: [{speaker, text_clean}]).
+Reads catalog/people/*.yaml with multi-part phrases (parts: [{speaker, text_clean}]).
 Resolves speaker → voice reference from config/voices.yaml characters lists.
 Generates per-part WAVs, then concatenates into final per-phrase WAV.
 
@@ -28,9 +28,8 @@ from qwen_tts import Qwen3TTSModel
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PARTS_DIR = os.path.join(ROOT, "output", "full_icl")
 GAME_DIR = os.path.join(ROOT, "Localization", "ruRU")
-CONFIG_VOICES = os.path.join(ROOT, "config", "voices.yaml")
 CONFIG_DEFAULT = os.path.join(ROOT, "config", "default.yaml")
-CATALOG_DIR = os.path.join(ROOT, "Localization", "ruRU", "people")
+CATALOG_DIR = os.path.join(ROOT, "catalog", "people")
 os.makedirs(GAME_DIR, exist_ok=True)
 os.makedirs(PARTS_DIR, exist_ok=True)
 
@@ -46,7 +45,7 @@ def load_voices_config() -> dict:
 
 
 def load_catalog_phrases() -> Dict[str, dict]:
-    """Load all YAMLs from Localization/ruRU/people/.
+    """Load all YAMLs from catalog/people/.
     Returns dict: character_name -> yaml_data (with phrases list)
     """
     catalog = {}
@@ -152,10 +151,17 @@ def concat_wavs(part_paths: List[str], output_path: str, gap_ms: int = 300):
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="Generate TTS WAVs")
+    parser.add_argument("--char", help="Character name filter (e.g. 'Теодора фон Валанциус')")
+    parser.add_argument("--voice", help="Voice name filter (e.g. 'teodora')")
+    args = parser.parse_args()
+
     cfg = load_defaults()
     voices_config = load_voices_config()
     catalog = load_catalog_phrases()
-    filter_voice = sys.argv[1] if len(sys.argv) > 1 else None
+    filter_voice = args.voice
+    filter_char = args.char
 
     model_id = cfg.get("qwen3_base_model", "Qwen/Qwen3-TTS-12Hz-1.7B-Base")
     device = cfg.get("qwen3_base_device", "cpu")
@@ -185,6 +191,8 @@ def main():
     skipped = 0
 
     for char_name, char_data in catalog.items():
+        if filter_char and char_name != filter_char:
+            continue
         for phrase in char_data.get("phrases", []):
             parts = phrase.get("parts")
             if not parts:
@@ -246,7 +254,10 @@ def main():
                     break
 
             if success and part_paths:
-                merged_path = os.path.join(GAME_DIR, f"{guid}.wav")
+                char_name_clean = char_name.replace(" ", "_").replace("(", "").replace(")", "")
+                char_dir = os.path.join(GAME_DIR, char_name_clean)
+                os.makedirs(char_dir, exist_ok=True)
+                merged_path = os.path.join(char_dir, f"{guid}.wav")
                 if os.path.exists(merged_path):
                     skipped += 1
                 else:

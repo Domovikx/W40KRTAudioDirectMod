@@ -25,7 +25,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
 from clean_text import split_into_parts
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))))
-CATALOG_DIR = os.path.join(ROOT, "Localization", "ruRU", "people")
+CATALOG_DIR = os.path.join(ROOT, "catalog", "people")
 VOICES_CONFIG_PATH = os.path.join(ROOT, "config", "voices.yaml")
 
 
