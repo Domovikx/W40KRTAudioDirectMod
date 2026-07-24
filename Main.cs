@@ -15,8 +15,8 @@ namespace W40KRTAudioDirectMod
     {
         public int Volume = 100;
         public string Language = "ruRU";
-        public bool DuckMusic = true;
-        public int DuckLevel = 0;
+        public int DuckLevel = 50;
+        public bool MuteEnglishVoice = true;
 
         public override void Save(UnityModManager.ModEntry modEntry)
         {
@@ -328,7 +328,7 @@ namespace W40KRTAudioDirectMod
 
         private static void DuckMusic()
         {
-            if (!settings.DuckMusic) return;
+            if (settings.DuckLevel == 0) return;
             if (savedVals != null) return;
             float mul = settings.DuckLevel / 100f;
             FindVolumeProps();
@@ -376,15 +376,32 @@ namespace W40KRTAudioDirectMod
                     }
                     LogDuck("  Saved RTPC: " + string.Join(", ", Array.ConvertAll(savedRTPCVals, v => v.ToString("F2"))));
                 }
-                foreach (string r in rtpcNames)
+                float[] curDucked = new float[rtpcNames.Length];
+                for (int i = 0; i < rtpcNames.Length; i++)
                 {
                     try
                     {
-                        duckSetRTPC.Invoke(null, new object[] { r, mul });
-                        LogDuck("  RTPC: " + r + " = " + mul);
+                        string name = rtpcNames[i];
+                        float baseVal = (savedRTPCVals != null && i < savedRTPCVals.Length) ? savedRTPCVals[i] : 100f;
+                        float target;
+                        if (settings.MuteEnglishVoice && (name == "VoiceLevel" || name == "DialogueLevel"))
+                        {
+                            if (savedVoiceRTPC == null) savedVoiceRTPC = new float[2];
+                            int vi = (name == "VoiceLevel") ? 0 : 1;
+                            if (savedVoiceRTPC[vi] == 0f) savedVoiceRTPC[vi] = baseVal;
+                            target = 0f;
+                            LogDuck("  Voice mute: " + name + " = 0");
+                        }
+                        else
+                        {
+                            target = baseVal * mul;
+                        }
+                        curDucked[i] = target;
+                        duckSetRTPC.Invoke(null, new object[] { name, target });
                     }
-                    catch (Exception ex) { LogDuck("  RTPC err " + r + ": " + ex.Message); }
+                    catch (Exception ex) { LogDuck("  RTPC err " + rtpcNames[i] + ": " + ex.Message); }
                 }
+                duckedRTPC = curDucked;
             }
             savedVals = vals.ToArray();
             restoreFrames = 0;
@@ -392,6 +409,11 @@ namespace W40KRTAudioDirectMod
         }
 
         private static string[] rtpcNames = { "MusicLevel", "DialogueLevel", "VoiceLevel", "SFXLevel", "AmbienceLevel", "AudioLevel" };
+        private static float[] savedVoiceRTPC;
+        private static float[] duckedRTPC;
+        private static int fadeFramesRemaining; // smooth restore countdown
+        private static float[] fadeStartVals; // RTPC values at fade start (ducked)
+        private static float[] fadeTargetVals; // RTPC values to reach (original)
 
         private static void RestoreMusic()
         {
@@ -415,18 +437,28 @@ namespace W40KRTAudioDirectMod
                 try { duckMuteNoneState.Invoke(null, null); LogDuck("  SetNoneState()"); }
                 catch (Exception ex) { LogDuck("  SetNoneState err: " + ex.Message); }
             }
-            if (duckSetRTPC != null)
+            // Smooth RTPC restore: save target values, start fade
+            if (duckSetRTPC != null && duckedRTPC != null)
             {
-                string[] rtpcNames = { "MusicLevel", "DialogueLevel", "VoiceLevel", "SFXLevel", "AmbienceLevel", "AudioLevel" };
+                fadeTargetVals = new float[rtpcNames.Length];
+                for (int i = 0; i < rtpcNames.Length; i++)
+                {
+                    string name = rtpcNames[i];
+                    if (savedVoiceRTPC != null && name == "VoiceLevel") fadeTargetVals[i] = savedVoiceRTPC[0];
+                    else if (savedVoiceRTPC != null && name == "DialogueLevel") fadeTargetVals[i] = savedVoiceRTPC[1];
+                    else fadeTargetVals[i] = (savedRTPCVals != null && i < savedRTPCVals.Length) ? savedRTPCVals[i] : 100f;
+                }
+                fadeStartVals = (float[])duckedRTPC.Clone();
+                fadeFramesRemaining = 20; // ~330ms at 60fps
+            }
+            else if (duckSetRTPC != null)
+            {
+                // No ducked values saved — instant restore
                 for (int i = 0; i < rtpcNames.Length; i++)
                 {
                     float restoreVal = (savedRTPCVals != null && i < savedRTPCVals.Length) ? savedRTPCVals[i] : 100f;
-                    try
-                    {
-                        duckSetRTPC.Invoke(null, new object[] { rtpcNames[i], restoreVal });
-                        LogDuck("  RTPC restore: " + rtpcNames[i] + " = " + restoreVal.ToString("F2"));
-                    }
-                    catch (Exception ex) { LogDuck("  RTPC restore err " + rtpcNames[i] + ": " + ex.Message); }
+                    try { duckSetRTPC.Invoke(null, new object[] { rtpcNames[i], restoreVal }); }
+                    catch { }
                 }
             }
             if (duckMuteField != null && savedVals.Length == 0)
@@ -436,8 +468,10 @@ namespace W40KRTAudioDirectMod
             }
             savedVals = null;
             savedRTPCVals = null;
-            restoreFrames = 60;
-            LogDuck("RestoreMusic (restoreFrames=60)");
+            savedVoiceRTPC = null;
+            if (fadeFramesRemaining == 0)
+                restoreFrames = 60; // no fade needed — start persistent restore
+            LogDuck("RestoreMusic (fade=" + fadeFramesRemaining + " frames, then restoreFrames=60)");
         }
 
         private static void OnUpdate(UnityModManager.ModEntry modEntry, float delta)
@@ -453,7 +487,23 @@ namespace W40KRTAudioDirectMod
                 }
             }
 
-            if (restoreFrames > 0)
+            if (fadeFramesRemaining > 0 && duckSetRTPC != null && fadeStartVals != null && fadeTargetVals != null)
+            {
+                fadeFramesRemaining--;
+                float t = 1f - (float)fadeFramesRemaining / 20f; // 0→1 over 20 frames
+                for (int i = 0; i < rtpcNames.Length && i < fadeStartVals.Length && i < fadeTargetVals.Length; i++)
+                {
+                    float val = fadeStartVals[i] + (fadeTargetVals[i] - fadeStartVals[i]) * t;
+                    try { duckSetRTPC.Invoke(null, new object[] { rtpcNames[i], val }); }
+                    catch { }
+                }
+                if (fadeFramesRemaining == 0)
+                {
+                    LogDuck("Smooth fade done, starting persistent restore");
+                    restoreFrames = 60;
+                }
+            }
+            else if (restoreFrames > 0)
             {
                 restoreFrames--;
                 if (restoreFrames == 59) LogDuck("PersistentRestore start");
@@ -464,10 +514,9 @@ namespace W40KRTAudioDirectMod
                 }
                 if (duckSetRTPC != null)
                 {
-                    string[] rtpcNames = { "MusicLevel", "DialogueLevel", "VoiceLevel", "SFXLevel", "AmbienceLevel", "AudioLevel" };
                     for (int i = 0; i < rtpcNames.Length; i++)
                     {
-                        float val = (savedRTPCVals != null && i < savedRTPCVals.Length) ? savedRTPCVals[i] : 100f;
+                        float val = (fadeTargetVals != null && i < fadeTargetVals.Length) ? fadeTargetVals[i] : 100f;
                         try { duckSetRTPC.Invoke(null, new object[] { rtpcNames[i], val }); }
                         catch { }
                     }
@@ -509,54 +558,43 @@ namespace W40KRTAudioDirectMod
             GUILayout.BeginVertical();
             GUILayout.Label("W40KRT Audio Direct Mod", GUILayout.ExpandWidth(true));
 
-            int v = (int)GUILayout.HorizontalSlider((float)settings.Volume, 0f, 100f, GUILayout.Width(200f));
-            if (v != settings.Volume)
-            {
-                settings.Volume = v;
-                settings.Save(modEntry);
-            }
-            GUILayout.Label("Громкость: " + settings.Volume + "%");
-
             GUILayout.Space(5f);
-            bool duck = GUILayout.Toggle(settings.DuckMusic, new GUIContent("Приглушать музыку", "Автоматически убавлять громкость музыки в игре пока звучит наша озвучка. Громкость восстанавливается после окончания реплики."), GUILayout.ExpandWidth(true));
-            if (duck != settings.DuckMusic)
+            GUILayout.Label("Громкость озвучки:");
+            int vol = (int)GUILayout.HorizontalSlider((float)settings.Volume, 0f, 100f, GUILayout.Width(200f));
+            if (vol != settings.Volume)
             {
-                settings.DuckMusic = duck;
+                settings.Volume = vol;
                 settings.Save(modEntry);
             }
-            if (settings.DuckMusic)
-            {
-                GUILayout.BeginHorizontal();
-                GUILayout.Space(30f);
-                GUILayout.Label("Громкость музыки:", GUILayout.Width(130f));
-                int dl = (int)GUILayout.HorizontalSlider((float)settings.DuckLevel, 0f, 100f, GUILayout.Width(150f));
-                if (dl != settings.DuckLevel)
-                {
-                    settings.DuckLevel = dl;
-                    settings.Save(modEntry);
-                }
-                GUILayout.Label(dl + "%", GUILayout.Width(30f));
-                GUILayout.EndHorizontal();
-            }
+            GUILayout.Label("  " + settings.Volume + "%");
 
             GUILayout.Space(10f);
+            GUILayout.Label("Приглушение игры на время озвучки:");
             GUILayout.BeginHorizontal();
-            GUILayout.Label("Язык:", GUILayout.Width(50f));
-            string lang = GUILayout.TextField(settings.Language, GUILayout.Width(80f));
-            if (lang != settings.Language && lang.Length > 0)
-            {
-                settings.Language = lang;
-                settings.Save(modEntry);
-localizationDir = modPath + "\\Localization\\" + settings.Language + "\\";
-                LoadMappings();
-            }
-            if (GUILayout.Button("Reload", GUILayout.Width(60f)))
-            {
-                LoadMappings();
-            }
+            GUILayout.Label("0 (выкл)", GUILayout.Width(60f));
+            int dl = (int)GUILayout.HorizontalSlider((float)settings.DuckLevel, 0f, 100f, GUILayout.Width(200f));
+            GUILayout.Label("100 (полн.)", GUILayout.Width(80f));
+            GUILayout.Label("= " + settings.DuckLevel + "%", GUILayout.Width(60f));
             GUILayout.EndHorizontal();
-            GUILayout.Label("Доступные: ruRU, enGB, deDE, frFR, esES, jaJP, zhCN, trTR", GUILayout.ExpandWidth(true));
-            GUILayout.Label("WAV: " + textMappings.Count, GUILayout.ExpandWidth(true));
+            if (dl != settings.DuckLevel)
+            {
+                settings.DuckLevel = dl;
+                settings.Save(modEntry);
+            }
+
+            bool mute = GUILayout.Toggle(settings.MuteEnglishVoice, new GUIContent(
+                "Отключать английскую озвучку",
+                "Когда включено: оригинальные голоса персонажей не слышны одновременно с нашей озвучкой.\nКогда выключено: английские голоса играют фоном (приглушаются только музыка и SFX)."
+            ));
+            if (mute != settings.MuteEnglishVoice)
+            {
+                settings.MuteEnglishVoice = mute;
+                settings.Save(modEntry);
+            }
+            GUILayout.Label("  Если включено — английские голоса замолкают на время нашей реплики.\n  Если выключено — слышны и наши, и английские голоса одновременно.", GUILayout.Width(350f));
+
+            GUILayout.Space(10f);
+            GUILayout.Label("Загружено WAV: " + textMappings.Count);
 
             GUILayout.EndVertical();
         }
