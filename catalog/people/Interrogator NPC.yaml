@@ -1,9 +1,0 @@
-name: Интеррогатор (NPC)
-gender: M
-role: Интеррогатор
-age: ''
-personality: холодный, официальный
-sound_keys:
-- Interrogator
-total_phrases: 0
-phrases: []
