@@ -28,6 +28,7 @@ from qwen_tts import Qwen3TTSModel
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PARTS_DIR = os.path.join(ROOT, "output", "full_icl")
 GAME_DIR = os.path.join(ROOT, "Localization", "ruRU")
+CONFIG_VOICES = os.path.join(ROOT, "config", "voices.yaml")
 CONFIG_DEFAULT = os.path.join(ROOT, "config", "default.yaml")
 CATALOG_DIR = os.path.join(ROOT, "catalog", "people")
 os.makedirs(GAME_DIR, exist_ok=True)
