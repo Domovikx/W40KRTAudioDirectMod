@@ -64,7 +64,7 @@ python .opencode/skills/text-catalog/scripts/catalog.py --json export.json
 python .opencode/skills/text-catalog/scripts/generate_catalog.py --verify-only
 ```
 
-Ожидается: 5089 записей, 0 неопознанных.
+Ожидается: 5089 Sound.json + 34319 extra dialog + N description = итого ~39408+.
 
 ## Формат `people/*.yaml`
 
@@ -106,6 +106,16 @@ characters:
 2. Сортируем: **по убыванию длины** ключа, затем **по возрастанию позиции** в имени
 3. Берём победителя; если ни один не подошёл → `NPC (по умолчанию)`
 4. Fallback идёт только на неподходящие ивенты (пустые `sound_keys` у персонажа не считаются)
+
+## Категории фраз
+
+В каталоге три источника фраз:
+
+| Категория | Источник | Фильтр | Пример |
+|-----------|----------|--------|--------|
+| **Sound.json events** | `Sound.json` | Есть Wwise-ивент → маппинг через `sound_keys` | `PRL_TheodoraFirstConversation_01` |
+| **Extra dialog** (ruRU-only) | `ruRU.json` | Нет Sound.json, есть `"` или `{n}`, длина ≥50 | Реплики NPC без озвучки |
+| **Descriptions** (окружение) | `ruRU.json` | Нет Sound.json, нет `"`, `{`, `<`, `[`, длина ≥50 | "Массивный стол для переговоров..." |
 
 ## Как добавить нового персонажа
 

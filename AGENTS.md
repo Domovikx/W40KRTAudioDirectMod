@@ -4,7 +4,7 @@
 
 ## Статус генерации
 
-- **Сгенерировано WAV:** ~150 (36 Кунрад + 76 Теодора + 40 Эдельтрад) — Qwen3-TTS (24000 Гц)
+- **Сгенерировано WAV:** ~170 (36 Кунрад + 76 Теодора + 40 Эдельтрад + 11 NPC + 2 описания + ...)
 
 ## Путь к игре
 
@@ -36,7 +36,14 @@ C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader
 
 1. **`DialogVM.HandleOnCueShow`** (через `[HarmonyPatch]`) — ловит GUID реплик в диалогах
 2. **`TMP_Text.set_text`** (патч ставится на 1-м кадре в OnUpdate) — ловит ЛЮБОЙ текст на экране через TextMeshPro
-3. **GUID → WAV сопоставление** — если GUID текста есть в словаре, играет соответствующую WAV
+3. **`BarkPlayer.Bark / BarkExploration`** (через `[HarmonyPatch]`, runtime) — ловит барки (всплывающие подписи при клике на объекты)
+4. **GUID → WAV сопоставление** — если GUID текста есть в словаре, играет соответствующую WAV
+
+#### Анти-флуд и авто-барки
+
+- `OnTextSet` проверяет `Environment.StackTrace`: если вызов из `MapObjectOvertipsView` **без** `InteractionBarkPart.OnInteract` — это авто-барк от камеры (`UnitsProximityController`), звук НЕ играется
+- `HandleBark` (из `BarkPlayer.Bark`) — всегда играет (только ручные клики)
+- Per-GUID cooldown 10 секунд (`lastPlayedByGuid`)
 
 ### Определение спикера (каталог фраз)
 
@@ -49,6 +56,11 @@ C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader
 **Результат:** 4523/5089 (88.9%) фраз с точным speaker, 566 (11.1%) null (default = file owner). Null → narration fallback + default.
 
 **Маппинг ролей Companions:** Smugler→Джаэ, Navigator→Кассия, Techpriest→Паскаль, Interrogator→Хайнрикс, Ranger→Йрлиет, Psyker→Идира, Sororitas→Арджента, Seneschal→Абеляр.
+
+**Три категории фраз:**
+1. **Sound.json events** (5089) — Wwise-ивент → маппинг через sound_keys
+2. **Extra dialog** (ruRU-only, ~34319) — есть `"` или `{n}`, длина ≥50
+3. **Описания окружения** (ruRU-only, ~N) — нет `"`, `{`, `<`, `[`, длина ≥50 → `catalog/people/Описания_окружения.yaml`
 
 **Метаданные персонажей** — в каждом `catalog/people/*.yaml` (name, gender, role, sound_keys).
 
@@ -65,6 +77,17 @@ Base model → generate_voice_clone(text, prompt) → output/full_icl/{voice}/*.
 Скрипт: `tools/qwen3_full_icl.py` — читает `config/voices.yaml` + `catalog/people/*.yaml` (формат с `parts: [{speaker, text_clean}]`).
 Склейка частей: `.opencode/skills/qwen3-full-icl/concat_parts.py`.
 Скилл: `.opencode/skills/qwen3-full-icl/SKILL.md`.
+
+Фильтры: `--voice`, `--char`, `--guid guid1 guid2 ...`, `--force`.
+
+Примеры:
+```bash
+# Все NPC
+python tools/qwen3_full_icl.py --voice default_male
+
+# Конкретные GUID
+python tools/qwen3_full_icl.py --guid 000e97aa-... 001db7fa-... --force
+```
 
 Формат `catalog/people/*.yaml`:
 

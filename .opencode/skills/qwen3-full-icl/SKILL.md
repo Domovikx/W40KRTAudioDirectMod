@@ -79,12 +79,24 @@ output/full_icl/{voice_name}/
 ### `tools/qwen3_full_icl.py` — батчевая генерация
 
 ```bash
-python tools/qwen3_full_icl.py [voice_name]
+python tools/qwen3_full_icl.py [--voice voice_name] [--char char_name] [--guid guid...] [--force]
 ```
 
-- Без аргумента — все голоса из `config/voices.yaml`
-- С аргументом — только указанный voice_name
-- Пропускает уже сгенерированные WAV (idempotent)
+- Без аргументов — все голоса из `config/voices.yaml`
+- `--voice` — только указанный voice_name
+- `--char` — только указанный персонаж
+- `--guid guid1 guid2 ...` — только конкретные GUID (из `catalog/people/*.yaml`)
+- `--force` — перегенерировать даже если WAV уже существует
+- Пропускает уже сгенерированные WAV (idempotent, если без `--force`)
+
+Примеры:
+```bash
+# Все NPC
+python tools/qwen3_full_icl.py --voice default_male
+
+# Конкретные GUID (с перезаписью)
+python tools/qwen3_full_icl.py --guid 000e97aa-... 001db7fa-... --force
+```
 
 ### `.opencode/skills/qwen3-full-icl/concat_parts.py` — склейка частей
 

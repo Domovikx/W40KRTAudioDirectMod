@@ -49,6 +49,17 @@ namespace W40KRTAudioDirectMod
             var harmony = new Harmony(modEntry.Info.Id);
             harmony.PatchAll(Assembly.GetExecutingAssembly());
 
+            // Patch BarkPlayer.Bark and BarkExploration at runtime
+            Type barkPlayer = AccessTools.TypeByName("Kingmaker.Code.UI.MVVM.VM.Bark.BarkPlayer");
+            if (barkPlayer != null)
+            {
+                foreach (var m in barkPlayer.GetMethods(AccessTools.all))
+                {
+                    if ((m.Name == "Bark" || m.Name == "BarkExploration") && m.ReturnType == typeof(void))
+                        harmony.Patch(m, postfix: new HarmonyMethod(typeof(Main), "OnBarkPostfix"));
+                }
+            }
+
             modEntry.OnToggle = (entry, value) => { Enabled = value; if (!value) { isPlaying = false; RestoreMusic(); } return true; };
             modEntry.OnUpdate = OnUpdate;
             modEntry.OnGUI = OnGui;
@@ -599,8 +610,8 @@ namespace W40KRTAudioDirectMod
             GUILayout.EndVertical();
         }
 
-        private static string lastTextValue = "";
-        private static float lastTextTime;
+        private static Dictionary<string, float> lastPlayedByGuid = new Dictionary<string, float>();
+        private const float GUID_COOLDOWN = 10f;
 
         private static void LoadMappings()
         {
@@ -639,23 +650,51 @@ namespace W40KRTAudioDirectMod
             catch { }
         }
 
+        public static void OnBarkPostfix(object ____text)
+        {
+            string text = ____text != null ? ____text.ToString() : null;
+            if (!Enabled || string.IsNullOrEmpty(text)) return;
+            HandleBark(text);
+        }
+
+        public static void HandleBark(string text)
+        {
+            for (int i = 0; i < textMappings.Count; i++)
+            {
+                if (text.IndexOf(textMappings[i].Value) < 0) continue;
+
+                string guid = Path.GetFileNameWithoutExtension(textMappings[i].Key);
+                lastPlayedByGuid[guid] = Time.time;
+                PlayClip(textMappings[i].Key);
+                return;
+            }
+        }
+
         public static void OnTextSet(string value)
         {
             if (!Enabled) return;
             if (value == null || value.Length <= 3) return;
 
             float now = Time.time;
-            if (value == lastTextValue && now - lastTextTime < 2f) return;
-            lastTextValue = value;
-            lastTextTime = now;
 
             for (int i = 0; i < textMappings.Count; i++)
             {
-                if (value.IndexOf(textMappings[i].Value) >= 0)
-                {
-                    PlayClip(textMappings[i].Key);
-                    return;
-                }
+                if (value.IndexOf(textMappings[i].Value) < 0) continue;
+
+                string guid = Path.GetFileNameWithoutExtension(textMappings[i].Key);
+                var stack = Environment.StackTrace;
+
+                // Барки от камеры (без InteractionBarkPart.OnInteract) — пропускаем
+                if (stack.Contains("MapObjectOvertipsView") && !stack.Contains("InteractionBarkPart.OnInteract"))
+                    break;
+
+                float lastT;
+                if (lastPlayedByGuid.TryGetValue(guid, out lastT) && now - lastT < GUID_COOLDOWN)
+                    continue;
+
+                lastPlayedByGuid[guid] = now;
+                PlayClip(textMappings[i].Key);
+                return;
             }
         }
 
@@ -696,7 +735,6 @@ namespace W40KRTAudioDirectMod
             DuckMusic();
         }
     }
-
     [HarmonyPatch("Kingmaker.Code.UI.MVVM.VM.Dialog.Dialog.DialogVM", "HandleOnCueShow")]
     public static class DialogCuePatch
     {

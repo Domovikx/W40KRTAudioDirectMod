@@ -156,6 +156,8 @@ def main():
     parser = argparse.ArgumentParser(description="Generate TTS WAVs")
     parser.add_argument("--char", help="Character name filter (e.g. 'Теодора фон Валанциус')")
     parser.add_argument("--voice", help="Voice name filter (e.g. 'teodora')")
+    parser.add_argument("--guid", nargs="*", help="One or more specific GUIDs to generate")
+    parser.add_argument("--force", action="store_true", help="Regenerate even if output exists")
     args = parser.parse_args()
 
     cfg = load_defaults()
@@ -163,6 +165,8 @@ def main():
     catalog = load_catalog_phrases()
     filter_voice = args.voice
     filter_char = args.char
+    filter_guids = set(args.guid) if args.guid else None
+    force = args.force
 
     model_id = cfg.get("qwen3_base_model", "Qwen/Qwen3-TTS-12Hz-1.7B-Base")
     device = cfg.get("qwen3_base_device", "cpu")
@@ -200,6 +204,8 @@ def main():
                 continue
 
             guid = phrase.get("guid", "")
+            if filter_guids and guid not in filter_guids:
+                continue
             part_paths = []
             success = True
             first_voice = None
@@ -259,7 +265,7 @@ def main():
                 char_dir = os.path.join(GAME_DIR, char_name_clean)
                 os.makedirs(char_dir, exist_ok=True)
                 merged_path = os.path.join(char_dir, f"{guid}.wav")
-                if os.path.exists(merged_path):
+                if os.path.exists(merged_path) and not force:
                     skipped += 1
                 else:
                     concat_wavs(part_paths, merged_path)
