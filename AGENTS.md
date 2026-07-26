@@ -4,7 +4,7 @@
 
 ## Статус генерации
 
-- **Сгенерировано WAV:** ~170 (36 Кунрад + 76 Теодора + 40 Эдельтрад + 11 NPC + 2 описания + ...)
+- **Сгенерировано WAV:** ~170 (36 Кунрад + 76 Теодора + 40 Edelthrad + 11 NPC + 2 описания + ...)
 
 ## Путь к игре
 
@@ -50,7 +50,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader
 **Двухстадийный метод в `generate_catalog.py::extract_speaker_from_event()`:**
 
 1. **Primary (88.9%):** Парсинг Wwise event name из `Sound.json` — экстракция character-сегмента по паттерну префикса (BNTRS → segment[2], Companions → segment[1] + role→name map, PRL/CH1-3 → standalone token в сегментах, RMNC → search/fallback substring, и т.д.)
-   - **Важно:** scene-start matching (PRL/CH1-3) НЕ используется — имя в названии сцены может быть subject'ом, а не speaker'ом (например, `PRL_TheodoraFirstConversation_*` — сцена РАЗГОВОРА с Теодорой, где спикеры: Абеляр, Эдельтрад и др.)
+   - **Важно:** scene-start matching (PRL/CH1-3) НЕ используется — имя в названии сцены может быть subject'ом, а не speaker'ом (например, `PRL_TheodoraFirstConversation_*` — сцена РАЗГОВОРА с Теодорой, где спикеры: Абеляр, Edelthrad и др.)
 2. **Fallback (11.1%):** Парсинг `{n}...{/n}` narration blocks — поиск имени персонажа в начале блока, определение спикера по обращению к владельцу YAML + keyword fallback (синт-кож→Абеляр)
 
 **Результат:** 4523/5089 (88.9%) фраз с точным speaker, 566 (11.1%) null (default = file owner). Null → narration fallback + default.
@@ -60,7 +60,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader
 **Три категории фраз:**
 1. **Sound.json events** (5089) — Wwise-ивент → маппинг через sound_keys
 2. **Extra dialog** (ruRU-only, ~34319) — есть `"` или `{n}`, длина ≥50
-3. **Описания окружения** (ruRU-only, ~N) — нет `"`, `{`, `<`, `[`, длина ≥50 → `catalog/people/Описания_окружения.yaml`
+3. **Environment Descriptions** (ruRU-only, ~N) — нет `"`, `{`, `<`, `[`, длина ≥50 → `catalog/people/Environment_Descriptions.yaml`
 
 **Метаданные персонажей** — в каждом `catalog/people/*.yaml` (name, gender, role, sound_keys).
 
@@ -92,7 +92,7 @@ python tools/qwen3_full_icl.py --guid 000e97aa-... 001db7fa-... --force
 Формат `catalog/people/*.yaml`:
 
 ```yaml
-name: Кунрад Войгтвир
+name: Kunrad Voigtvir
 phrases:
   - guid: ...
     parts:

@@ -32,15 +32,15 @@ references:
 ### 2. Фразы — `catalog/people/{Персонаж}.yaml`
 
 ```yaml
-name: Кунрад Войгтвир
+name: Kunrad Voigtvir
 phrases:
   - guid: ca2ef6c0-...
     parts:
-      - speaker: Кунрад_Войгтвир       # кто говорит — маппится через voices.yaml.characters
+      - speaker: Kunrad_Voigtvir       # кто говорит — маппится через voices.yaml.characters
         text_clean: Прекрасное место для размышлений.
       - speaker: narrator               # специальное имя — маппится на wh40k_narrator
         text_clean: Взгляд приблизившегося...
-      - speaker: Кунрад_Войгтвир
+      - speaker: Kunrad_Voigtvir
         text_clean: Отсюда открывается лучший вид...
 ```
 

@@ -7,7 +7,7 @@
 - **Формат:** WAV (PCM s16le), 48000 Hz, **моно**
 - **Громкость:** нормализована до RMS = -23dB (EBU R128)
 - **Длина:** ~15 секунд
-- **Имя файла:** `{Имя Фамилия}.wav` (с пробелом)
+- **Имя файла:** `{Name_Surname}.wav` (транслит, нижнее подчёркивание)
 
 ## Нормализация
 
@@ -34,29 +34,29 @@ ffmpeg -y -i file.wav -ac 1 -ar 48000 file_mono.wav
 
 ## Текущие файлы (22 референса + 2 демо)
 
-| Файл                          | Длина | Каналы | RMS   |
-| ----------------------------- | ----- | ------ | ----- |
-| Аглая Шиловская.wav           | ~15s  | моно   | -23dB |
-| Александр Клюквин.wav         | ~15s  | моно   | -23dB |
-| Алексей Мясников.wav          | ~15s  | моно   | -23dB |
-| Анастасия Лапина.wav          | ~15s  | моно   | -23dB |
-| Андрей Кравец.wav             | ~15s  | моно   | -23dB |
-| Вадим Медведев.wav            | ~15s  | моно   | -23dB |
-| Владимир Антоник.wav          | ~15s  | моно   | -23dB |
-| Всеволод Кузнецов.wav         | ~15s  | моно   | -23dB |
-| Денис Некрасов.wav            | ~15s  | моно   | -23dB |
-| Елена Соловьёва.wav           | ~15s  | моно   | -23dB |
-| Иван Литвинов.wav             | ~15s  | моно   | -23dB |
-| Ирина Киреева.wav             | ~15s  | моно   | -23dB |
-| Лина Иванова.wav              | ~15s  | моно   | -23dB |
-| Михаил Пшеничный.wav          | ~15s  | моно   | -23dB |
-| Михаил Хрусталёв.wav          | ~15s  | моно   | -23dB |
-| Наталья Казначеева.wav        | ~15s  | моно   | -23dB |
-| Никита Прозоровский.wav       | ~15s  | моно   | -23dB |
-| Олег Куценко.wav              | ~15s  | моно   | -23dB |
-| Ольга Голованова.wav          | ~15s  | моно   | -23dB |
-| Сергей Чихачёв.wav            | ~15s  | моно   | -23dB |
-| Сергей Чихачёв 2.wav          | ~15s  | моно   | -23dB |
-| Сергей Чонишвили.wav          | ~15s  | моно   | -23dB |
-| demo/Сергей Чихачёв_demo.wav  | demo  | моно   | -23dB |
-| demo/Сергей Чихачёв 2_demo.wav| demo  | моно   | -23dB |
+| Файл                               | Длина | Каналы | RMS   |
+| ---------------------------------- | ----- | ------ | ----- |
+| Aglaya_Shilovskaya.wav             | ~15s  | моно   | -23dB |
+| Aleksandr_Klyukvin.wav             | ~15s  | моно   | -23dB |
+| Aleksey_Myasnikov.wav              | ~15s  | моно   | -23dB |
+| Anastasiya_Lapina.wav              | ~15s  | моно   | -23dB |
+| Andrey_Kravets.wav                 | ~15s  | моно   | -23dB |
+| Vadim_Medvedev.wav                 | ~15s  | моно   | -23dB |
+| Vladimir_Antonik.wav               | ~15s  | моно   | -23dB |
+| Vsevolod_Kuznetsov.wav             | ~15s  | моно   | -23dB |
+| Denis_Nekrasov.wav                 | ~15s  | моно   | -23dB |
+| Elena_Solovyova.wav                | ~15s  | моно   | -23dB |
+| Ivan_Litvinov.wav                  | ~15s  | моно   | -23dB |
+| Irina_Kireeva.wav                  | ~15s  | моно   | -23dB |
+| Lina_Ivanova.wav                   | ~15s  | моно   | -23dB |
+| Mikhail_Pshenichny.wav             | ~15s  | моно   | -23dB |
+| Mikhail_Khrustalyov.wav            | ~15s  | моно   | -23dB |
+| Natalya_Kaznacheeva.wav            | ~15s  | моно   | -23dB |
+| Nikita_Prozorovsky.wav             | ~15s  | моно   | -23dB |
+| Oleg_Kutsenko.wav                  | ~15s  | моно   | -23dB |
+| Olga_Golovanova.wav                | ~15s  | моно   | -23dB |
+| Sergey_Chikhachyov.wav             | ~15s  | моно   | -23dB |
+| Sergey_Chikhachyov_2.wav           | ~15s  | моно   | -23dB |
+| Sergey_Chonishvili.wav             | ~15s  | моно   | -23dB |
+| demo/sergey_chikhachyov_demo.wav   | demo  | моно   | -23dB |
+| demo/sergey_chikhachyov_2_demo.wav | demo  | моно   | -23dB |

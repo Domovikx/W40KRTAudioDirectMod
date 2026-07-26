@@ -3,103 +3,103 @@ total_characters: 25
 total_phrases: 5089
 unassigned: 0
 characters:
-- name: NPC (по умолчанию)
+- name: Generic Male NPC
   gender: M
   role: generic
   total_phrases: 227
-- name: Абеляр Версериан
+- name: Abelard Werserian
   gender: M
   role: Сенешаль
   total_phrases: 255
-- name: Арбитрес (NPC)
+- name: Arbites (NPC)
   gender: M
   role: Арбитрес
   total_phrases: 1
-- name: Джаэ Хейдари
+- name: Jae Heydari
   gender: F
   role: Агент Касабаллики
   total_phrases: 248
-- name: Идира Тласс
+- name: Idira Tlass
   gender: F
   role: Псайкер
   total_phrases: 247
-- name: Интеррогатор (NPC)
+- name: Interrogator (NPC)
   gender: M
   role: Интеррогатор
   total_phrases: 0
-- name: Йрлиет Ланаэвисс
+- name: Yrliet Lanaeviss
   gender: F
   role: Аэльдари-рейнджер
   total_phrases: 329
-- name: Кассия Орселлио
+- name: Cassia Orsellio
   gender: F
   role: Навигатор
   total_phrases: 440
-- name: Кибелла
+- name: Kibellah
   gender: F
   role: Ассасин Культа Смерти
   total_phrases: 400
-- name: Контрабандист
+- name: Smuggler
   gender: M
   role: Footfall-контрабандист
   total_phrases: 175
-- name: Кунрад Войгтвир
+- name: Kunrad Voigtvir
   gender: M
   role: Мастер шепотов
   total_phrases: 66
-- name: Манипулус
+- name: Manipulus
   gender: M
   role: Магос-манипулус
   total_phrases: 175
-- name: Маражай Аэзирраэш
+- name: Marazhai Aezyrraesh
   gender: M
   role: Друкари-архонт
   total_phrases: 325
-- name: Паскаль Ханеуманн
+- name: Pasqal Haneumann
   gender: M
   role: Магос Адептус Механикус
   total_phrases: 319
-- name: Псайкер (NPC)
+- name: Psyker (NPC)
   gender: F
   role: Псайкер
   total_phrases: 91
-- name: Рассказчик
+- name: Narrator
   gender: M
   role: Narrator
   total_phrases: 16
-- name: Сенешаль (NPC)
+- name: Seneschal (NPC)
   gender: M
   role: Сенешаль
   total_phrases: 63
-- name: Сестра Арджента
+- name: Sister Argenta
   gender: F
   role: Сестра Битвы
   total_phrases: 264
-- name: Соломон Антар
+- name: Solomon Antar
   gender: M
   role: Арбитр
   total_phrases: 486
-- name: Теодора фон Валанциус
+- name: Theodora von Valancius
   gender: F
   role: Вольный Торговец
   total_phrases: 99
-- name: Тразин
+- name: Trazyn
   gender: M
   role: Некрон
   total_phrases: 63
-- name: Ульфар Громолёт
+- name: Ulfar
   gender: M
   role: Космический Волк
   total_phrases: 286
-- name: Хайнрикс ван Калокс
+- name: Heinrix van Calox
   gender: M
   role: Интеррогатор Инквизиции
   total_phrases: 410
-- name: Эдельтрад
+- name: Edelthrad
   gender: M
   role: Наследник-псайкер
   total_phrases: 0
-- name: Эоганн
+- name: Eogann
   gender: M
   role: Навигатор
   total_phrases: 104

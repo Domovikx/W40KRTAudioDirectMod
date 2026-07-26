@@ -10,9 +10,9 @@ description: Generate and query the per-character dialog phrase catalog from gam
 ```
 catalog/
   people/              # один YAML на персонажа (мета + фразы)
-    Кунрад_Войгтвир.yaml
-    Теодора_фон_Валанциус.yaml
-    Абеляр_Версериан.yaml
+    Kunrad_Voigtvir.yaml
+    Theodora_von_Valancius.yaml
+    Abelard_Werserian.yaml
     ...
   index.yaml           # сводка: имена, роли, количество фраз
 ```
@@ -69,7 +69,7 @@ python .opencode/skills/text-catalog/scripts/generate_catalog.py --verify-only
 ## Формат `people/*.yaml`
 
 ```yaml
-name: Кунрад Войгтвир
+name: Kunrad Voigtvir
 gender: M
 role: Мастер шепотов
 sound_keys:
@@ -92,11 +92,11 @@ total_characters: 25
 total_phrases: 5089
 unassigned: 0
 characters:
-  - name: Кунрад Войгтвир
+  - name: Kunrad Voigtvir
     gender: M
     role: Мастер шепотов
     total_phrases: 67
-  - name: Теодора фон Валанциус
+  - name: Theodora von Valancius
     ...
 ```
 
@@ -104,7 +104,7 @@ characters:
 
 1. Для каждого ивента в Sound.json: ищем все `sound_keys`, входящие в имя ивента
 2. Сортируем: **по убыванию длины** ключа, затем **по возрастанию позиции** в имени
-3. Берём победителя; если ни один не подошёл → `NPC (по умолчанию)`
+3. Берём победителя; если ни один не подошёл → `Generic Male NPC`
 4. Fallback идёт только на неподходящие ивенты (пустые `sound_keys` у персонажа не считаются)
 
 ## Категории фраз

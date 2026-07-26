@@ -1,53 +1,53 @@
 characters:
-- name: NPC (по умолчанию)
+- name: Generic Male NPC
   voice_actor: Михаил Георгиу
-- name: Абеляр Версериан
+- name: Abelard Werserian
   voice_actor: Михаил Георгиу
-- name: Арбитрес (NPC)
+- name: Arbites (NPC)
   voice_actor: Дмитрий Филимонов
-- name: Джаэ Хейдари
+- name: Jae Heydari
   voice_actor: Наталья Тетенова
-- name: Идира Тласс
+- name: Idira Tlass
   voice_actor: Елена Ивасишина
-- name: Интеррогатор (NPC)
+- name: Interrogator (NPC)
   voice_actor: Андрей Ярославцев
-- name: Йрлиет Ланаэвисс
+- name: Yrliet Lanaeviss
   voice_actor: Мария Виноградова
-- name: Кассия Орселлио
+- name: Cassia Orsellio
   voice_actor: Татьяна Канаева
-- name: Кибелла
+- name: Kibellah
   voice_actor: Анна Калашникова
-- name: Контрабандист
+- name: Smuggler
   voice_actor: Алексей Колган
-- name: Кунрад Войгтвир
+- name: Kunrad Voigtvir
   voice_actor: Владимир Зайцев
-- name: Манипулус
+- name: Manipulus
   voice_actor: Владимир Левашев
-- name: Маражай Аэзирраэш
+- name: Marazhai Aezyrraesh
   voice_actor: Алексей Колган
-- name: Паскаль Ханеуманн
+- name: Pasqal Haneumann
   voice_actor: Владимир Левашев
-- name: Псайкер (NPC)
+- name: Psyker (NPC)
   voice_actor: Елена Ивасишина
-- name: Рассказчик
+- name: Narrator
   voice_actor: Всеволод Кузнецов
-- name: Сенешаль (NPC)
+- name: Seneschal (NPC)
   voice_actor: Михаил Георгиу
-- name: Сестра Арджента
+- name: Sister Argenta
   voice_actor: Ольга Голубева
-- name: Соломон Антар
+- name: Solomon Antar
   voice_actor: Дмитрий Филимонов
-- name: Теодора фон Валанциус
+- name: Theodora von Valancius
   voice_actor: Марина Бакина
-- name: Тразин
+- name: Trazyn
   voice_actor: Всеволод Кузнецов
-- name: Ульфар Громолёт
+- name: Ulfar
   voice_actor: Борис Эйфман
-- name: Хайнрикс ван Калокс
+- name: Heinrix van Calox
   voice_actor: Андрей Ярославцев
-- name: Эдельтрад
+- name: Edelthrad
   voice_actor: Дмитрий Быковский-Ромашов
-- name: Эоганн
+- name: Eogann
   voice_actor: Михаил Росляков
 - name: Incendia Bastaal-Chorda
   voice_actor: Елена Шульман

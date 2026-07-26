@@ -27,11 +27,9 @@ from qwen_tts import Qwen3TTSModel
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PARTS_DIR = os.path.join(ROOT, "output", "full_icl")
-GAME_DIR = os.path.join(ROOT, "Localization", "ruRU")
 CONFIG_VOICES = os.path.join(ROOT, "config", "voices.yaml")
 CONFIG_DEFAULT = os.path.join(ROOT, "config", "default.yaml")
 CATALOG_DIR = os.path.join(ROOT, "catalog", "people")
-os.makedirs(GAME_DIR, exist_ok=True)
 os.makedirs(PARTS_DIR, exist_ok=True)
 
 
@@ -154,7 +152,8 @@ def concat_wavs(part_paths: List[str], output_path: str, gap_ms: int = 300):
 def main():
     import argparse
     parser = argparse.ArgumentParser(description="Generate TTS WAVs")
-    parser.add_argument("--char", help="Character name filter (e.g. 'Теодора фон Валанциус')")
+    parser.add_argument("--char", help="Character name filter (e.g. 'Theodora von Valancius')")
+    parser.add_argument("--lang", default="ruRU", help="Language code (ruRU, enGB, etc.)")
     parser.add_argument("--voice", help="Voice name filter (e.g. 'teodora')")
     parser.add_argument("--guid", nargs="*", help="One or more specific GUIDs to generate")
     parser.add_argument("--force", action="store_true", help="Regenerate even if output exists")
@@ -167,6 +166,10 @@ def main():
     filter_char = args.char
     filter_guids = set(args.guid) if args.guid else None
     force = args.force
+    lang = args.lang
+    GAME_DIR = os.path.join(ROOT, "Localization", lang)
+    os.makedirs(GAME_DIR, exist_ok=True)
+    os.makedirs(PARTS_DIR, exist_ok=True)
 
     model_id = cfg.get("qwen3_base_model", "Qwen/Qwen3-TTS-12Hz-1.7B-Base")
     device = cfg.get("qwen3_base_device", "cpu")

@@ -1,173 +1,156 @@
 references:
   wh40k_narrator:
-    wav: refs/samples/Сергей Чонишвили.wav
+    wav: refs/samples/Sergey_Chonishvili.wav
     x_vector_only: true
     description: Нарратор — Сергей Чонишвили
     characters:
     - narrator
     - system
     - loading_screen
-    - Рассказчик
+    - Narrator
   kunrad:
-    wav: refs/samples/Всеволод Кузнецов.wav
+    wav: refs/samples/Vsevolod_Kuznetsov.wav
     x_vector_only: true
     description: Кунрад — Всеволод Кузнецов
     characters:
     - Kunrad Voigtvir
     - Kunrad
-    - Кунрад Войгтвир
   teodora:
-    wav: refs/samples/Наталья Казначеева.wav
+    wav: refs/samples/Natalya_Kaznacheeva.wav
     x_vector_only: true
     description: Теодора — Наталья Казначеева
     characters:
     - Theodora
-    - Теодора фон Валанциус
+    - Theodora von Valancius
   abelard:
-    wav: refs/samples/Михаил Пшеничный.wav
+    wav: refs/samples/Mikhail_Pshenichny.wav
     x_vector_only: true
     description: Абеляр — Михаил Пшеничный
     characters:
     - Abelard Werserian
     - Abelard
-    - Абеляр Версериан
   heinrix:
-    wav: refs/samples/Никита Прозоровский.wav
+    wav: refs/samples/Nikita_Prozorovsky.wav
     x_vector_only: true
     description: Хайнрикс — Никита Прозоровский
     characters:
     - Heinrix van Calox
     - Heinrix
-    - Хайнрикс ван Калокс
   pasqal:
-    wav: refs/samples/Александр Клюквин.wav
+    wav: refs/samples/Aleksandr_Klyukvin.wav
     x_vector_only: true
     description: Паскаль — Александр Клюквин
     characters:
     - Pasqal Haneumann
     - Pasqal
-    - Паскаль Ханеуманн
   solomon:
-    wav: refs/samples/Олег Куценко.wav
+    wav: refs/samples/Oleg_Kutsenko.wav
     x_vector_only: true
     description: Соломон — Олег Куценко
     characters:
     - Solomon Antar
     - Solomon
-    - Соломон Антар
   ulfar:
-    wav: refs/samples/Алексей Мясников.wav
+    wav: refs/samples/Aleksey_Myasnikov.wav
     x_vector_only: true
     description: Ульфар — Алексей Мясников
     characters:
     - Ulfar
-    - Ульфар Громолёт
   marazhai:
-    wav: refs/samples/Сергей Чихачёв.wav
+    wav: refs/samples/Sergey_Chikhachyov.wav
     x_vector_only: true
     description: Маражай — Сергей Чихачёв
     characters:
     - Marazhai Aezyrraesh
     - Marazhai
-    - Маражай Аэзирраэш
   edelthrad:
-    wav: refs/samples/Иван Литвинов.wav
+    wav: refs/samples/Ivan_Litvinov.wav
     x_vector_only: true
-    description: Эдельтрад — Иван Литвинов
+    description: Edelthrad — Иван Литвинов
     characters:
     - Edelthrad
-    - Эдельтрад
   eogann:
-    wav: refs/samples/Андрей Кравец.wav
+    wav: refs/samples/Andrey_Kravets.wav
     x_vector_only: true
-    description: Эоганн — Андрей Кравец
+    description: Eogann — Андрей Кравец
     characters:
-    - Eohann
-    - Эоганн
+    - Eogann
   manipulus:
-    wav: refs/samples/Владимир Антоник.wav
+    wav: refs/samples/Vladimir_Antonik.wav
     x_vector_only: true
-    description: Манипулус — Владимир Антоник
+    description: Manipulus — Владимир Антоник
     characters:
     - Manipulus
-    - Манипулус
   argenta:
-    wav: refs/samples/Елена Соловьёва.wav
+    wav: refs/samples/Elena_Solovyova.wav
     x_vector_only: true
     description: Арджента — Елена Соловьёва
     characters:
     - Sister Argenta
     - Argenta
-    - Сестра Арджента
   idira:
-    wav: refs/samples/Аглая Шиловская.wav
+    wav: refs/samples/Aglaya_Shilovskaya.wav
     x_vector_only: true
     description: Идира — Аглая Шиловская
     characters:
     - Idira Tlass
     - Idira
-    - Идира Тласс
   cassia:
-    wav: refs/samples/Анастасия Лапина.wav
+    wav: refs/samples/Anastasiya_Lapina.wav
     x_vector_only: true
     description: Кассия — Анастасия Лапина
     characters:
     - Cassia Orsellio
     - Cassia
-    - Кассия Орселлио
   jae:
-    wav: refs/samples/Ирина Киреева.wav
+    wav: refs/samples/Irina_Kireeva.wav
     x_vector_only: true
     description: Джаэ — Ирина Киреева
     characters:
     - Jae Heydari
     - Jae
-    - Джаэ Хейдари
   kibellah:
-    wav: refs/samples/Ольга Голованова.wav
+    wav: refs/samples/Olga_Golovanova.wav
     x_vector_only: true
-    description: Кибелла — Ольга Голованова
+    description: Kibellah — Ольга Голованова
     characters:
     - Kibellah
-    - Кибелла
   yrliet:
-    wav: refs/samples/Лина Иванова.wav
+    wav: refs/samples/Lina_Ivanova.wav
     x_vector_only: true
     description: Йрлиет — Лина Иванова
     characters:
     - Yrliet Lanaeviss
     - Yrliet
-    - Йрлиет Ланаэвисс
   trazyn:
-    wav: refs/samples/Вадим Медведев.wav
+    wav: refs/samples/Vadim_Medvedev.wav
     x_vector_only: true
-    description: Тразин — Вадим Медведев
+    description: Trazyn — Вадим Медведев
     characters:
     - Trazyn
-    - Тразин
   default_male:
-    wav: refs/samples/Денис Некрасов.wav
+    wav: refs/samples/Denis_Nekrasov.wav
     x_vector_only: true
     description: NPC (муж.) — Денис Некрасов
     characters:
-    - NPC (по умолчанию)
+    - Generic Male NPC
     - Default NPC
-    - Контрабандист
     - Smuggler
-    - Псайкер (NPC)
+    - Psyker (NPC)
     - Psyker NPC
-    - Псайкер
-    - Арбитрес (NPC)
+    - Psyker
+    - Arbites (NPC)
     - Arbites NPC
-    - Сенешаль (NPC)
+    - Seneschal (NPC)
     - Seneschal NPC
-    - Интеррогатор (NPC)
+    - Interrogator (NPC)
     - Interrogator NPC
   default_female:
-    wav: refs/samples/Елена Чебатуркина.wav
+    wav: refs/samples/Elena_Chebaturkina.wav
     x_vector_only: true
     description: NPC (жен.) — Елена Чебатуркина
     characters:
     - default_female
+    - Generic Female NPC
     - NPC Female
     - female npc
