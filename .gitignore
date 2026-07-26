@@ -11,7 +11,6 @@ nul
 .env
 .vscode/
 .pytest_cache
-# tools
 tests
 output
 *.temp
@@ -21,5 +20,4 @@ Python
 .vscode
 demo
 wwiser_output
-tools
 -
