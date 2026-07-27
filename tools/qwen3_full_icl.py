@@ -242,7 +242,7 @@ def main():
                 part_path = os.path.join(parts_out_dir, f"{guid}__{idx+1}.wav")
                 part_paths.append(part_path)
 
-                if os.path.exists(part_path):
+                if os.path.exists(part_path) and not force:
                     print(f"  {guid}__{idx+1} (cached) [{speaker} -> {resolved}]")
                     continue
 

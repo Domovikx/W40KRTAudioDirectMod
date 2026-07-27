@@ -1,6 +1,6 @@
 ---
 name: voice-ref-collect
-description: Download YouTube clips of voice actors, find clean speech segments, and save reference WAVs to refs/samples/
+description: [DEPRECATED — теперь используем refs/samples_en/ из игры] Download YouTube clips of voice actors for reference WAVs
 ---
 
 # Voice Reference Collection

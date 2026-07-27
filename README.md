@@ -87,11 +87,93 @@
 | Trazyn | Вадим Медведев | 66 |
 | Generic Male NPC | Денис Некрасов | 28 661 |
 
-> **Всего:** 25 персонажей, 20 голосов, 39 408 фраз в каталоге
+> **Всего:** 25 персонажей, 21 голос, 39 408 фраз в каталоге
 
 ---
 
-## Статус генерации
+## Сбор английских референсов (English Voice Samples)
+
+### Что это
+
+`refs/samples_en/` содержит английские голосовые образцы (WAV, ~16 сек) для всех персонажей. Используются как референс для Voice Clone — из оригинальной английской озвучки игры.
+
+### Метод поиска
+
+Английская озвучка диалогов хранится в `.pck` файлах игры (Wwise Audio Packages) в формате RIFF/WAVE.
+
+**Цепочка маппинга:**
+
+```
+enGB.json (GUID → English text)
+  → catalog/people/*.yaml (GUID → speaker)
+    → Whisper ASR (аудио → текст)
+      → text matching → speaker identification
+```
+
+**Процесс:**
+
+1. Извлечение RIFF/WAVE структур из `WH40KRT_Main_Dialogues.pck`, `WH40KRT_DLC3_Dialogues.pck` и других `.pck` файлов
+2. Конвертация через `vgmstream-cli.exe` (Custom Vorbis → PCM WAV)
+3. Транскрибация через Whisper `tiny.en`
+4. Сравнение транскрибированного текста с enGB.json через word overlap
+5. Определение персонажа через catalog YAML (GUID → speaker)
+6. Склеивание лучших клипов до ~16 секунд, нормализация -23dB RMS
+
+**Скрипты:**
+- `tools/filter_noncompanion.py` — фильтрация WAV компаньонов
+- `tools/identify_dialog.py` — Whisper + text matching (Main_Dialogues)
+- `tools/find_eogann_trazyn.py` — поиск по DLC-диалогам
+- `tools/extract_main_dialogues.py` — извлечение RIFF из Main_Dialogues.pck
+
+### Источники диалогов
+
+Все английские диалоги находятся в `.pck` файлах в формате RIFF/WAVE (Wwise Custom Vorbis, 48000Hz, 1ch):
+
+| PCK файл | Размер | RIFF-клипов | Персонажи |
+|---|---|---|---|
+| `WH40KRT_Main_Dialogues.pck` | 660 MB | 2 644 | Все основные диалоги |
+| `WH40KRT_DLC3_Dialogues.pck` | 135 MB | 586 | Eogann, Trazyn (DLC3) |
+| `WH40KRT_NARR_PRL.pck` | 92 MB | 586 | Kunrad, Theodora (пролог) |
+| `WH40KRT_NARR_CH01-05.pck` | ~520 MB | 2 773 | Chapter-специфичные диалоги |
+| `WH40KRT_NARR_DLC1.pck` | 232 MB | 562 | DLC1 |
+
+Всего обработано **~7 000 RIFF/WAVE клипов**, идентифицировано **~1 900** (остальное SFX).
+
+---
+
+## Статус референсов
+
+### English refs (`refs/samples_en/`) — статус по персонажам
+
+| Персонаж | RU актёр | RU sample | EN sample | Длительность |
+|---|---|---|---|---|
+| Narrator | Сергей Чонишвили | ✅ | ❌ * | — |
+| Abelard Werserian | Михаил Пшеничный | ✅ | ✅ | 16s |
+| Heinrix van Calox | Никита Прозоровский | ✅ | ✅ | 15s |
+| Pasqal Haneumann | Александр Клюквин | ✅ | ✅ | 16s |
+| Sister Argenta | Елена Соловьёва | ✅ | ✅ | 16s |
+| Idira Tlass | Аглая Шиловская | ✅ | ✅ | 16s |
+| Cassia Orsellio | Анастасия Лапина | ✅ | ✅ | 16s |
+| Jae Heydari | Ирина Киреева | ✅ | ✅ | 15s |
+| Yrliet Lanaeviss | Лина Иванова | ✅ | ✅ | 16s |
+| Kibellah | Ольга Голованова | ✅ | ✅ | 16s |
+| Kunrad Voigtvir | Всеволод Кузнецов | ✅ | ✅ | 16s |
+| Theodora von Valancius | Наталья Казначеева | ✅ | ✅ | 16s |
+| Solomon Antar | Олег Куценко | ✅ | ✅ | 16s |
+| Ulfar | Алексей Мясников | ✅ | ✅ | 16s |
+| Marazhai Aezyrraesh | Сергей Чихачёв | ✅ | ✅ | 20s |
+| Edelthrad | Иван Литвинов | ✅ | ✅ | 16s |
+| Eogann | Андрей Кравец | ✅ | ✅ | 16s |
+| Manipulus | Владимир Антоник | ✅ | ✅ | 20s |
+| Trazyn | Вадим Медведев | ✅ | ✅ | 16s |
+| Generic Male NPC | Денис Некрасов | ✅ | ❌ | — |
+| Generic Female NPC | Елена Чебатуркина | ✅ | ❌ | — |
+
+> * Narrator — английские narration-блоки принадлежат разным персонажам сцены, отдельного диктора нет
+
+**Итого:** 18/21 голосов имеют английские референсы ✅, 3缺失 (Narrator, default_male, default_female)
+
+### Сгенерировано WAV
 
 | Персонаж | Сгенерировано WAV |
 |---|---|
@@ -145,11 +227,12 @@ W40KRTAudioDirectMod/
 │   ├── default.yaml            # Конфигурация TTS
 │   └── voices.yaml             # Маппинг голосов и актёров
 ├── tools/                      # Python-скрипты генерации
-│   ├── qwen3_full_icl.py       # Генерация через Qwen3-TTS Voice Clone
-│   ├── clone_voice.py          # Хелпер клонирования голоса
-│   └── parse_blueprints.py     # Парсинг игровых данных
+│   ├── qwen3_full_icl.py       # Основная генерация через Qwen3-TTS Voice Clone
+│   ├── generate_demo.py        # Демо русских голосов
+│   ├── generate_demo_en.py     # Демо английских референсов
+│   └── concat_samples.py       # Склейка WAV
 ├── docs/characters/            # Описания персонажей
-├── refs/samples/               # Референсные WAV актёров
+├── refs/samples_en/            # Английские референсы из игры (для Voice Clone)
 └── assets/portraits/           # Портреты
 ```
 

@@ -20,4 +20,8 @@ Python
 .vscode
 demo
 wwiser_output
+tools/vgmstream
+tools/wwiser
 -
+npc_candidates
+*20260727084803.txt

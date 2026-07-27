@@ -113,7 +113,7 @@ phrases:
 - Full ICL: `.opencode/skills/qwen3-full-icl/SKILL.md`, `tools/qwen3_full_icl.py`
 - Каталог фраз: `.opencode/skills/text-catalog/SKILL.md`, файлы в `Localization/ruRU/people/`
 - Голоса: `config/voices.yaml`, `catalog/people/*.yaml`
-- Референсы голосов: `.opencode/skills/voice-ref-collect/SKILL.md`, `refs/samples/`
+- Референсы голосов (оригинал англ.): `refs/samples_en/`
 - Конфиги: `config/default.yaml`
 
 ## Ducking (приглушение)
