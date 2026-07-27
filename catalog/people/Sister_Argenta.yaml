@@ -2,7 +2,6 @@ name: Sister Argenta
 sound_keys:
 - Argenta
 - Sororitas
-doc: docs/characters/Sister_Argenta.md
 total_phrases: 382
 phrases:
 - guid: 019a2eaf-ffd0-40f5-a5e7-9a585d04d38a

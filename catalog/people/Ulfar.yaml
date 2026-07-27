@@ -1,7 +1,6 @@
 name: Ulfar
 sound_keys:
 - Ulfar
-doc: docs/characters/Ulfar.md
 total_phrases: 358
 phrases:
 - guid: 0031f351-7b6a-4f47-a070-4d871bb1c594

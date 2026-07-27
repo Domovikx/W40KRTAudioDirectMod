@@ -2,7 +2,6 @@ name: Solomon Antar
 sound_keys:
 - Solomorne
 - Solomorn
-doc: docs/characters/Solomon_Antar.md
 total_phrases: 607
 phrases:
 - guid: 015feae2-c2ce-42f9-8084-6cfa608fd02d

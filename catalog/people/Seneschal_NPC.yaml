@@ -1,7 +1,6 @@
 name: Seneschal (NPC)
 sound_keys:
 - Seneschal
-doc: docs/characters/Seneschal_NPC.md
 total_phrases: 105
 phrases:
 - guid: 0ce225d5-c5d6-4e1f-8322-6973ebe64675

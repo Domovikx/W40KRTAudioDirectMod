@@ -2,7 +2,6 @@ name: Abelard Werserian
 sound_keys:
 - Abelard
 - Abel
-doc: docs/characters/Abelard_Werserian.md
 total_phrases: 403
 phrases:
 - guid: 00795ced-1c54-42de-8e8e-d6ff43298e9b

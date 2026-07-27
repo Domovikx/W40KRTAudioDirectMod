@@ -1,80 +1,49 @@
-generated: '2026-07-24'
-total_characters: 25
+generated: '2026-07-27'
+total_characters: 22
 total_phrases: 39408
 unassigned: 0
 characters:
 - name: Generic Male NPC
-  doc: docs/characters/Generic_Male_NPC.md
   total_phrases: 28661
 - name: Abelard Werserian
-  doc: docs/characters/Abelard_Werserian.md
   total_phrases: 403
-- name: Arbites (NPC)
-  doc: docs/characters/Arbites_NPC.md
-  total_phrases: 1
 - name: Jae Heydari
-  doc: docs/characters/Jae_Heydari.md
   total_phrases: 248
 - name: Idira Tlass
-  doc: docs/characters/Idira_Tlass.md
   total_phrases: 412
-- name: Interrogator (NPC)
-  doc: docs/characters/Interrogator_NPC.md
-  total_phrases: 0
 - name: Yrliet Lanaeviss
-  doc: docs/characters/Yrliet_Lanaeviss.md
   total_phrases: 329
 - name: Cassia Orsellio
-  doc: docs/characters/Cassia_Orsellio.md
   total_phrases: 656
 - name: Kibellah
-  doc: docs/characters/Kibellah.md
   total_phrases: 579
 - name: Smuggler
-  doc: docs/characters/Smuggler.md
   total_phrases: 179
 - name: Kunrad Voigtvir
-  doc: docs/characters/Kunrad_Voigtvir.md
-  total_phrases: 67
+  total_phrases: 68
 - name: Manipulus
-  doc: docs/characters/Manipulus.md
   total_phrases: 204
 - name: Marazhai Aezyrraesh
-  doc: docs/characters/Marazhai_Aezyrraesh.md
   total_phrases: 553
 - name: Pasqal Haneumann
-  doc: docs/characters/Pasqal_Haneumann.md
   total_phrases: 408
 - name: Psyker (NPC)
-  doc: docs/characters/Psyker_NPC.md
   total_phrases: 97
 - name: Narrator
-  doc: docs/characters/Narrator.md
   total_phrases: 4374
 - name: Seneschal (NPC)
-  doc: docs/characters/Seneschal_NPC.md
   total_phrases: 105
 - name: Sister Argenta
-  doc: docs/characters/Sister_Argenta.md
   total_phrases: 382
 - name: Solomon Antar
-  doc: docs/characters/Solomon_Antar.md
   total_phrases: 607
 - name: Theodora von Valancius
-  doc: docs/characters/Theodora_von_Valancius.md
   total_phrases: 102
 - name: Trazyn
-  doc: docs/characters/Trazyn.md
   total_phrases: 66
 - name: Ulfar
-  doc: docs/characters/Ulfar.md
   total_phrases: 358
 - name: Heinrix van Calox
-  doc: docs/characters/Heinrix_van_Calox.md
   total_phrases: 410
-- name: Edelthrad
-  doc: docs/characters/Edelthrad.md
-  total_phrases: 0
 - name: Eogann
-  doc: docs/characters/Eogann.md
   total_phrases: 207

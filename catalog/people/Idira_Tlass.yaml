@@ -1,7 +1,6 @@
 name: Idira Tlass
 sound_keys:
 - Idira
-doc: docs/characters/Idira_Tlass.md
 total_phrases: 412
 phrases:
 - guid: 054add6d-81db-40e8-85ee-8cc003fe7b4d

@@ -1,7 +1,6 @@
 name: Smuggler
 sound_keys:
 - Smugler
-doc: docs/characters/Smuggler_NPC.md
 total_phrases: 179
 phrases:
 - guid: 0d772691-09ef-493f-8719-7755d9761e8f

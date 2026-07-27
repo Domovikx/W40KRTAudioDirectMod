@@ -1,7 +1,6 @@
 name: Narrator
 sound_keys:
 - NARR
-doc: docs/characters/Narrator.md
 total_phrases: 4374
 phrases:
 - guid: 00245306-da0e-4520-8f56-b7f931aa821d

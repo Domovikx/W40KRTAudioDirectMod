@@ -1,10 +1,8 @@
-# W40KRTAudioDirectMod — Замена английской озвучки на русскую AI-озвучку
-
-Замена английских диалоговых реплик в Warhammer 40K: Rogue Trader на русскую озвучку (AI-голос / TTS).
+# W40KRTAudioDirectMod — Техническая документация
 
 ## Статус генерации
 
-- **Сгенерировано WAV:** ~170 (36 Кунрад + 76 Теодора + 40 Edelthrad + 11 NPC + 2 описания + ...)
+- **Сгенерировано WAV:** ~169 (67 Кунрад + 102 Теодора)
 
 ## Путь к игре
 
@@ -50,7 +48,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader
 **Двухстадийный метод в `generate_catalog.py::extract_speaker_from_event()`:**
 
 1. **Primary (88.9%):** Парсинг Wwise event name из `Sound.json` — экстракция character-сегмента по паттерну префикса (BNTRS → segment[2], Companions → segment[1] + role→name map, PRL/CH1-3 → standalone token в сегментах, RMNC → search/fallback substring, и т.д.)
-   - **Важно:** scene-start matching (PRL/CH1-3) НЕ используется — имя в названии сцены может быть subject'ом, а не speaker'ом (например, `PRL_TheodoraFirstConversation_*` — сцена РАЗГОВОРА с Теодорой, где спикеры: Абеляр, Edelthrad и др.)
+   - **Важно:** scene-start matching (PRL/CH1-3) НЕ используется — имя в названии сцены может быть subject'ом, а не speaker'ом (например, `PRL_TheodoraFirstConversation_*` — сцена РАЗГОВОРА с Теодорой, где спикеры: Абеляр, Эдельтрад и др.)
 2. **Fallback (11.1%):** Парсинг `{n}...{/n}` narration blocks — поиск имени персонажа в начале блока, определение спикера по обращению к владельцу YAML + keyword fallback (синт-кож→Абеляр)
 
 **Результат:** 4523/5089 (88.9%) фраз с точным speaker, 566 (11.1%) null (default = file owner). Null → narration fallback + default.
@@ -60,7 +58,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader
 **Три категории фраз:**
 1. **Sound.json events** (5089) — Wwise-ивент → маппинг через sound_keys
 2. **Extra dialog** (ruRU-only, ~34319) — есть `"` или `{n}`, длина ≥50
-3. **Environment Descriptions** (ruRU-only, ~N) — нет `"`, `{`, `<`, `[`, длина ≥50 → `catalog/people/Environment_Descriptions.yaml`
+3. **Описания окружения** (ruRU-only, ~N) — нет `"`, `{`, `<`, `[`, длина ≥50 → `catalog/people/Описания_окружения.yaml`
 
 **Метаданные персонажей** — в каждом `catalog/people/*.yaml` (name, gender, role, sound_keys).
 
@@ -75,7 +73,6 @@ Base model → generate_voice_clone(text, prompt) → output/full_icl/{voice}/*.
 ```
 
 Скрипт: `tools/qwen3_full_icl.py` — читает `config/voices.yaml` + `catalog/people/*.yaml` (формат с `parts: [{speaker, text_clean}]`).
-Склейка частей: `.opencode/skills/qwen3-full-icl/concat_parts.py`.
 Скилл: `.opencode/skills/qwen3-full-icl/SKILL.md`.
 
 Фильтры: `--voice`, `--char`, `--guid guid1 guid2 ...`, `--force`.
@@ -111,7 +108,7 @@ phrases:
 
 - SpeechMod: `https://github.com/Osmodium/W40KRogueTraderSpeechMod`
 - Full ICL: `.opencode/skills/qwen3-full-icl/SKILL.md`, `tools/qwen3_full_icl.py`
-- Каталог фраз: `.opencode/skills/text-catalog/SKILL.md`, файлы в `Localization/ruRU/people/`
+- Каталог фраз: `.opencode/skills/text-catalog/SKILL.md`, файлы в `catalog/people/`
 - Голоса: `config/voices.yaml`, `catalog/people/*.yaml`
 - Референсы голосов (оригинал англ.): `refs/samples_en/`
 - Конфиги: `config/default.yaml`
@@ -168,3 +165,14 @@ csc -target:library -out:W40KRTAudioDirectMod.dll \
   -reference:"$UMM/UnityModManager.dll" \
   Main.cs
 ```
+
+## Голоса (config/voices.yaml)
+
+21 голос — все оригинальные английские актёры из `refs/samples_en/`.
+
+| Группа | Голоса |
+|--------|--------|
+| Компаньоны | `abelard`, `cassia`, `heinrix`, `pasqal`, `argenta`, `idira`, `jae`, `kibellah`, `yrliet`, `ulfar`, `marazhai`, `solomon` |
+| Антагонисты | `kunrad`, `teodora`, `trazyn`, `edelthrad`, `eogann`, `manipulus` |
+| NPC | `default_male`, `default_female` |
+| Рассказчик | `wh40k_narrator` |

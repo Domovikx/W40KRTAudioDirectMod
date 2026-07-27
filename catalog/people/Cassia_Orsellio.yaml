@@ -2,7 +2,6 @@ name: Cassia Orsellio
 sound_keys:
 - Cassia
 - Navigator
-doc: docs/characters/Cassia_Orsellio.md
 total_phrases: 656
 phrases:
 - guid: 00074f46-4e59-4dcd-b118-d535a7673eba

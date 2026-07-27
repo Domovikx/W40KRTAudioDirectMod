@@ -1,7 +1,6 @@
 name: Trazyn
 sound_keys:
 - Trazyn
-doc: docs/characters/Trazyn.md
 total_phrases: 66
 phrases:
 - guid: c22f081c-d37b-467b-a0ff-dac81750e944

@@ -1,7 +1,6 @@
 name: Eogann
 sound_keys:
 - Eogann
-doc: docs/characters/Eogann.md
 total_phrases: 207
 phrases:
 - guid: 01ca822f-736c-4a4b-b1dd-8425ac589a56

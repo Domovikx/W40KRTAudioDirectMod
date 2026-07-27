@@ -1,7 +1,6 @@
 name: Theodora von Valancius
 sound_keys:
 - Theodora
-doc: docs/characters/Theodora_von_Valancius.md
 total_phrases: 102
 phrases:
 - guid: 22f503f8-b952-4f4e-a338-e26f65c29bfd

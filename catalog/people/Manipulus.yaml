@@ -1,7 +1,6 @@
 name: Manipulus
 sound_keys:
 - Manipulus
-doc: docs/characters/Manipulus.md
 total_phrases: 204
 phrases:
 - guid: 012d9f5a-f954-4b88-bd03-a6cf47305113

@@ -1,5 +1,5 @@
-generated: '2026-07-23'
-total_characters: 25
+generated: '2026-07-27'
+total_characters: 22
 total_phrases: 5089
 unassigned: 0
 characters:
@@ -11,10 +11,6 @@ characters:
   gender: M
   role: Сенешаль
   total_phrases: 255
-- name: Arbites (NPC)
-  gender: M
-  role: Арбитрес
-  total_phrases: 1
 - name: Jae Heydari
   gender: F
   role: Агент Касабаллики
@@ -23,10 +19,6 @@ characters:
   gender: F
   role: Псайкер
   total_phrases: 247
-- name: Interrogator (NPC)
-  gender: M
-  role: Интеррогатор
-  total_phrases: 0
 - name: Yrliet Lanaeviss
   gender: F
   role: Аэльдари-рейнджер
@@ -46,7 +38,7 @@ characters:
 - name: Kunrad Voigtvir
   gender: M
   role: Мастер шепотов
-  total_phrases: 66
+  total_phrases: 67
 - name: Manipulus
   gender: M
   role: Магос-манипулус
@@ -95,10 +87,6 @@ characters:
   gender: M
   role: Интеррогатор Инквизиции
   total_phrases: 410
-- name: Edelthrad
-  gender: M
-  role: Наследник-псайкер
-  total_phrases: 0
 - name: Eogann
   gender: M
   role: Навигатор

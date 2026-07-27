@@ -2,7 +2,6 @@ name: Kibellah
 sound_keys:
 - Kibellah
 - DeathCult
-doc: docs/characters/Kibellah.md
 total_phrases: 579
 phrases:
 - guid: 00d9c6dd-8aca-4cca-b03b-b20fd674ed6e

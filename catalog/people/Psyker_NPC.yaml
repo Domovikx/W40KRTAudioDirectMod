@@ -1,7 +1,6 @@
 name: Psyker (NPC)
 sound_keys:
 - Psyker
-doc: docs/characters/Psyker_NPC.md
 total_phrases: 97
 phrases:
 - guid: 0477fd83-9280-4e68-8630-2cb413478a81
