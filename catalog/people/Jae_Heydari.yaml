@@ -1364,6 +1364,7 @@ phrases:
     text_clean: 'Хейнрикс кашляет и тихо, едва слышно оттарабанивает:'
   - speaker: Jae Heydari
     text_clean: Она из хладных торговцев — контрабандистов, промышляющих ксенотоварами. Помимо этой ереси о других, более тяжелых прегрешениях в ее исполнении не слышал.
+    speaker_override: Heinrix van Calox
 - guid: 2f87a47a-6b6e-45f5-83b6-ccd24c84f762
   event: CH2_JaeHasAnOfferForYou_18
   text: '"Хех. Она начинает мне нравиться".'

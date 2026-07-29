@@ -170,12 +170,92 @@ def build_name_to_char(chars: list[dict]) -> dict[str, str]:
             m[parts[0]] = name          # first name
         if len(parts) > 1:
             m[parts[-1]] = name         # last name
-        # Also add full name as-is
-        m[name] = name
+        m[name] = name                  # full name
+
+    # Russian narration name aliases + title aliases from config/name_map.yaml
+    name_map_path = MOD_DIR / "config" / "name_map.yaml"
+    if name_map_path.exists():
+        with open(name_map_path, encoding="utf-8") as f:
+            name_map_data = yaml.safe_load(f)
+        m.update(name_map_data.get("ru_aliases", {}))
+        m.update(name_map_data.get("title_aliases", {}))
+        m.update(name_map_data.get("ru_full_names", {}))
+
+    # Auto-add reverse English mappings for self-address detection
+    en_aliases = {}
+    for c in chars:
+        cn = c["name"]
+        for token in cn.split():
+            if token not in m:
+                en_aliases[token] = cn
+    m.update(en_aliases)
+    return m
+
+
+def load_bbp_speakers() -> dict:
+    """Load BBP speaker mapping: {sound_guid: speaker_name}."""
+    bbp_path = MOD_DIR / "catalog" / "bbp_speakers.yaml"
+    if not bbp_path.exists():
+        return {}
+    with open(bbp_path, encoding="utf-8") as f:
+        data = yaml.safe_load(f)
+    return data.get("speakers", {})
+
+
+def load_speaker_overrides() -> dict:
+    """Load manual speaker overrides from config/speaker_overrides.yaml."""
+    path = MOD_DIR / "config" / "speaker_overrides.yaml"
+    if not path.exists():
+        return {}
+    with open(path, encoding="utf-8") as f:
+        data = yaml.safe_load(f)
+    return data or {}
+
+
+def _text_addresses_owner(text: str, speaker: str, name_map: dict) -> bool:
+    """Check if dialog text addresses the detected speaker by name/title.
+    
+    E.g. 'Мастер шепотов, что творится...' addresses Kunrad,
+    so Kunrad is not the speaker — he's being addressed.
+    """
+    segments = _split_segments(text)
+    non_narrator = [s for s, is_narr in segments if not is_narr]
+    if not non_narrator:
+        return False
+    first = non_narrator[0].strip().strip('"').strip('\u201d').strip('\u201c').strip('\u00ab').strip('\u00bb')
+
+    # Collect all addressable names for this speaker (first name, last name, title aliases)
+    address_forms = set()
+    for token, cn in name_map.items():
+        if cn == speaker and len(token) > 1:
+            address_forms.add(token.lower())
+
+    # Also add speaker's own name parts
+    for part in speaker.split():
+        if len(part) > 1:
+            address_forms.add(part.lower())
+
+    lower = first.lower()
+    # Check if text starts with an address form
+    for af in sorted(address_forms, key=len, reverse=True):
+        if lower.startswith(af) and len(lower) > len(af):
+            after = lower[len(af):len(af)+1]
+            if after in (" ", ",", "—", "\u2014", ".", "!", "\u00ab"):
+                return True
+
+    # Check for direct address patterns: ", {name}" or ", {title}" (vocative)
+    for af in sorted(address_forms, key=len, reverse=True):
+        for pattern in (f", {af}", f" {af},", f", {af}!"):
+            if pattern in lower:
+                return True
+
+    return False
+
     # Hardcoded aliases for generic NPC roles
     m["Архмилитант"] = "__NPC__"
     m["Морт"] = "__NPC__"
     m["Мастер шепотов"] = "__NPC__"
+
     # Role → specific character mappings (specific chars only, not generic NPCs)
     role_map: dict[str, str] = {}
     for c in chars:
@@ -365,6 +445,9 @@ def build_output(chars: list[dict]) -> tuple[dict[str, dict], int]:
 
     print(f"  Extra dialog entries (ruRU-only): {extra_added}")
 
+    bbp_speakers = load_bbp_speakers()
+    speaker_overrides = load_speaker_overrides()
+
     for guid, event_name in sorted(events.items(), key=lambda x: x[1]):
         if guid not in texts:
             continue
@@ -374,9 +457,32 @@ def build_output(chars: list[dict]) -> tuple[dict[str, dict], int]:
 
         name, _ = resolve_character(event_name, char_map, chars)
         if name:
-            speaker = extract_speaker_from_event(event_name, speaker_aliases)
+            speaker = None
+
+            # 0. Manual overrides (always win)
+            if guid in speaker_overrides:
+                speaker = speaker_overrides[guid]
+
+            # 1. BBP data
+            if not speaker and guid in bbp_speakers:
+                sp = bbp_speakers[guid]
+                if not _text_addresses_owner(text, sp, name_map):
+                    speaker = sp
+
+            # 2. Event name parsing (for non-scene events)
+            if not speaker:
+                prefix = event_name.split("_")[0] if event_name else ""
+                if prefix in ("PRL", "CH1", "CH2", "CH3"):
+                    speaker = extract_speaker_from_event(event_name, speaker_aliases)
+                    if speaker == name and _text_addresses_owner(text, speaker, name_map):
+                        speaker = None
+                else:
+                    speaker = extract_speaker_from_event(event_name, speaker_aliases)
+
+            # 3. Text analysis (narration blocks)
             if not speaker:
                 speaker = detect_speaker(text, name_map, char_name=name)
+
             if not speaker or speaker == "__NPC__":
                 speaker = name  # default to file owner
 
@@ -403,7 +509,7 @@ def write_people(by_char: dict[str, dict]):
         path = PEOPLE_DIR / f"{safe}.yaml"
         with open(path, "w", encoding="utf-8") as f:
             yaml.dump(data, f, allow_unicode=True, indent=2,
-                      sort_keys=False, default_flow_style=False, width=120)
+                      sort_keys=False, default_flow_style=False, width=65535)
     print(f"Written {len(by_char)} files to {PEOPLE_DIR}/")
 
 

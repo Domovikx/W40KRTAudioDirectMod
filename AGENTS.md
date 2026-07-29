@@ -62,6 +62,50 @@ C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader
 
 **Метаданные персонажей** — в каждом `catalog/people/*.yaml` (name, gender, role, sound_keys).
 
+## Определение спикера (Speaker Detection Pipeline)
+
+Трёхуровневая система определения, кто говорит фразу:
+
+1. **BBP / event name → tree owner** (базовый спикер) — загружается из `catalog/bbp_speakers.yaml` (бинарные данные игры) или из `extract_speaker_from_event()` (Wwise event name). Даёт **владельца диалогового дерева** (кто контролирует сцену), но не всегда per-line спикера.
+
+2. **Self-address validation** (`_text_addresses_owner()`) — проверяет, не обращается ли текст к детектированному спикеру по имени или титулу (например, `"Мастер шепотов, что творится..."` → адресуется Кунраду → значит Кунрад НЕ спикер). При срабатывании → сброс на `None`.
+
+3. **Text analysis** (`detect_speaker()`) — парсит `{n}...{/n}` narration blocks: если блок начинается с имени персонажа (из `config/name_map.yaml`), этот персонаж — спикер.
+
+4. **Manual overrides** (`config/speaker_overrides.yaml`) — для фраз, где pipeline падает (нет narration, self-address сработал, но настоящий спикер неопределим). GUID → точный speaker вручную.
+
+**Итоговая точность:** ~99.9% (4 ручных оверрайда на весь каталог).
+
+**Ограничение:** BlueprintCue в `.bbp` хранит только **tree owner**, не per-line speaker. Per-line спикер — runtime-концепция игрового DialogSystem (стейт-машина переходов Cue→Answer→Cue). Извлечь его из статичных данных невозможно — это фундаментальное ограничение движка.
+
+**Маппинг русских имён** — `config/name_map.yaml` (ru_aliases + title_aliases).
+
+### Работа с speaker_override
+
+`speaker_override` на уровне part — единственный способ переопределить спикера для фраз, где pipeline падает.
+
+**ВАЖНО:** `speaker_override` может быть установлен только вручную. Автоматические скрипты (`merge_speakers.py`, `generate_catalog.py`) НЕ ДОЛЖНЫ создавать или изменять `speaker_override`. BBP-данные (tree owner) не являются per-line speaker и НЕ ИСПОЛЬЗУЮТСЯ для `speaker_override`.
+
+Процесс:
+1. `python tools/merge_speakers.py` — применяет только `speaker` из `generate_catalog`, НЕ трогает `speaker_override`
+2. Если фраза требует ручного оверрайда — добавить `speaker_override` в part вручную
+3. `speaker_override` проверяется через `tools/test_pipeline.py::test_text_clean_no_formatting`
+
+### Запуск аудита
+
+```bash
+# Одного файла
+python tools/audit_speakers.py --file catalog/people/Kunrad_Voigtvir.yaml
+
+# Всех (кроме Generic_Male_NPC — медленно)
+for f in catalog/people/*.yaml; do
+  [[ "$f" == *"Generic_Male_NPC"* ]] && continue
+  python tools/audit_speakers.py --file "$f"
+done
+```
+
+Subagent-флоу описан в `.opencode/skills/speaker-audit/SKILL.md`.
+
 ## Full ICL Pipeline (Qwen3-TTS Base + VoiceClone)
 
 Генерация реплик через Voice Clone (Base модель + референс).

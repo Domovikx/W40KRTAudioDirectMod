@@ -43,7 +43,7 @@ def load_yaml(path: str) -> dict:
 
 def save_yaml(data: dict, path: str):
     with open(path, "w", encoding="utf-8") as f:
-        yaml.dump(data, f, allow_unicode=True, sort_keys=False, width=9999)
+        yaml.dump(data, f, allow_unicode=True, sort_keys=False, width=65535)
 
 
 def _normalize_name(name: str) -> str:

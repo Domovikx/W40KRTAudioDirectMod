@@ -209,12 +209,13 @@ def main():
             guid = phrase.get("guid", "")
             if filter_guids and guid not in filter_guids:
                 continue
+
             part_paths = []
             success = True
             first_voice = None
 
             for idx, part in enumerate(parts):
-                speaker = part.get("speaker", "")
+                speaker = part.get("speaker_override", "") or part.get("speaker", "")
                 text_clean = part.get("text_clean", "").strip()
                 if not text_clean:
                     continue
@@ -243,8 +244,18 @@ def main():
                 part_paths.append(part_path)
 
                 if os.path.exists(part_path) and not force:
-                    print(f"  {guid}__{idx+1} (cached) [{speaker} -> {resolved}]")
-                    continue
+                    ref_wav_path = os.path.join(ROOT, voices_config.get("references", {}).get(resolved, {}).get("wav", ""))
+                    part_mtime = os.path.getmtime(part_path)
+                    stale = False
+                    if os.path.exists(ref_wav_path) and os.path.getmtime(ref_wav_path) > part_mtime:
+                        stale = True
+                    if os.path.exists(CONFIG_VOICES) and os.path.getmtime(CONFIG_VOICES) > part_mtime:
+                        stale = True
+                    if stale:
+                        print(f"  {guid}__{idx+1} (stale, regenerating) [{speaker} -> {resolved}]")
+                    else:
+                        print(f"  {guid}__{idx+1} (cached) [{speaker} -> {resolved}]")
+                        continue
 
                 print(f"  {guid}__{idx+1} [{speaker} -> {resolved}]: {text_clean[:60]}...")
                 try:
