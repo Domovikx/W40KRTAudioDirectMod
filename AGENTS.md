@@ -32,16 +32,19 @@ C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader
 
 ### Отслеживание текста (триггеры)
 
-1. **`DialogVM.HandleOnCueShow`** (через `[HarmonyPatch]`) — ловит GUID реплик в диалогах
-2. **`TMP_Text.set_text`** (патч ставится на 1-м кадре в OnUpdate) — ловит ЛЮБОЙ текст на экране через TextMeshPro
-3. **`BarkPlayer.Bark / BarkExploration`** (через `[HarmonyPatch]`, runtime) — ловит барки (всплывающие подписи при клике на объекты)
+Схема «один класс контента = один семантический триггер»:
+
+1. **Диалоги** — `DialogVM.HandleOnCueShow` (через `[HarmonyPatch]`) — ловит GUID реплик в диалогах
+2. **Барки** — `BarkHandle..ctor` (runtime-патч в Load, постфикс с `string text`) — ровно один раз при СОЗДАНИИ барка (клик по объекту/NPC, скриптовые барки `ShowBark.RunAction`). Все пути барков проходят через этот конструктор — это единственная семантическая точка
+3. **Не-барковый текст** — `TMP_Text.set_text` (патч ставится на 1-м кадре в OnUpdate) — журнал, кодекс, лог событий
 4. **GUID → WAV сопоставление** — если GUID текста есть в словаре, играет соответствующую WAV
 
-#### Анти-флуд и авто-барки
+#### Анти-флуд (ре-рендеры, пан камеры)
 
-- `OnTextSet` проверяет `Environment.StackTrace`: если вызов из `MapObjectOvertipsView` **без** `InteractionBarkPart.OnInteract` — это авто-барк от камеры (`UnitsProximityController`), звук НЕ играется
-- `HandleBark` (из `BarkPlayer.Bark`) — всегда играет (только ручные клики)
-- Per-GUID cooldown 10 секунд (`lastPlayedByGuid`)
+- `OnTextSet` пропускает **любой барк-текст**: если в `Environment.StackTrace` есть `BarkBlockView` (все барковые TMP-установки идут через `Kingmaker.UI.MVVM.View.Bark.PC.BarkBlockView`) → SKIP. Это гасит повторные установки одного текста при пане камеры, ре-создании овертипов (`UnitOvertipsView`, `OvertipMapObjectInteractionView` и др.) — без перечисления имён вьюх
+- `HandleBark` (из `BarkHandle..ctor`) — играет с per-GUID cooldown 10 секунд (`lastPlayedByGuid`)
+- История: `BarkPlayer.Bark` патч не работал (фильтр `ReturnType == typeof(void)` + нерезолвимый параметр `____text`) — заменён на `BarkHandle..ctor`; хардкод `MapObjectOvertipsView` убран как избыточный
+- Диагностика: `trigger_debug.log` (пересоздаётся при старте игры) — строки `BARK play/skip-cooldown`, `TEXT play/skip-barkdisplay/skip-cooldown`, `DIALOG cue`. Включение: `Main.TriggerLogEnabled = true` (в `Main.cs`, по умолчанию `false` — в проде выключено). Новые места логирования — просто `LogTrigger("...")`
 
 ### Определение спикера (каталог фраз)
 

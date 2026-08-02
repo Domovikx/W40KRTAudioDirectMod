@@ -44,23 +44,15 @@ namespace W40KRTAudioDirectMod
 
             settings = UnityModManager.ModSettings.Load<Settings>(modEntry);
             localizationDir = modPath + "\\Localization\\" + settings.Language + "\\";
+            InitTriggerLog();
             LoadMappings();
 
             var harmony = new Harmony(modEntry.Info.Id);
             harmony.PatchAll(Assembly.GetExecutingAssembly());
 
-            // Patch BarkPlayer.Bark and BarkExploration at runtime
-            Type barkPlayer = AccessTools.TypeByName("Kingmaker.Code.UI.MVVM.VM.Bark.BarkPlayer");
-            if (barkPlayer != null)
-            {
-                foreach (var m in barkPlayer.GetMethods(AccessTools.all))
-                {
-                    if (m.Name == "Bark" || m.Name == "BarkExploration")
-                        harmony.Patch(m, postfix: new HarmonyMethod(typeof(Main), "OnBarkPostfix"));
-                }
-            }
-
-            // Patch BarkHandle ctor — единая точка создания барка с готовым текстом
+            // Patch BarkHandle ctor — единая точка создания барка с готовым текстом.
+            // Озвучиваем барк ровно один раз здесь; экранные ре-рендеры того же текста
+            // (овертипы, пан камеры) ловим в OnTextSet и пропускаем (BarkBlockView).
             Type barkHandle = AccessTools.TypeByName("Kingmaker.Code.UI.MVVM.VM.Bark.BarkHandle");
             if (barkHandle != null)
             {
@@ -97,9 +89,25 @@ namespace W40KRTAudioDirectMod
             catch { }
         }
 
+        // Диагностика триггеров. true — писать trigger_debug.log (режим отладки),
+        // false — выключено (прод). Для быстрого логирования в новом месте:
+        // просто вызвать LogTrigger("...") — включение/выключение в этой одной строке.
+        private static bool TriggerLogEnabled = false;
         private static string triggerLogPath;
+        public static void InitTriggerLog()
+        {
+            if (!TriggerLogEnabled) return;
+            try
+            {
+                triggerLogPath = modPath + "\\trigger_debug.log";
+                File.WriteAllText(triggerLogPath, "=== W40KRT Audio Direct trigger log " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " ===\n");
+            }
+            catch { }
+        }
+
         public static void LogTrigger(string msg)
         {
+            if (!TriggerLogEnabled) return;
             try
             {
                 if (triggerLogPath == null) triggerLogPath = modPath + "\\trigger_debug.log";
@@ -113,14 +121,6 @@ namespace W40KRTAudioDirectMod
             if (string.IsNullOrEmpty(s)) return s;
             s = s.Replace("\n", "\\n").Replace("\r", "\\r");
             return s.Length <= max ? s : s.Substring(0, max) + "...";
-        }
-
-        private static string TrimStack(string st, int maxLines = 30)
-        {
-            if (string.IsNullOrEmpty(st)) return st;
-            string[] lines = st.Split('\n');
-            if (lines.Length <= maxLines) return st;
-            return string.Join("\n", lines, 0, maxLines);
         }
 
         private static bool duckInitDone;
@@ -695,15 +695,6 @@ namespace W40KRTAudioDirectMod
             HandleBark(text);
         }
 
-        public static void OnBarkPostfix(object text)
-        {
-            string s = null;
-            if (text is string) s = (string)text;
-            else if (text != null) { try { s = text.ToString(); } catch { } }
-            if (!Enabled || string.IsNullOrEmpty(s)) return;
-            HandleBark(s);
-        }
-
         public static void HandleBark(string text)
         {
             float now = Time.time;
@@ -712,30 +703,27 @@ namespace W40KRTAudioDirectMod
                 if (text.IndexOf(textMappings[i].Value) < 0) continue;
 
                 string guid = Path.GetFileNameWithoutExtension(textMappings[i].Key);
-                LogTrigger("BARK match guid=" + guid + " text=" + Shorten(text));
-                LogTrigger("  stack: " + TrimStack(Environment.StackTrace).Replace("\n", "\n  "));
 
                 float lastT;
                 if (lastPlayedByGuid.TryGetValue(guid, out lastT) && now - lastT < GUID_COOLDOWN)
                 {
-                    LogTrigger("  -> SKIP: cooldown " + (now - lastT).ToString("F1") + "s");
+                    LogTrigger("BARK skip-cooldown guid=" + guid + " text=" + Shorten(text));
                     return;
                 }
 
                 lastPlayedByGuid[guid] = now;
-                LogTrigger("  -> PLAY");
+                LogTrigger("BARK play guid=" + guid + " text=" + Shorten(text));
                 PlayClip(textMappings[i].Key);
                 return;
             }
         }
 
-        public static void OnTextSet(string value, object __instance)
+        public static void OnTextSet(string value)
         {
             if (!Enabled) return;
             if (value == null || value.Length <= 3) return;
 
             float now = Time.time;
-            string instId = __instance != null ? __instance.GetHashCode().ToString() : "null";
 
             for (int i = 0; i < textMappings.Count; i++)
             {
@@ -744,27 +732,24 @@ namespace W40KRTAudioDirectMod
                 string guid = Path.GetFileNameWithoutExtension(textMappings[i].Key);
                 var stack = Environment.StackTrace;
 
-                LogTrigger("TEXT match guid=" + guid + " inst=" + instId + " text=" + Shorten(value));
-                LogTrigger("  stack: " + TrimStack(stack).Replace("\n", "\n  "));
-
                 // Барк-текст (BarkBlockView) — озвучивается ровно один раз при создании
-                // барка через BarkPlayer.Bark (HandleBark). Повторные установки того же
+                // барка через BarkHandle..ctor (HandleBark). Повторные установки того же
                 // текста (овертипы при пане камеры, ре-рендеры) здесь пропускаем.
                 if (stack.Contains("BarkBlockView"))
                 {
-                    LogTrigger("  -> SKIP: bark display (BarkBlockView)");
+                    LogTrigger("TEXT skip-barkdisplay guid=" + guid);
                     break;
                 }
 
                 float lastT;
                 if (lastPlayedByGuid.TryGetValue(guid, out lastT) && now - lastT < GUID_COOLDOWN)
                 {
-                    LogTrigger("  -> SKIP: cooldown " + (now - lastT).ToString("F1") + "s");
+                    LogTrigger("TEXT skip-cooldown guid=" + guid);
                     continue;
                 }
 
                 lastPlayedByGuid[guid] = now;
-                LogTrigger("  -> PLAY");
+                LogTrigger("TEXT play guid=" + guid);
                 PlayClip(textMappings[i].Key);
                 return;
             }
