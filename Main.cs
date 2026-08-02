@@ -55,8 +55,21 @@ namespace W40KRTAudioDirectMod
             {
                 foreach (var m in barkPlayer.GetMethods(AccessTools.all))
                 {
-                    if ((m.Name == "Bark" || m.Name == "BarkExploration") && m.ReturnType == typeof(void))
+                    if (m.Name == "Bark" || m.Name == "BarkExploration")
                         harmony.Patch(m, postfix: new HarmonyMethod(typeof(Main), "OnBarkPostfix"));
+                }
+            }
+
+            // Patch BarkHandle ctor — единая точка создания барка с готовым текстом
+            Type barkHandle = AccessTools.TypeByName("Kingmaker.Code.UI.MVVM.VM.Bark.BarkHandle");
+            if (barkHandle != null)
+            {
+                foreach (var c in barkHandle.GetConstructors(AccessTools.all))
+                {
+                    bool hasText = false;
+                    foreach (var p in c.GetParameters())
+                        if (p.Name == "text" && p.ParameterType == typeof(string)) { hasText = true; break; }
+                    if (hasText) harmony.Patch(c, postfix: new HarmonyMethod(typeof(Main), "OnBarkCtorPostfix"));
                 }
             }
 
@@ -82,6 +95,32 @@ namespace W40KRTAudioDirectMod
         {
             try { File.AppendAllText(duckLogPath, msg + "\n"); }
             catch { }
+        }
+
+        private static string triggerLogPath;
+        public static void LogTrigger(string msg)
+        {
+            try
+            {
+                if (triggerLogPath == null) triggerLogPath = modPath + "\\trigger_debug.log";
+                File.AppendAllText(triggerLogPath, DateTime.Now.ToString("HH:mm:ss.fff") + " " + msg + "\n");
+            }
+            catch { }
+        }
+
+        private static string Shorten(string s, int max = 80)
+        {
+            if (string.IsNullOrEmpty(s)) return s;
+            s = s.Replace("\n", "\\n").Replace("\r", "\\r");
+            return s.Length <= max ? s : s.Substring(0, max) + "...";
+        }
+
+        private static string TrimStack(string st, int maxLines = 30)
+        {
+            if (string.IsNullOrEmpty(st)) return st;
+            string[] lines = st.Split('\n');
+            if (lines.Length <= maxLines) return st;
+            return string.Join("\n", lines, 0, maxLines);
         }
 
         private static bool duckInitDone;
@@ -650,32 +689,53 @@ namespace W40KRTAudioDirectMod
             catch { }
         }
 
-        public static void OnBarkPostfix(object ____text)
+        public static void OnBarkCtorPostfix(string text)
         {
-            string text = ____text != null ? ____text.ToString() : null;
             if (!Enabled || string.IsNullOrEmpty(text)) return;
             HandleBark(text);
         }
 
+        public static void OnBarkPostfix(object text)
+        {
+            string s = null;
+            if (text is string) s = (string)text;
+            else if (text != null) { try { s = text.ToString(); } catch { } }
+            if (!Enabled || string.IsNullOrEmpty(s)) return;
+            HandleBark(s);
+        }
+
         public static void HandleBark(string text)
         {
+            float now = Time.time;
             for (int i = 0; i < textMappings.Count; i++)
             {
                 if (text.IndexOf(textMappings[i].Value) < 0) continue;
 
                 string guid = Path.GetFileNameWithoutExtension(textMappings[i].Key);
-                lastPlayedByGuid[guid] = Time.time;
+                LogTrigger("BARK match guid=" + guid + " text=" + Shorten(text));
+                LogTrigger("  stack: " + TrimStack(Environment.StackTrace).Replace("\n", "\n  "));
+
+                float lastT;
+                if (lastPlayedByGuid.TryGetValue(guid, out lastT) && now - lastT < GUID_COOLDOWN)
+                {
+                    LogTrigger("  -> SKIP: cooldown " + (now - lastT).ToString("F1") + "s");
+                    return;
+                }
+
+                lastPlayedByGuid[guid] = now;
+                LogTrigger("  -> PLAY");
                 PlayClip(textMappings[i].Key);
                 return;
             }
         }
 
-        public static void OnTextSet(string value)
+        public static void OnTextSet(string value, object __instance)
         {
             if (!Enabled) return;
             if (value == null || value.Length <= 3) return;
 
             float now = Time.time;
+            string instId = __instance != null ? __instance.GetHashCode().ToString() : "null";
 
             for (int i = 0; i < textMappings.Count; i++)
             {
@@ -684,15 +744,27 @@ namespace W40KRTAudioDirectMod
                 string guid = Path.GetFileNameWithoutExtension(textMappings[i].Key);
                 var stack = Environment.StackTrace;
 
-                // Барки от камеры (без InteractionBarkPart.OnInteract) — пропускаем
-                if (stack.Contains("MapObjectOvertipsView") && !stack.Contains("InteractionBarkPart.OnInteract"))
+                LogTrigger("TEXT match guid=" + guid + " inst=" + instId + " text=" + Shorten(value));
+                LogTrigger("  stack: " + TrimStack(stack).Replace("\n", "\n  "));
+
+                // Барк-текст (BarkBlockView) — озвучивается ровно один раз при создании
+                // барка через BarkPlayer.Bark (HandleBark). Повторные установки того же
+                // текста (овертипы при пане камеры, ре-рендеры) здесь пропускаем.
+                if (stack.Contains("BarkBlockView"))
+                {
+                    LogTrigger("  -> SKIP: bark display (BarkBlockView)");
                     break;
+                }
 
                 float lastT;
                 if (lastPlayedByGuid.TryGetValue(guid, out lastT) && now - lastT < GUID_COOLDOWN)
+                {
+                    LogTrigger("  -> SKIP: cooldown " + (now - lastT).ToString("F1") + "s");
                     continue;
+                }
 
                 lastPlayedByGuid[guid] = now;
+                LogTrigger("  -> PLAY");
                 PlayClip(textMappings[i].Key);
                 return;
             }
@@ -779,7 +851,11 @@ namespace W40KRTAudioDirectMod
 
                 var keyP = txt.GetType().GetProperty("Key");
                 string k = keyP != null ? (string)keyP.GetValue(txt, null) : null;
-                if (!string.IsNullOrEmpty(k)) Main.PlayClip(k);
+                if (!string.IsNullOrEmpty(k))
+                {
+                    Main.LogTrigger("DIALOG cue guid=" + k);
+                    Main.PlayClip(k);
+                }
             }
             catch { }
         }
