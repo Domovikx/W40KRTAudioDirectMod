@@ -1,0 +1,56 @@
+# Russian narration aliases -> English character names
+# Used by generate_catalog.py detect_speaker() to match
+# character names in {n}...{/n} narration blocks to the
+# English character name used in catalog YAMLs.
+
+ru_aliases:
+  Теодора: Theodora von Valancius
+  Абеляр: Abelard Werserian
+  Кунрад: Kunrad Voigtvir
+  Войгтвир: Kunrad Voigtvir
+  Кассия: Cassia Orsellio
+  Идира: Idira Tlass
+  Хайнрикс: Heinrix van Calox
+  Паскаль: Pasqal Haneumann
+  Арджента: Sister Argenta
+  Йрлиет: Yrliet Lanaeviss
+  Джаэ: Jae Heydari
+  Ульфар: Ulfar
+  Маражай: Marazhai Aezyrraesh
+  Соломон: Solomon Antar
+  Эдельтрад: Edelthrad
+  Эделя: Edelthrad
+  Эдель: Edelthrad
+  Кибелла: Kibellah
+  Еогани: Eogann
+  Тразин: Trazyn
+  Манипулус: Manipulus
+  Старший магос: Manipulus
+
+# Full Russian names used as part speakers (from text-cleaner parts assignment)
+# These are the full Russian character names as they appear in parts[].speaker
+ru_full_names:
+  Абеляр Версериан: Abelard Werserian
+  Кассия Орселлио: Cassia Orsellio
+  Идира Тласс: Idira Tlass
+  Хайнрикс ван Калокс: Heinrix van Calox
+  Паскаль Ханеманн: Pasqal Haneumann
+  Сестра Арджента: Sister Argenta
+  Йрлиет Ланависс: Yrliet Lanaeviss
+  Джаэ Хейдари: Jae Heydari
+  Ульфар: Ulfar
+  Маражай Азираеш: Marazhai Aezyrraesh
+  Соломон Антар: Solomon Antar
+  Эдельтрад: Edelthrad
+  Еогани: Eogann
+  Тразин: Trazyn
+  Манипулус: Manipulus
+  Кибелла: Kibellah
+  Кунрад Войгтвир: Kunrad Voigtvir
+  Теодора фон Валанциус: Theodora von Valancius
+  Старший магос: Manipulus
+
+# Character titles used in dialog addresses (for self-address detection)
+# When dialog text starts with a character's title, that character is the addressee, not the speaker
+title_aliases:
+  Мастер шепотов: Kunrad Voigtvir

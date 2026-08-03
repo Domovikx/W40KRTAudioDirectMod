@@ -1,0 +1,17 @@
+# ──────────────────────────────────────────────
+# TTS Engine Configuration (Qwen3 Base Full ICL)
+# ──────────────────────────────────────────────
+
+# ─── Qwen3-TTS Base Model (Full ICL / Voice Clone) ──
+# Дока: .opencode/skills/qwen3-full-icl/SKILL.md
+# Модель: Qwen/Qwen3-TTS-12Hz-1.7B-Base (~4GB на диске)
+
+qwen3_base_model: Qwen/Qwen3-TTS-12Hz-1.7B-Base
+qwen3_base_device: cpu
+qwen3_base_dtype: float32
+qwen3_base_temperature: 1.0
+qwen3_base_top_p: 0.9
+qwen3_base_repetition_penalty: 1.05
+qwen3_base_max_new_tokens: 2048
+qwen3_base_x_vector_only: true
+qwen3_base_voices_config: config/voices.yaml

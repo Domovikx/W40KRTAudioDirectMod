@@ -1,0 +1,157 @@
+references:
+  # ── English voice actor references ──
+  wh40k_narrator:
+    wav: refs/samples_en/Narrator.wav
+    x_vector_only: true
+    description: Нарратор — оригинальный голос (англ.)
+    characters:
+    - narrator
+    - system
+    - loading_screen
+    - Narrator
+  kunrad:
+    wav: refs/samples_en/Kunrad_Voigtvir.wav
+    x_vector_only: true
+    description: Кунрад — оригинальный голос (англ.)
+    characters:
+    - Kunrad Voigtvir
+    - Kunrad
+  teodora:
+    wav: refs/samples_en/Theodora_von_Valancius.wav
+    x_vector_only: true
+    description: Теодора — оригинальный голос (англ.)
+    characters:
+    - Theodora
+    - Theodora von Valancius
+  abelard:
+    wav: refs/samples_en/Abelard_Werserian.wav
+    x_vector_only: true
+    description: Абеляр — оригинальный голос (англ.)
+    characters:
+    - Abelard Werserian
+    - Abelard
+  heinrix:
+    wav: refs/samples_en/Heinrix_van_Calox.wav
+    x_vector_only: true
+    description: Хайнрикс — оригинальный голос (англ.)
+    characters:
+    - Heinrix van Calox
+    - Heinrix
+  pasqal:
+    wav: refs/samples_en/Pasqal_Haneumann.wav
+    x_vector_only: true
+    description: Паскаль — оригинальный голос (англ.)
+    characters:
+    - Pasqal Haneumann
+    - Pasqal
+  solomon:
+    wav: refs/samples_en/Solomon_Antar.wav
+    x_vector_only: true
+    description: Соломон — оригинальный голос (англ.)
+    characters:
+    - Solomon Antar
+    - Solomon
+  ulfar:
+    wav: refs/samples_en/Ulfar.wav
+    x_vector_only: true
+    description: Ульфар — оригинальный голос (англ.)
+    characters:
+    - Ulfar
+  marazhai:
+    wav: refs/samples_en/Marazhai_Aezyrraesh.wav
+    x_vector_only: true
+    description: Маражай — оригинальный голос (англ.)
+    characters:
+    - Marazhai Aezyrraesh
+    - Marazhai
+  edelthrad:
+    wav: refs/samples_en/Edelthrad.wav
+    x_vector_only: true
+    description: Edelthrad — оригинальный голос (англ.)
+    characters:
+    - Edelthrad
+  eogann:
+    wav: refs/samples_en/Eogann.wav
+    x_vector_only: true
+    description: Eogann — оригинальный голос (англ.)
+    characters:
+    - Eogann
+  manipulus:
+    wav: refs/samples_en/Manipulus.wav
+    x_vector_only: true
+    description: Manipulus — оригинальный голос (англ.)
+    characters:
+    - Manipulus
+  argenta:
+    wav: refs/samples_en/Sister_Argenta.wav
+    x_vector_only: true
+    description: Арджента — оригинальный голос (англ.)
+    characters:
+    - Sister Argenta
+    - Argenta
+  idira:
+    wav: refs/samples_en/Idira_Tlass.wav
+    x_vector_only: true
+    description: Идира — оригинальный голос (англ.)
+    characters:
+    - Idira Tlass
+    - Idira
+  cassia:
+    wav: refs/samples_en/Cassia_Orsellio.wav
+    x_vector_only: true
+    description: Кассия — оригинальный голос (англ.)
+    characters:
+    - Cassia Orsellio
+    - Cassia
+  jae:
+    wav: refs/samples_en/Jae_Heydari.wav
+    x_vector_only: true
+    description: Джаэ — оригинальный голос (англ.)
+    characters:
+    - Jae Heydari
+    - Jae
+  kibellah:
+    wav: refs/samples_en/Kibellah.wav
+    x_vector_only: true
+    description: Kibellah — оригинальный голос (англ.)
+    characters:
+    - Kibellah
+  yrliet:
+    wav: refs/samples_en/Yrliet_Lanaeviss.wav
+    x_vector_only: true
+    description: Йрлиет — оригинальный голос (англ.)
+    characters:
+    - Yrliet Lanaeviss
+    - Yrliet
+  trazyn:
+    wav: refs/samples_en/Trazyn.wav
+    x_vector_only: true
+    description: Trazyn — оригинальный голос (англ.)
+    characters:
+    - Trazyn
+  default_male:
+    wav: refs/samples_en/npc_m_1.wav
+    x_vector_only: true
+    description: NPC (муж.) — оригинальный голос (англ.)
+    characters:
+    - Generic Male NPC
+    - Default NPC
+    - Smuggler
+    - Psyker (NPC)
+    - Psyker NPC
+    - Psyker
+    - Arbites (NPC)
+    - Arbites NPC
+    - Seneschal (NPC)
+    - Seneschal NPC
+    - Interrogator (NPC)
+    - Interrogator NPC
+  default_female:
+    wav: refs/samples_en/npc_f_1.wav
+    x_vector_only: true
+    description: NPC (жен.) — оригинальный голос (англ.)
+    characters:
+    - default_female
+    - Generic Female NPC
+    - NPC Female
+    - female npc
