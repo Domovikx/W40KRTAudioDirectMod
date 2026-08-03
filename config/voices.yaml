@@ -1,6 +1,9 @@
 references:
   # ── English voice actor references ──
+  # gender: male | female — пол голоса, используется gender-review пайплайном
+  # (проверка, что текст реплики не противоречит полу озвученного голоса)
   wh40k_narrator:
+    gender: male
     wav: refs/samples_en/Narrator.wav
     x_vector_only: true
     description: Нарратор — оригинальный голос (англ.)
@@ -10,6 +13,7 @@ references:
     - loading_screen
     - Narrator
   kunrad:
+    gender: male
     wav: refs/samples_en/Kunrad_Voigtvir.wav
     x_vector_only: true
     description: Кунрад — оригинальный голос (англ.)
@@ -17,6 +21,7 @@ references:
     - Kunrad Voigtvir
     - Kunrad
   teodora:
+    gender: female
     wav: refs/samples_en/Theodora_von_Valancius.wav
     x_vector_only: true
     description: Теодора — оригинальный голос (англ.)
@@ -24,6 +29,7 @@ references:
     - Theodora
     - Theodora von Valancius
   abelard:
+    gender: male
     wav: refs/samples_en/Abelard_Werserian.wav
     x_vector_only: true
     description: Абеляр — оригинальный голос (англ.)
@@ -31,6 +37,7 @@ references:
     - Abelard Werserian
     - Abelard
   heinrix:
+    gender: male
     wav: refs/samples_en/Heinrix_van_Calox.wav
     x_vector_only: true
     description: Хайнрикс — оригинальный голос (англ.)
@@ -38,6 +45,7 @@ references:
     - Heinrix van Calox
     - Heinrix
   pasqal:
+    gender: male
     wav: refs/samples_en/Pasqal_Haneumann.wav
     x_vector_only: true
     description: Паскаль — оригинальный голос (англ.)
@@ -45,6 +53,7 @@ references:
     - Pasqal Haneumann
     - Pasqal
   solomon:
+    gender: male
     wav: refs/samples_en/Solomon_Antar.wav
     x_vector_only: true
     description: Соломон — оригинальный голос (англ.)
@@ -52,12 +61,14 @@ references:
     - Solomon Antar
     - Solomon
   ulfar:
+    gender: male
     wav: refs/samples_en/Ulfar.wav
     x_vector_only: true
     description: Ульфар — оригинальный голос (англ.)
     characters:
     - Ulfar
   marazhai:
+    gender: male
     wav: refs/samples_en/Marazhai_Aezyrraesh.wav
     x_vector_only: true
     description: Маражай — оригинальный голос (англ.)
@@ -65,24 +76,28 @@ references:
     - Marazhai Aezyrraesh
     - Marazhai
   edelthrad:
+    gender: male
     wav: refs/samples_en/Edelthrad.wav
     x_vector_only: true
-    description: Edelthrad — оригинальный голос (англ.)
+    description: Эдельтрад — оригинальный голос (англ.)
     characters:
     - Edelthrad
   eogann:
+    gender: male
     wav: refs/samples_en/Eogann.wav
     x_vector_only: true
-    description: Eogann — оригинальный голос (англ.)
+    description: Еогани — оригинальный голос (англ.)
     characters:
     - Eogann
   manipulus:
+    gender: male
     wav: refs/samples_en/Manipulus.wav
     x_vector_only: true
-    description: Manipulus — оригинальный голос (англ.)
+    description: Манипулус — оригинальный голос (англ.)
     characters:
     - Manipulus
   argenta:
+    gender: female
     wav: refs/samples_en/Sister_Argenta.wav
     x_vector_only: true
     description: Арджента — оригинальный голос (англ.)
@@ -90,6 +105,7 @@ references:
     - Sister Argenta
     - Argenta
   idira:
+    gender: female
     wav: refs/samples_en/Idira_Tlass.wav
     x_vector_only: true
     description: Идира — оригинальный голос (англ.)
@@ -97,6 +113,7 @@ references:
     - Idira Tlass
     - Idira
   cassia:
+    gender: female
     wav: refs/samples_en/Cassia_Orsellio.wav
     x_vector_only: true
     description: Кассия — оригинальный голос (англ.)
@@ -104,6 +121,7 @@ references:
     - Cassia Orsellio
     - Cassia
   jae:
+    gender: female
     wav: refs/samples_en/Jae_Heydari.wav
     x_vector_only: true
     description: Джаэ — оригинальный голос (англ.)
@@ -111,12 +129,14 @@ references:
     - Jae Heydari
     - Jae
   kibellah:
+    gender: female
     wav: refs/samples_en/Kibellah.wav
     x_vector_only: true
-    description: Kibellah — оригинальный голос (англ.)
+    description: Кибелла — оригинальный голос (англ.)
     characters:
     - Kibellah
   yrliet:
+    gender: female
     wav: refs/samples_en/Yrliet_Lanaeviss.wav
     x_vector_only: true
     description: Йрлиет — оригинальный голос (англ.)
@@ -124,12 +144,14 @@ references:
     - Yrliet Lanaeviss
     - Yrliet
   trazyn:
+    gender: male
     wav: refs/samples_en/Trazyn.wav
     x_vector_only: true
-    description: Trazyn — оригинальный голос (англ.)
+    description: Тразин — оригинальный голос (англ.)
     characters:
     - Trazyn
   default_male:
+    gender: male
     wav: refs/samples_en/npc_m_1.wav
     x_vector_only: true
     description: NPC (муж.) — оригинальный голос (англ.)
@@ -147,6 +169,7 @@ references:
     - Interrogator (NPC)
     - Interrogator NPC
   default_female:
+    gender: female
     wav: refs/samples_en/npc_f_1.wav
     x_vector_only: true
     description: NPC (жен.) — оригинальный голос (англ.)
