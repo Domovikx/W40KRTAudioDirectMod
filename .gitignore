@@ -11,7 +11,6 @@ nul
 .env
 .vscode/
 .pytest_cache
-tests
 output
 *.temp
 Python
@@ -26,3 +25,5 @@ tools/wwiser
 npc_candidates
 *20260727084803.txt
 *.sh
+catalog/people_bak/
+catalog/people_orig/

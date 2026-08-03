@@ -34,6 +34,8 @@ def clean_text(raw: str, keep_outer_quotes: bool = False, name_replacement: str 
     if name_replacement:
         s = s.replace("{name}", name_replacement)
 
+    s = s.replace("{petname}", "ПЕТ")
+
     s = _normalize_whitespace(s)
 
     return s.strip()

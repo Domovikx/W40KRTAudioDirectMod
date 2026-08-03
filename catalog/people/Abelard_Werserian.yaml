@@ -2,7 +2,7 @@ name: Abelard Werserian
 sound_keys:
 - Abelard
 - Abel
-total_phrases: 403
+total_phrases: 404
 phrases:
 - guid: 00795ced-1c54-42de-8e8e-d6ff43298e9b
   event: ''
@@ -3282,3 +3282,12 @@ phrases:
     text_clean: Сенешаль хмурится.
   - speaker: Abelard Werserian
     text_clean: Проктор, перед вами — Вольный Торговец КЭП фон Валанциус, Помазанник Императора и держатель священного Патента. Касательно целей Его Светлости на планете — вы не в праве требовать ответа. Относитесь к Лорд-капитану с тем же уважением, которое выказывали Леди Теодоре... Ныне покойной.
+- guid: 82c3ed49-0932-4822-af76-517cb8007323
+  event: ''
+  text: '{n}Абеляр одобрительно кивает.{/n} "Подходяще".'
+  speaker: Abelard Werserian
+  parts:
+  - speaker: narrator
+    text_clean: Абеляр одобрительно кивает.
+  - speaker: Abelard Werserian
+    text_clean: Подходяще.

@@ -76,6 +76,11 @@ def regenerate_file(path: str, dry_run: bool = False, voices_config: dict = None
     data = load_yaml(path)
     stats = {"total": 0, "updated": 0, "skipped": 0, "errors": 0}
 
+    # skip_voicing files (e.g. Player_Answers.yaml) need no parts at all
+    if data.get("skip_voicing"):
+        stats["skipped"] = len(data.get("phrases", []))
+        return stats
+
     char_name = data.get("name", os.path.basename(path))
     filename_stem = os.path.splitext(os.path.basename(path))[0]
 
@@ -88,6 +93,7 @@ def regenerate_file(path: str, dry_run: bool = False, voices_config: dict = None
 
         orig_speaker = phrase.get("speaker")
         default_speaker = _normalize_speaker_to_char(orig_speaker, char_name, voices_config, filename_stem) if orig_speaker else char_name
+        old_parts = phrase.get("parts") or []
         try:
             parts = split_into_parts(raw, default_speaker=default_speaker, name_replacement="КЭП")
         except Exception as e:
@@ -98,6 +104,22 @@ def regenerate_file(path: str, dry_run: bool = False, voices_config: dict = None
         if not parts:
             stats["skipped"] += 1
             continue
+
+        # Preserve manual per-part data (speaker, speaker_override) from the old
+        # parts, matched by text_clean. Regeneration must not clobber review edits.
+        old_by_clean = {}
+        for op in old_parts:
+            tc = op.get("text_clean")
+            if tc:
+                old_by_clean.setdefault(tc, op)
+        for part in parts:
+            op = old_by_clean.get(part.get("text_clean"))
+            if not op:
+                continue
+            if op.get("speaker") and op.get("speaker") != part.get("speaker"):
+                part["speaker"] = op["speaker"]
+            if op.get("speaker_override"):
+                part["speaker_override"] = op["speaker_override"]
 
         phrase["parts"] = parts
         stats["updated"] += 1

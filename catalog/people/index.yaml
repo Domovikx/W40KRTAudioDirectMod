@@ -1,49 +1,73 @@
-generated: '2026-07-27'
-total_characters: 22
-total_phrases: 39408
-unassigned: 0
+generated: merge_speakers rebuild
+total_characters: 23
+total_phrases: 35882
 characters:
-- name: Generic Male NPC
-  total_phrases: 28661
 - name: Abelard Werserian
-  total_phrases: 403
-- name: Jae Heydari
-  total_phrases: 248
-- name: Idira Tlass
-  total_phrases: 412
-- name: Yrliet Lanaeviss
-  total_phrases: 329
+  doc: ''
+  total_phrases: 404
 - name: Cassia Orsellio
+  doc: ''
   total_phrases: 656
+- name: Environment Descriptions
+  doc: ''
+  total_phrases: 2
+- name: Eogann
+  doc: ''
+  total_phrases: 207
+- name: Generic Male NPC
+  doc: ''
+  total_phrases: 25026
+- name: Heinrix van Calox
+  doc: ''
+  total_phrases: 410
+- name: Idira Tlass
+  doc: ''
+  total_phrases: 412
+- name: Jae Heydari
+  doc: ''
+  total_phrases: 248
 - name: Kibellah
+  doc: ''
   total_phrases: 579
-- name: Smuggler
-  total_phrases: 179
 - name: Kunrad Voigtvir
+  doc: ''
   total_phrases: 68
 - name: Manipulus
+  doc: ''
   total_phrases: 204
 - name: Marazhai Aezyrraesh
+  doc: ''
   total_phrases: 553
+- name: Narrator
+  doc: ''
+  total_phrases: 4480
 - name: Pasqal Haneumann
+  doc: ''
   total_phrases: 408
 - name: Psyker (NPC)
+  doc: ''
   total_phrases: 97
-- name: Narrator
-  total_phrases: 4374
 - name: Seneschal (NPC)
+  doc: ''
   total_phrases: 105
 - name: Sister Argenta
+  doc: ''
   total_phrases: 382
+- name: Smuggler
+  doc: ''
+  total_phrases: 179
 - name: Solomon Antar
+  doc: ''
   total_phrases: 607
 - name: Theodora von Valancius
+  doc: ''
   total_phrases: 102
 - name: Trazyn
+  doc: ''
   total_phrases: 66
 - name: Ulfar
+  doc: ''
   total_phrases: 358
-- name: Heinrix van Calox
-  total_phrases: 410
-- name: Eogann
-  total_phrases: 207
+- name: Yrliet Lanaeviss
+  doc: ''
+  total_phrases: 329

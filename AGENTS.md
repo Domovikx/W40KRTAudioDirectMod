@@ -60,8 +60,14 @@ C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader
 
 **Три категории фраз:**
 1. **Sound.json events** (5089) — Wwise-ивент → маппинг через sound_keys
-2. **Extra dialog** (ruRU-only, ~34319) — есть `"` или `{n}`, длина ≥50
-3. **Описания окружения** (ruRU-only, ~N) — нет `"`, `{`, `<`, `[`, длина ≥50 → `catalog/people/Описания_окружения.yaml`
+2. **Extra dialog** (ruRU-only, ~30630) — есть `"` или `{n}`, **без ограничений по длине**
+3. **Ответы игрока** (ruRU-only, ~12221) — `BlueprintAnswer` из bbp → `catalog/people/Player_Answers.yaml` (`skip_voicing: true`, озвучка выключена оптом)
+
+**Роли диалоговых GUID (answer/cue/unknown)** — `catalog/dialog_roles.yaml`, генерируется `tools/extract_dialog_roles.py` из `blueprints-pack.bbp`. Классификатор **байтовый**: в сериализации узла после 32-hex GUID идёт байт типа — `0x5B` = BlueprintAnswer (игрок), `0x45` = BlueprintCue (NPC). **Имя узла (`Answer_0001`) — не тип!** (фраза Абеляра в узле «Answer_5» с байтом `0x45` — cue). Правило: `0x45 в наборе → cue`; `0x5B → answer`; иначе unknown (в каталог, решает ревью). **Важно:** answer-фильтр применяется ТОЛЬКО к фразам без Sound.json event — озвученные реплики NPC могут сидеть в Answer-узлах (например, `TrazynOffer_Trazyn_01`), их нельзя удалять в Player_Answers.
+
+**Маппинг для игры** — `Localization/{lang}/mappings.json` (`tools/export_mappings.py`): нормализованные `parts[].text_clean` (+ целая фраза) → WAV. Исключает `skip_voicing`. Мод играет по **exact-match** после нормализации (снятие TMP-тегов, игровой разметки, внешних кавычек) — коллизии подстрок невозможны.
+
+**Skip-флаги**: `skip_voicing: true` на уровне файла (Player_Answers.yaml) или фразы — `qwen3_full_icl.py` и `export_mappings.py` их уважают.
 
 **Метаданные персонажей** — в каждом `catalog/people/*.yaml` (name, gender, role, sound_keys).
 
@@ -90,9 +96,11 @@ C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader
 **ВАЖНО:** `speaker_override` может быть установлен только вручную. Автоматические скрипты (`merge_speakers.py`, `generate_catalog.py`) НЕ ДОЛЖНЫ создавать или изменять `speaker_override`. BBP-данные (tree owner) не являются per-line speaker и НЕ ИСПОЛЬЗУЮТСЯ для `speaker_override`.
 
 Процесс:
-1. `python tools/merge_speakers.py` — применяет только `speaker` из `generate_catalog`, НЕ трогает `speaker_override`
+1. `python tools/merge_speakers.py` — полная пересборка каталога: бэкап → `generate_catalog.py` → union-merge (старые parts сохраняются, speaker из нового) → удаление ответов игрока из персональных файлов → `Player_Answers.yaml` → `index.yaml`. Сопоставляет файлы по внутреннему `name` (не по имени файла). Имеет echo-метки прогресса (6 фаз)
 2. Если фраза требует ручного оверрайда — добавить `speaker_override` в part вручную
 3. `speaker_override` проверяется через `tools/test_pipeline.py::test_text_clean_no_formatting`
+4. `regenerate_text_clean.py` сохраняет `speaker` и `speaker_override` (перенос по text_clean при пересоздании parts)
+5. Если оверрайды всё же потеряны — `python tools/restore_overrides.py` восстанавливает их из `catalog/people_orig` (эталон, не удалять!)
 
 ### Запуск аудита
 

@@ -60,6 +60,11 @@ def normalize_name(name: str) -> str:
     return name.lower().replace("_", " ").replace("-", " ").strip()
 
 
+def should_skip(char_data: dict, phrase: dict) -> bool:
+    """skip_voicing on the file (e.g. Player_Answers.yaml) or on the phrase."""
+    return bool(char_data.get("skip_voicing") or phrase.get("skip_voicing"))
+
+
 def resolve_speaker_to_voice(
     speaker: str,
     voices_config: dict,
@@ -197,13 +202,17 @@ def main():
     prompt_cache: Dict[str, dict] = {}
     total = 0
     skipped = 0
+    no_parts: list[str] = []
 
     for char_name, char_data in catalog.items():
         if filter_char and char_name != filter_char:
             continue
         for phrase in char_data.get("phrases", []):
+            if should_skip(char_data, phrase):
+                continue
             parts = phrase.get("parts")
             if not parts:
+                no_parts.append(phrase.get("guid", "?"))
                 continue
 
             guid = phrase.get("guid", "")
@@ -286,6 +295,11 @@ def main():
                     total += 1
             elif not success:
                 print(f"  !! {guid}: generation failed")
+
+    if no_parts:
+        shown = ", ".join(no_parts[:5]) + ("..." if len(no_parts) > 5 else "")
+        print(f"WARNING: {len(no_parts)} phrase(s) skipped: no parts [{shown}] — "
+              f"run .opencode/skills/text-cleaner/scripts/regenerate_text_clean.py")
 
     print(f"\nDone. Generated: {total}, Skipped: {skipped}")
 

@@ -70,6 +70,10 @@ class TestCleanText:
         raw = "Вряд ли тебе известны пределы возможного, {name}"
         assert clean_text(raw, name_replacement="") == "Вряд ли тебе известны пределы возможного, {name}"
 
+    def test_petname_replaced_with_pet(self):
+        raw = "{petname} издает пронзительный крик."
+        assert clean_text(raw) == "ПЕТ издает пронзительный крик."
+
     def test_outer_quotes_stripped_standard(self):
         raw = f"{LQ}Прекрасное место для размышлений{RQ}."
         assert clean_text(raw) == "Прекрасное место для размышлений."

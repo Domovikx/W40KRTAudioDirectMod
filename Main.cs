@@ -92,7 +92,7 @@ namespace W40KRTAudioDirectMod
         // Диагностика триггеров. true — писать trigger_debug.log (режим отладки),
         // false — выключено (прод). Для быстрого логирования в новом месте:
         // просто вызвать LogTrigger("...") — включение/выключение в этой одной строке.
-        private static bool TriggerLogEnabled = false;
+        private static bool TriggerLogEnabled = true; // TEMP: тестовая сессия — вернуть false в прод
         private static string triggerLogPath;
         public static void InitTriggerLog()
         {
@@ -121,6 +121,12 @@ namespace W40KRTAudioDirectMod
             if (string.IsNullOrEmpty(s)) return s;
             s = s.Replace("\n", "\\n").Replace("\r", "\\r");
             return s.Length <= max ? s : s.Substring(0, max) + "...";
+        }
+
+        private static string EscapeLog(string s)
+        {
+            if (s == null) return "null";
+            return s.Replace("\n", "\\n").Replace("\r", "\\r");
         }
 
         private static bool duckInitDone;
@@ -649,8 +655,27 @@ namespace W40KRTAudioDirectMod
             GUILayout.EndVertical();
         }
 
-        private static Dictionary<string, float> lastPlayedByGuid = new Dictionary<string, float>();
+        private static Dictionary<string, float> lastPlayedByKey = new Dictionary<string, float>();
         private const float GUID_COOLDOWN = 10f;
+
+        private static readonly System.Text.RegularExpressions.Regex normTmpTag =
+            new System.Text.RegularExpressions.Regex(@"<[^>]*>");
+        private static readonly System.Text.RegularExpressions.Regex normMarkup =
+            new System.Text.RegularExpressions.Regex(@"\{/?[a-zA-Z_]+\|[^}]*\}|\{/?[a-zA-Z_]+\}");
+        private static readonly System.Text.RegularExpressions.Regex normOuterQuotes =
+            new System.Text.RegularExpressions.Regex(@"^\s*([""\u00ab\u201c\u201e])(.*?)([\u00bb\u201d\u201c""])\s*(\.?)\s*$");
+        private static readonly System.Text.RegularExpressions.Regex normWs =
+            new System.Text.RegularExpressions.Regex(@"\s+");
+
+        public static string NormalizeText(string s)
+        {
+            if (string.IsNullOrEmpty(s)) return "";
+            s = normTmpTag.Replace(s, "");       // <align="center"> etc.
+            s = normMarkup.Replace(s, "");       // {n} {/n} {g|...}{/g} {mf|a|b} {name}
+            s = normOuterQuotes.Replace(s, "$2$4"); // "Текст". / «Текст».
+            s = normWs.Replace(s, " ").Trim();
+            return s;
+        }
 
         private static void LoadMappings()
         {
@@ -659,31 +684,19 @@ namespace W40KRTAudioDirectMod
 
             try
             {
-                if (!Directory.Exists(localizationDir)) return;
-
-                string[] files = Directory.GetFiles(localizationDir, "*.wav", SearchOption.AllDirectories);
-                if (files.Length == 0) return;
-
-                string gameLocalizationPath = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Warhammer 40,000 Rogue Trader\\WH40KRT_Data\\StreamingAssets\\Localization\\";
-                string jsonPath = gameLocalizationPath + settings.Language + ".json";
+                string jsonPath = localizationDir + "mappings.json";
                 if (!File.Exists(jsonPath)) return;
 
-                string json = File.ReadAllText(jsonPath);
-                var jObj = Newtonsoft.Json.Linq.JObject.Parse(json);
-                var strings = jObj["strings"] as Newtonsoft.Json.Linq.JObject;
-                if (strings == null) return;
+                var jObj = Newtonsoft.Json.Linq.JObject.Parse(File.ReadAllText(jsonPath));
+                var entries = jObj["entries"] as Newtonsoft.Json.Linq.JArray;
+                if (entries == null) return;
 
-                foreach (string file in files)
+                foreach (var e in entries)
                 {
-                    string guid = Path.GetFileNameWithoutExtension(file);
-                    if (guid.Length != 36) continue;
-
-                    var entry = strings[guid];
-                    if (entry == null) continue;
-
-                    string text = entry["Text"].ToString();
-                    if (text.Length > 3)
-                        textMappings.Add(new KeyValuePair<string, string>(file, text));
+                    string t = e["t"] != null ? e["t"].ToString() : null;
+                    string w = e["w"] != null ? e["w"].ToString() : null;
+                    if (string.IsNullOrEmpty(t) || string.IsNullOrEmpty(w)) continue;
+                    textMappings.Add(new KeyValuePair<string, string>(w, t));
                 }
             }
             catch { }
@@ -697,23 +710,29 @@ namespace W40KRTAudioDirectMod
 
         public static void HandleBark(string text)
         {
+            if (!Enabled || string.IsNullOrEmpty(text)) return;
+            string n = NormalizeText(text);
+            if (n.Length == 0) return;
+
+            LogTrigger("BARK full-value: " + EscapeLog(text));
+
             float now = Time.time;
             for (int i = 0; i < textMappings.Count; i++)
             {
-                if (text.IndexOf(textMappings[i].Value) < 0) continue;
+                if (textMappings[i].Value != n) continue;
 
-                string guid = Path.GetFileNameWithoutExtension(textMappings[i].Key);
+                string wav = textMappings[i].Key;
 
                 float lastT;
-                if (lastPlayedByGuid.TryGetValue(guid, out lastT) && now - lastT < GUID_COOLDOWN)
+                if (lastPlayedByKey.TryGetValue(wav, out lastT) && now - lastT < GUID_COOLDOWN)
                 {
-                    LogTrigger("BARK skip-cooldown guid=" + guid + " text=" + Shorten(text));
+                    LogTrigger("BARK skip-cooldown wav=" + wav + " text=" + Shorten(text));
                     return;
                 }
 
-                lastPlayedByGuid[guid] = now;
-                LogTrigger("BARK play guid=" + guid + " text=" + Shorten(text));
-                PlayClip(textMappings[i].Key);
+                lastPlayedByKey[wav] = now;
+                LogTrigger("BARK play wav=" + wav + " text=" + Shorten(text));
+                PlayClip(wav);
                 return;
             }
         }
@@ -723,13 +742,17 @@ namespace W40KRTAudioDirectMod
             if (!Enabled) return;
             if (value == null || value.Length <= 3) return;
 
-            float now = Time.time;
+            string n = NormalizeText(value);
+            if (n.Length == 0) return;
 
+            LogTrigger("TEXT full-value: " + EscapeLog(value));
+
+            float now = Time.time;
             for (int i = 0; i < textMappings.Count; i++)
             {
-                if (value.IndexOf(textMappings[i].Value) < 0) continue;
+                if (textMappings[i].Value != n) continue;
 
-                string guid = Path.GetFileNameWithoutExtension(textMappings[i].Key);
+                string wav = textMappings[i].Key;
                 var stack = Environment.StackTrace;
 
                 // Барк-текст (BarkBlockView) — озвучивается ровно один раз при создании
@@ -737,20 +760,20 @@ namespace W40KRTAudioDirectMod
                 // текста (овертипы при пане камеры, ре-рендеры) здесь пропускаем.
                 if (stack.Contains("BarkBlockView"))
                 {
-                    LogTrigger("TEXT skip-barkdisplay guid=" + guid);
+                    LogTrigger("TEXT skip-barkdisplay wav=" + wav);
                     break;
                 }
 
                 float lastT;
-                if (lastPlayedByGuid.TryGetValue(guid, out lastT) && now - lastT < GUID_COOLDOWN)
+                if (lastPlayedByKey.TryGetValue(wav, out lastT) && now - lastT < GUID_COOLDOWN)
                 {
-                    LogTrigger("TEXT skip-cooldown guid=" + guid);
-                    continue;
+                    LogTrigger("TEXT skip-cooldown wav=" + wav);
+                    return;
                 }
 
-                lastPlayedByGuid[guid] = now;
-                LogTrigger("TEXT play guid=" + guid);
-                PlayClip(textMappings[i].Key);
+                lastPlayedByKey[wav] = now;
+                LogTrigger("TEXT play wav=" + wav);
+                PlayClip(wav);
                 return;
             }
         }
@@ -758,19 +781,26 @@ namespace W40KRTAudioDirectMod
         public static void PlayClip(string pathOrGuid)
         {
             if (!Enabled) return;
-            string path = pathOrGuid;
-            if (!File.Exists(path))
+            string path = null;
+
+            // Relative wav path from mappings.json ("Npc/guid.wav")
+            if (pathOrGuid.IndexOf('\\') >= 0 || pathOrGuid.IndexOf('/') >= 0)
             {
+                string full = localizationDir + pathOrGuid;
+                if (File.Exists(full)) path = full;
+            }
+            else
+            {
+                // GUID key (dialog cue): resolve in localization tree
                 string full = localizationDir + pathOrGuid + ".wav";
                 if (File.Exists(full)) path = full;
                 else
                 {
                     var found = Directory.GetFiles(localizationDir, pathOrGuid + ".wav", SearchOption.AllDirectories);
-                    if (found.Length == 0) return;
-                    path = found[0];
+                    if (found.Length > 0) path = found[0];
                 }
             }
-            if (!File.Exists(path)) return;
+            if (path == null || !File.Exists(path)) return;
 
             mciSendString("close voice", null, 0, IntPtr.Zero);
             System.Threading.Thread.Sleep(10);

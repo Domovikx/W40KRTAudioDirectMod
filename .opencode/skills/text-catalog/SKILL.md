@@ -114,8 +114,22 @@ characters:
 | Категория | Источник | Фильтр | Пример |
 |-----------|----------|--------|--------|
 | **Sound.json events** | `Sound.json` | Есть Wwise-ивент → маппинг через `sound_keys` | `PRL_TheodoraFirstConversation_01` |
-| **Extra dialog** (ruRU-only) | `ruRU.json` | Нет Sound.json, есть `"` или `{n}`, длина ≥50 | Реплики NPC без озвучки |
-| **Descriptions** (окружение) | `ruRU.json` | Нет Sound.json, нет `"`, `{`, `<`, `[`, длина ≥50 | "Массивный стол для переговоров..." |
+| **Extra dialog** (ruRU-only) | `ruRU.json` | Нет Sound.json, есть `"` или `{n}`, **без ограничений по длине** | Реплики NPC без озвучки |
+| **Player answers** | `ruRU.json` + `catalog/dialog_roles.yaml` | Роль `answer` (байт `0x5B` в bbp) → `Player_Answers.yaml` со `skip_voicing: true` | `"Мне пора".` |
+
+## Роли диалоговых GUID
+
+`tools/extract_dialog_roles.py` сканирует `blueprints-pack.bbp` и пишет `catalog/dialog_roles.yaml` (`{guid: answer|cue}`, отсутствующие = unknown). Классификация **по байту типа** узла (не по имени!): `0x5B` → answer, `0x45` → cue, прочие/смешанные → unknown. Перегенерация ролей обязательна перед `merge_speakers.py`.
+
+## Skip-флаги озвучки
+
+- Файловый: `skip_voicing: true` в YAML (Player_Answers.yaml) — весь файл исключается из озвучки
+- Пофразовый: `skip_voicing: true` у phrases[i] — только эта фраза
+- Уважаются: `tools/qwen3_full_icl.py`, `tools/export_mappings.py`, `tools/merge_speakers.py` (при перемещении answer)
+
+## Маппинг для игры
+
+`tools/export_mappings.py` → `Localization/{lang}/mappings.json`: нормализованные `parts[].text_clean` и целые фразы → относительный путь WAV. Мод матчит по **точному равенству** после нормализации (снятие TMP-тегов `<>`, игровой разметки `{n}/{g}/{mf}/{name}`, внешних кавычек).
 
 ## Как добавить нового персонажа
 

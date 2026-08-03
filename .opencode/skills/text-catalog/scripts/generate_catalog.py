@@ -192,6 +192,37 @@ def build_name_to_char(chars: list[dict]) -> dict[str, str]:
     return m
 
 
+def load_dialog_roles() -> dict:
+    """Load {guid: answer|cue} from catalog/dialog_roles.yaml (see tools/extract_dialog_roles.py)."""
+    path = MOD_DIR / "catalog" / "dialog_roles.yaml"
+    if not path.exists():
+        print("WARN: catalog/dialog_roles.yaml not found — run tools/extract_dialog_roles.py "
+              "(player answers will not be filtered)")
+        return {}
+    with open(path, encoding="utf-8") as f:
+        return yaml.safe_load(f) or {}
+
+
+DEFAULT_CHAR_NAME = "Generic Male NPC"
+
+
+def is_junk_text(text: str) -> bool:
+    """Empty/placeholder localization strings ('"', '{n} {/n}', ...) — nothing to voice."""
+    s = text.strip()
+    if len(s) <= 1:
+        return True
+    s = re.sub(r"\{/?[a-zA-Z_]+\|[^}]*\}|\{/?[a-zA-Z_]+\}", "", s)
+    s = s.replace('"', "").strip()
+    return len(s) == 0
+
+
+def normalize_speaker_name(speaker: str | None) -> str | None:
+    """Canonical speaker names (narration must be 'Narrator' to resolve the voice)."""
+    if speaker == "Рассказчик":
+        return "Narrator"
+    return speaker
+
+
 def load_bbp_speakers() -> dict:
     """Load BBP speaker mapping: {sound_guid: speaker_name}."""
     bbp_path = MOD_DIR / "catalog" / "bbp_speakers.yaml"
@@ -396,7 +427,7 @@ def resolve_character(
     return None, None
 
 
-def build_output(chars: list[dict]) -> tuple[dict[str, dict], int]:
+def build_output(chars: list[dict]) -> tuple[dict[str, dict], int, list[dict], int, int]:
     events = load_sound_json()
     texts = load_texts()
     char_map = build_char_map(chars)
@@ -415,22 +446,40 @@ def build_output(chars: list[dict]) -> tuple[dict[str, dict], int]:
             "phrases": [],
         }
 
+    player_answers: list[dict] = []
     unassigned = 0
 
     event_keys = set(events.keys())
     extra_added = 0
+    player_added = 0
+    extra_pool = 0
+
+    dialog_roles = load_dialog_roles()
 
     for guid, text in sorted(texts.items(), key=lambda x: x[0]):
         if guid in event_keys:
             continue
-        if len(text) < 50:
-            continue
         if '"' not in text and '{n}' not in text:
+            continue
+        if is_junk_text(text):
+            continue
+        extra_pool += 1
+
+        # Ответы игрока (BlueprintAnswer в bbp): только чистые выборы БЕЗ {n}-нарратива.
+        # Answer-узлы с нарративом — это «ответ-сцены» (внутри них речь NPC) -> в каталог.
+        if dialog_roles.get(guid) == "answer" and "{n}" not in text:
+            player_answers.append({
+                "guid": guid,
+                "event": "",
+                "text": text,
+                "speaker": "Player",
+            })
+            player_added += 1
             continue
 
         # Determine file owner and speaker from text
         speaker = detect_speaker(text, name_map)
-        name = speaker if speaker else "NPC (по умолчанию)"
+        name = normalize_speaker_name(speaker if speaker else DEFAULT_CHAR_NAME)
         if name not in by_char:
             continue
 
@@ -438,12 +487,12 @@ def build_output(chars: list[dict]) -> tuple[dict[str, dict], int]:
             "guid": guid,
             "event": "",
             "text": text,
-            "speaker": speaker if speaker and speaker != "__NPC__" else name,
+            "speaker": normalize_speaker_name(speaker) if speaker and speaker != "__NPC__" else name,
         })
         by_char[name]["total_phrases"] += 1
         extra_added += 1
 
-    print(f"  Extra dialog entries (ruRU-only): {extra_added}")
+    print(f"  Extra dialog entries (ruRU-only): {extra_added} (+{player_added} player answers -> Player_Answers.yaml)")
 
     bbp_speakers = load_bbp_speakers()
     speaker_overrides = load_speaker_overrides()
@@ -483,6 +532,8 @@ def build_output(chars: list[dict]) -> tuple[dict[str, dict], int]:
             if not speaker:
                 speaker = detect_speaker(text, name_map, char_name=name)
 
+            speaker = normalize_speaker_name(speaker)
+
             if not speaker or speaker == "__NPC__":
                 speaker = name  # default to file owner
 
@@ -499,7 +550,23 @@ def build_output(chars: list[dict]) -> tuple[dict[str, dict], int]:
         else:
             unassigned += 1
 
-    return by_char, unassigned
+    return by_char, unassigned, player_answers, extra_pool
+
+
+def write_player_answers(player_answers: list[dict]):
+    PEOPLE_DIR.mkdir(parents=True, exist_ok=True)
+    path = PEOPLE_DIR / "Player_Answers.yaml"
+    data = {
+        "name": "Player Answers",
+        "description": "Ответы игрока в диалогах (BlueprintAnswer из bbp). Озвучка отключена (skip_voicing).",
+        "skip_voicing": True,
+        "total_phrases": len(player_answers),
+        "phrases": player_answers,
+    }
+    with open(path, "w", encoding="utf-8") as f:
+        yaml.dump(data, f, allow_unicode=True, indent=2,
+                  sort_keys=False, default_flow_style=False, width=65535)
+    print(f"Player answers: {len(player_answers)} phrases -> {path.name}")
 
 
 def write_people(by_char: dict[str, dict]):
@@ -537,26 +604,33 @@ def write_index(by_char: dict[str, dict], unassigned: int):
     print(f"Index: {INDEX_PATH}")
 
 
-def verify_total(by_char: dict[str, dict], unassigned: int) -> bool:
+def verify_total(by_char: dict[str, dict], unassigned: int,
+                 player_answers: list[dict], extra_pool: int) -> bool:
+    """Every event and every extra-dialog string must land somewhere."""
     events = load_sound_json()
-    total_in_events = len(events)
+    texts = load_texts()
+    event_used = sum(1 for g in events if g in texts)
     total_assigned = sum(d["total_phrases"] for d in by_char.values())
-    grand = total_assigned + unassigned
-    print(f"\nSound.json: {total_in_events} entries")
-    print(f"Assigned:   {total_assigned}")
-    print(f"Unassigned: {unassigned}")
-    print(f"Total:      {grand}")
-    if grand != total_in_events:
-        print(f"!! MISMATCH: expected {total_in_events}, got {grand}")
+    player = len(player_answers)
+    expected = event_used + extra_pool
+    consumed = total_assigned + unassigned + player
+    print(f"\nSound.json (in texts): {event_used}")
+    print(f"Extra dialog pool:     {extra_pool}")
+    print(f"Assigned:              {total_assigned}")
+    print(f"Unassigned (events):   {unassigned}")
+    print(f"Player answers:        {player}")
+    print(f"Expected: {expected}, consumed: {consumed}")
+    if consumed != expected:
+        print(f"!! MISMATCH: expected {expected}, got {consumed}")
         return False
-    print("OK - All good -- every event is assigned to a character")
+    print("OK - every event and extra phrase is routed")
     return True
 
 
 def main():
     p = argparse.ArgumentParser(description="Generate per-character YAML catalogs")
     p.add_argument("--verify-only", action="store_true",
-                   help="Just verify counts against Sound.json, don't write")
+                   help="Just verify counts, don't write")
     args = p.parse_args()
 
     chars = load_char_metadata()
@@ -564,15 +638,16 @@ def main():
         print("ERROR: No character metadata found (missing characters.yaml and Localization/ruRU/people/)")
         sys.exit(1)
 
-    by_char, unassigned = build_output(chars)
+    by_char, unassigned, player_answers, extra_pool = build_output(chars)
 
     if args.verify_only:
-        ok = verify_total(by_char, unassigned)
+        ok = verify_total(by_char, unassigned, player_answers, extra_pool)
         sys.exit(0 if ok else 1)
 
     write_people(by_char)
+    write_player_answers(player_answers)
     write_index(by_char, unassigned)
-    verify_total(by_char, unassigned)
+    verify_total(by_char, unassigned, player_answers, extra_pool)
 
 
 if __name__ == "__main__":
