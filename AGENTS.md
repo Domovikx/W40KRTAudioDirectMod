@@ -117,6 +117,20 @@ done
 
 Subagent-флоу описан в `.opencode/skills/speaker-audit/SKILL.md`.
 
+## Gender-review пайплайн (проверка рода М/Ж перед озвучкой)
+
+Трёхступенчатый ручной процесс с сабагентами:
+
+1. **2-3 триера параллельно** (`.opencode/agents/gender-trier.md`, read-only) читают один YAML построчно, сверяют род реплик (русская грамматика: «я сказала», «я рада», «Контрабандистка…» в наррации) с полом голоса спикера (`config/voices.yaml` → `gender`). Возвращают JSON `[{guid, part, status: OK|REVIEW, note}]`.
+2. **Merge**: кандидаты = union по триерам.
+3. **Ревьюер-антипод** (`.opencode/agents/gender-reviewer.md`) перепроверяет каждого кандидата, подтверждает (ставит в YAML `review_gender: REVIEW` + `review_note` на фразе) или отклоняет. В JSON возвращает `suggested_speaker` (правильного спикера, если определим).
+
+**Фикс найденного:** человек (или оркестратор после ресерча по GUID) ставит `speaker_override: <правильный спикер>` на part (НЕ на `speaker`!), снимает `review_gender`/`review_note`. Если WAV для фразы уже сгенерированы — добавить на фразу `need_regen: true`.
+
+**`need_regen`** — фраза-уровневое поле: генератор пересоздаёт все части + склейку этой фразы (работает как per-phrase `--force`) и **автоматически снимает флаг** после успешной генерации (пишет YAML обратно, формат как у merge_speakers). При ошибке генерации флаг сохраняется. Если часть пропущена фильтром `--voice` — склейка НЕ пересобирается, флаг сохраняется (иначе склейка была бы неполной).
+
+**Флаги на фразе:** `review_gender: REVIEW` (подозрение, блокировки генерации НЕТ — только информирует), `need_regen: true` (пересгенерить WAV), `review_note` (причина). Оба переживают `merge_speakers.py` (фразы сохраняются целиком).
+
 ## Full ICL Pipeline (Qwen3-TTS Base + VoiceClone)
 
 Генерация реплик через Voice Clone (Base модель + референс).
@@ -231,3 +245,16 @@ csc -target:library -out:W40KRTAudioDirectMod.dll \
 | Антагонисты | `kunrad`, `teodora`, `trazyn`, `edelthrad`, `eogann`, `manipulus` |
 | NPC | `default_male`, `default_female` |
 | Рассказчик | `wh40k_narrator` |
+
+## Дедупликация GUID (один GUID = один файл)
+
+Каждая фраза (GUID) должна жить ровно в одном файле каталога. Дубли критичны: генератор делает два WAV (разные голоса), а `export_mappings.py` берёт первый по алфавиту каталог — играет не тот голос.
+
+Защита (3 уровня):
+
+- `tools/dedup_catalog.py` — удаляет дубли GUID из `Generic_Male_NPC.yaml` (keep per-char копии). `--dry-run` для просмотра.
+- `tools/test_pipeline.py::test_no_duplicate_guids` — каждый GUID строго в одном файле (fail со списком).
+- `tools/merge_speakers.py` — после union-merge выполняет dedup-фазу (keep: свежая маршрутизация generate_catalog > per-char файл > первый) и в конце прогоняет `test_no_duplicate_guids` (пересборка падает при дублях).
+- `tools/export_mappings.py` — печатает WARNING, если у GUID WAV в 2+ каталогах (симптом дубля/мусора).
+
+Причина дублей (археология 2026-08): union-merge никогда не удалял фразы из старых файлов — при улучшении детекции спикера фраза добавлялась в per-char файл, но оставалась в Generic-дампе (161 дубль: Eogann 103, Seneschal 42, Psyker 6, Sister 6, Smuggler 4).

@@ -11,6 +11,7 @@ phrases:
   - speaker: narrator
     text_clean: Контрабандистка бессильно машет рукой.
   - speaker: Smuggler
+    speaker_override: Jae Heydari
     text_clean: Твоя взяла, КЭП. Я не могу сопротивляться твоим чарам. Кубок нашей страсти я выпью до дна, сколь бы горький осадок не ждал меня в последнем глотке. Я — твоя.
 - guid: ceaceb13-bd02-4cc4-b6dd-465ba5ed15ac
   event: ''
@@ -18,10 +19,12 @@ phrases:
   speaker: Smuggler
   parts:
   - speaker: Smuggler
+    speaker_override: Jae Heydari
     text_clean: Фаф, покоти секунфту...
   - speaker: narrator
     text_clean: Контрабандистка склоняется над Фалько и со всей силы бьет кулаком в лицо.
   - speaker: Smuggler
+    speaker_override: Jae Heydari
     text_clean: Пвоклятье! А я натеялафь, фто пофледним, фто он уфидит, стане моя рафпитая рофа...
 - guid: cf017f15-9ba5-4611-8619-d24907285cac
   event: ''
@@ -29,10 +32,12 @@ phrases:
   speaker: Smuggler
   parts:
   - speaker: Smuggler
+    speaker_override: Jae Heydari
     text_clean: Шерин, я получила важное послание. Пощада и круг Миссии желают меня видеть. Большая честь!
   - speaker: narrator
     text_clean: Контрабандистка улыбается, но под обычной веселой маской Джай затаилась тревога.
   - speaker: Smuggler
+    speaker_override: Jae Heydari
     text_clean: Не буду лгать, что это полностью безопасно, но... Может, ты бы хотел отправиться туда со мной?
 - guid: ee525f2f-8249-4f98-bee8-10d8b070593a
   event: ''

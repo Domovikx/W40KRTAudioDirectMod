@@ -86,7 +86,7 @@ def test_all_speakers_resolve(voices_config, catalog):
     for char_name, char_data in catalog.items():
         for phrase in char_data.get("phrases", []):
             for part in phrase.get("parts", []):
-                speaker = part.get("speaker", "")
+                speaker = part.get("speaker_override") or part.get("speaker", "")
                 if not speaker:
                     continue
                 voice = resolve_speaker(speaker, voices_config)
@@ -149,7 +149,19 @@ def test_no_duplicate_guids(catalog):
     assert not dups, f"Duplicate GUIDs:\n" + "\n".join(dups)
 
 
-def test_final_wavs_have_parts():
+def test_final_wavs_have_parts(catalog):
+    """Every merged WAV's GUID must exist in the catalog with parts defined.
+
+    Part WAVs on disk are a transient cache (cleaned after concat) — the real
+    integrity check is: merged wav GUID -> catalog phrase with non-empty parts.
+    """
+    guids = {}
+    for char_name, char_data in catalog.items():
+        for phrase in char_data.get("phrases", []):
+            g = phrase.get("guid", "")
+            if g and phrase.get("parts"):
+                guids.setdefault(g, []).append(char_name)
+    missing = []
     for lang_dir in LOCALIZATION_DIR.iterdir():
         if not lang_dir.is_dir():
             continue
@@ -158,14 +170,9 @@ def test_final_wavs_have_parts():
                 continue
             for wav in char_dir.glob("*.wav"):
                 guid = wav.stem
-                has_part = False
-                for voice_dir in PARTS_DIR.iterdir():
-                    if not voice_dir.is_dir():
-                        continue
-                    if list(voice_dir.glob(f"{guid}__*.wav")):
-                        has_part = True
-                        break
-                assert has_part, f"{wav} has no cached parts"
+                if guid not in guids:
+                    missing.append(f"{wav} — GUID not in catalog (or no parts)")
+    assert not missing, "Orphan/stale merged WAVs:\n" + "\n".join(missing[:20])
 
 
 def test_no_en_suffix_voices(voices_config):

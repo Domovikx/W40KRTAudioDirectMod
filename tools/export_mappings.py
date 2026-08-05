@@ -90,10 +90,12 @@ def phrase_mapping_entries(phrase: dict, wav_rel: str) -> list[dict]:
 
 def export(lang: str = "ruRU") -> tuple[int, int]:
     lang_dir = ROOT / "Localization" / lang
+    maps_dir = lang_dir / "mappings"
     catalog = load_catalog()
     wavs = collect_wavs(lang_dir)
 
-    entries: list[dict] = []
+    # group -> entries, one file per character dir
+    grouped: dict[str, list[dict]] = {}
     skipped = 0
     for guid, wav_list in wavs.items():
         phrase = catalog.get(guid)
@@ -103,24 +105,35 @@ def export(lang: str = "ruRU") -> tuple[int, int]:
             skipped += 1
             continue
         wav_rel = wav_list[0]
+        if len(wav_list) > 1:
+            print(f"  WARNING: GUID {guid} has WAVs in {len(wav_list)} dirs: "
+                  f"{wav_list} — duplicate GUIDs or stale wavs; using {wav_rel}")
+        group = wav_rel.split("/", 1)[0] if "/" in wav_rel else "_root"
         for e in phrase_mapping_entries(phrase, wav_rel):
-            entries.append(e)
+            grouped.setdefault(group, []).append(e)
 
-    # Deterministic order (stable for identical texts) and dedupe by text.
-    entries.sort(key=lambda e: e["w"])
-    seen: set[str] = set()
-    unique = []
-    for e in entries:
-        if e["t"] in seen:
-            continue
-        seen.add(e["t"])
-        unique.append(e)
+    maps_dir.mkdir(exist_ok=True)
+    total = 0
+    for group in sorted(grouped):
+        # Deterministic order (stable for identical texts) and dedupe by text.
+        entries = grouped[group]
+        entries.sort(key=lambda e: e["w"])
+        seen: set[str] = set()
+        unique = []
+        for e in entries:
+            if e["t"] in seen:
+                continue
+            seen.add(e["t"])
+            unique.append(e)
 
-    out = lang_dir / "mappings.json"
-    with open(out, "w", encoding="utf-8") as f:
-        json.dump({"entries": unique}, f, ensure_ascii=False, separators=(",", ":"))
-    print(f"{out}: {len(unique)} entries, {skipped} skipped (skip_voicing)")
-    return len(unique), skipped
+        out = maps_dir / f"{group}.json"
+        with open(out, "w", encoding="utf-8") as f:
+            json.dump({"entries": unique}, f, ensure_ascii=False, separators=(",", ":"))
+        total += len(unique)
+        print(f"  {out.name}: {len(unique)} entries")
+
+    print(f"{maps_dir}: {total} entries, {skipped} skipped (skip_voicing)")
+    return total, skipped
 
 
 def main() -> int:

@@ -3343,6 +3343,7 @@ phrases:
   speaker: Cassia Orsellio
   parts:
   - speaker: Cassia Orsellio
+    speaker_override: Generic Male NPC
     text_clean: Прошу, Дитя, не упрямьтесь. Помните о долге перед Домом, и путь эти мысли предают вам сил.
 - guid: cc1c705e-5129-4809-ace9-07b415a165ab
   event: CH1_CassiaScared_06
@@ -3375,6 +3376,7 @@ phrases:
   speaker: Cassia Orsellio
   parts:
   - speaker: Cassia Orsellio
+    speaker_override: Generic Male NPC
     text_clean: Довольно, Дитя не заслуживает подобных страданий!
 - guid: 1cce7e72-b036-4c6c-a6b0-ef1285eea26b
   event: CH1_CassiaScared_09
@@ -3395,6 +3397,7 @@ phrases:
   speaker: Cassia Orsellio
   parts:
   - speaker: Cassia Orsellio
+    speaker_override: Generic Male NPC
     text_clean: Не беспокойтесь, Дитя. Ваши люди готовы погибнуть за вас в любую минуту — хоть под градом выстрелов, хоть на разрушенной станции. И так будет всегда.
 - guid: d20ffbe0-8794-48de-9579-7c541d5878d9
   event: CH1_CassiaScared_11
@@ -3511,10 +3514,12 @@ phrases:
   speaker: Cassia Orsellio
   parts:
   - speaker: Cassia Orsellio
+    speaker_override: Generic Male NPC
     text_clean: Дитя, прошу, выслушайте меня очень внимательно. В последний раз.
   - speaker: narrator
     text_clean: Старик сгибается от боли и приглушенно хрипит.
   - speaker: Cassia Orsellio
+    speaker_override: Generic Male NPC
     text_clean: Вам предстоит отправиться в путь с этим господином, дабы воссоединиться с Домом и регентом в Просторе Коронус. Я... не смогу сопровождать вас в этих странствиях.
   - speaker: narrator
     text_clean: Очередная порция синей крови стекает по лицу старика — теперь уже из уха и носа.
@@ -3533,6 +3538,7 @@ phrases:
   speaker: Cassia Orsellio
   parts:
   - speaker: Cassia Orsellio
+    speaker_override: Generic Male NPC
     text_clean: Боюсь, моя госпожа, это единственный ваш приказ, что я посмею нарушить. Я — Хранитель Эурак-V. И, увы, уже не проживу дольше дня. А потому позвольте послужить вам в последний раз так, как того требует долг перед Домом Орселлио. Я останусь на станции и уничтожу тайны, что она хранит.
 - guid: 86a89877-d020-4ff3-8fe9-d4b8ea57cbca
   event: CH1_CassiaScared_26

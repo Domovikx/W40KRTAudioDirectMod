@@ -30,6 +30,7 @@ phrases:
   - speaker: narrator
     text_clean: 'Кибелла бросает долгий взгляд в визор Паскаля и вопросительно поднимает бровь. Техножрец отвечает длительным молчанием, а затем скрипит:'
   - speaker: Kibellah
+    speaker_override: Pasqal Haneumann
     text_clean: Благодарю за содействие. Запрос отклонен. Катехизис велит свершить сие рукой уполномоченной единицы.
 - guid: 06292d7a-25e3-4116-ab0f-03ae36ee0f49
   event: ''
@@ -1376,10 +1377,12 @@ phrases:
   speaker: Kibellah
   parts:
   - speaker: Kibellah
+    speaker_override: Generic Male NPC
     text_clean: Сегодня особенный день. Лишь единожды я надевал сей доспех — когда был вторым из ткачей. В тот день... им я быть перестал. Но золота тяжесть на плечах и груди помнил все эти годы.
   - speaker: narrator
     text_clean: Кибелла открывает рот, но Висирь останавливает ее жестом.
   - speaker: Kibellah
+    speaker_override: Generic Male NPC
     text_clean: Ты поймешь, дочь. Скоро.
 - guid: c3e829c9-46e4-4299-8c03-585de3a74a8e
   event: ''
@@ -1611,6 +1614,7 @@ phrases:
   - speaker: narrator
     text_clean: Ксиони дотрагивается до щеки Кибеллы.
   - speaker: Kibellah
+    speaker_override: Generic Female NPC
     text_clean: Нааки... Император милостив, он не разлучил нас!
   - speaker: narrator
     text_clean: Кибелла осторожно отодвигает руку женщины.

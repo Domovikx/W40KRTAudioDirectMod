@@ -43,16 +43,16 @@ def load_voices_config() -> dict:
         return yaml.safe_load(f)
 
 
-def load_catalog_phrases() -> Dict[str, dict]:
+def load_catalog_phrases() -> Dict[str, tuple]:
     """Load all YAMLs from catalog/people/.
-    Returns dict: character_name -> yaml_data (with phrases list)
+    Returns dict: character_name -> (yaml_path, yaml_data with phrases list)
     """
     catalog = {}
     for yaml_path in glob.glob(os.path.join(CATALOG_DIR, "*.yaml")):
         with open(yaml_path, "r", encoding="utf-8") as f:
             data = yaml.safe_load(f)
         char_name = data.get("name", os.path.splitext(os.path.basename(yaml_path))[0])
-        catalog[char_name] = data
+        catalog[char_name] = (yaml_path, data)
     return catalog
 
 
@@ -203,25 +203,28 @@ def main():
     total = 0
     skipped = 0
     no_parts: list[str] = []
+    dirty: set = set()
 
-    for char_name, char_data in catalog.items():
+    for char_name, (yaml_path, char_data) in catalog.items():
         if filter_char and char_name != filter_char:
             continue
         for phrase in char_data.get("phrases", []):
             if should_skip(char_data, phrase):
                 continue
+            guid = phrase.get("guid", "")
+            need_regen = bool(phrase.get("need_regen"))
             parts = phrase.get("parts")
             if not parts:
-                no_parts.append(phrase.get("guid", "?"))
+                no_parts.append(guid)
                 continue
 
-            guid = phrase.get("guid", "")
             if filter_guids and guid not in filter_guids:
                 continue
 
             part_paths = []
             success = True
             first_voice = None
+            filtered_part = False
 
             for idx, part in enumerate(parts):
                 speaker = part.get("speaker_override", "") or part.get("speaker", "")
@@ -236,6 +239,8 @@ def main():
                     break
 
                 if filter_voice and resolved != filter_voice:
+                    if need_regen:
+                        filtered_part = True
                     continue
 
                 if first_voice is None:
@@ -252,7 +257,7 @@ def main():
                 part_path = os.path.join(parts_out_dir, f"{guid}__{idx+1}.wav")
                 part_paths.append(part_path)
 
-                if os.path.exists(part_path) and not force:
+                if os.path.exists(part_path) and not force and not need_regen:
                     ref_wav_path = os.path.join(ROOT, voices_config.get("references", {}).get(resolved, {}).get("wav", ""))
                     part_mtime = os.path.getmtime(part_path)
                     stale = False
@@ -266,7 +271,7 @@ def main():
                         print(f"  {guid}__{idx+1} (cached) [{speaker} -> {resolved}]")
                         continue
 
-                print(f"  {guid}__{idx+1} [{speaker} -> {resolved}]: {text_clean[:60]}...")
+                print(f"  {guid}__{idx+1} [{speaker} -> {resolved}]{' (need_regen)' if need_regen else ''}: {text_clean[:60]}...")
                 try:
                     wavs, sr = model.generate_voice_clone(
                         text=text_clean,
@@ -284,17 +289,33 @@ def main():
                     break
 
             if success and part_paths:
-                char_name_clean = char_name.replace(" ", "_").replace("(", "").replace(")", "")
-                char_dir = os.path.join(GAME_DIR, char_name_clean)
-                os.makedirs(char_dir, exist_ok=True)
-                merged_path = os.path.join(char_dir, f"{guid}.wav")
-                if os.path.exists(merged_path) and not force:
-                    skipped += 1
+                if need_regen and filtered_part:
+                    print(f"  !! {guid}: need_regen, но часть пропущена фильтром --voice — "
+                          f"склейка НЕ пересобрана, флаг сохранён")
                 else:
-                    concat_wavs(part_paths, merged_path)
-                    total += 1
+                    char_name_clean = char_name.replace(" ", "_").replace("(", "").replace(")", "")
+                    char_dir = os.path.join(GAME_DIR, char_name_clean)
+                    os.makedirs(char_dir, exist_ok=True)
+                    merged_path = os.path.join(char_dir, f"{guid}.wav")
+                    if os.path.exists(merged_path) and not force and not need_regen:
+                        skipped += 1
+                    else:
+                        concat_wavs(part_paths, merged_path)
+                        total += 1
+                        if need_regen:
+                            phrase.pop("need_regen", None)
+                            dirty.add(yaml_path)
             elif not success:
                 print(f"  !! {guid}: generation failed")
+
+    if dirty:
+        for char_name, (path, char_data) in catalog.items():
+            if path not in dirty:
+                continue
+            with open(path, "w", encoding="utf-8") as f:
+                yaml.dump(char_data, f, allow_unicode=True, indent=2,
+                          sort_keys=False, default_flow_style=False, width=65535)
+        print(f"need_regen flags cleared in {len(dirty)} YAML file(s)")
 
     if no_parts:
         shown = ", ".join(no_parts[:5]) + ("..." if len(no_parts) > 5 else "")

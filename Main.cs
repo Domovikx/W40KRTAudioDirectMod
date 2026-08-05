@@ -684,22 +684,38 @@ namespace W40KRTAudioDirectMod
 
             try
             {
-                string jsonPath = localizationDir + "mappings.json";
-                if (!File.Exists(jsonPath)) return;
-
-                var jObj = Newtonsoft.Json.Linq.JObject.Parse(File.ReadAllText(jsonPath));
-                var entries = jObj["entries"] as Newtonsoft.Json.Linq.JArray;
-                if (entries == null) return;
-
-                foreach (var e in entries)
+                // Split mappings: Localization/{lang}/mappings/*.json — per character file
+                string mapsDir = localizationDir + "mappings";
+                if (Directory.Exists(mapsDir))
                 {
-                    string t = e["t"] != null ? e["t"].ToString() : null;
-                    string w = e["w"] != null ? e["w"].ToString() : null;
-                    if (string.IsNullOrEmpty(t) || string.IsNullOrEmpty(w)) continue;
-                    textMappings.Add(new KeyValuePair<string, string>(w, t));
+                    var files = Directory.GetFiles(mapsDir, "*.json");
+                    Array.Sort(files, StringComparer.Ordinal);
+                    foreach (string f in files)
+                        LoadMappingsFile(f);
+                    return;
                 }
+
+                // Legacy single-file fallback (mappings.json)
+                LoadMappingsFile(localizationDir + "mappings.json");
             }
             catch { }
+        }
+
+        private static void LoadMappingsFile(string jsonPath)
+        {
+            if (!File.Exists(jsonPath)) return;
+
+            var jObj = Newtonsoft.Json.Linq.JObject.Parse(File.ReadAllText(jsonPath));
+            var entries = jObj["entries"] as Newtonsoft.Json.Linq.JArray;
+            if (entries == null) return;
+
+            foreach (var e in entries)
+            {
+                string t = e["t"] != null ? e["t"].ToString() : null;
+                string w = e["w"] != null ? e["w"].ToString() : null;
+                if (string.IsNullOrEmpty(t) || string.IsNullOrEmpty(w)) continue;
+                textMappings.Add(new KeyValuePair<string, string>(w, t));
+            }
         }
 
         public static void OnBarkCtorPostfix(string text)

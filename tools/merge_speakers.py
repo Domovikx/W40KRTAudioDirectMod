@@ -27,6 +27,7 @@ PEOPLE = os.path.join(ROOT, "catalog", "people")
 BACKUP = os.path.join(ROOT, "catalog", "people_bak")
 ROLES_PATH = os.path.join(ROOT, "catalog", "dialog_roles.yaml")
 GENERATE = os.path.join(ROOT, ".opencode", "skills", "text-catalog", "scripts", "generate_catalog.py")
+GENERIC_FILE = "Generic_Male_NPC.yaml"
 
 
 def load_roles() -> dict:
@@ -109,6 +110,54 @@ def rewrite_with_count(path: str, data: dict, prev_text: str | None = None) -> b
     with open(path, "w", encoding="utf-8") as f:
         f.write(text)
     return True
+
+
+def dedup_people(people_dir: str, fresh_by_guid: dict) -> int:
+    """One GUID must live in exactly one character file.
+
+    For GUIDs present in 2+ files the canonical copy is chosen by priority:
+    1. the file the fresh generate_catalog.py routed it to (fresh_by_guid),
+    2. the non-generic (per-character) file,
+    3. the first file (fallback).
+    Duplicate copies are removed from all other files. Returns removed count.
+    """
+    by_guid: dict[str, list[str]] = {}
+    files_data: dict[str, tuple[str, dict]] = {}
+    for fname in sorted(os.listdir(people_dir)):
+        if not fname.endswith(".yaml") or fname in ("index.yaml", "Player_Answers.yaml"):
+            continue
+        path = os.path.join(people_dir, fname)
+        with open(path, encoding="utf-8") as f:
+            data = yaml.safe_load(f) or {}
+        files_data[fname] = (path, data)
+        for ph in data.get("phrases", []):
+            g = ph.get("guid", "")
+            if g:
+                by_guid.setdefault(g, []).append(fname)
+
+    removed = 0
+    for g, files in by_guid.items():
+        if len(files) < 2:
+            continue
+        if g in fresh_by_guid and fresh_by_guid[g] in files:
+            keep = fresh_by_guid[g]
+        elif any(f != GENERIC_FILE for f in files):
+            keep = min(f for f in files if f != GENERIC_FILE)
+        else:
+            keep = files[0]
+        for fname in files:
+            if fname == keep:
+                continue
+            path, data = files_data[fname]
+            data["phrases"] = [p for p in data.get("phrases", [])
+                               if p.get("guid") != g]
+            data["total_phrases"] = len(data["phrases"])
+            with open(path, "w", encoding="utf-8") as f:
+                yaml.dump(data, f, allow_unicode=True, indent=2,
+                          sort_keys=False, default_flow_style=False, width=65535)
+            removed += 1
+            print(f"  dedup: removed {g} from {fname} (kept in {keep})")
+    return removed
 
 
 def write_index() -> None:
@@ -205,6 +254,8 @@ def main() -> int:
             data = yaml.safe_load(f) or {}
         new_names.add(file_key(data))
 
+    fresh_by_guid: dict = {}
+
     for name, old_data in old_by_name.items():
         if not name:
             continue
@@ -215,10 +266,21 @@ def main() -> int:
             with open(new_path, encoding="utf-8") as f:
                 prev_text = f.read()
             new_data = yaml.safe_load(prev_text) or {}
+            for ph in new_data.get("phrases", []):
+                g = ph.get("guid", "")
+                if g:
+                    fresh_by_guid.setdefault(g, safe_filename(name) + ".yaml")
         old_data["phrases"] = merge_phrases(old_data.get("phrases", []),
                                             new_data.get("phrases", []), is_answer)
         changed = rewrite_with_count(new_path, old_data, prev_text)
         print(f"  {name}: merged, total={len(old_data['phrases'])}{'' if changed else ' (no changes)'}")
+
+    step("4b/6 deduplicating GUIDs across files")
+    removed = dedup_people(PEOPLE, fresh_by_guid)
+    if removed:
+        print(f"  dedup: removed {removed} duplicate phrase(s)")
+    else:
+        print("  dedup: no duplicate GUIDs")
 
     # Player_Answers.yaml: prefer old phrases (with parts)
     pa_path = os.path.join(PEOPLE, "Player_Answers.yaml")
@@ -232,7 +294,16 @@ def main() -> int:
 
     step("5/6 rebuilding index.yaml")
     write_index()
-    step("6/6 done. Remove backup with: rm -rf catalog/people_bak")
+    step("6/6 verifying no duplicate GUIDs")
+    result = subprocess.run(
+        [sys.executable, "-m", "pytest", os.path.join("tools", "test_pipeline.py"),
+         "-q", "-k", "no_duplicate_guids"],
+        capture_output=True, text=True, cwd=ROOT)
+    print(result.stdout or result.stderr)
+    if result.returncode != 0:
+        print("ERROR: duplicate GUIDs detected after rebuild — fix routing before committing")
+        return 1
+    print("OK: no duplicate GUIDs. Remove backup with: rm -rf catalog/people_bak")
     return 0
 
 
