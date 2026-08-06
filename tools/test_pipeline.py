@@ -222,3 +222,30 @@ def test_text_clean_no_formatting(catalog):
                 if tc != tc.strip():
                     problems.append(f"{char_name}/{guid}: whitespace")
     assert not problems, f"text_clean issues:\n" + "\n".join(problems[:20])
+
+
+def test_no_gender_candidates():
+    """Regression guard: feminine self-referential grammar must not sit on a male voice.
+
+    Runs tools/scan_speaker_candidates.py over the whole catalog and fails if any
+    GENDER candidate appears (e.g. a new female line added with default_male voice).
+    """
+    import sys
+    from pathlib import Path
+    tools_dir = str(ROOT / "tools")
+    if tools_dir not in sys.path:
+        sys.path.insert(0, tools_dir)
+    from scan_speaker_candidates import scan_file, load_yaml, load_names
+
+    voices = load_yaml(CONFIG_VOICES)
+    names = load_names()
+    issues = []
+    for yaml_path in sorted(CATALOG_DIR.glob("*.yaml")):
+        if yaml_path.name in ("index.yaml", "Player_Answers.yaml"):
+            continue
+        res = scan_file(str(yaml_path), names, voices)
+        for c in res["candidates"]:
+            if "GENDER" in c["flags"]:
+                issues.append(f"{yaml_path.name}: {c['guid'][:8]} p{c['part']} "
+                              f"{c['reason']} | {c['text'][:60]}")
+    assert not issues, "GENDER candidates found:\n" + "\n".join(issues[:20])
