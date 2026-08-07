@@ -1,6 +1,6 @@
 ---
 name: text-cleaner
-description: Clean raw game dialog text into TTS-ready text_clean. Handles all W40KRT markup patterns: {g|...}{/g}, {d|...}{/d}, {mf||}, {rt_mf||}, {n}...{/n}, outer quotes. Splits into multi-part structures for character speech + narrator blocks.
+description: "Clean raw game dialog text into TTS-ready text_clean. Handles all W40KRT markup patterns: {g|...}{/g}, {d|...}{/d}, {mf||}, {rt_mf||}, {n}...{/n}, outer quotes. Splits into multi-part structures for character speech + narrator blocks."
 ---
 
 # text-cleaner — Очистка диалогового текста для TTS

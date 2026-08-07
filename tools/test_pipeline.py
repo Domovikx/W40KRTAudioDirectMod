@@ -249,3 +249,24 @@ def test_no_gender_candidates():
                 issues.append(f"{yaml_path.name}: {c['guid'][:8]} p{c['part']} "
                               f"{c['reason']} | {c['text'][:60]}")
     assert not issues, "GENDER candidates found:\n" + "\n".join(issues[:20])
+
+
+def test_skill_frontmatter_valid():
+    """Every .opencode/skills/*/SKILL.md must have parseable YAML frontmatter."""
+    skills_dir = ROOT / ".opencode" / "skills"
+    if not skills_dir.is_dir():
+        return
+    bad = []
+    for md in sorted(skills_dir.glob("*/SKILL.md")):
+        txt = md.read_text(encoding="utf-8")
+        if not txt.startswith("---"):
+            bad.append(f"{md.name}: no frontmatter")
+            continue
+        end = txt.find("\n---", 4)
+        fm = txt[4:end] if end > 0 else txt[4:]
+        try:
+            import yaml as _yaml
+            _yaml.safe_load(fm)
+        except Exception as e:
+            bad.append(f"{md.parent.name}: {e}")
+    assert not bad, "Broken skill frontmatter:\n" + "\n".join(bad)
