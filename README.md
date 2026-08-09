@@ -10,7 +10,7 @@
 
 [![Version](https://img.shields.io/badge/version-0.0.2-blue)](Info.json)
 [![WAV](https://img.shields.io/badge/WAV%20сгенерировано-3494-success)](Localization/ruRU/)
-[![Готово](https://img.shields.io/badge/прогресс-9.8%25-yellow)](Localization/ruRU/STATUS.md)
+[![Готово](https://img.shields.io/badge/прогресс-9.8%25-yellow)](Localization/ruRU/)
 [![Персонажи](https://img.shields.io/badge/персонажей-23-orange)](Localization/ruRU/)
 [![Голосов](https://img.shields.io/badge/голосов-21-lightgrey)](config/voices.yaml)
 [![UMM](https://img.shields.io/badge/Unity%20Mod%20Manager-0.25.0-green)](Info.json)
@@ -61,7 +61,7 @@
 | 🟨 87% | Seneschal NPC |
 | 🔴 0-16% | Остальные 17 персонажей |
 
-**Всего:** 3 494 WAV / 35 716 фраз (9.8%). Подробнее: [STATUS.md](Localization/ruRU/STATUS.md)
+**Всего:** 3 494 WAV / 35 716 фраз (9.8%).
 
 ---
 
