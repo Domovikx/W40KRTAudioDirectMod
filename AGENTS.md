@@ -1,5 +1,10 @@
 # W40KRTAudioDirectMod — Техническая документация
 
+## Правила для AI-агента
+
+- **НИКОГДА не коммитить без явного разрешения пользователя.** Только explicit «коммить» / «commit» / «закоммитить». Редактировать, писать, компилировать — можно. `git commit` — только после review.
+- По умолчанию все изменения остаются в рабочем дереве (staged или unstaged), не закоммиченными.
+
 ## Статус генерации
 
 - **Сгенерировано WAV:** ~169 (67 Кунрад + 102 Теодора)
@@ -258,3 +263,47 @@ csc -target:library -out:W40KRTAudioDirectMod.dll \
 - `tools/export_mappings.py` — печатает WARNING, если у GUID WAV в 2+ каталогах (симптом дубля/мусора).
 
 Причина дублей (археология 2026-08): union-merge никогда не удалял фразы из старых файлов — при улучшении детекции спикера фраза добавлялась в per-char файл, но оставалась в Generic-дампе (161 дубль: Eogann 103, Seneschal 42, Psyker 6, Sister 6, Smuggler 4).
+
+## Релизный процесс
+
+### Как пользователь получает мод
+
+Пользователь жмёт **Code → Download ZIP** на GitHub и получает чистый архив. Никаких ручных ZIP, никаких скриптов упаковки.
+
+### Как это работает
+
+- `.gitattributes` содержит `export-ignore` для всех dev-файлов
+- GitHub при генерации «Download ZIP» использует `git archive`, который уважает `export-ignore`
+- В архиве остаются только: `Info.json`, `Settings.xml`, `W40KRTAudioDirectMod.dll`, `Localization/ruRU/`
+
+### Что исключено из Download ZIP
+
+Директории: `.opencode/`, `.vscode/`, `catalog/`, `config/`, `docs/`, `Python/`, `refs/`, `review/`, `tests/`, `tools/`, `assets/`
+Файлы: `AGENTS.md`, `plan.md`, `compile.bat`, `Main.cs`, `W40KRTAudioDirectMod.csproj`, `.gitignore`, `.gitattributes`, `*.log`, `*.cache`, `*.txt`, `STATUS.md`
+
+### Структура для пользователя (после распаковки)
+
+```
+%userprofile%\AppData\LocalLow\Owlcat Games\Warhammer 40000 Rogue Trader\UnityModManager\
+  W40KRTAudioDirectMod\
+    Info.json
+    Settings.xml
+    W40KRTAudioDirectMod.dll
+    Localization\
+      ruRU\
+        mappings\          (20 JSON)
+        Abelard_Werserian\ (403 WAV)
+        ...
+```
+
+### Порядок выпуска версии
+
+1. `TriggerLogEnabled = false` в `Main.cs` (в проде всегда false)
+2. Обновить версию в `Info.json`
+3. Актуализировать `README.md` (бейджи, статус озвучки)
+4. `compile.bat` — пересобрать DLL
+5. `git add W40KRTAudioDirectMod.dll` (DLL трекается в git для релиза)
+6. Коммит + `git tag vX.Y.Z`
+7. `git push --tags`
+8. GitHub Release: changelog + ссылка на Download ZIP
+9. (опционально) Создать/обновить страницу на Nexus Mods

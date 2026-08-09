@@ -6,6 +6,6 @@
     "Requirements": [],
     "AssemblyName": "W40KRTAudioDirectMod.dll",
     "EntryMethod": "W40KRTAudioDirectMod.Main.Load",
-    "HomePage": "",
-    "Version": "0.0.1"
+    "HomePage": "https://github.com/Domovikx/W40KRTAudioDirectMod",
+    "Version": "0.0.2"
 }

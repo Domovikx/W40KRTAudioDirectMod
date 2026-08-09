@@ -2,18 +2,17 @@
 
 **Русская AI-озвучка для Warhammer 40,000: Rogue Trader**
 
-Замена английской диалоговой озвучки на русскую через AI-генерацию (TTS) с голосовым клонированием. Работает через Unity Mod Manager.
+Замена английской диалоговой озвучки на русскую через AI-генерацию (TTS) с голосовым клонированием. Работает через Unity Mod Manager (встроен в игру).
 
 <p align="center">
   <img src="assets/portraits/0001/Fulllength.png" alt="Rogue Trader Portrait" width="400">
 </p>
 
-[![Version](https://img.shields.io/badge/version-0.0.1-blue)](Info.json)
-[![Phrases](https://img.shields.io/badge/фраз%20в%20каталоге-39.4K-blueviolet)](catalog/people/index.yaml)
-[![Сгенерировано](https://img.shields.io/badge/WAV%20в%20игре-180-success)](Localization/ruRU/)
-[![Персонажи](https://img.shields.io/badge/персонажей-26-orange)](catalog/people/)
-[![Voice](https://img.shields.io/badge/голосов-21-lightgrey)](config/voices.yaml)
-[![.NET](https://img.shields.io/badge/.NET-4.8.1-512BD4)](W40KRTAudioDirectMod.csproj)
+[![Version](https://img.shields.io/badge/version-0.0.2-blue)](Info.json)
+[![WAV](https://img.shields.io/badge/WAV%20сгенерировано-3494-success)](Localization/ruRU/)
+[![Готово](https://img.shields.io/badge/прогресс-9.8%25-yellow)](Localization/ruRU/STATUS.md)
+[![Персонажи](https://img.shields.io/badge/персонажей-23-orange)](Localization/ruRU/)
+[![Голосов](https://img.shields.io/badge/голосов-21-lightgrey)](config/voices.yaml)
 [![UMM](https://img.shields.io/badge/Unity%20Mod%20Manager-0.25.0-green)](Info.json)
 
 ---
@@ -35,11 +34,12 @@
 
 ## Установка
 
-1. Установите [Unity Mod Manager](https://www.nexusmods.com/site/mods/21) (v0.25+)
-2. Скачайте последний релиз `W40KRTAudioDirectMod.dll`
-3. Поместите в `%userprofile%\AppData\LocalLow\Owlcat Games\Warhammer 40000 Rogue Trader\UnityModManager\W40KRTAudioDirectMod\`
-4. Скопируйте папку `Localization/ruRU/` туда же (WAV-файлы)
-5. Запустите игру через Unity Mod Manager
+Игра **уже содержит** Unity Mod Manager — ничего дополнительно устанавливать не нужно.
+
+1. Скачайте ZIP архива: **Code → Download ZIP** (зелёная кнопка на GitHub)
+2. Распакуйте в `%userprofile%\AppData\LocalLow\Owlcat Games\Warhammer 40000 Rogue Trader\UnityModManager\`
+3. Должна получиться папка `W40KRTAudioDirectMod` с `Info.json`, `W40KRTAudioDirectMod.dll` и `Localization\ruRU\`
+4. Запустите игру, нажмите **Ctrl+F10** → мод появится в списке
 
 ### Настройки
 
@@ -49,6 +49,19 @@
 | `Language`         | ruRU      | Языковая папка для WAV       |
 | `DuckLevel`        | 50        | Приглушение игры (%)         |
 | `MuteEnglishVoice` | true      | Выключить английскую озвучку |
+
+---
+
+## Статус озвучки
+
+| Статус | Персонажи |
+|--------|-----------|
+| ✅ 100% | Heinrix, Theodora, Kunrad, Environment |
+| 🟨 99.8% | Abelard (осталась 1 фраза) |
+| 🟨 87% | Seneschal NPC |
+| 🔴 0-16% | Остальные 17 персонажей |
+
+**Всего:** 3 494 WAV / 35 716 фраз (9.8%). Подробнее: [STATUS.md](Localization/ruRU/STATUS.md)
 
 ---
 

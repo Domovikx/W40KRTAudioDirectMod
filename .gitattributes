@@ -1,0 +1,28 @@
+# Directories
+.opencode/        export-ignore
+.vscode/          export-ignore
+catalog/          export-ignore
+config/           export-ignore
+docs/             export-ignore
+Python/           export-ignore
+refs/             export-ignore
+review/           export-ignore
+tests/            export-ignore
+tools/            export-ignore
+assets/           export-ignore
+
+# Dev files
+AGENTS.md         export-ignore
+plan.md           export-ignore
+compile.bat       export-ignore
+Main.cs           export-ignore
+W40KRTAudioDirectMod.csproj  export-ignore
+
+# Git metadata
+.gitignore        export-ignore
+.gitattributes    export-ignore
+
+# Generated
+*.log             export-ignore
+*.cache           export-ignore
+*.txt             export-ignore

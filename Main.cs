@@ -92,7 +92,7 @@ namespace W40KRTAudioDirectMod
         // Диагностика триггеров. true — писать trigger_debug.log (режим отладки),
         // false — выключено (прод). Для быстрого логирования в новом месте:
         // просто вызвать LogTrigger("...") — включение/выключение в этой одной строке.
-        private static bool TriggerLogEnabled = true; // TEMP: тестовая сессия — вернуть false в прод
+        private static bool TriggerLogEnabled = false;
         private static string triggerLogPath;
         public static void InitTriggerLog()
         {
