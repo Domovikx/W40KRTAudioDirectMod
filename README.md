@@ -36,7 +36,7 @@
 
 Игра **уже содержит** Unity Mod Manager — ничего дополнительно устанавливать не нужно.
 
-1. Скачайте ZIP: **[master.zip](https://github.com/Domovikx/W40KRTAudioDirectMod/archive/refs/heads/master.zip)** (или Code → Download ZIP на GitHub)
+1. Скачайте архив: **[W40KRTAudioDirectMod-v0.0.2.zip](https://github.com/Domovikx/W40KRTAudioDirectMod/archive/refs/tags/v0.0.2.zip)** (~2.1 ГБ, содержит WAV-файлы озвучки)
 2. Распакуйте в `%userprofile%\AppData\LocalLow\Owlcat Games\Warhammer 40000 Rogue Trader\UnityModManager\`
 3. Должна получиться папка `W40KRTAudioDirectMod` с `Info.json`, `W40KRTAudioDirectMod.dll` и `Localization\ruRU\`
 4. Запустите игру, нажмите **Ctrl+F10** → мод появится в списке
