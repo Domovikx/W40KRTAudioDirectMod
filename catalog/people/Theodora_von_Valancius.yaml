@@ -147,6 +147,7 @@ phrases:
   parts:
   - speaker: Seneschal (NPC)
     text_clean: Это иррационально, Леди Теодора.
+    speaker_override: Edelthrad
   - speaker: narrator
     text_clean: Голос мужчины, облаченного в причудливое одеяние, звенит от напряжения. Его лицо, половина которого скрыта синт-кожей, искажено в гримасе недовольства и недоверия.
   - speaker: Seneschal (NPC)
@@ -832,6 +833,7 @@ phrases:
   parts:
   - speaker: Theodora von Valancius
     text_clean: Все могло решиться в пылу боя. Тем более здесь был Морт, он защищал бы Леди Теодору до последнего.
+    speaker_override: Generic Male NPC
 - guid: 669dd63c-f69f-43d0-be79-f34babffeb08
   event: PRL_TheodorasFate_04
   text: '{n}Сенешаль проводит рукой по лицу.{/n} "Сначала — предательство, теперь — убийство {g|Encyclopedia:RogueTrader}Вольного Торговца{/g}... и Морта!"'
@@ -890,6 +892,7 @@ phrases:
   parts:
   - speaker: Theodora von Valancius
     text_clean: Нет! Погодите! Давайте посмотрим, что мы можем найти...
+    speaker_override: Idira Tlass
 - guid: 6447cc04-76de-4d86-b0b5-c3a5f38fac8e
   event: PRL_TheodorasFate_10
   text: '"И ты так легко сдаешься, старик?! Ладно святоша, у нее сердца нет, но ты?! Как бы не так! Я докопаюсь до того, кто виновен в смерти Лорд-капитана! Докопаюсь и тогда..." {n}Идира сжимает кулаки.{/n} "Этот ублюдок пожалеет о том, что родился на свет!"'
@@ -928,6 +931,7 @@ phrases:
   parts:
   - speaker: Theodora von Valancius
     text_clean: Как Морт мог оплошать? Архмилитант был выходцем с мира смерти, у него были молниеносные рефлексы...
+    speaker_override: Generic Male NPC
 - guid: f919e4d4-4eda-4a20-9eea-54e299785de5
   event: PRL_TheodorasFate_14
   text: '"Да. Не терпится снова окунуться в горнило битвы!"'
@@ -935,3 +939,4 @@ phrases:
   parts:
   - speaker: Theodora von Valancius
     text_clean: Да. Не терпится снова окунуться в горнило битвы!
+    speaker_override: Generic Male NPC

@@ -46,6 +46,7 @@ phrases:
   parts:
   - speaker: Smuggler
     text_clean: Попфотящая смерфь тля мерфского упфлюдка фроте тепя, Фалько.
+    speaker_override: Jae Heydari
   - speaker: narrator
     text_clean: Контрабандистка выплевывает очередной зуб из окровавленного рта прямо в спящую рожу своего мучителя.
 - guid: ae501a05-6d60-4388-b5d3-b0ecec655b3f

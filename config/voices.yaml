@@ -168,6 +168,13 @@ references:
     - Seneschal NPC
     - Interrogator (NPC)
     - Interrogator NPC
+  npc_f_3:
+    gender: female
+    wav: refs/samples_en_demo/npc_f_3_demo.wav
+    x_vector_only: true
+    description: NPC female 3 — demo голос (англ.)
+    characters:
+    - Хор
   default_female:
     gender: female
     wav: refs/samples_en/npc_f_1.wav

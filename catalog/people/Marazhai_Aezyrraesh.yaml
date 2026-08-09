@@ -1404,6 +1404,7 @@ phrases:
   parts:
   - speaker: narrator
     text_clean: Маражай поворачивает к вам голову — и Караэль вздрагивает, заметив на его шее клеймо. Голос друкари превращается в шипение.
+    speaker_override: Generic Male NPC
   - speaker: Marazhai Aezyrraesh
     text_clean: Ты... позволил поставить на себе знак, отличный от татуировок Опустошительной бури?
   - speaker: narrator

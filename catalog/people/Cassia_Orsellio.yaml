@@ -211,6 +211,7 @@ phrases:
   parts:
   - speaker: Cassia Orsellio
     text_clean: Ты правда готова пожертвовать пестрыми оттенками свой души, дабы избавиться от проклятия, что тебя тяготит?
+    speaker_override: Generic Male NPC
   - speaker: narrator
     text_clean: Кассия опускает взгляд и прикладывает ладонь к Атласу в своей груди.
   - speaker: Cassia Orsellio

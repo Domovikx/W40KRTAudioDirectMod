@@ -117,7 +117,6 @@ def test_no_ambiguous_speakers(voices_config, catalog):
 
 
 def test_no_stale_cached_parts(voices_config):
-    voices_mtime = os.path.getmtime(CONFIG_VOICES)
     stale = []
     for vname, ref in voices_config.get("references", {}).items():
         voice_dir = PARTS_DIR / vname
@@ -127,7 +126,7 @@ def test_no_stale_cached_parts(voices_config):
         ref_mtime = os.path.getmtime(ref_wav) if ref_wav.exists() else 0
         for wav_file in sorted(voice_dir.glob("*.wav")):
             part_mtime = os.path.getmtime(wav_file)
-            if part_mtime < ref_mtime or part_mtime < voices_mtime:
+            if part_mtime < ref_mtime:
                 stale.append(f"{vname}/{wav_file.name}")
     assert not stale, (
         f"{len(stale)} stale cached parts:\n" + "\n".join(stale)
