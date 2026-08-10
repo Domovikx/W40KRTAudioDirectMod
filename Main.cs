@@ -17,6 +17,9 @@ namespace W40KRTAudioDirectMod
         public string Language = "ruRU";
         public int DuckLevel = 50;
         public bool MuteEnglishVoice = true;
+        public bool VerboseDebugLog = false;
+        public bool CollectSpeakerStats = false;
+        public bool CollectUsageStats = false;
 
         public override void Save(UnityModManager.ModEntry modEntry)
         {
@@ -45,6 +48,7 @@ namespace W40KRTAudioDirectMod
             settings = UnityModManager.ModSettings.Load<Settings>(modEntry);
             localizationDir = modPath + "\\Localization\\" + settings.Language + "\\";
             InitTriggerLog();
+            InitTracking();
             LoadMappings();
 
             var harmony = new Harmony(modEntry.Info.Id);
@@ -65,7 +69,7 @@ namespace W40KRTAudioDirectMod
                 }
             }
 
-            modEntry.OnToggle = (entry, value) => { Enabled = value; if (!value) { isPlaying = false; RestoreMusic(); } return true; };
+            modEntry.OnToggle = (entry, value) => { Enabled = value; if (!value) { isPlaying = false; RestoreMusic(); FlushTracking(); } return true; };
             modEntry.OnUpdate = OnUpdate;
             modEntry.OnGUI = OnGui;
             modEntry.OnSaveGUI = (entry) => settings.Save(entry);
@@ -89,10 +93,9 @@ namespace W40KRTAudioDirectMod
             catch { }
         }
 
-        // Диагностика триггеров. true — писать trigger_debug.log (режим отладки),
-        // false — выключено (прод). Для быстрого логирования в новом месте:
-        // просто вызвать LogTrigger("...") — включение/выключение в этой одной строке.
-        private static bool TriggerLogEnabled = false;
+        // Диагностика триггеров. Управляется через settings.VerboseDebugLog (UI-чекбокс).
+        // Выключено по умолчанию. Для быстрого логирования: LogTrigger("...").
+        private static bool TriggerLogEnabled { get { return settings != null && settings.VerboseDebugLog; } }
         private static string triggerLogPath;
         public static void InitTriggerLog()
         {
@@ -115,6 +118,117 @@ namespace W40KRTAudioDirectMod
             }
             catch { }
         }
+
+        // ── Статистика трекинга ──
+        // speaker_stats.json: расхождения каталог vs игра
+        // usage_stats.json: счётчики play/skip-cooldown/skip-bark/no-wav
+        private static System.Text.RegularExpressions.Regex reGameSpeaker =
+            new System.Text.RegularExpressions.Regex(@"^([\w\-\u0400-\u04FF]+[\w\-\s\u0400-\u04FF]*):\s*");
+        private static System.Text.RegularExpressions.Regex reGuidFromPath =
+            new System.Text.RegularExpressions.Regex(@"([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})");
+
+        // in-memory accumulators — flush to disk every FLUSH_INTERVAL seconds
+        private static Dictionary<string, object> speakerMismatches = new Dictionary<string, object>();
+        private static Dictionary<string, Dictionary<string, int>> usageStats = new Dictionary<string, Dictionary<string, int>>();
+        private static float lastFlushTime;
+        private const float FLUSH_INTERVAL = 10f;
+        private static string speakerStatsPath;
+        private static string usageStatsPath;
+
+        public static string ExtractGameSpeaker(string rawText)
+        {
+            if (string.IsNullOrEmpty(rawText)) return null;
+            var m = reGameSpeaker.Match(rawText);
+            return m.Success ? m.Groups[1].Value : null;
+        }
+
+        public static string ExtractGuidFromWav(string wavRelPath)
+        {
+            if (string.IsNullOrEmpty(wavRelPath)) return null;
+            var m = reGuidFromPath.Match(wavRelPath);
+            return m.Success ? m.Groups[1].Value : null;
+        }
+
+        private static void InitTracking()
+        {
+            speakerStatsPath = modPath + "\\speaker_stats.json";
+            usageStatsPath = modPath + "\\usage_stats.json";
+            speakerMismatches.Clear();
+            usageStats.Clear();
+            lastFlushTime = Time.time;
+        }
+
+        private static void TrackMismatchStats(string guid, string catalogSpeaker, string gameSpeaker, string text)
+        {
+            if (!settings.CollectSpeakerStats || string.IsNullOrEmpty(guid)) return;
+
+            var key = guid;
+            if (speakerMismatches.ContainsKey(key)) return; // already tracked this session
+
+            var entry = new Dictionary<string, object> {
+                { "catalog", catalogSpeaker ?? "" },
+                { "game", gameSpeaker ?? "" },
+                { "text", text ?? "" },
+                { "count", 1 }
+            };
+            speakerMismatches[key] = entry;
+            FlushTrackingIfNeeded();
+        }
+
+        private static void TrackUsageStats(string guid, string type)
+        {
+            if (!settings.CollectUsageStats || string.IsNullOrEmpty(guid)) return;
+
+            if (!usageStats.ContainsKey(guid))
+                usageStats[guid] = new Dictionary<string, int> { { "plays", 0 }, { "skips", 0 }, { "cooldown", 0 }, { "missing", 0 } };
+
+            if (usageStats[guid].ContainsKey(type))
+                usageStats[guid][type]++;
+
+            FlushTrackingIfNeeded();
+        }
+
+        private static void FlushTrackingIfNeeded()
+        {
+            float now = Time.time;
+            if (now - lastFlushTime < FLUSH_INTERVAL) return;
+            FlushTracking();
+        }
+
+        public static void FlushTracking()
+        {
+            lastFlushTime = Time.time;
+
+            if (settings.CollectSpeakerStats && speakerMismatches.Count > 0)
+            {
+                try
+                {
+                    var obj = new Dictionary<string, object> {
+                        { "version", settings.GetType().GetField("Version") != null ? "" : "0.0.2" },
+                        { "mismatches", speakerMismatches }
+                    };
+                    string json = Newtonsoft.Json.JsonConvert.SerializeObject(obj, Newtonsoft.Json.Formatting.Indented);
+                    File.WriteAllText(speakerStatsPath, json);
+                }
+                catch { }
+            }
+
+            if (settings.CollectUsageStats && usageStats.Count > 0)
+            {
+                try
+                {
+                    var obj = new Dictionary<string, object> {
+                        { "version", "0.0.2" },
+                        { "entries", usageStats }
+                    };
+                    string json = Newtonsoft.Json.JsonConvert.SerializeObject(obj, Newtonsoft.Json.Formatting.Indented);
+                    File.WriteAllText(usageStatsPath, json);
+                }
+                catch { }
+            }
+        }
+
+        // ── Конец трекинга ──
 
         private static string Shorten(string s, int max = 80)
         {
@@ -532,6 +646,8 @@ namespace W40KRTAudioDirectMod
 
         private static void OnUpdate(UnityModManager.ModEntry modEntry, float delta)
         {
+            FlushTrackingIfNeeded();
+
             if (isPlaying)
             {
                 mciStatusBuf.Clear();
@@ -652,6 +768,42 @@ namespace W40KRTAudioDirectMod
             GUILayout.Space(10f);
             GUILayout.Label("Загружено WAV: " + textMappings.Count);
 
+            GUILayout.Space(10f);
+            GUILayout.Label("Диагностика и улучшение озвучки", GUILayout.ExpandWidth(true));
+            GUILayout.Label("Все настройки ниже выключены по умолчанию. Они не влияют на озвучку,", GUILayout.Width(350f));
+            GUILayout.Label("а только собирают данные для её улучшения. Файлы лежат в папке мода.", GUILayout.Width(350f));
+
+            bool verbose = GUILayout.Toggle(settings.VerboseDebugLog, new GUIContent(
+                "Подробный лог срабатываний (trigger_debug.log)",
+                "Записывает какие фразы игра пыталась озвучить, какие WAV проигрались. Включите перед отправкой баг-репорта."
+            ));
+            if (verbose != settings.VerboseDebugLog)
+            {
+                settings.VerboseDebugLog = verbose;
+                if (verbose) InitTriggerLog();
+                settings.Save(modEntry);
+            }
+
+            bool spkStats = GUILayout.Toggle(settings.CollectSpeakerStats, new GUIContent(
+                "Статистика расхождений спикеров (speaker_stats.json)",
+                "Сверяет кого игра считает говорящим с тем что записано в каталоге мода. Помогает исправлять ошибки в определении персонажей."
+            ));
+            if (spkStats != settings.CollectSpeakerStats)
+            {
+                settings.CollectSpeakerStats = spkStats;
+                settings.Save(modEntry);
+            }
+
+            bool usageStats = GUILayout.Toggle(settings.CollectUsageStats, new GUIContent(
+                "Статистика использования (usage_stats.json)",
+                "Считает сколько раз фразы проигрались, сколько пропущены по кулдауну или из-за отсутствия WAV. Помогает понять что озвучить в первую очередь."
+            ));
+            if (usageStats != settings.CollectUsageStats)
+            {
+                settings.CollectUsageStats = usageStats;
+                settings.Save(modEntry);
+            }
+
             GUILayout.EndVertical();
         }
 
@@ -667,11 +819,15 @@ namespace W40KRTAudioDirectMod
         private static readonly System.Text.RegularExpressions.Regex normWs =
             new System.Text.RegularExpressions.Regex(@"\s+");
 
+        private static readonly System.Text.RegularExpressions.Regex normSpeakerPrefix =
+            new System.Text.RegularExpressions.Regex(@"^[^:]+:\s*");
+
         public static string NormalizeText(string s)
         {
             if (string.IsNullOrEmpty(s)) return "";
             s = normTmpTag.Replace(s, "");       // <align="center"> etc.
             s = normMarkup.Replace(s, "");       // {n} {/n} {g|...}{/g} {mf|a|b} {name}
+            s = normSpeakerPrefix.Replace(s, "");  // Kunrad Voigtvir: "текст" -> "текст"
             s = normOuterQuotes.Replace(s, "$2$4"); // "Текст". / «Текст».
             s = normWs.Replace(s, " ").Trim();
             return s;
@@ -777,6 +933,7 @@ namespace W40KRTAudioDirectMod
                 if (stack.Contains("BarkBlockView"))
                 {
                     LogTrigger("TEXT skip-barkdisplay wav=" + wav);
+                    TrackUsageStats(ExtractGuidFromWav(wav), "skips");
                     break;
                 }
 
@@ -784,11 +941,25 @@ namespace W40KRTAudioDirectMod
                 if (lastPlayedByKey.TryGetValue(wav, out lastT) && now - lastT < GUID_COOLDOWN)
                 {
                     LogTrigger("TEXT skip-cooldown wav=" + wav);
+                    TrackUsageStats(ExtractGuidFromWav(wav), "cooldown");
                     return;
                 }
 
                 lastPlayedByKey[wav] = now;
                 LogTrigger("TEXT play wav=" + wav);
+                TrackUsageStats(ExtractGuidFromWav(wav), "plays");
+
+                // Check speaker mismatch
+                if (settings.CollectSpeakerStats)
+                {
+                    string gameSpk = ExtractGameSpeaker(value);
+                    if (!string.IsNullOrEmpty(gameSpk))
+                    {
+                        string guid = ExtractGuidFromWav(wav);
+                        TrackMismatchStats(guid, null, gameSpk, n);
+                    }
+                }
+
                 PlayClip(wav);
                 return;
             }

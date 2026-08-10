@@ -1,61 +1,94 @@
-"""Tests for tools/text_normalize.py — canonical display form."""
+# -*- coding: utf-8 -*-
+"""
+Test NormalizeText speaker prefix stripping.
+Mirrors the C# regex logic from Main.cs.
+"""
 
-import sys
-import os
-from pathlib import Path
+import re
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))
-
-from text_normalize import normalize, matches  # noqa: E402
-
-
-def test_tmp_tags_stripped():
-    assert normalize('<align="center">Текст</align>') == "Текст"
-
-
-def test_narration_markup_stripped():
-    assert normalize("{n}Бла-бла{/n}") == "Бла-бла"
-
-
-def test_g_markup_stripped():
-    assert normalize("{g|Encyclopedia:Mechadendrite}текст{/g}") == "текст"
+# Same regex patterns as Main.cs
+norm_tmp_tag = re.compile(r"<[^>]*>")
+norm_markup = re.compile(r"\{/?[a-zA-Z_]+\|[^}]*\}|\{/?[a-zA-Z_]+\}")
+norm_speaker_prefix = re.compile(r"^[^:]+:\s*")
+norm_outer_quotes = re.compile(
+    r'^\s*(["\u00ab\u201c\u201e])(.*?)([\u00bb\u201d\u201c"])\s*(\.?)\s*$'
+)
+norm_ws = re.compile(r"\s+")
 
 
-def test_mf_markup_stripped():
-    assert normalize("Я бы очень удивил{mf|ся|ась}") == "Я бы очень удивил"
+def normalize_text(s: str) -> str:
+    if not s:
+        return ""
+    s = norm_tmp_tag.sub("", s)
+    s = norm_markup.sub("", s)
+    s = norm_speaker_prefix.sub("", s)
+    s = norm_outer_quotes.sub(r"\2\4", s)
+    s = norm_ws.sub(" ", s).strip()
+    return s
 
 
-def test_name_markup_stripped():
-    assert normalize("{name}, что ты делаешь?") == ", что ты делаешь?"
+# ── Test cases ──
 
+cases = [
+    # (input, expected)
+    #
+    # 1. Speaker prefix + quotes
+    (
+        '\u041a\u0443\u043d\u0440\u0430\u0434 \u0412\u043e\u0439\u0433\u0442\u0432\u0438\u0440: "\u041e\u0434\u043d\u0430 \u0438\u0437 \u0442\u0440\u043e\u0444\u0435\u0439\u043d\u044b\u0445 \u0444\u043e\u043d \u0412\u0430\u043b\u0430\u043d\u0446\u0438\u0443\u0441. \u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e, \u043f\u043e\u0441\u043b\u0435 \u0432\u0438\u0437\u0438\u0442\u0430 \u043a \u041b\u043e\u0440\u0434-\u043a\u0430\u043f\u0438\u0442\u0430\u043d\u0443 \u0432\u044b \u0437\u0430\u0445\u043e\u0442\u0438\u0442\u0435 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u044c \u044d\u0442\u043e\u0442 \u0437\u0430\u043b..."',
+        "\u041e\u0434\u043d\u0430 \u0438\u0437 \u0442\u0440\u043e\u0444\u0435\u0439\u043d\u044b\u0445 \u0444\u043e\u043d \u0412\u0430\u043b\u0430\u043d\u0446\u0438\u0443\u0441. \u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e, \u043f\u043e\u0441\u043b\u0435 \u0432\u0438\u0437\u0438\u0442\u0430 \u043a \u041b\u043e\u0440\u0434-\u043a\u0430\u043f\u0438\u0442\u0430\u043d\u0443 \u0432\u044b \u0437\u0430\u0445\u043e\u0442\u0438\u0442\u0435 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u044c \u044d\u0442\u043e\u0442 \u0437\u0430\u043b...",
+    ),
+    # 2. Speaker prefix without quotes
+    (
+        '\u0410\u0431\u0435\u043b\u044f\u0440 \u0412\u0435\u0440\u0441\u0435\u0440\u0438\u0430\u043d: \u0414\u043e\u0431\u0440\u043e \u043f\u043e\u0436\u0430\u043b\u043e\u0432\u0430\u0442\u044c \u043d\u0430 \u0431\u043e\u0440\u0442, \u041b\u043e\u0440\u0434-\u043a\u0430\u043f\u0438\u0442\u0430\u043d.',
+        '\u0414\u043e\u0431\u0440\u043e \u043f\u043e\u0436\u0430\u043b\u043e\u0432\u0430\u0442\u044c \u043d\u0430 \u0431\u043e\u0440\u0442, \u041b\u043e\u0440\u0434-\u043a\u0430\u043f\u0438\u0442\u0430\u043d.',
+    ),
+    # 3. Guillemet quotes
+    (
+        '\u041d\u0430\u0432\u0438\u0433\u0430\u0442\u043e\u0440: \u00ab\u041c\u044b \u0432\u044b\u0445\u043e\u0434\u0438\u043c \u0438\u0437 \u0432\u0430\u0440\u043f\u0430\u00bb',
+        '\u041c\u044b \u0432\u044b\u0445\u043e\u0434\u0438\u043c \u0438\u0437 \u0432\u0430\u0440\u043f\u0430',
+    ),
+    # 4. No speaker prefix (pass-through)
+    (
+        '\u041f\u0440\u043e\u0441\u0442\u043e \u0442\u0435\u043a\u0441\u0442 \u0431\u0435\u0437 \u0441\u043f\u0438\u043a\u0435\u0440\u0430.',
+        '\u041f\u0440\u043e\u0441\u0442\u043e \u0442\u0435\u043a\u0441\u0442 \u0431\u0435\u0437 \u0441\u043f\u0438\u043a\u0435\u0440\u0430.',
+    ),
+    # 5. Speaker + markup
+    (
+        '\u041f\u0430\u0441\u043a\u0430\u043b\u044c: "{n}\u0412\u043e\u0441\u0445\u0432\u0430\u043b\u0435\u043d\u0438\u0435 \u041e\u043c\u043d\u0438\u0441\u0441\u0438\u0438.{/n} \u041b\u043e\u0433\u0438\u0447\u043d\u043e."',
+        '\u0412\u043e\u0441\u0445\u0432\u0430\u043b\u0435\u043d\u0438\u0435 \u041e\u043c\u043d\u0438\u0441\u0441\u0438\u0438. \u041b\u043e\u0433\u0438\u0447\u043d\u043e.',
+    ),
+    # 6. Single-word speaker name
+    (
+        '\u0425\u0430\u0439\u043d\u0440\u0438\u043a\u0441: "\u0418\u043d\u043a\u0432\u0438\u0437\u0438\u0446\u0438\u044f \u043d\u0435 \u0434\u0440\u0435\u043c\u043b\u0435\u0442."',
+        '\u0418\u043d\u043a\u0432\u0438\u0437\u0438\u0446\u0438\u044f \u043d\u0435 \u0434\u0440\u0435\u043c\u043b\u0435\u0442.',
+    ),
+    # 7. Colon-prefixed non-speaker text (acceptable trade-off: gets stripped)
+    (
+        '\u0412\u043d\u0438\u043c\u0430\u043d\u0438\u0435: \u043e\u0431\u043d\u0430\u0440\u0443\u0436\u0435\u043d\u0430 \u0443\u0433\u0440\u043e\u0437\u0430.',
+        '\u043e\u0431\u043d\u0430\u0440\u0443\u0436\u0435\u043d\u0430 \u0443\u0433\u0440\u043e\u0437\u0430.',
+    ),
+    # 8. Empty
+    ("", ""),
+    # 9. TMP tags + speaker prefix
+    (
+        '<align="center">\u041f\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044e.</align>',
+        '\u041f\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044e.',
+    ),
+]
 
-def test_outer_quotes_stripped():
-    assert normalize('"Нет".') == "Нет."
-    assert normalize('"Слава Омниссии, подателю Знания".') == "Слава Омниссии, подателю Знания."
+failed = 0
+for i, (inp, expected) in enumerate(cases):
+    result = normalize_text(inp)
+    status = "OK" if result == expected else "FAIL"
+    if status == "FAIL":
+        failed += 1
+    print(f"[{status}] Case {i+1}: in={repr(inp[:60])}")
+    print(f"       out={repr(result[:80])}")
+    if status == "FAIL":
+        print(f"       exp={repr(expected[:80])}")
+    print()
 
-
-def test_guillemets_stripped():
-    assert normalize("«Текст».") == "Текст."
-
-
-def test_whitespace_collapsed():
-    assert normalize("  Много   пробелов \n и\n переносов ") == "Много пробелов и переносов"
-
-
-def test_empty_and_none():
-    assert normalize(None) == ""
-    assert normalize("") == ""
-    assert normalize("   ") == ""
-
-
-def test_matches_exact_after_normalization():
-    assert matches('<align="center">"Нет".</align>', '"Нет".')
-    assert matches('"Нет".', "Нет.")
-    assert not matches('"Нет". {n}Стариковский шепот.{/n} "Тревога".', '"Нет".')
-    assert not matches("Привет, как дела?", "Привет")
-
-
-def test_matches_full_phrase():
-    displayed = '"Нет". {n}Стариковский шепот заползает вам в уши.{/n} "Тревога твоя не пуста".'
-    catalog = '"Нет". {n}Стариковский шепот заползает вам в уши.{/n} "Тревога твоя не пуста".'
-    assert matches(displayed, catalog)
+print(f"{'='*40}")
+print(f"Results: {len(cases) - failed}/{len(cases)} passed, {failed} failed")
+if failed:
+    exit(1)

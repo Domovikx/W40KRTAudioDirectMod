@@ -57,7 +57,16 @@ C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader
 - `OnTextSet` пропускает **любой барк-текст**: если в `Environment.StackTrace` есть `BarkBlockView` (все барковые TMP-установки идут через `Kingmaker.UI.MVVM.View.Bark.PC.BarkBlockView`) → SKIP. Это гасит повторные установки одного текста при пане камеры, ре-создании овертипов (`UnitOvertipsView`, `OvertipMapObjectInteractionView` и др.) — без перечисления имён вьюх
 - `HandleBark` (из `BarkHandle..ctor`) — играет с per-GUID cooldown 10 секунд (`lastPlayedByGuid`)
 - История: `BarkPlayer.Bark` патч не работал (фильтр `ReturnType == typeof(void)` + нерезолвимый параметр `____text`) — заменён на `BarkHandle..ctor`; хардкод `MapObjectOvertipsView` убран как избыточный
-- Диагностика: `trigger_debug.log` (пересоздаётся при старте игры) — строки `BARK play/skip-cooldown`, `TEXT play/skip-barkdisplay/skip-cooldown`, `DIALOG cue`. Включение: `Main.TriggerLogEnabled = true` (в `Main.cs`, по умолчанию `false` — в проде выключено). Новые места логирования — просто `LogTrigger("...")`
+- Диагностика: `trigger_debug.log` (пересоздаётся при старте игры) — строки `BARK play/skip-cooldown`, `TEXT play/skip-barkdisplay/skip-cooldown`, `DIALOG cue`. Включение: чекбокс «Подробный лог» в меню мода (UMM → Settings → `VerboseDebugLog`, по умолчанию `false`). Новые места логирования — просто `LogTrigger("...")`
+
+#### Префикс спикера в тексте
+
+Игра может присылать текст с префиксом `Имя Фамилия: "реплика"`.
+`NormalizeText` обрезает префикс через `normSpeakerPrefix = ^[^:]+:\s*`, затем снимает кавычки.
+Без этого маппинг не матчится (текст в маппингах — без префикса).
+
+**Диагностика:** включить «Подробный лог» → в `trigger_debug.log` видно сырой текст с префиксом и факт проигрывания/пропуска.
+**Тесты:** `tests/test_text_normalize.py` — 9 кейсов на нормализацию с префиксом и без.
 
 ### Определение спикера (каталог фраз)
 
@@ -272,6 +281,64 @@ csc -target:library -out:W40KRTAudioDirectMod.dll \
 
 Причина дублей (археология 2026-08): union-merge никогда не удалял фразы из старых файлов — при улучшении детекции спикера фраза добавлялась в per-char файл, но оставалась в Generic-дампе (161 дубль: Eogann 103, Seneschal 42, Psyker 6, Sister 6, Smuggler 4).
 
+## Статистика и диагностика (UMM-меню)
+
+Три флага в Settings (все **OFF** по умолчанию, включаются в UMM-меню чекбоксами):
+
+| Флаг | Файл | Что собирает |
+|------|------|-------------|
+| `VerboseDebugLog` | `trigger_debug.log` | Сырой текст, факт проигрывания/пропуска |
+| `CollectSpeakerStats` | `speaker_stats.json` | Расхождения: кого каталог считает спикером vs кого игра показывает |
+| `CollectUsageStats` | `usage_stats.json` | Счётчики: plays, skips (bark), cooldown, missing (нет WAV) |
+
+### Формат `speaker_stats.json`
+
+```json
+{
+  "version": "0.0.2",
+  "mismatches": {
+    "<guid>": { "catalog": "Generic Male NPC", "game": "Kunrad Voigtvir", "text": "...", "count": 1 }
+  }
+}
+```
+
+Дедупликация: один GUID — одна запись за сессию.
+
+### Формат `usage_stats.json`
+
+```json
+{
+  "version": "0.0.2",
+  "entries": {
+    "<guid>": { "plays": 5, "skips": 0, "cooldown": 2, "missing": 0 }
+  }
+}
+```
+
+### Как пользователь делится статистикой
+
+1. Включает флаги в UMM-меню
+2. Играет → JSON-файлы копятся в папке мода
+3. Кидает файл в GitHub Issue или Discord
+4. Разработчик запускает `tools/merge_stats.py` для агрегации отчёта
+
+### Производительность и безопасность
+
+- `ExtractGameSpeaker`: один `IndexOf(':')` + `Substring` — мгновенно
+- Запись в JSON: только при расхождении (1/1000+ проигрываний), flush раз в 10 сек
+- Никакой телеметрии, никаких личных данных — файлы локально, пользователь решает делиться
+- **Тесты:** `tests/test_speaker_tracking.py` — 6 кейсов (extract speaker, extract guid, JSON format, dedup, defaults)
+
+## Проект «Литания Успешного Спринта» (fun/)
+
+Кастомная AI-озвучка техно-ритуальной литании + YouTube-видео. Фан-проект, не из игры.
+
+- `fun/litany.yaml` — каталог из 8 фраз (Ведущий → narrator, Хор → npc_f_3)
+- `fun/litany_gregorian_v2.wav` — финальная аудио-версия (3:15, Kevin MacLeod фон)
+- `fun/litany_youtube.mp4` — видео (1920×1080, Ken Burns, WH40K-стиль)
+- `fun/raw/` — 8 PNG + 8 WAV-исходников
+- Исключено из git (`.gitignore: fun/`, `Litany_of_Successful_Sprint`, `Litany.yaml`)
+
 ## Релизный процесс
 
 ### Как пользователь получает мод
@@ -315,3 +382,16 @@ csc -target:library -out:W40KRTAudioDirectMod.dll \
 7. `git push --tags`
 8. GitHub Release: changelog + ссылка на Download ZIP
 9. (опционально) Создать/обновить страницу на Nexus Mods
+
+## Извлечение референсов голосов из игры (Wwise)
+
+Когда голос TTS не устраивает — выдрать оригинальную озвучку из игры:
+
+1. `WH40KRT_Data/StreamingAssets/Localization/Sound.json` — event-имена персонажа (фильтр по имени)
+2. Банк: извлечь из `GeneratedSoundBanks/Windows/Packages/WH40KRT_Main_Dialogues.pck` (AKPK: заголовок @0x1C.., секции: langs/banks/sounds; первый банк @0x13358, звуки — таблица @0x48: записи 20б `[id,block,size,offset,lang]`), распарсить `tools/wwiser/wwiser.py`
+3. Связка: FNV-1 32-bit hash (lowercase, UTF-8) имени события = `CAkEvent.ulID` → `CAkActionPlay` → `CAkSound` → `AkMediaInformation.sourceID`
+4. `sourceID` = имя wem (в `Media/` или в pck по таблице) → декод `C:\tools\vgmstream\vgmstream-cli.exe -o out.wav in.wem`
+5. Реф: 12-17с чистой речи, 48kHz mono (ffmpeg `-ac 1 -ar 48000`) → `refs/samples_en/{Char}.wav`
+6. Кандидаты на выбор — в `refs/samples_en_demo/{Char}_candidates/`
+
+Утверждённые рефы: Marazhai = Companions_Marazhai_112, Ulfar = CH3_UlfarPrison_01.
