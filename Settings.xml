@@ -4,4 +4,7 @@
   <Language>ruRU</Language>
   <DuckLevel>50</DuckLevel>
   <MuteEnglishVoice>true</MuteEnglishVoice>
+  <VerboseDebugLog>false</VerboseDebugLog>
+  <CollectSpeakerStats>false</CollectSpeakerStats>
+  <CollectUsageStats>false</CollectUsageStats>
 </Settings>
