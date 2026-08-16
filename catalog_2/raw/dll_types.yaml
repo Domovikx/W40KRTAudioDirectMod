@@ -1,0 +1,141 @@
+source: WH40KRT_Data/Managed/*.dll
+extracted_by: catalog_2/tools/extract_dll_types.py
+tool: dnfile (Python)
+name_keywords:
+- BlueprintEncyclopedia
+- BlueprintItemNote
+- BlueprintBook
+- BlueprintPointOfInterest
+- BlueprintArea
+- BlueprintCue
+- BlueprintDialog
+- BlueprintExamine
+- BlueprintEnvironment
+- BlueprintScene
+- BlueprintTransition
+- BlueprintLocation
+- BlueprintInteract
+- AreaEnter
+- AreaTransition
+- ScriptZone
+- RandomEncounter
+- LocationList
+field_keywords:
+- Description
+- Text
+- Cue
+- Note
+- Book
+- Page
+- Block
+- Encyclopedia
+- Encounter
+- Transition
+- Location
+- Stage
+total_types: 22
+by_dll:
+  Code.dll:
+  - namespace: Kingmaker.RandomEncounters.Settings
+    name: BlueprintRandomEncounter
+    fields:
+    - Description
+    - EncountersLimit
+    - CanBeCampingEncounter
+    - m_BookEvent
+  - namespace: Kingmaker.QA.Clockwork
+    name: TaskUseAreaTransition
+    fields:
+    - m_Transition
+  - namespace: Kingmaker.Globalmap.CombatRandomEncounters
+    name: CombatRandomEncounterState
+    fields:
+    - GeneratedCombatRandomEncounterCount
+    - IsInCombatRandomEncounter
+  - namespace: Kingmaker.Globalmap.Blueprints.Exploration
+    name: BlueprintPointOfInterestBookEvent
+    fields:
+    - m_BookEvent
+  - namespace: Kingmaker.GameCommands
+    name: AreaTransitionHelper
+    fields:
+    - ApproachRadiusToTransitionPoint
+  - namespace: Kingmaker.GameCommands
+    name: AreaTransitionPartGameCommand
+    fields:
+    - m_AreaTransitionPartRef
+  - namespace: Kingmaker.DialogSystem.Blueprints
+    name: BlueprintBookPage
+    fields:
+    - Cues
+  - namespace: Kingmaker.DialogSystem.Blueprints
+    name: BlueprintCue
+    fields:
+    - Text
+    - IsNarratorText
+    - Description
+  - namespace: Kingmaker.DialogSystem.Blueprints
+    name: BlueprintCueSequence
+    fields:
+    - Cues
+  - namespace: Kingmaker.DialogSystem.Blueprints
+    name: BlueprintDialog
+    fields:
+    - FirstCue
+    - IsNarratorText
+    - Description
+  - namespace: Kingmaker.Controllers.GlobalMap
+    name: CombatRandomEncounterController
+    fields:
+    - m_IsInRandomEncounter
+  - namespace: Kingmaker.Blueprints.Encyclopedia
+    name: BlueprintEncyclopediaBookEventPage
+    fields:
+    - BookEvent
+    - m_Blocks
+  - namespace: Kingmaker.Blueprints.Encyclopedia
+    name: BlueprintEncyclopediaChapter
+    fields:
+    - HiddenInEncyclopedia
+  - namespace: Kingmaker.Blueprints.Encyclopedia
+    name: BlueprintEncyclopediaGlossaryChapter
+    fields:
+    - m_ChildLetterIndexPages
+    - m_IndexPages
+  - namespace: Kingmaker.Blueprints.Encyclopedia
+    name: BlueprintEncyclopediaNode
+    fields:
+    - ChildPages
+  - namespace: Kingmaker.Blueprints.Encyclopedia
+    name: BlueprintEncyclopediaPage
+    fields:
+    - Blocks
+  - namespace: Kingmaker.Blueprints.Encyclopedia.Blocks
+    name: BlueprintEncyclopediaBlockPages
+    fields:
+    - Pages
+  - namespace: Kingmaker.Blueprints.Encyclopedia.Blocks
+    name: BlueprintEncyclopediaBlockText
+    fields:
+    - Text
+    - HasConsoleText
+    - ConsoleText
+    - TextAlignment
+  - namespace: Kingmaker.Blueprints.Area
+    name: BlueprintArea
+    fields:
+    - RandomEncounterSettings
+  - namespace: Kingmaker.Blueprints.Area
+    name: BlueprintAreaPart
+    fields:
+    - StartVailValueForLocation
+  - namespace: Kingmaker.Blueprints.Area
+    name: BlueprintAreaPreset
+    fields:
+    - CuesSeen
+  - namespace: Kingmaker.UnitLogic.Commands
+    name: AreaTransitionGroupCommand
+    fields:
+    - MaxDistanceFromAreaTransitionToIncludeAllParty
+  Kingmaker.Enums.dll: []
+  BundlesBaseTypes.dll: []

@@ -2,6 +2,7 @@
 .opencode/        export-ignore
 .vscode/          export-ignore
 catalog/          export-ignore
+catalog_2/        export-ignore
 config/           export-ignore
 docs/             export-ignore
 Python/           export-ignore

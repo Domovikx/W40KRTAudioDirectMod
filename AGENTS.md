@@ -17,6 +17,15 @@
 
 - **Сгенерировано WAV:** ~169 (67 Кунрад + 102 Теодора)
 
+## Environment Descriptions — НА ПАУЗЕ (2026-08-15)
+
+Задача «озвучка environment descriptions» поставлена на паузу после 3 безуспешных
+заходов (регексы/LLM → BBP name-prefix → Wwise/Sound.json). Причины провала и
+путь возврата — `docs/ENV_DESC_PIVOT.md`. **Не возвращаться через** регексы,
+BBP name-prefix, Sound.json или few-shot без нового сигнала. Результаты
+промежуточного pipeline лежат в `catalog_2/raw/` (export-ignored), а сам
+`catalog_2/` — экспериментальная инфраструктура, не для production.
+
 ## Путь к игре
 
 ```
