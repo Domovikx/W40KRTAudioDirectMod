@@ -26,6 +26,45 @@ BBP name-prefix, Sound.json или few-shot без нового сигнала. 
 промежуточного pipeline лежат в `catalog_2/raw/` (export-ignored), а сам
 `catalog_2/` — экспериментальная инфраструктура, не для production.
 
+**2026-08-16: Путь A подтверждён.** `catalog_2/tools/build_guid_map.py` построил
+`catalog_2/raw/guid_map.json` (140.6 МБ, gitignored — пересборка ~70с) — карта
+по ВСЕМ 77 691 GUID из ruRU.json: текст/flags, blueprint-владелец
+(m_Name=owner+field, class, neighbors), BBP-роль (cue/answer/unknown) +
+dialog_owner, сцены. VALIDATION OK 77691==77691. Покрытие any_source 94.1%.
+Запрос: `catalog_2/tools/guid_info.py <guid>`.
+
+**2026-08-16 вечер: `tools/env_scan.py`** (Domo) — собственный сканер env-desc:
+объектные/адъективные словари + категории A/B, режимы `--residual`
+(все GUID не из каталога), `--apply` (мерж в
+`catalog/people/Environment_Descriptions.yaml`). Выводы:
+`catalog_2/raw/env_residual.json` (кандидаты A/B) + `env_residual_2.json`
+(отвергнутые с причинами).
+
+**2026-08-17: Путь A максимизирован (Phase 5).** `catalog_2/tools/build_trees.py`
+(L1b) — блок-точный нод-парсер bbp по ВСЕМ заголовкам (383 968 блоков):
+текст-GUID в диалоговых нодах 41 583 + недиалоговые 9 923, деревья = 12 895
+непрерывных runs диалоговых блоков; guid_map обогащена
+tree_id/node_seq/node_prev/node_aux/node_lit (51 449 GUID, 587 исправлений
+windowed-атрибуции старого парсера); `catalog_2/raw/dialog_trees.json`.
+`catalog_2/tools/enrich_sound.py` (L2) — Sound.json events (5 089) → speaker
+85.2% (порт extract_speaker_from_event + camelCase-prefix только для
+диалоговых префиксов; PRL/CH — сцены, exact only) + (L3) owner_hint (1 043).
+Тесты `tests/test_catalog_2_trees.py` (9) — 92/92. Дизайн: `docs/MAP_MAXIMIZATION.md`.
+
+**2026-08-16 ночь: `catalog_2/people/` — полная разбивка корпуса.**
+`catalog_2/tools/build_partition.py` маршрутизирует ВСЕ 77 691 GUID из ruRU.json
+без потерь, инвариант: сумма == 77691 == len(ruRU) — детектор апдейта игры.
+**2026-08-18 (Phase 6):** дробление до 12 файлов, цепочка
+voiced→answer→cue→bark→env→ui→enc→gamelog→objective→narration→short→other
+(VoicedDialog 5 089, DialogAnswer 15 074, DialogCue 24 808, Barks 1 936,
+Env_Descriptions 2 211 (A=447/B=1 764), UI 1 994, Encyclopedia 91, GameLog 230,
+Objectives 639, Narration 1 203, Short 12 574, Other 11 842). env-файл обогащён
+(category/reasons/blueprint_owner/scenes/parts narrator). Phase 2-тулы удалены
+(parse_bbp/narrow_candidates/extract_non_dialog + их raw-артефакты и тесты —
+история в manifests/latest.yaml, docs/ENV_DESC_PIVOT.md). Тесты:
+`tests/test_catalog_2_partition.py` + `tests/test_catalog_2_trees.py`,
+61/61 проходят. `catalog_2/tools/update_map_stats.py` — регенерация снапшота.
+
 ## Путь к игре
 
 ```

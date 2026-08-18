@@ -75,8 +75,11 @@ def make_wavs(tmp: Path):
 
 
 def load_entries(tmp: Path) -> list[dict]:
-    with open(tmp / "Localization" / "ruRU" / "mappings.json", encoding="utf-8") as f:
-        return json.load(f)["entries"]
+    entries = []
+    for f in sorted((tmp / "Localization" / "ruRU" / "mappings").glob("*.json")):
+        with open(f, encoding="utf-8") as fh:
+            entries.extend(json.load(fh)["entries"])
+    return entries
 
 
 def test_export_parts_and_whole(monkeypatch, tmp_path):

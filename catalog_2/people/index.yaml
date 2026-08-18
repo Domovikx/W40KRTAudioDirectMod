@@ -1,0 +1,42 @@
+generated: build_partition.py
+source_ruRU: C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader\WH40KRT_Data\StreamingAssets\Localization\ruRU.json
+source_ruRU_sha256: 68157f5b4d3e285a9e9c38620cf86a2ec3f57c8d45fa87bc5445a04267d30669
+source_guid_map: C:\Users\Domo\AppData\LocalLow\Owlcat Games\Warhammer 40000 Rogue Trader\UnityModManager\W40KRTAudioDirectMod\catalog_2\raw\guid_map.json
+total_guids: 77691
+files:
+- name: VoicedDialog
+  rule: GUID has a Wwise event (Sound.json) — voiced dialog line
+  total: 5089
+- name: DialogAnswer
+  rule: bbp role 'answer' — player dialogue choices
+  total: 15074
+- name: DialogCue
+  rule: bbp role 'cue' — NPC dialog lines
+  total: 24808
+- name: Barks
+  rule: blueprint owner matches bark|banter|randomphrase — NPC barks
+  total: 1936
+- name: Environment_Descriptions
+  rule: env_scan.classify() accepted — object/location descriptions
+  total: 2211
+- name: UI
+  rule: blueprint class in UI set (UIStrings/UISettings/KeyBinding/ReasonStrings/GlossaryStrings)
+  total: 1994
+- name: Encyclopedia
+  rule: blueprint class Encyclopedia*/BookPage — codex articles
+  total: 91
+- name: GameLog
+  rule: blueprint class GameLog* — journal event entries
+  total: 230
+- name: Objectives
+  rule: dialog_owner Objective*/Obj* — quest objective nodes
+  total: 639
+- name: Narration
+  rule: text contains {n} narrator blocks
+  total: 1203
+- name: Short
+  rule: len(text) < 40 — no signals at all
+  total: 12574
+- name: Other
+  rule: 'remainder: markup, noise, unrecognized'
+  total: 11842

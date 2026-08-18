@@ -1,0 +1,113 @@
+total: 77691
+coverage:
+  blueprint: 20456
+  blueprint_pct: 26.3
+  bbp: 51581
+  bbp_pct: 66.4
+  scenes: 1758
+  scenes_pct: 2.3
+  any_source: 73695
+  multi_source: 100
+  tree_attributed: 41583
+  dialog_trees: 41583
+  sound: 5089
+  sound_speaker: 4338
+  owner_hint: 1043
+roles:
+  '-': 565
+  answer: 15074
+  cue: 27640
+  unknown: 8302
+bbp_categories:
+  Noise: 41925
+  Other: 8742
+  ? ''
+  : 587
+  Objective: 295
+  SequenceExit: 23
+  BookPage: 6
+  Block: 2
+  Item: 1
+blueprint_classes:
+  ? ''
+  : 17895
+  Kingmaker.Blueprints.Root.Strings.UIStrings: 1465
+  Kingmaker.Blueprints.Root.Strings.GameLog.GameLogStrings: 230
+  Kingmaker.UI.Models.SettingsUI.SettingAssets.UISettingsEntityKeyBinding: 111
+  Kingmaker.Blueprints.Encyclopedia.Blocks.BlueprintEncyclopediaBlockText: 107
+  Kingmaker.Blueprints.Root.Strings.ReasonStrings: 100
+  Kingmaker.UI.Models.SettingsUI.SettingAssets.UISettingsEntityBool: 81
+  Kingmaker.UI.Models.SettingsUI.SettingAssets.UISettingsEntitySliderFloat: 50
+  Kingmaker.UI.Models.SettingsUI.SettingAssets.Dropdowns.UISettingsEntityDropdownEntitiesType: 44
+  Kingmaker.Blueprints.Root.Strings.GlossaryStrings: 37
+  Kingmaker.UI.Models.SettingsUI.SettingAssets.UISettingsEntitySliderInt: 34
+  Kingmaker.Blueprints.Root.Strings.DescriptorTypeStrings: 30
+  Kingmaker.UI.Models.SettingsUI.UISettingsGroup: 21
+  Kingmaker.Blueprints.Root.Strings.AbilityTargetStrings: 20
+  Kingmaker.Blueprints.CalendarRoot: 16
+  Kingmaker.Blueprints.Root.Strings.ItemTypeNameString: 14
+  Kingmaker.Settings.Difficulty.DifficultyPresetAsset: 13
+  Kingmaker.Blueprints.Root.Strings.WarningNotificationString: 13
+  Kingmaker.Blueprints.Root.Strings.DamageTypeStrings: 12
+  Kingmaker.Blueprints.Root.Strings.CalculatedPrerequisiteStrings: 12
+blueprint_fields:
+  ? ''
+  : 8599
+  Description: 3823
+  DisplayName: 3349
+  Text: 2203
+  name: 919
+  Name: 601
+  desc: 371
+  Bark: 215
+  DescriptionText: 144
+  item_desc: 68
+  AdditionalString: 60
+  Title: 53
+  Tooltip: 49
+  Label: 2
+flags:
+  is_short: 16764
+  has_g_tag: 6959
+  has_newline: 1886
+  quote: 37276
+  has_pfwiki: 4
+  has_bind: 26
+  has_icon: 42
+  has_draft: 147
+  has_other_tag: 5735
+  mf: 2909
+  narration: 16058
+  rt_mf: 72
+top_scenes:
+  voidshipofficersdeck_start_mechanics.scenes: 41
+  footfallatrium_defaultmechanics.scenes: 39
+  vendorconsoleview.res: 39
+  vendorpcview.res: 39
+  voidshipbridge_rtcabin_mechanics.scenes: 38
+  santielspride_surface_default_mechanics.scenes: 38
+  ee_destroyedblackship_mechanics.scenes: 37
+  stryxshed_se_mechanics.scenes: 37
+  footfallatrium_chorda_mechanics.scenes: 37
+  forgeworld_mechanics.scenes: 35
+  santielsprideunderhive_mechanics.scenes: 34
+  navisnobilitestation_default_mechanics.scenes: 32
+  archeotechreactor_default_mechanics.scenes: 32
+  footfalldock_mechanics.scenes: 31
+  forgeheart_default_mechanics.scenes: 30
+  agriworldjungle_defaultmechanics.scenes: 28
+  prison_laboratory_mechanics.scenes: 28
+  taintedstreets_before_mechanics.scenes: 27
+  footfallslums_mechanics.scenes: 25
+  jailplanetoid_mechanics.scenes: 24
+extracted_by:
+- catalog_2/tools/build_guid_map.py
+- catalog_2/tools/build_trees.py (L1b)
+- catalog_2/tools/enrich_sound.py (L2/L3)
+- catalog_2/tools/update_map_stats.py (этот снапшот)
+sources:
+  P1: WH40KRT_Data/StreamingAssets/Localization/ruRU.json
+  P3: Bundles/blueprint.assets
+  P4: Bundles/blueprints-pack.bbp
+  P5: Bundles/*.scenes + *.res (без static/forart/ui)
+  L2: WH40KRT_Data/StreamingAssets/Localization/Sound.json

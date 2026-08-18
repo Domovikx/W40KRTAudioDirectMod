@@ -1,9 +1,16 @@
-# Environment Descriptions — PIVOT (2026-08-15)
+# Environment Descriptions — PIVOT (2026-08-15, обновлено 2026-08-16/08-18)
 
 Итоговая сводка по задаче «озвучка environment descriptions» (env-desc).
-**Задача поставлена на паузу** — мы упираемся в фундаментальные ограничения
-данных игры. Документ фиксирует что пробовали, что НЕ работает, и как
-возобновить работу если приоритет вернётся.
+Задача **на паузе** по генерации, но база для неё собрана: 2026-08-16
+подтверждён Путь A (`guid_map.json`, см. «Заход 4»). Документ фиксирует что
+пробовали, что НЕ работает, и как возобновить работу когда приоритет вернётся.
+
+> **2026-08-18 (Phase 6):** артефакты провальных заходов удалены —
+> `tools/parse_bbp.py`, `tools/extract_non_dialog.py`, `tools/narrow_candidates.py`,
+> `raw/narrow_v2.yaml`, `raw/dialog_mf_pending.yaml`, `raw/source.yaml` + их тесты.
+> История остаётся в этом документе и в `catalog_2/manifests/latest.yaml`
+> (phase_6). Текущий env-базис — `catalog_2/people/Environment_Descriptions.yaml`
+> (2 211 фраз, parts narrator+text_clean, готов к озвучке).
 
 ## Контекст
 
@@ -108,24 +115,35 @@ blueprint-owner) можно протянуть привязку.
 - ✅ `.gitignore` — `private/` (на будущее, для personal extracts).
 - ✅ `.gitattributes` — `catalog_2/` добавлен в export-ignore (YAMLы не попадут
   в release).
+- ✅ **`catalog_2/tools/build_guid_map.py` + `guid_map.json` (140.6 МБ)** —
+  полная карта по всем 77 691 GUID (см. «Заход 4» ниже). ПУТЬ A подтверждён.
+- ✅ **`tools/env_scan.py`** (2026-08-16 вечер, Domo) — сканер env-desc по
+  объектным/адъективным словарям (категории A/B, `--residual`, `--apply` в
+  `catalog/people/Environment_Descriptions.yaml`). Выводы:
+  `catalog_2/raw/env_residual.json` (1 МБ) + `env_residual_2.json` (7.6 МБ).
 
 ## Что делать если вернёмся (3 перспективных пути)
 
 Отсортированы по убыванию потенциальной пользы:
 
-### Путь A — Unity text-asset dump (НАИБОЛЕЕ ВЕРОЯТЕН)
+### Путь A — Unity text-asset dump (ПОДТВЕРЖДЁН 2026-08-16 ✅)
 
-Извлечь **text-assets** из Unity bundles (`WH40KRT_Data/*` — там есть
-`*.assets` файлы с MonoBehaviour сериализацией). Text-assets содержат
-**прямые ссылки text-GUID → blueprint-GUID** (LocalizedString поля,
-инлайненные в сериализацию). Это даст точный per-line blueprint-owner.
+**СДЕЛАНО в Заходе 4:** `catalog_2/tools/build_guid_map.py` извлекает из
+`Bundles/blueprint.assets` (283 МБ) прямые ссылки text-GUID → владелец
+(MonoBehaviour m_Name = `<BlueprintName>_<field>`, класс, соседи). 20 456 GUID
+из 77 691 нашли владельца; плюс BBP-слой (50 994) и сцены (1 758) — итого
+**94.1% GUID имеют хотя бы один источник контекста**.
 
-Артефакты:
-- `MonoBehaviour` reader (UnityPy / AssetStudio / uTinyRipper)
-- Маппинг: blueprint-GUID → type (через тот же DLL-типизатор)
+Ключевые техники (иначе не заработало бы):
+- `obj.get_raw_data()` вместо `obj.read_raw()` — последний падает
+  (`NoneType not callable`) на MonoBehaviour'ах blueprint.assets
+- data-блоки LZ4-сжаты: сырой ASCII-поиск по файлу видел только метаданные
+  (121/5306); распаковка через UnityPy даёт 1 268/5306
+- сцены: raw-скан 680 GUID vs deep (UnityPy) 2 013
 
-Ожидаемая precision: **80–95%** для text-GUID'ов, присутствующих в
-text-assets. Не все 5306 будут там (часть в BBP), но большинство — да.
+Дальше для env-desc: категории из `class` (Encyclopedia 107) + m_Name-паттерны
+(owner/field) + BBP-категории (Objective 295, SequenceExit 23, BookPage 6) +
+кластеры через `neighbors` (DisplayName+desc+fluff одного объекта).
 
 ### Путь B — Wwise wem-extraction-of-references (извлечь чужие ссылки)
 
@@ -149,16 +167,19 @@ text-assets. Не все 5306 будут там (часть в BBP), но бол
 
 ## Текущее состояние (что в git changes)
 
-После cleanup 06.08.2026:
+После cleanup 06.08.2026 + guid_map 16.08.2026:
 
 | Файл | Статус | Что делать |
 |---|---|---|
 | `.gitignore` | M | оставить (для `private/`) |
 | `.gitattributes` | M | оставить (`catalog_2/` в export-ignore) |
-| `catalog_2/` (README + manifest + 2 tool + raw/) | untracked | оставить как есть |
+| `catalog_2/` (README + manifest + tools + raw/) | untracked | оставить как есть |
 | `catalog_2/raw/source.yaml` (7.8 МБ) | untracked | оставить (перезапускаемый) |
 | `catalog_2/raw/narrow_v2.yaml` (2 МБ) | untracked | оставить (вход для будущего) |
 | `catalog_2/raw/dialog_mf_pending.yaml` (387 КБ) | untracked | оставить (отдельная задача) |
+| `catalog_2/raw/guid_map.json` (140.6 МБ) | untracked | оставить (полная карта по всем GUID) |
+| `catalog_2/raw/guid_map_stats.yaml` | untracked | оставить (покрытие/census) |
+| `catalog_2/tools/build_guid_map.py` + `guid_info.py` | untracked | оставить (перезапускаемые) |
 | `tools/extract_non_dialog.py` + `narrow_candidates.py` | untracked | оставить (перезапускаемые) |
 | `tests/test_extract_non_dialog.py` + `test_narrow_candidates.py` | untracked | оставить (тесты) |
 | `Localization/ruRU/Narrator/*.wav` (13) | staged (A) | оставить (TTS staging) |
@@ -171,6 +192,34 @@ text-assets. Не все 5306 будут там (часть в BBP), но бол
 - `tools/merge_classifications.py`, `tools/sample_few_shot.py` (от упавшего classifier)
 - `catalog_2/people/`, `catalog_2/diffs/` (пустые)
 
+## Заход 4 (2026-08-16): guid_map — ПУТЬ A ПОДТВЕРЖДЁН ✅
+
+`catalog_2/tools/build_guid_map.py` — полная карта по ВСЕМ 77 691 GUID из
+ruRU.json. **VALIDATION OK: 77691 == 77691, без дублей/чужих.**
+
+Покрытие (guid_map_stats.yaml):
+- any_source: **73 108 (94.1%)**
+- blueprint.assets: 20 456 (26.3%) — владелец: m_Name = `<Owner>_<field>`,
+  класс (где резолвится), соседи (родственные GUID того же объекта)
+- blueprints-pack.bbp: 50 994 (65.6%) — role (cue 27 634 / answer 15 073 /
+  unknown 8 287), dialog_owner, категория
+- сцены *.scenes/*.res (deep scan): 1 758 (2.3%)
+
+Ключевые техники (иначе не заработало бы):
+- `get_raw_data()` вместо `read_raw()` — последний падает
+  (`NoneType not callable`) на MonoBehaviour blueprint.assets
+- data-блоки LZ4-сжаты: сырой ASCII-поиск по файлу видел только метаданные
+- сцены: raw-скан видит 680 GUID, deep (UnityPy, распаковка) — 2 013
+
+Инструменты:
+- `catalog_2/tools/guid_info.py <guid>` — запрос по одному GUID
+- `guid_info.py --owner X / --class Y / --role Z / --search "текст"` — выборки
+- `build_guid_map.py --deep-scenes` — пересборка (~70с)
+
+Дальше для env-desc: категории env-desc — по классам (Encyclopedia 107) +
+m_Name-паттернам + BBP-категориям (Objective 295, SequenceExit 23, BookPage 6…);
+кластеры через `neighbors` (DisplayName+desc+fluff одного объекта).
+
 ## Куда идём сейчас
 
 Приоритеты переключены:
@@ -179,12 +228,14 @@ text-assets. Не все 5306 будут там (часть в BBP), но бол
 2. **gender-review/speaker-audit** для Generic_Male_NPC остатков (если есть).
 3. **Сборка/тегирование** промежуточных релизов (DLL в git, git tag).
 
-Env-desc — **off-priority до явного повторного запроса**.
+Env-desc — **off-priority до явного повторного запроса** (но база для него
+теперь собрана: guid_map.json).
 
 ## Связанные документы
 
 - `catalog_2/README.md` — структура и статусы фаз
-- `catalog_2/manifests/2026-08-15.yaml` — snapshot extract'а
+- `catalog_2/manifests/latest.yaml` — актуальный snapshot (Phase 3 done)
+- `catalog_2/raw/guid_map_stats.yaml` — покрытие + census
 - `review/counter_examples.yaml` — почему эвристики провалились
-- `review/resume_state.md` — секции "2026-08-14" и "2026-08-15"
+- `review/resume_state.md` — секции "2026-08-14", "2026-08-15", "2026-08-16"
 - `catalog_2/tools/parse_bbp.py` (docstring) — детальный отчёт BBP-пилота

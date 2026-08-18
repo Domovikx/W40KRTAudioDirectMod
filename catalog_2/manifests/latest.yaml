@@ -1,4 +1,4 @@
-extracted: 2026-08-15
+extracted: 2026-08-16
 game_version: unknown
 builder: Domo
 branch: feature/2026-08-09
@@ -36,14 +36,139 @@ phase_2_bbp:
 
 # === Phase 3 (Unity assets) ===
 phase_3_unity_assets:
-  status: not_started
+  status: done
+  script: catalog_2/tools/build_guid_map.py
+  result: catalog_2/raw/guid_map.json + guid_map_stats.yaml
+  size: 140.6MB (json)
+  validation: "OK: 77691 == 77691 GUIDs, no dup/foreign"
+  coverage:
+    any_source: 73108
+    any_source_pct: 94.1
+    blueprint: 20456
+    bbp: 50994
+    scenes: 1758
+  roles:
+    cue: 27634
+    answer: 15073
+    unknown: 8287
   notes:
-    - catalog_2/tools/extract_unity_assets.py ещё не написан
+    - все 77 691 GUID из ruRU.json; слои: ru/flags/len, blueprint (owner/field/
+      class/neighbors), bbp (role/dialog_owner/category), scenes (файлы)
+    - ПУТЬ A ПОДТВЕРЖДЁН: text-GUID'ы лежат в blueprint.assets как ASCII
+      (get_raw_data() в обход сломанного read_raw()); m_Name = <Owner>_<field>
+    - классов резолвится мало (UIStrings/Encyclopedia и т.п.) — остальное
+      Code.dll-классы вне файла (externals); m_Name-паттерн работает без них
 
-# === Phase 4 (catalog build) ===
+# === Phase 4 (catalog build — полная разбивка корпуса) ===
 phase_4_catalog:
-  status: blocked
-  blocker: "нет working primary classifier; ждём Фазу 3 / wem extraction"
+  status: done
+  script: catalog_2/tools/build_partition.py
+  result: catalog_2/people/*.yaml (7 файлов + index.yaml)
+  validation: "OK: sum 77691 == len(ruRU.json), no dup/foreign"
+  partition:
+    VoicedDialog: 5089
+    DialogAnswer: 15073
+    DialogCue: 24802
+    Environment_Descriptions: 2377
+    env_A: 462
+    env_B: 1915
+    UI: 1996
+    Encyclopedia: 91
+    Other: 28263
+  invariant: "сумма по файлам == 77691 — детектор апдейта игры (сумма меняется -> тест падает)"
+  notes:
+    - маршрутизация строго последовательная: voiced -> answer -> cue ->
+      env(classify) -> ui(класс) -> enc(класс) -> other; каждый GUID ровно в 1 файле
+    - env-записи обогащены: category A/B, reasons, blueprint_owner, scenes,
+      parts [narrator + text_clean] — готово к ревью и будущей озвучке
+    - остальные файлы lean: guid + text
+
+# === Phase 5 (map maximization: L1b деревья + L2 Sound.json + L3 owner) ===
+phase_5_map_max:
+  status: done
+  scripts: [catalog_2/tools/build_trees.py, catalog_2/tools/enrich_sound.py]
+  docs: docs/MAP_MAXIMIZATION.md
+  L1b:
+    result: catalog_2/raw/dialog_trees.json
+    trees: 12895
+    unique_dialog_text_guids: 41583
+    map_refs: 41583
+    non_dialog_refs: 9923
+    foreign_refs: 11869
+    attribution_changed_vs_old_windowed_parser: 587
+    enriched_guids: 51449
+    roles_dialog: {cue: 27582, answer: 15073, unknown: 8045}
+    node_blocks: 383968
+    dialog_blocks_with_text: 46099
+    validation: "OK: sum unique(trees) == unique(node blocks) == 41583; subset of guid_map"
+    notes:
+      - ноды: Cue_/Answer_/BookPage_ + прочие blueprint-заголовки (Command*, gate,
+        *Page, *Root) — блок-границы по ВСЕМ заголовкам (382k блоков)
+      - деревья = непрерывные runs диалоговых блоков в файле; cutscene-ноды
+        (CommandDelay, gate...) и др. blueprint'ы разбивают run — задокументировано
+      - атрибуция блок-точная (перезаписывает windowed-значения старого парсера,
+        587 исправлений); поле-ссылки $FieldName$<guid> исключены
+      - bbp-слой мапы: tree_id, node_seq, node_prev/node_aux (raw), node_lit
+      - answer-набор (15073) идентичен старому парсеру и партиции DialogAnswer —
+        кросс-валидация двух парсеров
+      - стейл-поля очищаются при недиалоговой атрибуции (5.6k GUID переехали)
+  L2:
+    result: guid_map[*].sound = {event, speaker}
+    sound_events: 5089
+    with_speaker: 4338 (85.2%)
+    source: WH40KRT_Data/StreamingAssets/Localization/Sound.json
+    notes:
+      - спикер из event-name (порт extract_speaker_from_event из v1)
+      - camelCase-prefix-match только для диалоговых префиксов (BNTRS,
+        CompanionDialogue, OfficialPropos...); PRL/CH1-3/RMNC — сцены, exact only
+      - miss: PRL/CH сцены (subject, не спикер), Trazyn:Ancestor, BNTRS:DLC3
+  L3:
+    result: guid_map[*].owner_hint (948 -> 1043 уникальных)
+    notes: токен-матчинг blueprint.owner против имён/ролей (bark-префиксы)
+  tests: tests/test_catalog_2_trees.py (9 тестов, 92/92 весь набор)
+
+# === Phase 6 (partition v2: декомпозиция + чистка) ===
+phase_6_partition_v2:
+  status: done
+  script: catalog_2/tools/build_partition.py
+  result: catalog_2/people/*.yaml (12 файлов + index.yaml)
+  validation: "OK: sum 77691 == len(ruRU.json), no dup/foreign"
+  partition_v2:
+    VoicedDialog: 5089
+    DialogAnswer: 15074
+    DialogCue: 24808
+    Barks: 1936
+    Environment_Descriptions: 2211
+    env_A: 447
+    env_B: 1764
+    UI: 1994
+    Encyclopedia: 91
+    GameLog: 230
+    Objectives: 639
+    Narration: 1203
+    Short: 12574
+    Other: 11842
+  chain: voiced -> answer -> cue -> bark(owner regex) -> env(classify) ->
+    ui(class) -> enc(class) -> gamelog(class) -> objective(dialog_owner) ->
+    narration({n}) -> short(len<40) -> other
+  cleanup:
+    removed: [tools/parse_bbp.py, tools/narrow_candidates.py,
+      tools/extract_non_dialog.py, raw/narrow_v2.yaml,
+      raw/dialog_mf_pending.yaml, raw/source.yaml,
+      tests/test_narrow_candidates.py, tests/test_extract_non_dialog.py]
+    reason: Phase 2 слабый сигнал (2% precision) и провальные env-desc
+      подходы — вытеснены build_trees.py (блок-точный) и env_scan.py
+  new_tools: [catalog_2/tools/update_map_stats.py]
+  tests: 61/61 (после удаления obsolete-тестов)
+  notes:
+    - DialogCue 24808 = роль cue (27640) минус voiced-cue (2832) — voiced
+      бакет перехватывает озвученные cue первым; партиция стабильна
+    - Barks 1936: blueprint.owner ~ bark|banter|randomphrase (164 бывших
+      env-барка ушли из env в Barks)
+    - Narration 1203: текст содержит {n} — кандидат на narrator-озвучку
+    - Objectives 639: dialog_owner Objective*/Obj* (quest objective nodes)
+    - guid_map_stats.yaml регенерирован (tree=41583, sound=5089/4338,
+      hint=1043); build_trees bbp:null фикс (+6 cue, 132 записи)
 
 raw_files:
   - path: raw/dll_types.yaml
@@ -51,7 +176,55 @@ raw_files:
     size: 3670
     source: WH40KRT_Data/Managed/Code.dll
     extracted_by: catalog_2/tools/extract_dll_types.py
+  - path: raw/guid_map.json
+    size: 140.6MB
+    source: ruRU.json + Bundles/blueprint.assets + Bundles/blueprints-pack.bbp + Bundles/*.scenes/*.res
+    extracted_by: catalog_2/tools/build_guid_map.py + build_trees.py + enrich_sound.py
+  - path: raw/dialog_trees.json
+    size: medium
+    source: Bundles/blueprints-pack.bbp (L1b node-parse)
+    extracted_by: catalog_2/tools/build_trees.py
+  - path: raw/guid_map_stats.yaml
+    size: small
+    source: same
+    extracted_by: catalog_2/tools/build_guid_map.py + update_map_stats.py
 
-people_files: []
+people_files:
+  - path: people/VoicedDialog.yaml
+    total: 5089
+    rule: GUID in Sound.json (Wwise event)
+  - path: people/DialogAnswer.yaml
+    total: 15074
+    rule: bbp role answer (выборы игрока)
+  - path: people/DialogCue.yaml
+    total: 24808
+    rule: bbp role cue (реплики NPC)
+  - path: people/Barks.yaml
+    total: 1936
+    rule: blueprint owner ~ bark|banter|randomphrase
+  - path: people/Environment_Descriptions.yaml
+    total: 2211
+    rule: env_scan.classify() (объектные/адъективные старты, без маркеров)
+  - path: people/UI.yaml
+    total: 1994
+    rule: blueprint класс UIStrings/UISettings/KeyBinding/ReasonStrings/GlossaryStrings
+  - path: people/Encyclopedia.yaml
+    total: 91
+    rule: blueprint класс Encyclopedia*/BookPage
+  - path: people/GameLog.yaml
+    total: 230
+    rule: blueprint класс GameLog*
+  - path: people/Objectives.yaml
+    total: 639
+    rule: dialog_owner Objective*/Obj* (quest objective nodes)
+  - path: people/Narration.yaml
+    total: 1203
+    rule: текст содержит {n}
+  - path: people/Short.yaml
+    total: 12574
+    rule: len(text) < 40, без сигналов
+  - path: people/Other.yaml
+    total: 11842
+    rule: остаток (markup, noise, без сигналов)
 
 diffs: []

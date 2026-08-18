@@ -1,0 +1,464 @@
+name: GameLog
+description: blueprint class GameLog* — journal event entries
+total_phrases: 230
+phrases:
+- guid: 002e3165-1cbb-4b31-b065-968dd22103a3
+  text: Проект выполнен
+- guid: 016c6157-7803-40e5-8671-fdb5b2326dcc
+  text: <b>{target}</b> применяет способность <b>{text}</b> и получает <b>{count}</b> временного здоровья
+- guid: 04ae0d29-e6da-442a-a695-2eede44073c8
+  text: 'Истончение завесы изменилось на <b>{veil_delta_value}</b>. Текущее Истончение: <b>{veil_value}</b>'
+- guid: 061ad570-390c-4849-9b98-1e5fd322956b
+  text: Ближний Бой обороняющегося
+- guid: 06c78760-4d13-4814-9487-57defa8f6e55
+  text: <b>Штраф за Ближний Бой</b>
+- guid: 0795ad6c-0dc2-4665-b39c-c9163f62557e
+  text: <b>Неснижаемый урон</b>
+- guid: 07ac36f0-e301-4a5a-a234-eaea9e43cde0
+  text: 'Результат: Попадание —'
+- guid: 0993ebe0-2d82-4ef3-9b20-44b526736f79
+  text: <b>{source}</b> применяет способность <b>{text}</b> на цели <b>{target}</b>
+- guid: 0a11766a-1eb1-41b7-9f5c-4e04ffd7ad50
+  text: Цель ({target}) заблокировала
+- guid: 0baca1d5-a855-4ae7-aa9f-14723f52f1f0
+  text: 'Получен опыт: <b>{count}</b>.'
+- guid: 0c366e5c-840e-4d4b-b236-26ceefcd9737
+  text: Дополнительный урон
+- guid: 0e74c6b6-afa0-424f-9ded-fbaa1d31204f
+  text: '[obsolete] <b>{source}</b> проваливает взаимодействие с <b>{text}</b>.'
+- guid: 0ef97df2-1eba-486d-934e-03c5273bdc83
+  text: Штраф ДБ
+- guid: 0efec4fa-b68e-44fd-a91e-4b3d0144977b
+  text: 'Интуиция Навигатора повышена на: <b>{text}</b>.'
+- guid: 10ba33e2-52de-4952-93cd-48df1525b8e6
+  text: Отсутствует цель на траектории выстрела
+- guid: 12da4d1f-79b7-46cb-a5f4-633243a10925
+  text: '[obsolete] <b>{source}</b> успешно сканирует <b>{text}</b>. Текущий модификатор взаимодействия с аномалией {dc}.'
+- guid: 12f75e5f-fd39-4b15-acec-426835ef55cd
+  text: <b>{source}</b> замечает ловушку.
+- guid: 13062e83-9432-452d-9aff-341301f6753a
+  text: Броня
+- guid: 13f08de3-707a-4c81-9185-7de91161f801
+  text: Груз <b>{text}</b> сформирован
+- guid: 175e8e45-d7f4-4c32-b792-f6640f154eda
+  text: Бой завершен
+- guid: 18515b8d-cfd4-47bb-baeb-c77be35a48a4
+  text: 'Урон: <b>{count} {description}</b>.'
+- guid: 19f7ca9b-10f1-4ef0-8bcd-1b98f7d3b4e5
+  text: Бой начался
+- guid: 1acf2517-1cc0-4a1f-a666-46d584a962c3
+  text: Отталкивание
+- guid: 1be8134a-5c02-4b98-ba6c-7bb147c9f401
+  text: <b>Дополнительный модификатор</b>
+- guid: 1d28865d-5a38-4285-87da-f7aea6e75548
+  text: '{momentum} изменился на <b>{momentum_delta_value}</b>. Текущее значение: <b>{momentum_value}</b>. Причина: {text}.'
+- guid: 210aaa41-6f27-4eda-a415-b7dfe89a8c07
+  text: <b>{second_text}</b> отправлено в <b>{text}</b>. Заполненность <b>{count}%</b>.
+- guid: 2408c450-6789-4e8e-9382-5fc8e889278e
+  text: <b>Целитель</b>
+- guid: 2509aaa7-7e3d-4d31-a448-915c9db2f4d6
+  text: <b>Шанс попадания</b>
+- guid: 258f30fb-4ccb-4459-a811-8931f749d5ea
+  text: Наносит урон (<b>{count}</b>) корпусу цели {target}<br>{critical_hit}
+- guid: 27020580-3530-4662-9d62-8e695375de5e
+  text: <b>{source}</b> исцеляется на <b>{count}</b> здоровья
+- guid: 2704137a-dfa6-418b-a385-bdb6b9b2d35a
+  text: '<b>{source}</b>: требуется групповая проверка характеристики <b>{text}</b> на сопротивление'
+- guid: 27d074ec-a5f9-475d-9b52-6a7d2e55b269
+  text: <b>Модификатор</b>
+- guid: 29bb8cd9-792f-4bf4-81f8-64acb389ab28
+  text: <b>{source}</b> падает без сознания!
+- guid: 2ef2b59d-e390-45e3-9dba-030f7259271c
+  text: '<b>{source}</b>: {text}'
+- guid: 30dab6ea-d354-47be-97f2-c99845d43af4
+  text: '[obsolete] <b>{source}</b> успешно взаимодействует с <b>{text}</b>.'
+- guid: 30e1a3e9-3abb-41cc-86ab-d3a2ed6b3b3f
+  text: Наносит урон (<b>{result_damage}</b>, {damage.type}) цели {target} с <b>превосходством в ближнем бою</b><br>{critical_hit}
+- guid: 31c3066b-fa1b-4d92-8f47-03e00f99b609
+  text: взрыв <b>гранаты</b>
+- guid: 31f0024c-04d5-4fea-88f7-bb7e281770b8
+  text: '{text}'
+- guid: 322f9ab4-31f2-4dd0-b11f-c0c2d4884c02
+  text: <b>{source}</b> теперь <b>{text}</b> уровня!
+- guid: 34731313-a6c0-4a5a-83b2-47d67606a83c
+  text: Атакует цель {target} <b>{count}</b> раз, наносит урон щитам ({text}) и корпусу ({second_text})
+- guid: 35fb121e-cd9f-4d34-8ec9-fd1c039271d0
+  text: 'Урон: <b>{result_damage}</b>'
+- guid: 360d424c-43c0-485e-9ce9-4736786af98d
+  text: <b>Промахивается</b> по цели {target}
+- guid: 38e2c31e-7ac8-4e17-a571-92c4543fc950
+  text: <b>{target}</b> применяет способность <b>{text}</b> и теряет <b>{count}</b> временного здоровья
+- guid: 3a8beac8-f72c-418a-a814-7441f3e1a72d
+  text: Урон прошел
+- guid: 3ace1c91-e59f-42c5-ab9f-f67714afdb79
+  text: 'Урон критического попадания: <b>{result_damage}</b>'
+- guid: 3ba3b22a-36fc-4a60-9fe4-175135fbf8f3
+  text: Автоматическое критическое попадание
+- guid: 3f14a9f8-015f-492d-beb8-b8edb3898871
+  text: '{source} использует {text} и наносит урон ({count}) цели {target}.'
+- guid: 3f18b673-b4bc-45b6-bd7e-42fb1676d07c
+  text: Наносит урон цели {target}. <b>Заблокировано</b>
+- guid: 40b33d2c-33e3-4dff-ac31-f502cc47cf24
+  text: '<b>{source}</b>: проверка навыка <b>{text}</b> пройдена.'
+- guid: 418fc38e-6bdc-4a25-8998-2c94a77ee5eb
+  text: <b>Бросок кубика</b>
+- guid: 422ca7b0-a7bb-4136-826f-c778233f6ad8
+  text: Диалог завершен
+- guid: 438ceafa-4194-4e74-ab5e-589662ce99bf
+  text: Дистанция
+- guid: 43f067b0-9c5c-418a-8820-eb57dbdb5a3d
+  text: Превосходство в ближнем бою
+- guid: 44202434-8eb8-4071-8eab-2721f09a5556
+  text: <b>Отражение урона</b>
+- guid: 449211aa-abe8-49a3-94d9-ebc7de9ca3e6
+  text: <b>Щит</b>
+- guid: 44d99318-aaed-4bec-9138-2eecee96aab7
+  text: 'Источник: <b>{source}</b>.'
+- guid: 474fde1d-b9b1-4571-b4c9-2626e0013943
+  text: (Иммунитет)
+- guid: 4799388a-7aed-4ed9-8aab-cca9b225be74
+  text: Довольство в колонии изменилось
+- guid: 4885fa05-33f7-4951-832b-87135d19e13d
+  text: <b>{source}</b> успешно обезвреживает ловушку.
+- guid: 49d9df15-4e17-4240-bea0-42b39b97960e
+  text: '[obsolete] <b>{source}</b> проваливает сканирование <b>{text}</b>. Текущий модификатор взаимодействия с аномалией {dc}.'
+- guid: 4d5d1259-68ed-45e7-819a-8ab0ef00ca6e
+  text: '<b>{source}</b>: проверка навыка <b>{text}</b> провалена.'
+- guid: 4de27059-faf4-4919-bcaa-608c54c6b33d
+  text: Довольство изменилось во всех колониях
+- guid: 4eb0af28-b49b-4ac2-a4e9-88365ff7c4c8
+  text: <b>Результат</b>
+- guid: 4fc9142a-c232-40a4-a7ac-ad29b6efd0b7
+  text: <b>Критическое попадание</b>
+- guid: 52841bb7-be5f-492e-95eb-58eb8687d900
+  text: 'Сложность игры:'
+- guid: 52c5fe40-05a9-4666-989f-ed807f55d388
+  text: <b>Общий шанс попадания</b>
+- guid: 540c9403-a498-4d45-84ad-22da402f536f
+  text: <b>объект окружения</b>
+- guid: 54ec2261-1fb4-48e4-b1dc-56d7ef42e37d
+  text: '{source} вызывает угрозы варпа: {text}!'
+- guid: 55576660-6034-41b7-8010-c5f6ba0352c4
+  text: Наносит урон (<b>{result_damage}</b>, {damage.type}) цели {target}{description}
+- guid: 5659c91a-ab71-4351-9fa6-56f33daeabd9
+  text: <b>Промахивается по цели</b> {target}
+- guid: 56b00ade-6c90-4e6b-85a6-86bdef090c25
+  text: Не достигает цели <b>{target}</b>
+- guid: 5ae4a428-3445-4647-acac-bbab34237f5a
+  text: _______________ Начало _______________
+- guid: 5bbc3de7-b799-4687-b2d3-81cd5429aa42
+  text: <b>{target}</b> получает <b>{count}</b> ущерб от столкновения.
+- guid: 5d5058d6-b211-41d0-a852-7feff7582785
+  text: Наносит урон (<b>{result_damage}</b>, {damage.type}) цели {target} с <b>превосходством в ближнем бою</b>
+- guid: 5d7c17f9-5430-444b-8d2c-42fd83437168
+  text: 'Урон: <b>{count}</b>.'
+- guid: 5e6ce3e0-eb19-4d13-964f-64cb0f183a36
+  text: 'Репутация фракции <b>{text}</b> увеличена на: <b>{count}</b>.'
+- guid: 5e77b86e-fcb5-4fdb-80b1-5bf9c6459e2d
+  text: Успех
+- guid: 5fe47f66-8e62-4581-8ea3-49e04091361a
+  text: 'Ланс-импульс: урон (<b>{roll}</b>)'
+- guid: 61be724e-138a-482d-b438-f740125aa2a2
+  text: 'Попадание: <b>{mod}</b> урона щитам и <b>{count}</b> корпусу'
+- guid: 64a0ed0d-3d2a-42fa-a517-4e7a1c2f17ac
+  text: Макс
+- guid: 65968ed3-2e7c-4f9d-9767-6d5b4e9fef4f
+  text: Наносит урон щитам (<b>{Penetration}</b>) и корпусу (<b>{count}</b>) цели <b>{target}</b><br>{critical_hit}
+- guid: 67766d1b-5b3d-4dc0-aaf0-6a43bcfb3ade
+  text: 'Потерян предмет: <b>{text}</b>.'
+- guid: 67d43d8e-c94e-4ff9-891a-219bd57190a1
+  text: Исходный
+- guid: 67f86410-a8ef-470c-8331-097deb3b0ce6
+  text: Критическое попадание!
+- guid: 6b629daf-1cfe-4984-a82b-118f4c2e0d13
+  text: Базовый шанс парирования
+- guid: 6c65be7a-d076-4371-948b-d35858743baa
+  text: Эффективность всех колоний изменилась
+- guid: 6c6b8558-9edb-4276-9646-aaf234b53170
+  text: Урон не может быть уменьшен
+- guid: 6cb02bce-6bcf-42a4-845b-58aa2f2c6599
+  text: '<b>{source}</b>: проверка навыка <b>{text}</b> провалена.'
+- guid: 6e0a9492-6029-42c5-8be5-a8877da21fe2
+  text: Число ресурсов в сети колоний увеличилось
+- guid: 6eaba629-2e70-4709-93aa-853a63fbcf21
+  text: <b>Восстановлено здоровья</b>
+- guid: 6f867d99-72af-48a1-9431-35928374bf2d
+  text: <b>Дополнительный бонус</b>
+- guid: 7233e87b-689d-4a0d-acee-d6c604f38880
+  text: '<b>{target}</b>: травма <b>{text}</b> исцелена'
+- guid: 723ae884-2578-4297-911f-9fceba167ff2
+  text: Промах
+- guid: 727fcf9d-01d1-4dba-977a-df213ec09b85
+  text: 'Промахивается по цели: <b>{target}</b>'
+- guid: 73f17f39-3fcd-4281-aec1-467382ca3a04
+  text: '<b>{target}</b>: получена <b>{text}</b>'
+- guid: 7435d6ba-ad6c-4dd8-a3fe-fbb50786e556
+  text: Наносит урон (<b>{count}</b>) корпусу цели {target}
+- guid: 74d47d0b-9409-4a94-a0db-63a361f14fa3
+  text: <b>Модификаторы урона</b>
+- guid: 76614f89-c205-42cc-86e5-a08e87f65e57
+  text: <unknown>
+- guid: 766dc95a-444f-4481-afdc-72b2ccb4b000
+  text: Бонус урона
+- guid: 777e34bb-1422-41ac-ae83-6d93bb464151
+  text: 'Причина:'
+- guid: 77a300de-4429-450e-a502-498787c1663a
+  text: Уклонение
+- guid: 78f1636d-83ca-4cbd-8209-abf8f6c2528d
+  text: <b>Максимальный шанс попадания</b>
+- guid: 79b44073-b5ac-4011-b1d6-4253a4a1fc99
+  text: Цель ({target}) парировала, несмотря на <b>превосходство в ближнем бою</b>
+- guid: 79d76ea5-25a3-490b-9e4f-eb5673288c40
+  text: ''
+- guid: 7a3fb299-2075-4084-ba10-c493fa312706
+  text: 'Количество выстрелов: <b>{attacks_count}</b>. {description}'
+- guid: 7ba1c190-781b-4191-bf57-5ec6f61f2ea6
+  text: Прошло время
+- guid: 7c909b46-b684-480f-bb59-04bf406b9e84
+  text: Экипаж потратил <b>{count}</b> металлолома на ремонт корабля.
+- guid: 7d4862f1-76bd-493a-9909-b1be65ab5020
+  text: 'Сработало <b>автопопадание</b>, причина:'
+- guid: 7d6592b4-53e0-4243-aed7-a35f856e1d2e
+  text: <b>{source}</b> погибает!
+- guid: 7dc9feab-9a3f-47cf-b799-0a11b80cfb1d
+  text: Событие завершено
+- guid: 7e7d9e88-ccf2-48fc-b8f7-b13ddb87bbb4
+  text: 'Фактор прибыли уменьшен на: <b>{text}</b>.'
+- guid: 7eced2d6-b718-46a6-b5d6-880deebdf6f6
+  text: Уведомления об изменениях в грузах
+- guid: 80202c3f-9084-495b-ac68-d6eda4a59bf8
+  text: Моментум
+- guid: 822498da-f9d5-4c2c-86f0-cc8dfa70c908
+  text: <b>{source}</b> проваливает обезвреживание ловушки.
+- guid: 837c8cd2-80b7-43e3-bd05-2f0a3d9981db
+  text: <b>атака по области</b>
+- guid: 8471eaee-28e1-4ac7-a06b-8e7441452f58
+  text: 'Сработало <b>автопарирование</b>, причина:'
+- guid: 85634566-0ee2-4bc1-9140-c89bb7bc1346
+  text: <b>Бонус</b>
+- guid: 8715abe3-04c6-478d-8fdc-52adb247db83
+  text: Событие началось
+- guid: 877b3b75-5d1b-48e2-948f-6b27d7fb9cee
+  text: 'Результат: Промах —'
+- guid: 87e651d9-7a53-48ea-ad54-c8e89ad84dd1
+  text: 'Ланс-импульс: промах'
+- guid: 8ace6c3b-ae87-4add-ad50-ed84cd4c4ff8
+  text: 'Сработало <b>автоуклонение</b>, причина:'
+- guid: 8adf2cb0-8541-4b98-bc1c-af1ee50f7e7f
+  text: <b>{source}</b> применяет способность <b>{text}</b>
+- guid: 8bb71351-f934-4a3a-8e8f-03801ea760fe
+  text: <br>Срабатывает {push}
+- guid: 8c48e29b-ec50-412f-8032-956de114560e
+  text: Ближний Бой атакующего
+- guid: 8dd8f818-1b6a-4b00-b9d4-08f86a1b5889
+  text: Команда собирает <b>{count}</b> металлолома.
+- guid: 8de44a8e-76d8-4c72-a678-e5a170a0fcc3
+  text: <b>атака в ближнем бою</b>
+- guid: 8de9b882-186f-45bc-9419-2be0b837bb93
+  text: Сквозное пробитие
+- guid: 8e0a68e5-c48f-40d7-9a0b-b22552f3a8bc
+  text: <b>Парирование</b>
+- guid: 8f296eb7-aea7-4bd0-9878-82fddf44253d
+  text: Груз <b>{text}</b> удален
+- guid: 8f8ea401-9efb-4a24-b273-94b15c9db89c
+  text: Бонус попадания
+- guid: 8fd6fad3-31cb-4a86-a238-823f6fd86ec2
+  text: с учетом уклонения, укрытия, парирования, отклонения
+- guid: 90447546-8a80-4d07-b616-e23fade1d28e
+  text: <b>Первоначальный бросок</b>
+- guid: 9245467f-4383-4e4f-b43a-1c5f55e602a7
+  text: <b>{second_text}</b> отправлено в <b>{text}</b>. Груз сформирован.
+- guid: 92d3448a-2781-4edd-9d2c-951fd9a9b6dc
+  text: '<b>{text}</b> активация: время действия уменьшено на −1'
+- guid: 94fdf9df-f7cd-42e0-a1dc-290fa5d7b2dd
+  text: 'Фактор прибыли увеличен на: <b>{text}</b>.'
+- guid: 95c42752-0e46-4aa0-b68c-59e1c3e587e1
+  text: 'Потеряны предметы: <b>{text} x{count}</b>.'
+- guid: 95f873c3-ee4f-4c90-a907-344326b01701
+  text: Уклонение
+- guid: 969e9593-1e00-4b30-98a2-9b4310757a4e
+  text: ''
+- guid: 987b4c85-1807-429e-9385-b32ebcb295f7
+  text: Мин
+- guid: 99c4964b-9040-4328-8de2-a411541a880b
+  text: 'Получен предмет: <b>{text}</b>.'
+- guid: 9a76a80d-19a3-441d-945e-c3383354de04
+  text: _______________ Отделка _______________
+- guid: 9d75f0d4-5ae0-41d4-83c2-054ec3dfa459
+  text: 'Интуиция Навигатора понижена на: <b>{text}</b>.'
+- guid: a029839b-d627-4a36-8240-ce5daf88b737
+  text: 'Получены предметы: <b>{text} x{count}</b>.'
+- guid: a133cb29-3bba-4634-a003-76097df6fe4f
+  text: 'Урон укрытию: <b>{result_damage}</b>'
+- guid: a2c839ed-fcdf-435b-b145-486be2bb94e3
+  text: Основана колония
+- guid: a7d4cad8-2e7e-4067-9962-9db451bd5cdf
+  text: 'Источник урона: <b>{source}</b>.'
+- guid: a83ddb2c-8ebe-4cd3-a0aa-4f1b5103900b
+  text: '<b>{source}</b>: проверка навыка <b>{text}</b> пройдена.'
+- guid: a8a9f681-223d-4a6c-b2ea-cbce4df46c07
+  text: <b>Обнуление урона</b>
+- guid: a95c56e4-771d-4a1f-b578-fc55f953715f
+  text: <b>Шанс попадания в укрытие</b>
+- guid: aaf4a755-23a9-4a99-82d2-afd647154595
+  text: Цель ({target}) парировала
+- guid: ab186e48-1532-4cc1-b54b-beafc340e626
+  text: 'Источник урона: <b>{text}</b>.'
+- guid: ab35c6ca-3998-4d40-a0d1-a597157e8a2e
+  text: <b>{source}</b> попадает в <b>{target}</b> с <b>{text}</b>.
+- guid: ac00fb11-4510-4f34-ac6b-223adbdd099c
+  text: Хроника завершена
+- guid: ae08d680-7c8d-43f6-96c1-be70719b16e0
+  text: <b>Бросок на попадание</b>
+- guid: b0e57f04-81d8-4486-966c-53e9a23eef3b
+  text: <b>Источник урона</b>
+- guid: b0fb3456-1fcc-4fed-98da-f755658f8f08
+  text: Начат новый проект
+- guid: b101bd2d-1cee-4c70-a836-6aabe721dbd7
+  text: Пробитие брони
+- guid: b143bd8f-a03e-456a-8d5b-13f8f6273084
+  text: Уклонение и парирование
+- guid: b3b9fad6-d1c5-4802-8784-5beba994df7c
+  text: 'Репутация фракции <b>{text}</b> понижена на: <b>{count}</b>.'
+- guid: b43087c0-dbd3-4216-b3f6-4aae5b74d0ab
+  text: <b>Итоговый показатель брони</b>
+- guid: b58f972d-889c-4c32-aa79-3c5b139a0f20
+  text: '{source}<b>{text}</b> наносит урон (<b>{result_damage}</b>, {damage.type}) цели {target}<br>{critical_hit}{description}'
+- guid: b6685443-d670-4691-8035-bf430373744b
+  text: 'Выполнен <b>повторный бросок</b>. Причина:'
+- guid: b6d8c2a4-9f9f-4b21-bfab-9e6c38e67da3
+  text: Истончение Завесы
+- guid: b86bb2e2-96ea-4d71-a3be-0d44683c0243
+  text: Цель ({target}) уклонилась и парировала
+- guid: b9319990-961d-484e-b183-e0ab07fcb01c
+  text: '<b>{target}</b>: получено <b>{text}</b>'
+- guid: b97dd2e7-6180-416e-b47d-5fe38174e764
+  text: Макс значение
+- guid: b9807166-97b8-4694-bdfb-216b59eaf5a8
+  text: Диалог начался
+- guid: ba49af14-a394-4960-a8fb-12931dbdec4e
+  text: 'Критическое попадание: <b>{mod}</b> урона щитам и <b>{count}</b> корпусу'
+- guid: ba58a18a-325d-4e6a-8c9e-c38e0ca15d0f
+  text: Безопасность в колонии изменилась
+- guid: bb19787d-968c-41ee-9eb8-fe0ea784c9e9
+  text: атака <b>очередью</b>
+- guid: bb4c0dd9-b365-4669-ac1d-b5542a7aa3cd
+  text: Модификатор броска
+- guid: bd26ae0c-715c-4713-94c0-d55547379cfd
+  text: Поглощенный урон
+- guid: bdb0df91-858c-4f63-bc5e-dbb0278f36b1
+  text: Летальность ассасина
+- guid: be7942ed-3af1-4fc7-b20b-41966d2f80b7
+  text: '<b>{source}</b> использует: <b>{text}</b>.'
+- guid: bf598ca6-9cf7-4b0b-aff2-3454f64b1ab1
+  text: <b>Урон</b>
+- guid: c039829d-eaa9-4aa9-bff0-af191843297c
+  text: Уведомления об изменениях в трофеях
+- guid: c0ef7311-1b6a-4f2e-98b9-1e8dda5e30ea
+  text: <b>Процентный модификатор</b>
+- guid: c2666bd4-18c4-4b6b-8a99-f07c98c6fedb
+  text: '<b>{target}</b>: {count_form|получена|получено} <b>{count} {count_form|единица|единиц} урона характеристики ({description})</b> от неизвестного источника.'
+- guid: c410bc76-ea18-41b1-9d05-e3c65df29482
+  text: '{source} получает дополнительный ход'
+- guid: c530abc7-682a-41a2-83d9-5934021125e4
+  text: <b>{source}</b> замечает тайную дверь.
+- guid: c65460b8-57c6-4051-a947-5ef36b307993
+  text: Создан груз <b>{text}</b>. Заполненность <b>{count}%</b>.
+- guid: c8661c46-23ad-4c68-b4b1-ef9d4ef124ff
+  text: Сквозное пробитие
+- guid: c90aa7f9-8b4f-4250-827f-8068bf97c368
+  text: Модификаторы способностей и снаряжения
+- guid: ca2afa24-6997-4f15-bceb-5b28afe41cc6
+  text: Цель ({target}) уклонилась
+- guid: ca38e407-f83c-49a1-890c-efe5939181bb
+  text: '{target} имеет иммунитет к <b>{text}</b>'
+- guid: cac30236-5efb-4048-b8e6-4bc6befa4c6d
+  text: '{target} пропускает ход'
+- guid: cafe8175-96cd-4f76-a3a9-a110945d7224
+  text: 'Причины:'
+- guid: cbc0da99-f2b0-4d1d-8197-1388e2aa7675
+  text: <b>Изначальный урон</b>
+- guid: cbd85c72-6d7c-4f00-98bb-d5d3f573917a
+  text: '{source}<b>{text}</b> наносит урон (<b>{result_damage}</b>, {damage.type}) цели {target}{description}'
+- guid: cc2142fc-376e-427d-a739-f609492c002c
+  text: Исцеляет цель (<b>{target}</b>) на <b>{count}</b> здоровья.
+- guid: cd8c0ca1-6209-40c5-bc19-b00a2ff23047
+  text: Парирование
+- guid: d0a880cf-09f1-4055-a995-19fdfb42dcb1
+  text: к мин урону
+- guid: d0b65e0c-47ce-423c-808e-2f57de97d044
+  text: Цель ({target}) заблокировала
+- guid: d0e572ce-40b8-4b01-bad6-10d88e52dff4
+  text: 'Ланс-импульс: урон (<b>{roll}</b>). {critical_hit}'
+- guid: d1725727-ceb7-4f6f-989a-1dabaaa4f5ae
+  text: '<b>{source}</b> наносит урон (<b>{count}</b>) цели: <b>{target}</b>.'
+- guid: d1bb75e1-b67a-4848-aefc-fa652f75df6b
+  text: Наносит урон щитам (<b>{Penetration}</b>) цели <b>{target}</b>
+- guid: d213d103-695d-4058-9bb8-b76aff62f0b0
+  text: Наносит урон щитам (<b>{Penetration}</b>) и корпусу (<b>{count}</b>) цели <b>{target}</b>
+- guid: d2c68cd2-c870-4243-bccf-e731135f38d6
+  text: '<b>{source}</b>: опыт составляет <b>{text}</b>, нужно еще <b>{count}</b>, чтобы получить следующий уровень'
+- guid: d31d2048-c37d-4be7-9717-e7380fed4a7b
+  text: '{veil} изменилось: <b>{veil_state}</b>'
+- guid: d4a039cd-d9ad-4925-9413-a8a3ed6cfa36
+  text: <b>Эффективное уклонение</b>
+- guid: d69fec0c-db7e-4ef6-b63e-c38db247cba5
+  text: 'Источник: <b>{source}</b>.'
+- guid: d82adc19-cdef-403a-8230-548b38a63dd4
+  text: к макс урону
+- guid: d8ebd97c-33bb-4b39-a297-accae412ec41
+  text: '{source} получает {count} опыта за бой'
+- guid: d9a914ae-6028-4d39-a1bf-07252b5ee6b1
+  text: Число ресурсов в сети колоний уменьшилось
+- guid: dab1c229-4df1-4f18-88e2-d26de7b286c4
+  text: Создан груз <b>{text}</b>. Заполненность <b>{count}%</b>.
+- guid: dc2e5fcf-f8cc-4739-b33e-fc9b75e7a267
+  text: <b>{source}</b> не может обезвредить ловушку
+- guid: dd4da7fa-6598-45bb-8d91-dff1d28319ca
+  text: <b>{source}</b> избегает угроз варпа!
+- guid: dd5d030f-c1e8-402d-8096-1a9e52985057
+  text: '{text} наносит урон ({count}) цели {target}.'
+- guid: e169f9a7-dcc1-4761-823b-375362351cf3
+  text: <b>Критический урон</b>
+- guid: e1aaa47d-4eaa-4301-b104-51bf9c412a96
+  text: 'Сработал <b>автопромах</b>, причина:'
+- guid: e5883ace-c986-408e-955d-c7a9094019f0
+  text: Попадает по укрытию вместо цели {target}
+- guid: e86e6e3d-7125-489d-83c1-22bb871e841d
+  text: '<b>{target}</b>: наложен эффект <b>{text}</b>'
+- guid: ea43c9cd-91d3-44ea-9b9d-b3477fadc7fb
+  text: <b>{source}</b> наносит <b>{count} {description}</b> урон(а) цели (<b>{target}</b>).
+- guid: eaad8f99-9050-4aad-8c24-3afffc6d2c31
+  text: <b>Базовый урон</b>
+- guid: ecb60c86-b9d3-4114-849b-5163ef561563
+  text: <b>Причина урона</b>
+- guid: f1be8c30-87a1-4238-97fc-eba660ffc41e
+  text: Мин значение
+- guid: f2f525fd-fbc4-4a18-a625-37daa84fa97c
+  text: <b>{source}</b> избегает пси-морока!
+- guid: f3292fda-646b-47f3-badf-37fc19cdba2b
+  text: '<b>{source}</b>: к группе применен эффект <b>{text}</b>'
+- guid: f34dfcc2-7325-4074-a470-4f6d77321410
+  text: Пополнен груз <b>{text}</b>. Заполненность <b>{count}%</b>.
+- guid: f5613875-b90e-4cf9-b205-9cf37e6fa1b7
+  text: <b>Сквозное пробитие</b>
+- guid: f751d600-e358-42d1-a5fa-39459e662e55
+  text: Безопасность изменилась во всех колониях
+- guid: f9c1f058-5c56-45fb-84df-705ec38bf4ed
+  text: Провал
+- guid: fc086b56-6d2b-476e-bdfe-4a9caa735e3c
+  text: <b>Уклонение</b>
+- guid: fc45edaf-fa17-4585-a56d-4cb64385fad1
+  text: Эффективность колонии изменилась
+- guid: fc7a1264-0a0b-41e7-97c4-06f72f9a8213
+  text: Урон не прошел
+- guid: fc90d8ab-c8c5-494c-9448-e24478840c0a
+  text: '<b>{target}</b>: ранение <b>{text}</b> исцелено'
+- guid: fd65a125-0cc0-4000-87a6-0da9f3122b40
+  text: Бронепокрытие
+- guid: fdbf7ca5-3e98-4f83-9c8e-49cf45d53c54
+  text: <b>{source}</b> проваливает обезвреживание ловушки и та случайно срабатывает.
+- guid: fe434e2d-758b-48bc-abe3-c1baa231d58e
+  text: <br>Срабатывает {overpenetration}
+- guid: ff6cc72c-bbbe-4fec-8271-8a1f4f00db74
+  text: Наносит урон (<b>{result_damage}</b>, {damage.type}) цели {target}<br>{critical_hit}{description}
