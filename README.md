@@ -1,19 +1,17 @@
-# W40KRT Audio Direct Mod
+# W40KRT Audio Direct Mod — русская нейро-озвучка Warhammer 40,000: Rogue Trader
 
-**Русская AI-озвучка для Warhammer 40,000: Rogue Trader**
+**Русская озвучка Warhammer 40,000: Rogue Trader** — мод заменяет английскую озвучку диалогов, барков и описаний окружения на русскую, сгенерированную нейросетью **Qwen3-TTS** через **Voice Clone** (AI TTS, клонирование голосов оригинальных актёров). Работает через **Unity Mod Manager** (встроен в игру).
 
-Замена английской диалоговой озвучки на русскую через AI-генерацию (TTS) с голосовым клонированием. Работает через Unity Mod Manager (встроен в игру).
+[![Version](https://img.shields.io/badge/version-0.0.2-blue)](Info.json)
+[![WAV](https://img.shields.io/badge/WAV%20сгенерировано-21%20760-success)](Localization/ruRU/)
+[![Готово](https://img.shields.io/badge/прогресс-61%25-yellow)](Localization/ruRU/)
+[![Персонажи](https://img.shields.io/badge/персонажей-23-orange)](Localization/ruRU/)
+[![Голосов](https://img.shields.io/badge/голосов-21-lightgrey)](config/voices.yaml)
+[![UMM](https://img.shields.io/badge/Unity%20Mod%20Manager-0.25.0-green)](Info.json)
 
 <p align="center">
   <img src="assets/portraits/0001/Fulllength.png" alt="Rogue Trader Portrait" width="400">
 </p>
-
-[![Version](https://img.shields.io/badge/version-0.0.2-blue)](Info.json)
-[![WAV](https://img.shields.io/badge/WAV%20сгенерировано-3494-success)](Localization/ruRU/)
-[![Готово](https://img.shields.io/badge/прогресс-9.8%25-yellow)](Localization/ruRU/)
-[![Персонажи](https://img.shields.io/badge/персонажей-23-orange)](Localization/ruRU/)
-[![Голосов](https://img.shields.io/badge/голосов-21-lightgrey)](config/voices.yaml)
-[![UMM](https://img.shields.io/badge/Unity%20Mod%20Manager-0.25.0-green)](Info.json)
 
 ---
 
@@ -54,14 +52,13 @@
 
 ## Статус озвучки
 
+**Всего: 21 760 WAV / 35 716 фраз (60.9%).**
+
 | Статус | Персонажи |
 |--------|-----------|
-| ✅ 100% | Heinrix, Theodora, Kunrad, Environment |
-| 🟨 99.8% | Abelard (осталась 1 фраза) |
-| 🟨 87% | Seneschal NPC |
-| 🔴 0-16% | Остальные 17 персонажей |
-
-**Всего:** 3 494 WAV / 35 716 фраз (9.8%).
+| ✅ 100% | Abelard, Cassia, Eogann, Heinrix, Idira, Jae, Kibellah, Kunrad, Manipulus, Marazhai, Narrator, Pasqal, Seneschal NPC, Sister Argenta, Smuggler, Solomon, Theodora, Trazyn, Ulfar, Yrliet, Environment |
+| 🟨 44.2% | Generic Male NPC (11 000 / 24 862) |
+| 🔴 3.1% | Psyker NPC (3 / 97) |
 
 ---
 
@@ -71,6 +68,12 @@
 - [Harmony](https://github.com/pardeike/Harmony) — IL-патчинг
 - [Unity Mod Manager](https://www.nexusmods.com/site/mods/21)
 - Wwise (AkSoundEngine) — ducking
+
+---
+
+## Ключевые слова
+
+русская озвучка Rogue Trader · Russian voiceover Warhammer 40k · нейроозвучка Вархаммер · AI TTS мод · voice clone Qwen3 · замена озвучки Unity Mod Manager · русская озвучка WH40KRT · озвучка диалогов нейросетью · Warhammer 40000 русский дубляж
 
 ---
 
