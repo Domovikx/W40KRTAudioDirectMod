@@ -46,3 +46,5 @@ catalog_2/private/
 # Regenerable big map (140MB, > GitHub 100MB limit) — rebuild via
 # catalog_2/tools/build_guid_map.py --deep-scenes (~70s)
 catalog_2/raw/guid_map.json
+
+*todo*
