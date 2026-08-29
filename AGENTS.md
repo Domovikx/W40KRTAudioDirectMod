@@ -243,6 +243,13 @@ phrases:
 
 Выход: `output/full_icl/{voice_name}/{guid}__{N}.wav` + `{guid}.wav` (склейка).
 
+## CosyVoice 3 — эксперимент ЗАМОРОЖЕН (2026-08-28)
+
+Пробовали Fun-CosyVoice3-0.5B как замену Q3. **Вердикт: Q3-TTS победил** — у CV3
+остаточный китайский акцент в русском (ru ~3% датасета). Установка `C:\tools\cosyvoice3`
+(~12 ГБ) оставлена на диске, скрипты `tools/cosyvoice3_demo.py` и `tools/run_abtest.sh`
+в репо. Подробности, A/B-результаты и точка возврата — `docs/cosyvoice3.md`.
+
 ## Референсы
 
 - SpeechMod: `https://github.com/Osmodium/W40KRogueTraderSpeechMod`
