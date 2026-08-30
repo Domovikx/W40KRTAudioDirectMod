@@ -70,6 +70,7 @@ SPEAKER_REF_FALLBACK = {
     'Generic Male NPC': 'refs/samples_en_cosy/npc_m_1.wav',
     'Default NPC': 'refs/samples_en_cosy/npc_m_1.wav',
     'Generic Female NPC': 'refs/samples_en_cosy/npc_f_1.wav',
+    'Seneschal (NPC)': 'refs/samples_en_cosy/Abelard_Werserian.wav',
 }
 
 
