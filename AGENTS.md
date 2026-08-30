@@ -87,7 +87,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 Rogue Trader
 
 ### Выбор языка
 
-- Язык задаётся в настройках (поле `Language` в Settings.xml, по умолчанию `ruRU`)
+- Язык задаётся в настройках (поле `Language` в Settings.xml, по умолчанию `ruRU_cosy`); переключатель CosyVoice3 / Qwen3 в GUI мода
 - WAV файлы ищутся в `Localization\{Language}\`
 - JSON локализация игры: `{Language}.json`
 

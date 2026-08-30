@@ -14,7 +14,7 @@ namespace W40KRTAudioDirectMod
     public class Settings : UnityModManager.ModSettings
     {
         public int Volume = 100;
-        public string Language = "ruRU";
+        public string Language = "ruRU_cosy";
         public int DuckLevel = 50;
         public bool MuteEnglishVoice = true;
         public bool VerboseDebugLog = false;
@@ -30,6 +30,7 @@ namespace W40KRTAudioDirectMod
     public static class Main
     {
         private static string localizationDir;
+        private static string localizationDirFallback;
         private static string modPath;
         private static Settings settings;
         private static List<KeyValuePair<string, string>> textMappings = new List<KeyValuePair<string, string>>();
@@ -741,6 +742,21 @@ namespace W40KRTAudioDirectMod
             GUILayout.Label("  " + settings.Volume + "%");
 
             GUILayout.Space(10f);
+            GUILayout.Label("Язык озвучки (папка WAV):");
+            string[] langLabels = { "CosyVoice3", "Qwen3" };
+            string[] langValues = { "ruRU_cosy", "ruRU" };
+            int langIdx = 0;
+            for (int i = 0; i < langValues.Length; i++)
+                if (settings.Language == langValues[i]) { langIdx = i; break; }
+            int newLangIdx = GUILayout.Toolbar(langIdx, langLabels, GUILayout.Width(200f));
+            if (newLangIdx != langIdx)
+            {
+                settings.Language = langValues[newLangIdx];
+                settings.Save(modEntry);
+                LoadMappings();
+            }
+
+            GUILayout.Space(10f);
             GUILayout.Label("Приглушение игры на время озвучки:");
             GUILayout.BeginHorizontal();
             GUILayout.Label("0 (выкл)", GUILayout.Width(60f));
@@ -766,7 +782,23 @@ namespace W40KRTAudioDirectMod
             GUILayout.Label("  Если включено — английские голоса замолкают на время нашей реплики.\n  Если выключено — слышны и наши, и английские голоса одновременно.", GUILayout.Width(350f));
 
             GUILayout.Space(10f);
-            GUILayout.Label("Загружено WAV: " + textMappings.Count);
+            string langLabel = settings.Language == "ruRU_cosy" ? "CosyVoice3" : "Qwen3";
+            string fallbackLabel = settings.Language == "ruRU_cosy" ? "Qwen3" : "CosyVoice3";
+            int primaryCount = textMappings.Count;
+            int fallbackCount = 0;
+            try
+            {
+                string fbMaps = localizationDirFallback + "mappings";
+                if (Directory.Exists(fbMaps))
+                    foreach (var f in Directory.GetFiles(fbMaps, "*.json"))
+                    {
+                        var j = Newtonsoft.Json.Linq.JObject.Parse(File.ReadAllText(f));
+                        var arr = j["entries"] as Newtonsoft.Json.Linq.JArray;
+                        if (arr != null) fallbackCount += arr.Count;
+                    }
+            }
+            catch { }
+            GUILayout.Label("Загружено WAV: " + langLabel + "=" + primaryCount + " + " + fallbackLabel + "(fallback)=" + fallbackCount);
 
             GUILayout.Space(10f);
             GUILayout.Label("Диагностика и улучшение озвучки", GUILayout.ExpandWidth(true));
@@ -837,24 +869,65 @@ namespace W40KRTAudioDirectMod
         {
             textMappings.Clear();
             localizationDir = modPath + "\\Localization\\" + settings.Language + "\\";
+            // Fallback: the other language folder (Qwen3 if primary is CosyVoice3, and vice versa)
+            localizationDirFallback = settings.Language == "ruRU_cosy"
+                ? modPath + "\\Localization\\ruRU\\"
+                : modPath + "\\Localization\\ruRU_cosy\\";
 
             try
             {
-                // Split mappings: Localization/{lang}/mappings/*.json — per character file
-                string mapsDir = localizationDir + "mappings";
-                if (Directory.Exists(mapsDir))
-                {
-                    var files = Directory.GetFiles(mapsDir, "*.json");
-                    Array.Sort(files, StringComparer.Ordinal);
-                    foreach (string f in files)
-                        LoadMappingsFile(f);
-                    return;
-                }
+                // Load primary language mappings first
+                LoadMappingsFromDir(localizationDir);
 
-                // Legacy single-file fallback (mappings.json)
-                LoadMappingsFile(localizationDir + "mappings.json");
+                // Then load fallback language — only entries whose text is not yet mapped
+                if (Directory.Exists(localizationDirFallback))
+                    LoadMappingsFromDirFallback(localizationDirFallback);
             }
             catch { }
+        }
+
+        private static void LoadMappingsFromDir(string dir)
+        {
+            string mapsDir = dir + "mappings";
+            if (Directory.Exists(mapsDir))
+            {
+                var files = Directory.GetFiles(mapsDir, "*.json");
+                Array.Sort(files, StringComparer.Ordinal);
+                foreach (string f in files)
+                    LoadMappingsFile(f);
+                return;
+            }
+            LoadMappingsFile(dir + "mappings.json");
+        }
+
+        private static void LoadMappingsFromDirFallback(string dir)
+        {
+            string mapsDir = dir + "mappings";
+            if (!Directory.Exists(mapsDir)) return;
+            var files = Directory.GetFiles(mapsDir, "*.json");
+            Array.Sort(files, StringComparer.Ordinal);
+            foreach (string f in files)
+                LoadMappingsFileFallback(f);
+        }
+
+        private static void LoadMappingsFileFallback(string jsonPath)
+        {
+            if (!File.Exists(jsonPath)) return;
+            var jObj = Newtonsoft.Json.Linq.JObject.Parse(File.ReadAllText(jsonPath));
+            var entries = jObj["entries"] as Newtonsoft.Json.Linq.JArray;
+            if (entries == null) return;
+            foreach (var e in entries)
+            {
+                string t = e["t"] != null ? e["t"].ToString() : null;
+                string w = e["w"] != null ? e["w"].ToString() : null;
+                if (string.IsNullOrEmpty(t) || string.IsNullOrEmpty(w)) continue;
+                // Only add if text not already mapped (primary takes priority)
+                bool exists = false;
+                for (int i = 0; i < textMappings.Count; i++)
+                    if (textMappings[i].Value == t) { exists = true; break; }
+                if (!exists)
+                    textMappings.Add(new KeyValuePair<string, string>(w, t));
+            }
         }
 
         private static void LoadMappingsFile(string jsonPath)
@@ -975,6 +1048,11 @@ namespace W40KRTAudioDirectMod
             {
                 string full = localizationDir + pathOrGuid;
                 if (File.Exists(full)) path = full;
+                else if (localizationDirFallback != null)
+                {
+                    string fb = localizationDirFallback + pathOrGuid;
+                    if (File.Exists(fb)) path = fb;
+                }
             }
             else
             {
@@ -985,6 +1063,17 @@ namespace W40KRTAudioDirectMod
                 {
                     var found = Directory.GetFiles(localizationDir, pathOrGuid + ".wav", SearchOption.AllDirectories);
                     if (found.Length > 0) path = found[0];
+                }
+                // Fallback: try other language dir
+                if (path == null && localizationDirFallback != null)
+                {
+                    string fb = localizationDirFallback + pathOrGuid + ".wav";
+                    if (File.Exists(fb)) path = fb;
+                    else
+                    {
+                        var found = Directory.GetFiles(localizationDirFallback, pathOrGuid + ".wav", SearchOption.AllDirectories);
+                        if (found.Length > 0) path = found[0];
+                    }
                 }
             }
             if (path == null || !File.Exists(path)) return;
