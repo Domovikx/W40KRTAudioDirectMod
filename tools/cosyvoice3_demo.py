@@ -30,6 +30,7 @@
 import argparse
 import os
 import random
+import re
 import shutil
 import sys
 import tempfile
@@ -127,20 +128,26 @@ def prep_ref(path):
     return tmp.name
 
 
-def hardlink_tree(src, dst):
+def link_tree(src, dst):
+    """Hardlink-копия модель-дира, НО cosyvoice3.yaml — отдельная копия
+    (чтобы правка сэмплинга в варианте не протекала в базовую модель)."""
     if not os.path.exists(dst):
         os.makedirs(dst)
     for name in os.listdir(src):
         s = os.path.join(src, name)
         d = os.path.join(dst, name)
         if os.path.isfile(s):
-            if not os.path.exists(d):
+            if os.path.exists(d):
+                continue
+            if name == 'cosyvoice3.yaml':
+                shutil.copy2(s, d)
+            else:
                 os.link(s, d)
         elif os.path.isdir(s):
-            hardlink_tree(s, d)
+            link_tree(s, d)
 
 
-def make_tuned_model_dir(top_p=None, top_k=None, tau_r=None, rl=False):
+def make_tuned_model_dir(top_p=None, top_k=None, tau_r=None, rl=False, cfg_rate=None):
     tag = []
     if top_p is not None:
         tag.append('p{}'.format(top_p))
@@ -148,21 +155,27 @@ def make_tuned_model_dir(top_p=None, top_k=None, tau_r=None, rl=False):
         tag.append('k{}'.format(top_k))
     if tau_r is not None:
         tag.append('t{}'.format(tau_r))
+    if cfg_rate is not None:
+        tag.append('c{}'.format(cfg_rate))
     if rl:
         tag.append('rl')
     dst = MODEL_DIR + ('_' + '_'.join(tag) if tag else '')
     if not os.path.exists(os.path.join(dst, 'cosyvoice3.yaml')):
         print('making tuned model dir:', dst)
-        hardlink_tree(MODEL_DIR, dst)
+        link_tree(MODEL_DIR, dst)
     yaml_path = os.path.join(dst, 'cosyvoice3.yaml')
     with open(yaml_path, encoding='utf-8') as f:
         text = f.read()
+    # re.sub по всему значению — идемпотентно (str.replace ломал yaml:
+    # 'top_k: 25' -> 'top_k: 25.0' -> следующий прогон '25.0.0.0...')
     if top_p is not None:
-        text = text.replace('top_p: 0.8', 'top_p: {}'.format(top_p))
+        text = re.sub(r'top_p: [0-9.]+', 'top_p: {}'.format(top_p), text, count=1)
     if top_k is not None:
-        text = text.replace('top_k: 25', 'top_k: {}'.format(top_k))
+        text = re.sub(r'top_k: [0-9.]+', 'top_k: {}'.format(top_k), text, count=1)
     if tau_r is not None:
-        text = text.replace('tau_r: 0.1', 'tau_r: {}'.format(tau_r))
+        text = re.sub(r'tau_r: [0-9.]+', 'tau_r: {}'.format(tau_r), text, count=1)
+    if cfg_rate is not None:
+        text = re.sub(r'inference_cfg_rate: [0-9.]+', 'inference_cfg_rate: {}'.format(cfg_rate), text, count=1)
     with open(yaml_path, 'w', encoding='utf-8') as f:
         f.write(text)
     if rl:
@@ -173,6 +186,80 @@ def make_tuned_model_dir(top_p=None, top_k=None, tau_r=None, rl=False):
             os.rename(llm_pt, base_pt)
             os.rename(rl_pt, llm_pt)
     return dst
+
+
+def patch_flow_temperature(temp):
+    """Проброс скрытого temperature в flow-диффузию (дефолт 1.0, в API не выведен).
+    Сигнатура CV3-декодера: forward(mu, mask, n_timesteps, temperature=1.0,
+    spks=None, cond=None, streaming=False)."""
+    from cosyvoice.flow.flow_matching import CausalConditionalCFM
+    orig = CausalConditionalCFM.forward
+
+    def wrapped(self, mu, mask, n_timesteps, temperature=1.0, spks=None,
+                cond=None, streaming=False, **kw):
+        return orig(self, mu, mask, n_timesteps, temperature=temp, spks=spks,
+                    cond=cond, streaming=streaming, **kw)
+
+    CausalConditionalCFM.forward = wrapped
+
+
+SILENT_TOKENS = frozenset({1, 2, 28, 29, 55, 248, 494, 2241, 2242, 2322, 2323})
+
+
+def patch_silent_token_trim():
+    """Срезать хвостовые silent/breath-токены перед flow.
+    CV3 после фразы сам дорисовывает токены тишины/дыхания (FSQ silent and
+    breath token), которые flow озвучивает как вздох/всхлип в конце реплики.
+    Фильтр на уровне токенов не трогает речь (в отличие от аудио-трима)."""
+    from cosyvoice.cli.model import CosyVoice3Model
+    orig = CosyVoice3Model.token2wav
+
+    def wrapped(self, token, *a, **kw):
+        toks = token[0].tolist()
+        i = len(toks)
+        while i > 0 and toks[i - 1] in SILENT_TOKENS:
+            i -= 1
+        if i == 0:
+            i = 1  # дегенерат: всё — тишина; оставляем 1 токен, чтобы flow не сломался
+        return orig(self, token[:, :i], *a, **kw)
+
+    CosyVoice3Model.token2wav = wrapped
+
+
+def tail_trim_fade(wave, sr, fade_ms=60, thresh_db=-40.0):
+    """Обрезать тихий хвост (вздохи/шум после речи) + fade-out.
+    Порог −40дБ, fade 60мс. Дополнительно (2026-08-29): изолированные
+    всплески после речи (вздох/клик громче порога через ≥40мс тишины)
+    считаются артефактом и режутся до речи."""
+    frame = max(int(sr * 0.01), 1)
+    n = wave.shape[1] // frame
+    if n < 2:
+        return wave
+    rms = []
+    for i in range(n):
+        seg = wave[:, i * frame:(i + 1) * frame]
+        rms.append(float((seg ** 2).mean().sqrt()))
+    rms = torch.tensor(rms)
+    thr = 10 ** (thresh_db / 20)
+    loud = rms > thr
+    if not bool(loud.any()):
+        return wave
+    last = int(loud.nonzero().max())
+    # изолированный хвостовой всплеск: ищем тихую лакуну перед последним
+    # громким кадром; если ≥4 кадров (40мс) тишины между речью и всплеском —
+    # всплеск артефакт, режем до речи
+    q = last - 1
+    while q >= 0 and not bool(loud[q]):
+        q -= 1
+    if q >= 0 and (last - 1 - q) >= 4:
+        last = q
+    end = min(wave.shape[1], (last + 1) * frame + int(sr * 0.03))
+    wave = wave[:, :end]
+    f = int(sr * fade_ms / 1000)
+    if f > 0 and wave.shape[1] > f * 2:
+        env = torch.linspace(1.0, 0.0, f)
+        wave = torch.cat([wave[:, :-f], wave[:, -f:] * env], dim=1)
+    return wave
 
 
 def gen_one(cosyvoice, text, ref, args):
@@ -216,12 +303,18 @@ def main():
     parser.add_argument('--instruct', choices=list(INSTRUCT_MAP), default=None)
     parser.add_argument('--instruct-text', default=None, help='свободная инструкция для instruct2')
     parser.add_argument('--lang-token', default=None, help='например ru — подставить <|ru|> перед текстом')
-    parser.add_argument('--seed', type=int, default=None, help='default: случайный (как в офиц. Space)')
-    parser.add_argument('--sampling', default=None, help='top_p,top_k,tau_r (RAS-семплер)')
+    parser.add_argument('--seed', type=int, default=42, help='default: 42 (победный конфиг)')
+    parser.add_argument('--sampling', default='0.5,10,0.15', help='top_p,top_k,tau_r (RAS, победный дефолт 0.5,10,0.15)')
+    parser.add_argument('--cfg', type=float, default=0.9, help='inference_cfg_rate (победный дефолт 0.9; сток модели 0.7)')
+    parser.add_argument('--flow-temp', type=float, default=1.2, help='temperature flow-диффузии (победный дефолт 1.2; сток кода 1.0)')
     parser.add_argument('--rl', action='store_true', default=True, help='использовать llm.rl.pt (default)')
     parser.add_argument('--base', action='store_true', help='использовать base llm.pt вместо RL')
     parser.add_argument('--gap', type=float, default=GAP, help='пауза между частями, сек')
     parser.add_argument('--single', action='store_true', help='только 1-ю часть фразы')
+    parser.add_argument('--tail-trim', action=argparse.BooleanOptionalAction, default=False, help='обрезка хвоста + fade (default: OFF — перерезает слова, детектор артефактов в разработке)')
+    parser.add_argument('--fade-ms', type=int, default=60, help='длина fade-out при --tail-trim')
+    parser.add_argument('--s16', action=argparse.BooleanOptionalAction, default=True, help='сохранять PCM s16 (default: on, для Localization)')
+    parser.add_argument('--no-silent-trim', action='store_true', help='НЕ срезать хвостовые silent/breath-токены')
     args = parser.parse_args()
 
     if args.sampling:
@@ -229,7 +322,7 @@ def main():
     else:
         top_p = top_k = tau_r = None
     rl = args.rl and not args.base
-    model_dir = make_tuned_model_dir(top_p, top_k, tau_r, rl)
+    model_dir = make_tuned_model_dir(top_p, top_k, tau_r, rl, cfg_rate=args.cfg)
 
     if args.text:
         parts = [('manual', args.text)]
@@ -237,7 +330,7 @@ def main():
         refs = [args.ref]
     else:
         phrase = load_phrase(args.char, args.guid)
-        parts = [(p.get('speaker'), p['text_clean']) for p in phrase.get('parts', []) if 'text_clean' in p]
+        parts = [(p.get('speaker_override') or p.get('speaker'), p['text_clean']) for p in phrase.get('parts', []) if 'text_clean' in p]
         refs = [ref_for_speaker(sp) for sp, _ in parts]
         if args.single:
             parts, refs = parts[:1], refs[:1]
@@ -252,6 +345,12 @@ def main():
 
     t0 = time.time()
     cosyvoice = AutoModel(model_dir=model_dir)
+    if args.flow_temp is not None:
+        patch_flow_temperature(args.flow_temp)
+        print('flow temperature patched:', args.flow_temp)
+    if not args.no_silent_trim:
+        patch_silent_token_trim()
+        print('silent/breath token trim: ON')
     print('model loaded in {:.1f}s, sample_rate={}'.format(time.time() - t0, cosyvoice.sample_rate))
 
     pieces = []
@@ -260,6 +359,8 @@ def main():
         print('    text: {}'.format(text))
         t1 = time.time()
         speech = gen_one(cosyvoice, text, ref, args)
+        if args.tail_trim:
+            speech = tail_trim_fade(speech, cosyvoice.sample_rate, fade_ms=args.fade_ms)
         pieces.append(speech)
         if args.out:
             part_out = args.out[:-4] + '__{}.wav'.format(i + 1)
@@ -272,7 +373,10 @@ def main():
     glued = pieces[0]
     for p in pieces[1:]:
         glued = torch.cat([glued, gap, p], dim=1)
-    torchaudio.save(out, glued, cosyvoice.sample_rate)
+    if args.s16:
+        torchaudio.save(out, glued, cosyvoice.sample_rate, encoding='PCM_S', bits_per_sample=16)
+    else:
+        torchaudio.save(out, glued, cosyvoice.sample_rate)
     print('GLUED {} ({:.2f}s)'.format(out, glued.shape[1] / cosyvoice.sample_rate))
 
 

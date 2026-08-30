@@ -7,6 +7,7 @@
 [![Готово](https://img.shields.io/badge/прогресс-61%25-yellow)](Localization/ruRU/)
 [![Персонажи](https://img.shields.io/badge/персонажей-23-orange)](Localization/ruRU/)
 [![Голосов](https://img.shields.io/badge/голосов-21-lightgrey)](config/voices.yaml)
+[![CosyVoice 3](https://img.shields.io/badge/CosyVoice%203-эксперимент-blueviolet)](Localization/ruRU_cosy/)
 [![UMM](https://img.shields.io/badge/Unity%20Mod%20Manager-0.25.0-green)](Info.json)
 
 <p align="center">
@@ -60,11 +61,19 @@
 | 🟨 44.2% | Generic Male NPC (11 000 / 24 862) |
 | 🔴 3.1% | Psyker NPC (3 / 97) |
 
+### Экспериментальная озвучка CosyVoice 3 (в разработке)
+
+Параллельно тестируется движок **CosyVoice 3** (Fun-CosyVoice3-0.5B) как
+кандидат на замену Qwen3-TTS. Пробная озвучка лежит в отдельной языковой
+папке `Localization\ruRU_cosy\` (сейчас: Kunrad Voigtvir, 68 фраз). Для
+теста: в настройках мода установите `Language = ruRU_cosy`.
+
 ---
 
 ## Использованные технологии
 
-- [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS) — Voice Clone
+- [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS) — Voice Clone (основной движок)
+- [CosyVoice 3](https://github.com/FunAudioLLM/CosyVoice) — zero-shot voice clone (эксперимент, ruRU_cosy)
 - [Harmony](https://github.com/pardeike/Harmony) — IL-патчинг
 - [Unity Mod Manager](https://www.nexusmods.com/site/mods/21)
 - Wwise (AkSoundEngine) — ducking

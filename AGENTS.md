@@ -243,12 +243,27 @@ phrases:
 
 Выход: `output/full_icl/{voice_name}/{guid}__{N}.wav` + `{guid}.wav` (склейка).
 
-## CosyVoice 3 — эксперимент ЗАМОРОЖЕН (2026-08-28)
+## CosyVoice 3 — эксперимент РАЗМОРОЖЕН (2026-08-29)
 
-Пробовали Fun-CosyVoice3-0.5B как замену Q3. **Вердикт: Q3-TTS победил** — у CV3
-остаточный китайский акцент в русском (ru ~3% датасета). Установка `C:\tools\cosyvoice3`
-(~12 ГБ) оставлена на диске, скрипты `tools/cosyvoice3_demo.py` и `tools/run_abtest.sh`
-в репо. Подробности, A/B-результаты и точка возврата — `docs/cosyvoice3.md`.
+Пробовали Fun-CosyVoice3-0.5B как замену Q3. ВЕРДИКТ 2026-08-28: Q3-TTS победил
+(у CV3 остаточный китайский акцент в русском, ru ~3% датасета). **2026-08-29:
+пересмотр** — найдены и исправлены 3 проблемы (склеенный реф Джаэ из двух
+тейков; сэмплинг 0.9/50 вместо стока 0.8/25, протёкший через hardlink'и во все
+копии модели; «шипение» = яркость тембра >8кГц, лечится EQ `highshelf f=8000
+g=-6`). CV3 — кандидат на замену Q3, нужны ещё эксперименты. **Финальный победный
+конфиг (2026-08-29, серия accent-демок): cross_lingual + RL +
+`--flow-temp 1.2 --cfg 0.9 --sampling 0.5,10,0.15 --tail-trim --s16`**
+(выбор пользователя: без акцента, без артефактов хвостов;
+`Localization/ruRU_cosy/Kunrad_Voigtvir/` = 68/68 этим конфигом, **трим
+выключен** — сырьё в `output/cosyvoice3/raw/`, детектор хвостовых артефактов
+в TODO). Рефы всех 25
+голосов в `refs/samples_en_cosy/` (wav + whisper-транскрипт txt; txt нужен
+для zero_shot). Установка `C:\tools\cosyvoice3` (~12 ГБ), скрипты
+`tools/cosyvoice3_demo.py`, `tools/cosyvoice3_batch.py` (очередь фраз →
+`Localization/{lang}/`, resumable), `tools/build_cosy_refs.py`,
+`tools/run_abtest.sh` в репо. **Скилл: `.opencode/skills/cosyvoice3/SKILL.md`**
+(конфиги, скрипты, грабли, документация). План озвучки — `todo_ruRU_cosy.md`
+(Phase 1 Kunrad 68/68 готов). Подробности и точка возврата — `docs/cosyvoice3.md`.
 
 ## Референсы
 
